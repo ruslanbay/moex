@@ -1,26 +1,30 @@
 <head>
-	<!-- Load plotly.js into the DOM -->
-	<script src='https://cdn.plot.ly/plotly-2.24.1.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+    <script src='https://cdn.plot.ly/plotly-2.24.1.min.js'></script>
 
-  <script>
-  d3.dsv(';', 'https://raw.githubusercontent.com/plotly/datasets/master/coffee-flavors.csv', function(err, rows){
-  function unpack(rows, key) {
-  return rows.map(function(row) { return row[key]});
-}
+    <!--
+    Работает только с версией D3 4.13.0 и ниже,
+    так как начиная с версии 5.0.0 используются Promises и код нужно переписать.
+    https://github.com/d3/d3/blob/main/CHANGES.md#changes-in-d3-50
+    -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js'></script>
+    <script>
+        d3.tsv('https://raw.githubusercontent.com/ruslanbay/moex/main/data.tsv?token=GHSAT0AAAAAACFJAPFFS3CK72HH2BNBE5HGZFX7KZA', function(err, rows){
+            function unpack(rows, key) {
+                return rows.map(function(row) { return row[key]});
+            }
 
-var data = [{
-      type: "treemap",
-      ids: unpack(rows, 'ids'),
-      labels: unpack(rows, 'labels'),
-      parents: unpack(rows, 'parents')
-    }];
+            var data = [{
+                type: "treemap",
+                ids: unpack(rows, 'labels'),
+                labels: unpack(rows, 'labels'),
+                parents: unpack(rows, 'parents')
+            }];
 
-Plotly.newPlot('myDiv', data);
-})
-</script>
+            Plotly.newPlot('myDiv', data);
+        })
+    </script>
 </head>
 
 <body>
-	<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
 </body>
