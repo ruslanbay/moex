@@ -1,0 +1,26 @@
+<head>
+	<!-- Load plotly.js into the DOM -->
+	<script src='https://cdn.plot.ly/plotly-2.24.1.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+
+  <script>
+  d3.dsv(';', 'https://raw.githubusercontent.com/plotly/datasets/master/coffee-flavors.csv', function(err, rows){
+  function unpack(rows, key) {
+  return rows.map(function(row) { return row[key]});
+}
+
+var data = [{
+      type: "treemap",
+      ids: unpack(rows, 'ids'),
+      labels: unpack(rows, 'labels'),
+      parents: unpack(rows, 'parents')
+    }];
+
+Plotly.newPlot('myDiv', data);
+})
+</script>
+</head>
+
+<body>
+	<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+</body>
