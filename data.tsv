@@ -1,0 +1,293 @@
+labels	parents
+MOEX	
+Chemicals and Pertochemicals / Химия и нефтехимия	MOEX
+Conglomerate / Холдинги	MOEX
+Construction (Development) / Строительство	MOEX
+Consumer Discretionary (Retail) / Потребительский сектор	MOEX
+Electric Utilities / Электроэнергетика	MOEX
+Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)	MOEX
+Financials / Финансы	MOEX
+Health Care/Здравоохранение	MOEX
+Industrials / Промышленность	MOEX
+Information Technologies / Информационные технологии	MOEX
+Metals and Mining / Металлы и добыча	MOEX
+Telecommunication Services / Телекоммуникации	MOEX
+Transportation / Транспорт	MOEX
+Others/Другое	MOEX
+AKRN	Chemicals and Pertochemicals / Химия и нефтехимия
+HIMCP	Chemicals and Pertochemicals / Химия и нефтехимия
+KAZT	Chemicals and Pertochemicals / Химия и нефтехимия
+KAZTP	Chemicals and Pertochemicals / Химия и нефтехимия
+KZOS	Chemicals and Pertochemicals / Химия и нефтехимия
+KZOSP	Chemicals and Pertochemicals / Химия и нефтехимия
+NKNC	Chemicals and Pertochemicals / Химия и нефтехимия
+NKNCP	Chemicals and Pertochemicals / Химия и нефтехимия
+PHOR	Chemicals and Pertochemicals / Химия и нефтехимия
+URKA	Chemicals and Pertochemicals / Химия и нефтехимия
+VLHZ	Chemicals and Pertochemicals / Химия и нефтехимия
+AFKS	Conglomerate / Холдинги
+ENPG	Conglomerate / Холдинги
+ENPL	Conglomerate / Холдинги
+ETLN	Construction (Development) / Строительство
+INGR	Construction (Development) / Строительство
+LSRG	Construction (Development) / Строительство
+PIKK	Construction (Development) / Строительство
+SMLT	Construction (Development) / Строительство
+ABRD	Consumer Discretionary (Retail) / Потребительский сектор
+AGRO	Consumer Discretionary (Retail) / Потребительский сектор
+APTK	Consumer Discretionary (Retail) / Потребительский сектор
+AQUA	Consumer Discretionary (Retail) / Потребительский сектор
+AVAZ	Consumer Discretionary (Retail) / Потребительский сектор
+AVAZP	Consumer Discretionary (Retail) / Потребительский сектор
+BELU	Consumer Discretionary (Retail) / Потребительский сектор
+DIXY	Consumer Discretionary (Retail) / Потребительский сектор
+DSKY	Consumer Discretionary (Retail) / Потребительский сектор
+FIVE	Consumer Discretionary (Retail) / Потребительский сектор
+FIXP	Consumer Discretionary (Retail) / Потребительский сектор
+GCHE	Consumer Discretionary (Retail) / Потребительский сектор
+KROT	Consumer Discretionary (Retail) / Потребительский сектор
+KROTP	Consumer Discretionary (Retail) / Потребительский сектор
+LNTA	Consumer Discretionary (Retail) / Потребительский сектор
+LENT	Consumer Discretionary (Retail) / Потребительский сектор
+MDMG	Consumer Discretionary (Retail) / Потребительский сектор
+MGNT	Consumer Discretionary (Retail) / Потребительский сектор
+MVID	Consumer Discretionary (Retail) / Потребительский сектор
+OKEY	Consumer Discretionary (Retail) / Потребительский сектор
+ORUP	Consumer Discretionary (Retail) / Потребительский сектор
+OTCP	Consumer Discretionary (Retail) / Потребительский сектор
+PRTK	Consumer Discretionary (Retail) / Потребительский сектор
+RBCM	Consumer Discretionary (Retail) / Потребительский сектор
+ROST	Consumer Discretionary (Retail) / Потребительский сектор
+SVAV	Consumer Discretionary (Retail) / Потребительский сектор
+SVET	Consumer Discretionary (Retail) / Потребительский сектор
+WUSH	Consumer Discretionary (Retail) / Потребительский сектор
+ASSB	Electric Utilities / Электроэнергетика
+DVEC	Electric Utilities / Электроэнергетика
+ENRU	Electric Utilities / Электроэнергетика
+ELFV	Electric Utilities / Электроэнергетика
+FEES	Electric Utilities / Электроэнергетика
+HYDR	Electric Utilities / Электроэнергетика
+IRAO	Electric Utilities / Электроэнергетика
+IRGZ	Electric Utilities / Электроэнергетика
+KBSB	Electric Utilities / Электроэнергетика
+KCHE	Electric Utilities / Электроэнергетика
+KCHEP	Electric Utilities / Электроэнергетика
+KGKC	Electric Utilities / Электроэнергетика
+KGKCP	Electric Utilities / Электроэнергетика
+KLSB	Electric Utilities / Электроэнергетика
+KRSB	Electric Utilities / Электроэнергетика
+KRSBP	Electric Utilities / Электроэнергетика
+KUBE	Electric Utilities / Электроэнергетика
+LPSB	Electric Utilities / Электроэнергетика
+LSNG	Electric Utilities / Электроэнергетика
+LSNGP	Electric Utilities / Электроэнергетика
+MAGE	Electric Utilities / Электроэнергетика
+MAGEP	Electric Utilities / Электроэнергетика
+MISB	Electric Utilities / Электроэнергетика
+MISBP	Electric Utilities / Электроэнергетика
+MRKC	Electric Utilities / Электроэнергетика
+MRKK	Electric Utilities / Электроэнергетика
+MRKP	Electric Utilities / Электроэнергетика
+MRKS	Electric Utilities / Электроэнергетика
+MRKU	Electric Utilities / Электроэнергетика
+MRKV	Electric Utilities / Электроэнергетика
+MRKY	Electric Utilities / Электроэнергетика
+MRKZ	Electric Utilities / Электроэнергетика
+MRSB	Electric Utilities / Электроэнергетика
+MSNG	Electric Utilities / Электроэнергетика
+MSRS	Electric Utilities / Электроэнергетика
+NNSB	Electric Utilities / Электроэнергетика
+NNSBP	Electric Utilities / Электроэнергетика
+OGKB	Electric Utilities / Электроэнергетика
+PMSB	Electric Utilities / Электроэнергетика
+PMSBP	Electric Utilities / Электроэнергетика
+RSTI	Electric Utilities / Электроэнергетика
+RSTIP	Electric Utilities / Электроэнергетика
+RTSB	Electric Utilities / Электроэнергетика
+RTSBP	Electric Utilities / Электроэнергетика
+RZSB	Electric Utilities / Электроэнергетика
+SAGO	Electric Utilities / Электроэнергетика
+SAGOP	Electric Utilities / Электроэнергетика
+SARE	Electric Utilities / Электроэнергетика
+SAREP	Electric Utilities / Электроэнергетика
+SLEN	Electric Utilities / Электроэнергетика
+STSB	Electric Utilities / Электроэнергетика
+STSBP	Electric Utilities / Электроэнергетика
+TASB	Electric Utilities / Электроэнергетика
+TASBP	Electric Utilities / Электроэнергетика
+TGKA	Electric Utilities / Электроэнергетика
+TGKB	Electric Utilities / Электроэнергетика
+TGKBP	Electric Utilities / Электроэнергетика
+TGKD	Electric Utilities / Электроэнергетика
+TGKN	Electric Utilities / Электроэнергетика
+TNSE	Electric Utilities / Электроэнергетика
+TORS	Electric Utilities / Электроэнергетика
+TORSP	Electric Utilities / Электроэнергетика
+UPRO	Electric Utilities / Электроэнергетика
+VGSB	Electric Utilities / Электроэнергетика
+VGSBP	Electric Utilities / Электроэнергетика
+VRSB	Electric Utilities / Электроэнергетика
+VRSBP	Electric Utilities / Электроэнергетика
+YKEN	Electric Utilities / Электроэнергетика
+YKENP	Electric Utilities / Электроэнергетика
+YRSB	Electric Utilities / Электроэнергетика
+YRSBP	Electric Utilities / Электроэнергетика
+BANE	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+BANEP	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+BLNG	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+CHGZ	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+GAZP	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+GAZS	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+JNOS	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+JNOSP	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+KBTK	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+KRKN	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+KRKNP	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+LKOH	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+MFGS	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+MFGSP	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+NVTK	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+RNFT	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+ROSN	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+RTGZ	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+SIBN	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+SNGS	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+SNGSP	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+TATN	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+TATNP	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+TRNFP	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+UKUZ	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+VJGZ	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+VJGZP	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+YAKG	Energy (Oil, Gas, Coal) / Энергоресурсы (Нефть, газ, уголь)
+ACKO	Financials / Финансы
+ARSA	Financials / Финансы
+AVAN	Financials / Финансы
+BSPB	Financials / Финансы
+BSPBP	Financials / Финансы
+CARM	Financials / Финансы
+CBOM	Financials / Финансы
+FTRE	Financials / Финансы
+GAZC	Financials / Финансы
+GAZT	Financials / Финансы
+KUZB	Financials / Финансы
+MOEX	Financials / Финансы
+OFCB	Financials / Финансы
+OPIN	Financials / Финансы
+PRMB	Financials / Финансы
+PSBR	Financials / Финансы
+QIWI	Financials / Финансы
+RDRB	Financials / Финансы
+RENI	Financials / Финансы
+RGSS	Financials / Финансы
+ROSB	Financials / Финансы
+RUSI	Financials / Финансы
+SBER	Financials / Финансы
+SBERP	Financials / Финансы
+SFIN	Financials / Финансы
+SPBE	Financials / Финансы
+TCSG	Financials / Финансы
+UCSS	Financials / Финансы
+USBN	Financials / Финансы
+VTBR	Financials / Финансы
+VZRZ	Financials / Финансы
+WTCM	Financials / Финансы
+WTCMP	Financials / Финансы
+APTK	Health Care/Здравоохранение
+GECO	Health Care/Здравоохранение
+GEMA	Health Care/Здравоохранение
+GEMC	Health Care/Здравоохранение
+ISKJ	Health Care/Здравоохранение
+LIFE	Health Care/Здравоохранение
+MDMG	Health Care/Здравоохранение
+AMEZ	Industrials / Промышленность
+CHKZ	Industrials / Промышленность
+DIOD	Industrials / Промышленность
+DZRD	Industrials / Промышленность
+DZRDP	Industrials / Промышленность
+EELT	Industrials / Промышленность
+GAZA	Industrials / Промышленность
+GAZAP	Industrials / Промышленность
+HMSG	Industrials / Промышленность
+KMAZ	Industrials / Промышленность
+KMEZ	Industrials / Промышленность
+KRKOP	Industrials / Промышленность
+KTSB	Industrials / Промышленность
+KTSBP	Industrials / Промышленность
+LVHK	Industrials / Промышленность
+MSTT	Industrials / Промышленность
+NAUK	Industrials / Промышленность
+NFAZ	Industrials / Промышленность
+NKSH	Industrials / Промышленность
+NSVZ	Industrials / Промышленность
+OMZZP	Industrials / Промышленность
+PAZA	Industrials / Промышленность
+RKKE	Industrials / Промышленность
+SGZH	Industrials / Промышленность
+TUZA	Industrials / Промышленность
+UNAC	Industrials / Промышленность
+URKZ	Industrials / Промышленность
+UWGN	Industrials / Промышленность
+VSYD	Industrials / Промышленность
+VSYDP	Industrials / Промышленность
+ZILL	Industrials / Промышленность
+ZVEZ	Industrials / Промышленность
+CIAN	Information Technologies / Информационные технологии
+HHRU	Information Technologies / Информационные технологии
+MAIL	Information Technologies / Информационные технологии
+OZON	Information Technologies / Информационные технологии
+POSI	Information Technologies / Информационные технологии
+SFTL	Information Technologies / Информационные технологии
+VKCO	Information Technologies / Информационные технологии
+YNDX	Information Technologies / Информационные технологии
+ALRS	Metals and Mining / Металлы и добыча
+AMEZ	Metals and Mining / Металлы и добыча
+BRZL	Metals and Mining / Металлы и добыча
+CHMF	Metals and Mining / Металлы и добыча
+CHMK	Metals and Mining / Металлы и добыча
+CHZN	Metals and Mining / Металлы и добыча
+ELTZ	Metals and Mining / Металлы и добыча
+GMKN	Metals and Mining / Металлы и добыча
+IGST	Metals and Mining / Металлы и добыча
+IGSTP	Metals and Mining / Металлы и добыча
+KMTZ	Metals and Mining / Металлы и добыча
+KOGK	Metals and Mining / Металлы и добыча
+LNZL	Metals and Mining / Металлы и добыча
+LNZLP	Metals and Mining / Металлы и добыча
+MAGN	Metals and Mining / Металлы и добыча
+MGNZ	Metals and Mining / Металлы и добыча
+MTLR	Metals and Mining / Металлы и добыча
+MTLRP	Metals and Mining / Металлы и добыча
+NLMK	Metals and Mining / Металлы и добыча
+PLZL	Metals and Mining / Металлы и добыча
+POGR	Metals and Mining / Металлы и добыча
+POLY	Metals and Mining / Металлы и добыча
+RASP	Metals and Mining / Металлы и добыча
+ROLO	Metals and Mining / Металлы и добыча
+RUAL	Metals and Mining / Металлы и добыча
+SELG	Metals and Mining / Металлы и добыча
+SELGP	Metals and Mining / Металлы и добыча
+TRMK	Metals and Mining / Металлы и добыча
+UNKL	Metals and Mining / Металлы и добыча
+VSMO	Metals and Mining / Металлы и добыча
+BISVP	Telecommunication Services / Телекоммуникации
+CNTL	Telecommunication Services / Телекоммуникации
+CNTLP	Telecommunication Services / Телекоммуникации
+MFON	Telecommunication Services / Телекоммуникации
+MGTS	Telecommunication Services / Телекоммуникации
+MGTSP	Telecommunication Services / Телекоммуникации
+MTSS	Telecommunication Services / Телекоммуникации
+RTKM	Telecommunication Services / Телекоммуникации
+RTKMP	Telecommunication Services / Телекоммуникации
+TTLK	Telecommunication Services / Телекоммуникации
+VEON-RX	Telecommunication Services / Телекоммуникации
+AFLT	Transportation / Транспорт
+FESH	Transportation / Транспорт
+FLOT	Transportation / Транспорт
+GLTR	Transportation / Транспорт
+GTRK	Transportation / Транспорт
+NKHP	Transportation / Транспорт
+NMTP	Transportation / Транспорт
+TRCN	Transportation / Транспорт
+UTAR	Transportation / Транспорт
+IRKT	Others/Другое
