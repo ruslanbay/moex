@@ -1,4 +1,30 @@
 <head>
+    <style>
+    html, body {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(65,69,84);
+    }
+    * {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    main,
+    section,
+    #myDiv,
+    .page-content {
+      height: 100%;
+      overflow: hidden;
+      background-color: rgb(65,69,84);
+    }
+    </style>
+    
     <script src='https://cdn.plot.ly/plotly-2.24.1.min.js'></script>
 
     <!--
@@ -8,19 +34,52 @@
     -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js'></script>
     <script>
-        d3.tsv('https://raw.githubusercontent.com/ruslanbay/moex/main/data.tsv?token=GHSAT0AAAAAACFJAPFFS3CK72HH2BNBE5HGZFX7KZA', function(err, rows){
+        d3.tsv('https://raw.githubusercontent.com/ruslanbay/moex/main/data.tsv?token=GHSAT0AAAAAACFJAPFEI5FZJLDI6TFM5GRWZFYADGA', function(err, rows){
             function unpack(rows, key) {
                 return rows.map(function(row) { return row[key]});
             }
 
+            var texttemplate = '<b>%{label}</b><br>%{customdata[4]}<br>%{customdata[5]:,.2f} (%{customdata[3]:.2f}%)<br>Mkt cap: %{value:$,.0f}';
+            var hovertemplate = '<b>%{customdata[1]}</b><br>%{customdata[4]}<br>Share price: %{customdata[5]:,.4f}<br>Price change: %{customdata[3]:.2f}%<br>Mkt cap: %{customdata[2]:$,.0f}<br>percentParent: %{percentParent:.2p}<br>percentRoot: %{percentRoot:.2p}<extra></extra>';
+            
             var data = [{
                 type: "treemap",
-                ids: unpack(rows, 'labels'),
+                // ids: unpack(rows, 'labels'),
                 labels: unpack(rows, 'labels'),
-                parents: unpack(rows, 'parents')
+                parents: unpack(rows, 'parents'),
+                // values: ???,
+                marker: {
+                      // colors: chartData.priceChange,
+                      colorscale: [[0, 'rgb(246,53,56)'], [0.5, 'rgb(65,69,84)'], [1, 'rgb(48,204,90)']],
+                      cmin: -3,
+                      cmid: 0,
+                      cmax: 3,
+                      line: {width: 2, color: "rgb(64,68,83)"}
+                    },
+                    // text: 'chartData.customdata[4]',
+                    textinfo: "label+text+value",
+                    // customdata: chartData.customdata,
+                    branchvalues: 'total',
+                    texttemplate: texttemplate,
+                    hovertemplate: hovertemplate,
+                    pathbar: {visible: true}
             }];
 
-            Plotly.newPlot('myDiv', data);
+            var layout = {
+                showlegend: false,
+                autosize: true,
+                margin: {l:0, r:0, t:45, b:0},
+                paper_bgcolor: "rgb(0,0,0,0)",
+                plot_bgcolor: "rgb(0,0,0,0)"
+              }
+            
+            var config = {
+              responsive: true,
+              displaylogo: false,
+              displayModeBar: false,
+              scrollZoom: true
+            }
+            Plotly.react('myDiv', data, layout, config);
         })
     </script>
 </head>
