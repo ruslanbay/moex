@@ -3,9 +3,10 @@
   2. Переходим на страницу https://iss.moex.com/iss/history/engines/stock/markets/shares/boards/TQBR/listing?status=traded
   3. Получаем список secid для акций, у которых history_from <= ДАТА <= history_till
   4. Для каждой акции из списка находим соответствующую отрасль из файла data.tsv
-  5. Переходим на страницу https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&from=2023-07-19&till=2023-07-19&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION
-  6. Получаем данные о стоиммости акции, об изменении стоимости и капитализации
-  7. Мержим полученные данные в один JS Object и строим для него тримап
+  5. Если отрасль не найдена, то присваиваем отрасль Прочее/Other
+  6. Переходим на страницу https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&from=2023-07-19&till=2023-07-19&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION
+  7. Получаем данные о стоиммости акции, об изменении стоимости и капитализации
+  8. Мержим полученные данные в один JS Object и строим для него тримап
  -->
 <head>
     <style>
