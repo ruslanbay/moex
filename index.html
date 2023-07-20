@@ -1,11 +1,8 @@
 <!-- 
-  1. От пользователя получаем ДАТУ, за которую нужно построить график
-  2.1. Переходим на страницу https://iss.moex.com/iss/history/engines/stock/markets/shares/boards/TQBR/listing?status=all
-  2.2. На одной странице получаем по 100 записей
-  2.3. Передаём параметр start=100, чтобы получить следующую сотню
-  2.4. Если в json менее 100 записей, значит это последняя страница
-  2.5. Мы получили все записи.
-  3. Получаем список secid для акций, у которых history_from <= ДАТА <= history_till
+  0. !!! РАЗ В ДЕНЬ ОБНОВЛЯТЬ СОДЕРЖИМОЕ ФАЙЛА listing.json (???? ЛУЧШЕ ПОМЕЩАТЬ ЭТИ ДАННЫЕ СРАЗУ В data.tsv????????)
+  https://iss.moex.com/iss/history/engines/stock/markets/shares/boards/TQBR/listing?status=all
+  1. Пользователь передаёт ДАТУ, за которую нужно построить график
+  2  Из файла listing.json получаем список secid для акций, у которых history_from <= ДАТА <= history_till
   4. Для каждой акции из списка находим соответствующую отрасль из файла data.tsv
   5. Если отрасль не найдена, то присваиваем отрасль Прочее/Other
   6. Переходим на страницу https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&from=2023-07-19&till=2023-07-19&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION
