@@ -1,290 +1,297 @@
-parents	labels	shortname	shortname_rus	name_rus
-	Moscow Exchange		Московская биржа	
-Moscow Exchange	Chemicals and Pertochemicals		Химия и нефтехимия	
-Moscow Exchange	Conglomerate		Холдинги	
-Moscow Exchange	Construction (Development)		Строительство	
-Moscow Exchange	Consumer Discretionary (Retail)		Потребительский сектор	
-Moscow Exchange	Electric Utilities		Электроэнергетика	
-Moscow Exchange	Energy (Oil, Gas, Coal)		Энергоресурсы (Нефть, газ, уголь)	
-Moscow Exchange	Financials		Финансы	
-Moscow Exchange	Health Care		Здравоохранение	
-Moscow Exchange	Industrials		Промышленность	
-Moscow Exchange	Information Technologies		Информационные технологии	
-Moscow Exchange	Metals and Mining		Металлы и добыча	
-Moscow Exchange	Telecommunication Services		Телекоммуникации	
-Moscow Exchange	Transportation		Транспорт	
-Moscow Exchange	Others		Прочее	
-Chemicals and Pertochemicals	AKRN	Acron	Акрон	Акрон ПАО ао
-Chemicals and Pertochemicals	HIMCP	Himprom ap	Химпром ап	Химпром ПАО ап
-Chemicals and Pertochemicals	KAZT	Kuib.Azot ao	Куйбазот	Куйбышевазот ПАО ао
-Chemicals and Pertochemicals	KAZTP	Kuibishevazot ap	Куйбазот-п	Куйбышевазот ПАО ап
-Chemicals and Pertochemicals	KZOS	PAO Organicheskiy Sintez ao	ОргСинт ао	ПАО Органический синтез ао
-Chemicals and Pertochemicals	KZOSP	PAO Organicheskiy Sintez ap	ОргСинт ап	ПАО Органический синтез ап
-Chemicals and Pertochemicals	NKNC	Niznekamskneftekhim ao	НКНХ ао	Нижнекамскнефтехим ПАО ао
-Chemicals and Pertochemicals	NKNCP	Niznekamskneftekhim (pref)	НКНХ ап	Нижнекамскнефтехим ПАО ап
-Chemicals and Pertochemicals	PHOR	PhosAgro ao	ФосАгро ао	ФосАгро ПАО ао
-Chemicals and Pertochemicals	URKA	UralKalij	УралКалий	УралКалий
-Chemicals and Pertochemicals	VLHZ	VHZ	ВХЗ-ао	Владимирский химич.з-д(ПАО) ао
-Conglomerate	AFKS	AFK Sistema	Система ао	АФК Система ПАО ао
-Conglomerate	ENPG	EN+ GROUP IPJSC ORD SHS	ЭН+ГРУП ао	МКПАО ЭН+ ГРУП ао
-Conglomerate	ENPL	EN+ GROUP IPJSC ORD SHS (London)	ЭН+ГРУП ао (Лондон)	МКПАО ЭН+ ГРУП ао (Лондон)
-Construction (Development)	ETLN	GDR ETALON GROUP PLC ORD SHS	ETLN-гдр	ГДР ETALON GROUP PLC ORD SHS
-Construction (Development)	INGR	INGRAD	ИНГРАД ао	ИНГРАД ПАО ао
-Construction (Development)	LSRG	LSR	ЛСР ао	Группа ЛСР ПАО ао
-Construction (Development)	PIKK	PIK SZ	ПИК ао	ПИК СЗ (ПАО) ао
-Construction (Development)	SMLT	Samolet	Самолет ао	ГК Самолет ао
-Consumer Discretionary (Retail)	ABRD	Abrau-Durso ao	АбрауДюрсо	Абрау-Дюрсо ПАО ао
-Consumer Discretionary (Retail)	AGRO	GDR ROS AGRO PLC ORD SHS	РосАгро-гдр	ГДР ROS AGRO PLC ORD SHS
-Consumer Discretionary (Retail)	AQUA	INARCTIKA	ИНАРКТИКА	ПАО ИНАРКТИКА
-Consumer Discretionary (Retail)	AVAZ	PJSC AVTOVAZ, ordinary shares	Автоваз ао	ПАО Автоваз ао
-Consumer Discretionary (Retail)	AVAZP	PJSC AVTOVAZ, pref shares	Автоваз ап	ПАО Автоваз ап
-Consumer Discretionary (Retail)	BELU	Beluga Group ao	Белуга ао	Белуга Групп ПАО ао
-Consumer Discretionary (Retail)	DIXY	Dixy	Дикси	Дикси
-Consumer Discretionary (Retail)	DSKY	Detsky mir	ДетскийМир	ПАО Детский мир
-Consumer Discretionary (Retail)	FIVE	GDR X5 RetailGroup N.V.ORD SHS	FIVE-гдр	ГДР X5 RetailGroup N.V.ORD SHS
-Consumer Discretionary (Retail)	FIXP	GDR FixPrice Group PLC ORD SHS	FIXP-гдр	ГДР FixPrice Group PLC ORD SHS
-Consumer Discretionary (Retail)	GCHE	Cherkizovo Group ao	ЧеркизГ-ао	Группа Черкизово ПАО-ао
-Consumer Discretionary (Retail)	KROT	KrasnyiOctyabr	КрасОкт-ао	КрасныйОктябрь ПАО - ао
-Consumer Discretionary (Retail)	KROTP	KrasnyiOctabr-1(pr)	КрасОкт-1п	КрасныйОктябрь-1п
-Consumer Discretionary (Retail)	LNTA	Lenta IPJSC ORD SHS	Лента ао	Лента МКПАО ао
-Consumer Discretionary (Retail)	LENT	Lenta IPJSC ORD SHS	Лента ао	Лента МКПАО ао
-Consumer Discretionary (Retail)	MGNT	Magnit	Магнит ао	Магнит ПАО ао
-Consumer Discretionary (Retail)	MVID	M.video	М.видео	М.видео ПАО ао
-Consumer Discretionary (Retail)	OKEY	GDR OKEY Group ORD SHS	OKEY-гдр	ГДР OKEY Group S.A. ORD SHS
-Consumer Discretionary (Retail)	ORUP	PJSC OR ordinary shares	ПАО ОР ао	ПАО ОР ао
-Consumer Discretionary (Retail)	PRTK	PROTEK	ПРОТЕК	ПРОТЕК
-Consumer Discretionary (Retail)	RBCM	GK RBK ao	ГК РБК ао	ГК РБК ПАО ао
-Consumer Discretionary (Retail)	ROST	ROSINTER RESTAURANTS ao	РОСИНТЕРао	РОСИНТЕР РЕСТОРАНТС (ПАО)
-Consumer Discretionary (Retail)	SVAV	Sollers Avto	СОЛЛЕРС	ПАО СОЛЛЕРС
-Consumer Discretionary (Retail)	SVET	Svetofor Group	Светофор	Светофор Групп ао
-Consumer Discretionary (Retail)	WUSH	WHOOSH Holding	iВУШХолднг	ВУШ Холдинг ао
-Electric Utilities	ASSB	Astrakhan Energo Sbyt	АстрЭнСб	Астраханская ЭСК ПАО
-Electric Utilities	DVEC	DEC	ДЭК ао	ДЭК ПАО ао
-Electric Utilities	ENRU	PJSC Enel Russia	ПАО Энел Россия	ПАО Энел Россия
-Electric Utilities	ELFV	El5-Ener	ЭЛ5Энер ао	ЭЛ5-Энерго ПАО
-Electric Utilities	FEES	FGC ROSSETI	Россети	ФСК - Россети ПАО
-Electric Utilities	HYDR	RusGidro	РусГидро	ПАО РусГидро
-Electric Utilities	IRAO	Inter RAO ao	ИнтерРАОао	Интер РАО ПАО ао
-Electric Utilities	IRGZ	JSC Irkutskenergo	Иркутскэнерго	ПАО Иркутскэнерго
-Electric Utilities	KBSB	TNS energo Kuban Company	ТНСэКубань	ТНС энерго Кубань ПАО ао
-Electric Utilities	KCHE	Kamchatskenergo	КамчатЭ ао	Камчатскэнерго ПАО ао
-Electric Utilities	KCHEP	Kamchatskenergo (pref)	КамчатЭ ап	Камчатскэнерго ПАО ап
-Electric Utilities	KGKC	Kurganskaja Gener.Kompanija	КурганГКао	Курганская генер.комп.ПАО ао
-Electric Utilities	KGKCP	Kurganskaja Gener.Kompanija ap	КурганГКап	Курганская генер. комп. ПАО ап
-Electric Utilities	KLSB	Kalugsk. Sbyt. Company ao	КалужскСК	ао Калужская сбыт.комп.ПАО
-Electric Utilities	KRSB	Krashojarskenergosbyt	Красэсб ао	Красноярскэнергосбыт ао
-Electric Utilities	KRSBP	Krashojarskenergosbyt pref.	Красэсб ап	Красноярскэнергосбыт ап
-Electric Utilities	KUBE	Rosseti Kuban	РСетКубань	Россети Кубань ПАО
-Electric Utilities	LPSB	LESK ao	ЛЭСК ао	Липецкая энергосбыт.ком.ОАО ао
-Electric Utilities	LSNG	Rosseti LenEnrg	РСетиЛЭ	Россети Ленэнерго ПАО-ао
-Electric Utilities	LSNGP	Rosseti LenEnrg (pref)	РСетиЛЭ-п	Россети Ленэнерго ПАО-ап
-Electric Utilities	MAGE	Magadanenergo ao	МагадЭн ао	Магаданэнерго ПАО ао
-Electric Utilities	MAGEP	Magadanenergo ap	МагадЭн ап	Магаданэнерго ПАО ап
-Electric Utilities	MISB	TNS energo Mariy El ao	ТНСэнМарЭл	ТНС энерго Марий Эл ПАО ао
-Electric Utilities	MISBP	TNS energo Mariy El (pref)	ТНСэМаЭл-п	ТНС энерго Марий Эл ПАО ап
-Electric Utilities	MRKC	Rosseti Centr	РоссЦентр	ПАО Россети Центр ао
-Electric Utilities	MRKK	Rosseti Severnyy Kavkaz ao	Россети СК	Россети Сев. Кавказ ао
-Electric Utilities	MRKP	Rosseti Centr i Privoljye ao	РСетиЦП ао	Россети Центр и Приволжье ао
-Electric Utilities	MRKS	Rosseti Sibir	РсетСиб ао	Россети Сибирь ао
-Electric Utilities	MRKU	MRSK Urala ao	МРСК Ур	МРСК Урала (ОАО) ао
-Electric Utilities	MRKV	Rosseti Volga	РсетВол ао	Россети Волга ао
-Electric Utilities	MRKY	Rosseti South ao	РоссЮг ао	Россети Юг (ПАО) ао
-Electric Utilities	MRKZ	Rosseti Severo-Zapad	РСетиСЗ ао	ПАО Россети Северо-Запад ао
-Electric Utilities	MRSB	Mordovskaya EnergoSbyt Comp.	МордЭнСб	Мордовск.энергсбыт.комп.ПАО ао
-Electric Utilities	MSNG	MosEnrg	+МосЭнерго	МосЭнерго акции обыкн.
-Electric Utilities	MSRS	Rosseti Moscow Region	РСетиМР ао	ПАО Россети Моск.рег. ао
-Electric Utilities	NNSB	TNS energo Nizhniy-Novgorod ao	ТНСэнНН ао	ТНС энерго Нижний Новг.ПАО ао
-Electric Utilities	NNSBP	TNS energo Nizhniy Novg. pref	ТНСэнНН ап	ТНС энерго Нижний Новг.ПАО ап
-Electric Utilities	OGKB	OGK-2	ОГК-2 ао	ОГК-2 ПАО ао
-Electric Utilities	PMSB	Perm' EnergoSbyt	ПермьЭнСб	Пермэнергосбыт ПАО ао
-Electric Utilities	PMSBP	Perm' EnergoSbyt (pref)	ПермьЭнС-п	Пермэнергосбыт ПАО ап
-Electric Utilities	RSTI	PJSC ROSSETI, ordinary shares	Россети ао	ПАО Россети ао
-Electric Utilities	RSTIP	PJSC ROSSETI, pref shares	Россети ап	ПАО Россети ап
-Electric Utilities	RTSB	TNS energo Rostov-na-Dony ao	ТНСэнРст	ТНС энерго Ростов. ПАО ао
-Electric Utilities	RTSBP	TNS energo Rostov-na-Dony(prf)	ТНСэнРст-п	ТНС энерго Ростов. ПАО ап
-Electric Utilities	RZSB	JSC Ryazanenergosbyt	РязЭнСб	Рязанская энергосб.комп ПАО
-Electric Utilities	SAGO	SamaraEnergo ao	СамарЭн-ао	Самараэнерго (ПАО) - ао
-Electric Utilities	SAGOP	SamaraEnergo(pref)	СамарЭн-ап	Самараэнерго (ПАО) - ап
-Electric Utilities	SARE	SaratovEnergo ao	СаратЭн-ао	Саратовэнерго(ПАО)-ао
-Electric Utilities	SAREP	SaratovEnergo (pref)	СаратЭн-ап	Саратовэнерго(ПАО)-ап
-Electric Utilities	SLEN	Sakhalinenergo ao	Сахэнер ао	ПАО Сахалинэнерго ао
-Electric Utilities	STSB	StavropolEnergoSbyt	СтаврЭнСб	Ставрополэнергосбыт ПАО ао
-Electric Utilities	STSBP	StavropolEnergoSbyt (pref)	СтаврЭнСбп	Ставрополэнергосбыт ПАО ап
-Electric Utilities	TASB	Tambov EnergoSbyt Company	ТамбЭнСб	ао Тамбов.энергсбыт.комп. ПАО
-Electric Utilities	TASBP	Tambov EnergoSbyt Comp. (pref)	ТамбЭнСб-п	ап Тамбов.энергсбыт.комп. ПАО
-Electric Utilities	TGKA	TGK-1	ТГК-1	ао ПАО ТГК-1
-Electric Utilities	TGKB	TGK-2	ТГК-2	ао ПАО ТГК-2
-Electric Utilities	TGKBP	TGK-2 pref	ТГК-2 ап	ап ПАО ТГК-2
-Electric Utilities	TGKD	PJSC Quadra - Power Generation	Квадра	ПАО Квадра
-Electric Utilities	TGKN	TGK-14	ТГК-14	ао ПАО ТГК-14
-Electric Utilities	TNSE	PAO GK TNS energo ao	ТНСэнрг ао	ПАО ГК ТНС энерго ао
-Electric Utilities	TORS	Tomsk raspredelit. komp ao	ТРК ао	ао Томская распределит.комп.
-Electric Utilities	TORSP	Tomsk raspredelit. komp ap	ТРК ап	ап Томская распределит.комп.
-Electric Utilities	UPRO	Unipro PAO ao	Юнипро ао	Юнипро ПАО ао
-Electric Utilities	VGSB	Volgograd Energo Sbyt	ВолгЭнСб	Волгоград.энергосбыткомп ПАО ао
-Electric Utilities	VGSBP	Volgograd Energo Sbyt (pref)	ВолгЭнСб-п	Волгоград.энергосбыткомп ПАО ап
-Electric Utilities	VRSB	TNS energo Voroneg ao	ТНСэнВорон	ТНС энерго Воронеж ПАО ао
-Electric Utilities	VRSBP	TNS energo Voroneg ap	ТНСэнВор-п	ТНС энерго Воронеж ПАО ап
-Electric Utilities	YKEN	YakutskEnergo	Якутскэнрг	АК Якутскэнерго (ПАО) ао
-Electric Utilities	YKENP	YakutskEnergo ap	Якутскэн-п	АК Якутскэнерго (ПАО) ап
-Electric Utilities	YRSB	TNS energo Yaroslavl' ao	ТНСэнЯр	ТНС энерго Ярославль ПАО ао
-Electric Utilities	YRSBP	TNS energo Yaroslavl' (pref)	ТНСэнЯр-п	ТНС энерго Ярославль ПАО ап
-Energy (Oil, Gas, Coal)	BANE	Bashneft ANK ao	Башнефт ао	Башнефть АНК ао
-Energy (Oil, Gas, Coal)	BANEP	Bashneft ANK ap	Башнефт ап	Башнефть АНК ап
-Energy (Oil, Gas, Coal)	BLNG	Belon ao	Белон ао	Белон ОАО ао
-Energy (Oil, Gas, Coal)	CHGZ	RN-Western Siberia ao	РН-ЗапСиб	РН-Западная Сибирь ПАО ао
-Energy (Oil, Gas, Coal)	GAZP	Gazprom	ГАЗПРОМ ао	Газпром (ПАО) ао
-Energy (Oil, Gas, Coal)	GAZS	Gaz-servis ao	ГАЗ-сервис	ГАЗ-сервис (ПАО) ао
-Energy (Oil, Gas, Coal)	JNOS	Slavneft-JANOS	Славн-ЯНОС	Славнефть-ЯНОС (ПАО) ао
-Energy (Oil, Gas, Coal)	JNOSP	Slavneft-JANOS (pref)	Слав-ЯНОСп	Славнефть-ЯНОС (ПАО) ап
-Energy (Oil, Gas, Coal)	KBTK	PJSC KTC	ПАО КТК	ПАО КТК
-Energy (Oil, Gas, Coal)	KRKN	Saratovskiy NPZ ao	СаратНПЗ	Саратовский НПЗ ПАО ао
-Energy (Oil, Gas, Coal)	KRKNP	Saratovskiy NPZ ap	СаратНПЗ-п	Саратовский НПЗ ПАО ап
-Energy (Oil, Gas, Coal)	LKOH	LUKOIL	ЛУКОЙЛ	НК ЛУКОЙЛ (ПАО) - ао
-Energy (Oil, Gas, Coal)	MFGS	Megion	Мегион-ао	ао Славнефть-Мегионнефтегаз
-Energy (Oil, Gas, Coal)	MFGSP	Megion (pref)	Мегион-ап	ап Славнефть-Мегионнефтегаз
-Energy (Oil, Gas, Coal)	NVTK	NOVATEK	Новатэк ао	ПАО НОВАТЭК ао
-Energy (Oil, Gas, Coal)	RNFT	RussNeft NK	РуссНфт ао	РуссНефть НК ПАО ао
-Energy (Oil, Gas, Coal)	ROSN	Rosneft	Роснефть	ПАО НК Роснефть
-Energy (Oil, Gas, Coal)	RTGZ	Gazprom gazorasp. Rostov ao	ГазпРнД ао	Газпром газорасп Р-н-Д ПАО ао
-Energy (Oil, Gas, Coal)	SIBN	Gazprom neft	Газпрнефть	Газпром нефть ПАО ао
-Energy (Oil, Gas, Coal)	SNGS	Surgut	Сургнфгз	Сургутнефтегаз ПАО акции об.
-Energy (Oil, Gas, Coal)	SNGSP	Surgut-pref	Сургнфгз-п	Сургутнефтегаз ПАО ап
-Energy (Oil, Gas, Coal)	TATN	Tatneft-3	Татнфт 3ао	ПАО Татнефть ао
-Energy (Oil, Gas, Coal)	TATNP	Tatneft (pref)	Татнфт 3ап	ПАО Татнефть ап 3 вып.
-Energy (Oil, Gas, Coal)	TRNFP	Transneft (pref)	Транснф ап	Транснефть ПАО акц.пр.
-Energy (Oil, Gas, Coal)	UKUZ	Uzhnyi Kuzbass	ЮжКузб. ао	Южный Кузбасс ПАО ао
-Energy (Oil, Gas, Coal)	VJGZ	Var'eganneftegaz ao	Варьеган	ННК-Варьеганнефтегаз ПАО ао
-Energy (Oil, Gas, Coal)	VJGZP	Var'eganneftegaz ap	Варьеган-п	ННК-Варьеганнефтегаз ПАО ап
-Energy (Oil, Gas, Coal)	YAKG	YaTEK ao	ЯТЭК ао	Якутская топл.-энерг. комп. ао
-Financials	ACKO	ASKO ao	АСКО ао	АСКО ПАО ао
-Financials	ARSA	UK Arsagera	Арсагера	УК Арсагера ПАО-ао
-Financials	AVAN	AKB AVANGARD	Авангрд-ао	АКБ АВАНГАРД ПАО ао
-Financials	BSPB	BSP	БСП ао	ПАО Банк Санкт-Петербург ао
-Financials	BSPBP	BSP ap	БСП ап	Банк Санкт-Петербург ап
-Financials	CARM	STG	СТГ	СТГ ао
-Financials	CBOM	MKB ao	МКБ ао	МКБ ПАО ао
-Financials	FTRE	PJSC FG FUTURE	ФГ БУДУЩЕЕ	ПАО ФГ БУДУЩЕЕ
-Financials	GAZC	Gazkon ao	ГАЗКОН-ао	ГАЗКОН (ПАО) ао
-Financials	GAZT	GAZ-Tek PAO ao	ГАЗ-Тек ао	ГАЗ-Тек ПАО ао
-Financials	KUZB	Bank Kuzneckiy	КузнецкийБ	Банк Кузнецкий ПАО ао
-Financials	MOEX	MoscowExchange	МосБиржа	ПАО Московская Биржа
-Financials	OFCB	PJSC Bank Otkritie Financial Corporation	Банк Открытие	Банк Финансовая Корпорация Открытие
-Financials	OPIN	PJSC INGRAD	ИНГРАД	ПАО ИНГРАД
-Financials	PRMB	AKB Primorye	Приморье	АКБ Приморье ао
-Financials	PSBR	PJSC Promsvyazbank	Промсвязьбанк	ПАО Промсвязьбанк
-Financials	QIWI	QIWI PLC	iQIWI	QIWI PLC
-Financials	RDRB	RosDor Bank ao	РДБанк ао	РоссийскийДорож Банк ПАО ао
-Financials	RENI	Renaissance Insurance	Ренессанс	Ренессанс Страхование ао
-Financials	RGSS	Rosgosstrakh ao	РГС СК ао	Росгосстрах СК ПАО ао
-Financials	ROSB	ROSBANK	Росбанк ао	РОСБАНК ПАО ао
-Financials	RUSI	RUSS-INVEST IC ao	ИКРУСС-ИНВ	РУСС-ИНВЕСТ ИК ПАО ао
-Financials	SBER	Sberbank	Сбербанк	Сбербанк России ПАО ао
-Financials	SBERP	Sberbank (pref)	Сбербанк-п	Сбербанк России ПАО ап
-Financials	SFIN	SFI ao	ЭсЭфАй ао	ЭсЭфАй ПАО ао
-Financials	SPBE	SPB Exchange	СПБ Биржа	СПБ Биржа ао
-Financials	TCSG	GDR TCS Group Holding ORD SHS	TCS-гдр	ГДР TCS Group Holding ORD SHS
-Financials	UCSS	PAO OKS ao	ОКС ао	ПАО ОКС ао
-Financials	USBN	BANK URALSIB ao	УралСиб ао	БАНК УРАЛСИБ ПАО ао
-Financials	VTBR	VTB	ВТБ ао	ао ПАО Банк ВТБ
-Financials	VZRZ	PJSC Vozrozhdenie Bank	Банк Возрождение	ПАО Банк Возрождение
-Financials	WTCM	CMT	ЦМТ ао	Центр междун. торговли ПАО ао
-Financials	WTCMP	CMT (pref)	ЦМТ ап	Центр междун. торговли ПАО ап
-Health Care	APTK	Apteki 36,6	Аптеки36и6	ПАО Аптечная сеть 36,6 ао
-Health Care	GECO	GENETICO	iГЕНЕТИКО	ЦГРМ ГЕНЕТИКО ао
-Health Care	GEMA	IMCB PJSC	iММЦБ ао	ПАО ММЦБ ао
-Health Care	GEMC	GDR UNITED MEDICAL GROUP GEMC	GEMC-гдр	ГДР ЕвроМедЦентр GEMC
-Health Care	ISKJ	HSCI ao	iИСКЧ ао	ПАО ИСКЧ
-Health Care	LIFE	Farmsintez ao	iФармсинтз	Фармсинтез ПАО ао
-Health Care	MDMG	GDR MD Medical Group Inv. PLC	MDMG Мать и дитя-гдр	ГДР MD Medical Group Inv. PLC  Мать и дитя
-Health Care	OTCP	PJSC OtisPharm	Отисифарм	Отисифарм
-Industrials	AMEZ	Ashinckiy metzavod PAO	АшинскийМЗ	Ашинский метзавод ПАО ао
-Industrials	CHKZ	CKPZ	ЧКПЗ ао	ЧКПЗ ПАО ао
-Industrials	DIOD	Zavod DIOD ao	ЗаводДИОД	Завод ДИОД ПАО ао
-Industrials	DZRD	DZRD ao	ДонскЗР	Донской завод радиодеталей ао
-Industrials	DZRDP	DZRD pref.	ДонскЗР п	Донской завод радиодеталей ап
-Industrials	EELT	European Eltech	ЕвроЭлтех	ЕвропЭлектротехника ПАО ао
-Industrials	GAZA	Gaz ao	ГАЗ ао	ГАЗ ПАО ао
-Industrials	GAZAP	Gaz (pref)	ГАЗ ап	ГАЗ ПАО ап
-Industrials	HMSG	GDR Hydraulic M&S Gr ORD SHS	HMSG-гдр	ГДР Hydraulic M&S Gr ORD SHS
-Industrials	KMAZ	KAMAZ	КАМАЗ	КАМАЗ ПАО
-Industrials	KMEZ	Kovrov Mech. Zavod	КМЗ	Ковровский механический завод
-Industrials	KRKOP	TKZ Krasny Kotelshchik ap	ТКЗКК ап	ТКЗ Красный котельщик ПАО ап
-Industrials	KTSB	KSB	КСБ ао	Костромск.сбыт.комп ПАО
-Industrials	KTSBP	KSB ap	КСБ ап	Костромск.сбыт.комп ПАО
-Industrials	LVHK	Levenguk ao	Левенгук	Левенгук ПАО ао
-Industrials	MSTT	Mostotrest	Мостотрест	ПАО МОСТОТРЕСТ ао
-Industrials	NAUK	NPO Nauka ao	iНПОНаука	НПО Наука ао
-Industrials	NFAZ	NEFAZ PAO ao	НЕФАЗ	НЕФАЗ ПАО ао
-Industrials	NKSH	Nizhnekamskshina ao	Нижкамшина	Нижнекамскшина ПАО ао
-Industrials	NSVZ	Nauka-Svyaz ao	iНаукаСвяз	Наука-Связь ПАО ао
-Industrials	OMZZP	OMZ (pref)	ОМЗ-ап	ап Объединён. маш. заводы
-Industrials	PAZA	Pavlovo Bus ao	ПавлАвт ао	Павловский автобус ПАО ао
-Industrials	RKKE	RKK Energia	ЭнергияРКК	РКК Энергия им.С.П.Королева ао
-Industrials	SGZH	Segezha	Сегежа	Сегежа ао
-Industrials	TUZA	Tuimaz. Zavod Avtobetonovozov	ТЗА ао	Туймаз. завод автобетоновозов
-Industrials	UNAC	Ob.aviastroitelnaya korp.	iАвиастКао	Об.авиастр.корп. ПАО ао
-Industrials	URKZ	Uralskaya kuznica ao	УрКузница	ПАО Уральская кузница ао
-Industrials	UWGN	PJSC RPC UWC	НПК ОВК	ПАО НПК ОВК
-Industrials	VSYD	Viborgskii sudostr. Zavod ao	ВыбСудЗ ао	Выборгский Суд.Завод ПАО ао
-Industrials	VSYDP	Viborgskii sudostr. Zavod ap	ВыбСудЗ ап	Выборгский Суд.Завод ПАО ап
-Industrials	ZILL	ZIL ao	ЗИЛ ао	Завод им. И.А.Лихачева ПАО ао
-Industrials	ZVEZ	Zvezda ao	ЗВЕЗДА ао	ЗВЕЗДА ПАО ао
-Information Technologies	CIAN	ADR Cian PLC ORD SHS	CIAN-адр	АДР Cian PLC ORD SHS
-Information Technologies	HHRU	ADR HeadHunter Group ORD SHS	iHHRU-адр	АДР HeadHunter Group ORD SHS
-Information Technologies	MAIL	Mail.Ru	Mail.Ru	Mail.Ru
-Information Technologies	OZON	ADS Ozon Holdings PLC ORD SHS	OZON-адр	АДР Ozon Holdings PLC ORD SHS
-Information Technologies	POSI	PJSC Positive Group	iПозитив	Группа Позитив ао
-Information Technologies	SFTL	GDR Noventiq Holdings ORD SHS	iNVTQ-гдр	ГДР Noventiq Holdings ORD SHS
-Information Technologies	VKCO	GDR VK Company Limited ORD SHS	VK-гдр	ГДР VK Company Limited ORD SHS
-Information Technologies	YNDX	PLLC Yandex N.V.	Yandex clA	PLLC Yandex N.V. class A shs
-Metals and Mining	ALRS	ALROSA ao	АЛРОСА ао	АЛРОСА ПАО ао
-Metals and Mining	BRZL	Buryatzoloto ao	БурЗолото	Бурятзолото ПАО ао
-Metals and Mining	CHMF	Severstal - ao	СевСт-ао	Северсталь (ПАО)ао
-Metals and Mining	CHMK	CMK	ЧМК ао	ЧМК ПАО ао
-Metals and Mining	CHZN	PJSC Chelyabinsk Zinc Plant	Челябинский цинковый завод	ПАО Челябинский цинковый завод
-Metals and Mining	ELTZ	Elektrotsink ao	Электрцинк	Электроцинк ПАО ао
-Metals and Mining	GMKN	NorNickel GMK	ГМКНорНик	ГМК Нор.Никель ПАО ао
-Metals and Mining	IGST	Izhstal 2ao	Ижсталь2ао	Ижсталь ПАО ао 2в.
-Metals and Mining	IGSTP	Izhstal ap	Ижсталь ап	Ижсталь ПАО ап
-Metals and Mining	KMTZ	KGIW ao	КосогМЗ ао	Косогорский метал. завод ПАО
-Metals and Mining	KOGK	Korshunovskii GOK	КоршГОК ао	Коршуновский ГОК ПАО ао
-Metals and Mining	LNZL	Lenzoloto	Лензолото	Лензолото ПАО ао
-Metals and Mining	LNZLP	Lenzoloto pref.	Лензол. ап	Лензолото ПАО ап
-Metals and Mining	MAGN	MMK	ММК	Магнитогорск.мет.комб ПАО ао
-Metals and Mining	MGNZ	SMZ	СМЗ-ао	Соликамский магн.завод(ОАО)ао
-Metals and Mining	MTLR	Mechel	Мечел ао	Мечел ПАО ао
-Metals and Mining	MTLRP	Mechel pref.	Мечел ап	Мечел ПАО ап
-Metals and Mining	NLMK	NLMK ao	НЛМК ао	ПАО НЛМК ао
-Metals and Mining	PLZL	Polus	Полюс	Полюс ПАО ао
-Metals and Mining	POGR	Petropavlovsk PLC	Петропавловск ПиЭлСи	Петропавловск ПиЭлСи
-Metals and Mining	POLY	Polymetal International plc	Polymetal	Polymetal International plc
-Metals and Mining	RASP	Raspadskaya	Распадская	ПАО Распадская ао
-Metals and Mining	ROLO	Rusolovo PAO ao	Русолово	Русолово ПАО ао
-Metals and Mining	RUAL	RUSAL ao	РУСАЛ ао	РУСАЛ ОК МКПАО ао
-Metals and Mining	SELG	Seligdar	Селигдар ао	ПАО Селигдар ао
-Metals and Mining	SELGP	Seligdar pref	Селигдар ап	ПАО Селигдар ап
-Metals and Mining	TRMK	TMK ao	ТМК ао	ПАО ТМК
-Metals and Mining	UNKL	Uzhno-Uralskiy nikel. komb. ao	ЮУНК ао	Южно-Уральский никел. комб. ао
-Metals and Mining	VSMO	Corp. VSMPO-AVISMA ao	ВСМПО-АВСМ	Корп. ВСМПО-АВИСМА (ПАО) ао
-Telecommunication Services	BISVP	BashInformSvyaz ap	БашИнСв ап	Башинформсвязь(ПАО) ап
-Telecommunication Services	CNTL	Centrlnyi Telegraf	Телеграф	Центральный Телеграф ПАО ао
-Telecommunication Services	CNTLP	Centrlnyi Telegraf ap	Телеграф-п	Центральный Телеграф ПАО ап
-Telecommunication Services	MFON	Megafon	Мегафон	Мегафон
-Telecommunication Services	MGTS	MGTS-5	МГТС-5ао	ПАО МГТС ао (5 в)
-Telecommunication Services	MGTSP	MGTS-4	МГТС-4ап	ПАО МГТС ап (4 в)
-Telecommunication Services	MTSS	MTS	МТС-ао	Мобильные ТелеСистемы ПАО ао
-Telecommunication Services	RTKM	Rostelecom	Ростел -ао	Ростелеком (ПАО) ао.
-Telecommunication Services	RTKMP	Rostelecom- (pref)	Ростел -ап	Ростелеком (ПАО) ап.
-Telecommunication Services	TTLK	Tattelekom	Таттел. ао	Таттелеком ПАО ао
-Telecommunication Services	VEON-RX	VEON Ltd. ORD SHS	VEON	VEON Ltd. ORD SHS
-Transportation	AFLT	Aeroflot	Аэрофлот	Аэрофлот-росс.авиалин(ПАО)ао
-Transportation	FESH	DVMP ao	ДВМП ао	ДВ морское пароходство ПАО ао
-Transportation	FLOT	Sovcomflot	Совкомфлот	Совкомфлот ао
-Transportation	GLTR	GDR Globaltrans Inves ORD SHS	GLTR-гдр	ГДР Globaltrans Invest ORD SHS
-Transportation	GTRK	GTM	ГТМ ао	ПАО ГТМ ао
-Transportation	NKHP	NKHP ao	НКХП ао	НКХП ПАО ао
-Transportation	NMTP	NMTP	НМТП ао	НМТП (ПАО) ао
-Transportation	TRCN	PJSC TransContainer	ТрансКонтейнер	ПАО ТрансКонтейнер
-Transportation	UTAR	UTAir Aviacompany	ЮТэйр ао	Авиакомпания ЮТэйр (ПАО) ао
-Others	IRKT	IRKUT-3	ИРКУТ-3	Корпорация ИРКУТ ПАО ак.об.-3
+parents	labels	shortname	shortname_rus	name_rus	history_from	history_till
+	Moscow Exchange		Московская биржа			
+Moscow Exchange	Chemicals and Pertochemicals		Химия и нефтехимия			
+Moscow Exchange	Conglomerate		Холдинги			
+Moscow Exchange	Construction (Development)		Строительство			
+Moscow Exchange	Consumer Discretionary (Retail)		Потребительский сектор			
+Moscow Exchange	Electric Utilities		Электроэнергетика			
+Moscow Exchange	Energy (Oil, Gas, Coal)		Энергоресурсы (Нефть, газ, уголь)			
+Moscow Exchange	Financials		Финансы			
+Moscow Exchange	Health Care		Здравоохранение			
+Moscow Exchange	Industrials		Промышленность			
+Moscow Exchange	Information Technologies		Информационные технологии			
+Moscow Exchange	Metals and Mining		Металлы и добыча			
+Moscow Exchange	Telecommunication Services		Телекоммуникации			
+Moscow Exchange	Transportation		Транспорт			
+Moscow Exchange	Others		Прочее			
+Chemicals and Pertochemicals	AKRN	Acron	Акрон	Акрон ПАО ао	2014-06-09	
+Chemicals and Pertochemicals	HIMCP	Himprom ap	Химпром ап	Химпром ПАО ап	2014-06-09	
+Chemicals and Pertochemicals	KAZT	Kuib.Azot ao	Куйбазот	Куйбышевазот ПАО ао	2014-06-09	
+Chemicals and Pertochemicals	KAZTP	Kuibishevazot ap	Куйбазот-п	Куйбышевазот ПАО ап	2014-06-09	
+Chemicals and Pertochemicals	KZOS	PAO Organicheskiy Sintez ao	ОргСинт ао	ПАО Органический синтез ао	2014-06-09	
+Chemicals and Pertochemicals	KZOSP	PAO Organicheskiy Sintez ap	ОргСинт ап	ПАО Органический синтез ап	2014-06-09	
+Chemicals and Pertochemicals	NKNC	Niznekamskneftekhim ao	НКНХ ао	Нижнекамскнефтехим ПАО ао	2014-06-09	
+Chemicals and Pertochemicals	NKNCP	Niznekamskneftekhim (pref)	НКНХ ап	Нижнекамскнефтехим ПАО ап	2014-06-09	
+Chemicals and Pertochemicals	PHOR	PhosAgro ao	ФосАгро ао	ФосАгро ПАО ао	2013-07-08	
+Chemicals and Pertochemicals	URKA	UralKalij	УралКалий	УралКалий	2013-03-25	2022-12-13
+Chemicals and Pertochemicals	VLHZ	VHZ	ВХЗ-ао	Владимирский химич.з-д(ПАО) ао	2014-06-09	
+Conglomerate	AFKS	AFK Sistema	Система ао	АФК Система ПАО ао	2014-06-09	
+Conglomerate	ENPG	EN+ GROUP IPJSC ORD SHS	ЭН+ГРУП ао	МКПАО ЭН+ ГРУП ао	2020-02-18	
+Conglomerate	ENPL	EN+ GROUP IPJSC ORD SHS (London)	ЭН+ГРУП ао (Лондон)	МКПАО ЭН+ ГРУП ао (Лондон)	2017-11-08	2020-04-17
+Construction (Development)	ETLN	GDR ETALON GROUP PLC ORD SHS	ETLN-гдр	ГДР ETALON GROUP PLC ORD SHS	2020-02-03	
+Construction (Development)	INGR	INGRAD	ИНГРАД ао	ИНГРАД ПАО ао	2020-03-30	
+Construction (Development)	LSRG	LSR	ЛСР ао	Группа ЛСР ПАО ао	2013-07-08	
+Construction (Development)	PIKK	PIK SZ	ПИК ао	ПИК СЗ (ПАО) ао	2013-07-08	
+Construction (Development)	SMLT	Samolet	Самолет ао	ГК Самолет ао	2020-10-29	
+Consumer Discretionary (Retail)	ABRD	Abrau-Durso ao	АбрауДюрсо	Абрау-Дюрсо ПАО ао	2014-06-09	
+Consumer Discretionary (Retail)	AGRO	GDR ROS AGRO PLC ORD SHS	РосАгро-гдр	ГДР ROS AGRO PLC ORD SHS	2014-12-01	
+Consumer Discretionary (Retail)	AQUA	INARCTIKA	ИНАРКТИКА	ПАО ИНАРКТИКА	2015-06-10	
+Consumer Discretionary (Retail)	AVAZ	PJSC AVTOVAZ, ordinary shares	Автоваз ао	ПАО Автоваз ао	2014-06-09	2019-04-09
+Consumer Discretionary (Retail)	AVAZP	PJSC AVTOVAZ, pref shares	Автоваз ап	ПАО Автоваз ап	2014-06-09	2019-04-09
+Consumer Discretionary (Retail)	BELU	Beluga Group ao	Белуга ао	Белуга Групп ПАО ао	2017-08-01	
+Consumer Discretionary (Retail)	DIXY	Dixy	Дикси	Дикси	2013-11-06	2018-06-27
+Consumer Discretionary (Retail)	DSKY	Detsky mir	ДетскийМир	ПАО Детский мир	2017-02-10	
+Consumer Discretionary (Retail)	FIVE	GDR X5 RetailGroup N.V.ORD SHS	FIVE-гдр	ГДР X5 RetailGroup N.V.ORD SHS	2018-02-01	
+Consumer Discretionary (Retail)	FIXP	GDR FixPrice Group PLC ORD SHS	FIXP-гдр	ГДР FixPrice Group PLC ORD SHS	2021-03-10	
+Consumer Discretionary (Retail)	GCHE	Cherkizovo Group ao	ЧеркизГ-ао	Группа Черкизово ПАО-ао	2013-09-02	
+Consumer Discretionary (Retail)	KROT	KrasnyiOctyabr	КрасОкт-ао	КрасныйОктябрь ПАО - ао	2014-06-09	
+Consumer Discretionary (Retail)	KROTP	KrasnyiOctabr-1(pr)	КрасОкт-1п	КрасныйОктябрь-1п	2014-06-09	
+Consumer Discretionary (Retail)	LNTA	Lenta IPJSC ORD SHS	Лента ао	Лента МКПАО ао	2014-06-09	2022-04-18
+Consumer Discretionary (Retail)	LENT	Lenta IPJSC ORD SHS	Лента ао	Лента МКПАО ао	2021-12-01	
+Consumer Discretionary (Retail)	MGNT	Magnit	Магнит ао	Магнит ПАО ао	2013-07-08	
+Consumer Discretionary (Retail)	MVID	M.video	М.видео	М.видео ПАО ао	2014-06-09	
+Consumer Discretionary (Retail)	OKEY	GDR OKEY Group ORD SHS	OKEY-гдр	ГДР OKEY Group S.A. ORD SHS	2020-12-14	
+Consumer Discretionary (Retail)	ORUP	PJSC OR ordinary shares	ПАО ОР ао	ПАО ОР ао	2021-03-26	2022-02-14
+Consumer Discretionary (Retail)	PRTK	PROTEK	ПРОТЕК	ПРОТЕК	2014-06-09	2020-12-29
+Consumer Discretionary (Retail)	RBCM	GK RBK ao	ГК РБК ао	ГК РБК ПАО ао	2014-06-09	
+Consumer Discretionary (Retail)	ROST	ROSINTER RESTAURANTS ao	РОСИНТЕРао	РОСИНТЕР РЕСТОРАНТС (ПАО)	2014-06-09	
+Consumer Discretionary (Retail)	SVAV	Sollers Avto	СОЛЛЕРС	ПАО СОЛЛЕРС	2014-06-09	
+Consumer Discretionary (Retail)	SVET	Svetofor Group	Светофор	Светофор Групп ао	2021-01-15	
+Consumer Discretionary (Retail)	WUSH	WHOOSH Holding	iВУШХолднг	ВУШ Холдинг ао	2022-12-14	
+Electric Utilities	ASSB	Astrakhan Energo Sbyt	АстрЭнСб	Астраханская ЭСК ПАО	2014-06-09	
+Electric Utilities	DVEC	DEC	ДЭК ао	ДЭК ПАО ао	2014-06-09	
+Electric Utilities	ELFV	El5-Ener	ЭЛ5Энер ао	ЭЛ5-Энерго ПАО	2023-03-29	
+Electric Utilities	ENRU	PJSC Enel Russia	ПАО Энел Россия	ПАО Энел Россия	2014-12-01	2023-03-28
+Electric Utilities	FEES	FGC ROSSETI	Россети	ФСК - Россети ПАО	2014-06-09	
+Electric Utilities	HYDR	RusGidro	РусГидро	ПАО РусГидро	2013-03-25	
+Electric Utilities	IRAO	Inter RAO ao	ИнтерРАОао	Интер РАО ПАО ао	2013-07-08	
+Electric Utilities	IRGZ	JSC Irkutskenergo	Иркутскэнерго	ПАО Иркутскэнерго	2014-06-09	2023-02-28
+Electric Utilities	KBSB	TNS energo Kuban Company	ТНСэКубань	ТНС энерго Кубань ПАО ао	2014-06-09	
+Electric Utilities	KCHE	Kamchatskenergo	КамчатЭ ао	Камчатскэнерго ПАО ао	2014-06-09	
+Electric Utilities	KCHEP	Kamchatskenergo (pref)	КамчатЭ ап	Камчатскэнерго ПАО ап	2014-06-09	
+Electric Utilities	KGKC	Kurganskaja Gener.Kompanija	КурганГКао	Курганская генер.комп.ПАО ао	2014-06-09	
+Electric Utilities	KGKCP	Kurganskaja Gener.Kompanija ap	КурганГКап	Курганская генер. комп. ПАО ап	2014-06-09	
+Electric Utilities	KLSB	Kalugsk. Sbyt. Company ao	КалужскСК	ао Калужская сбыт.комп.ПАО	2014-06-09	
+Electric Utilities	KRSB	Krashojarskenergosbyt	Красэсб ао	Красноярскэнергосбыт ао	2014-06-09	
+Electric Utilities	KRSBP	Krashojarskenergosbyt pref.	Красэсб ап	Красноярскэнергосбыт ап	2014-06-09	
+Electric Utilities	KUBE	Rosseti Kuban	РСетКубань	Россети Кубань ПАО	2014-06-09	
+Electric Utilities	LPSB	LESK ao	ЛЭСК ао	Липецкая энергосбыт.ком.ОАО ао	2014-06-09	
+Electric Utilities	LSNG	Rosseti LenEnrg	РСетиЛЭ	Россети Ленэнерго ПАО-ао	2014-06-09	
+Electric Utilities	LSNGP	Rosseti LenEnrg (pref)	РСетиЛЭ-п	Россети Ленэнерго ПАО-ап	2014-06-09	
+Electric Utilities	MAGE	Magadanenergo ao	МагадЭн ао	Магаданэнерго ПАО ао	2014-06-09	
+Electric Utilities	MAGEP	Magadanenergo ap	МагадЭн ап	Магаданэнерго ПАО ап	2014-06-09	
+Electric Utilities	MISB	TNS energo Mariy El ao	ТНСэнМарЭл	ТНС энерго Марий Эл ПАО ао	2014-06-09	
+Electric Utilities	MISBP	TNS energo Mariy El (pref)	ТНСэМаЭл-п	ТНС энерго Марий Эл ПАО ап	2014-06-09	
+Electric Utilities	MRKC	Rosseti Centr	РоссЦентр	ПАО Россети Центр ао	2013-09-02	
+Electric Utilities	MRKK	Rosseti Severnyy Kavkaz ao	Россети СК	Россети Сев. Кавказ ао	2014-06-09	
+Electric Utilities	MRKP	Rosseti Centr i Privoljye ao	РСетиЦП ао	Россети Центр и Приволжье ао	2013-09-02	
+Electric Utilities	MRKS	Rosseti Sibir	РсетСиб ао	Россети Сибирь ао	2014-06-09	
+Electric Utilities	MRKU	MRSK Urala ao	МРСК Ур	МРСК Урала (ОАО) ао	2014-06-09	
+Electric Utilities	MRKV	Rosseti Volga	РсетВол ао	Россети Волга ао	2014-06-09	
+Electric Utilities	MRKY	Rosseti South ao	РоссЮг ао	Россети Юг (ПАО) ао	2014-06-09	
+Electric Utilities	MRKZ	Rosseti Severo-Zapad	РСетиСЗ ао	ПАО Россети Северо-Запад ао	2014-06-09	
+Electric Utilities	MRSB	Mordovskaya EnergoSbyt Comp.	МордЭнСб	Мордовск.энергсбыт.комп.ПАО ао	2014-06-09	
+Electric Utilities	MSNG	MosEnrg	+МосЭнерго	МосЭнерго акции обыкн.	2013-07-08	
+Electric Utilities	MSRS	Rosseti Moscow Region	РСетиМР ао	ПАО Россети Моск.рег. ао	2013-07-08	
+Electric Utilities	NNSB	TNS energo Nizhniy-Novgorod ao	ТНСэнНН ао	ТНС энерго Нижний Новг.ПАО ао	2014-06-09	
+Electric Utilities	NNSBP	TNS energo Nizhniy Novg. pref	ТНСэнНН ап	ТНС энерго Нижний Новг.ПАО ап	2014-06-09	
+Electric Utilities	OGKB	OGK-2	ОГК-2 ао	ОГК-2 ПАО ао	2014-06-09	
+Electric Utilities	PMSB	Perm' EnergoSbyt	ПермьЭнСб	Пермэнергосбыт ПАО ао	2014-06-09	
+Electric Utilities	PMSBP	Perm' EnergoSbyt (pref)	ПермьЭнС-п	Пермэнергосбыт ПАО ап	2014-06-09	
+Electric Utilities	RSTI	PJSC ROSSETI, ordinary shares	Россети ао	ПАО Россети ао	2014-06-09	2022-12-30
+Electric Utilities	RSTIP	PJSC ROSSETI, pref shares	Россети ап	ПАО Россети ап	2014-06-09	2022-12-30
+Electric Utilities	RTSB	TNS energo Rostov-na-Dony ao	ТНСэнРст	ТНС энерго Ростов. ПАО ао	2014-06-09	
+Electric Utilities	RTSBP	TNS energo Rostov-na-Dony(prf)	ТНСэнРст-п	ТНС энерго Ростов. ПАО ап	2014-06-09	
+Electric Utilities	RZSB	JSC Ryazanenergosbyt	РязЭнСб	Рязанская энергосб.комп ПАО	2014-06-09	
+Electric Utilities	SAGO	SamaraEnergo ao	СамарЭн-ао	Самараэнерго (ПАО) - ао	2014-06-09	
+Electric Utilities	SAGOP	SamaraEnergo(pref)	СамарЭн-ап	Самараэнерго (ПАО) - ап	2014-06-09	
+Electric Utilities	SARE	SaratovEnergo ao	СаратЭн-ао	Саратовэнерго(ПАО)-ао	2014-06-09	
+Electric Utilities	SAREP	SaratovEnergo (pref)	СаратЭн-ап	Саратовэнерго(ПАО)-ап	2014-06-09	
+Electric Utilities	SLEN	Sakhalinenergo ao	Сахэнер ао	ПАО Сахалинэнерго ао	2017-02-06	
+Electric Utilities	STSB	StavropolEnergoSbyt	СтаврЭнСб	Ставрополэнергосбыт ПАО ао	2014-06-09	
+Electric Utilities	STSBP	StavropolEnergoSbyt (pref)	СтаврЭнСбп	Ставрополэнергосбыт ПАО ап	2014-06-09	
+Electric Utilities	TASB	Tambov EnergoSbyt Company	ТамбЭнСб	ао Тамбов.энергсбыт.комп. ПАО	2014-06-09	
+Electric Utilities	TASBP	Tambov EnergoSbyt Comp. (pref)	ТамбЭнСб-п	ап Тамбов.энергсбыт.комп. ПАО	2014-06-09	
+Electric Utilities	TGKA	TGK-1	ТГК-1	ао ПАО ТГК-1	2013-09-02	
+Electric Utilities	TGKB	TGK-2	ТГК-2	ао ПАО ТГК-2	2014-06-09	
+Electric Utilities	TGKBP	TGK-2 pref	ТГК-2 ап	ап ПАО ТГК-2	2014-06-09	
+Electric Utilities	TGKD	PJSC Quadra - Power Generation	Квадра ао	ПАО Квадра ао	2014-06-09	2023-01-24
+Electric Utilities	TGKDP	PJSC Quadra - Power Generation pref	Квадра ап	ПАО Квадра ап	2014-06-09	2023-01-24
+Electric Utilities	TGKN	TGK-14	ТГК-14	ао ПАО ТГК-14	2014-06-09	
+Electric Utilities	TNSE	PAO GK TNS energo ao	ТНСэнрг ао	ПАО ГК ТНС энерго ао	2015-06-17	
+Electric Utilities	TORS	Tomsk raspredelit. komp ao	ТРК ао	ао Томская распределит.комп.	2014-06-09	
+Electric Utilities	TORSP	Tomsk raspredelit. komp ap	ТРК ап	ап Томская распределит.комп.	2014-06-09	
+Electric Utilities	UPRO	Unipro PAO ao	Юнипро ао	Юнипро ПАО ао	2016-07-01	
+Electric Utilities	VGSB	Volgograd Energo Sbyt	ВолгЭнСб	Волгоград.энергосбыткомп ПАО ао	2014-06-09	
+Electric Utilities	VGSBP	Volgograd Energo Sbyt (pref)	ВолгЭнСб-п	Волгоград.энергосбыткомп ПАО ап	2014-06-09	
+Electric Utilities	VRSB	TNS energo Voroneg ao	ТНСэнВорон	ТНС энерго Воронеж ПАО ао	2014-06-09	
+Electric Utilities	VRSBP	TNS energo Voroneg ap	ТНСэнВор-п	ТНС энерго Воронеж ПАО ап	2014-06-09	
+Electric Utilities	YKEN	YakutskEnergo	Якутскэнрг	АК Якутскэнерго (ПАО) ао	2014-06-09	
+Electric Utilities	YKENP	YakutskEnergo ap	Якутскэн-п	АК Якутскэнерго (ПАО) ап	2014-06-09	
+Electric Utilities	YRSB	TNS energo Yaroslavl' ao	ТНСэнЯр	ТНС энерго Ярославль ПАО ао	2014-06-09	
+Electric Utilities	YRSBP	TNS energo Yaroslavl' (pref)	ТНСэнЯр-п	ТНС энерго Ярославль ПАО ап	2014-06-09	
+Energy (Oil, Gas, Coal)	BANE	Bashneft ANK ao	Башнефт ао	Башнефть АНК ао	2014-06-09	
+Energy (Oil, Gas, Coal)	BANEP	Bashneft ANK ap	Башнефт ап	Башнефть АНК ап	2014-06-09	
+Energy (Oil, Gas, Coal)	BLNG	Belon ao	Белон ао	Белон ОАО ао	2014-06-09	
+Energy (Oil, Gas, Coal)	CHGZ	RN-Western Siberia ao	РН-ЗапСиб	РН-Западная Сибирь ПАО ао	2014-06-09	
+Energy (Oil, Gas, Coal)	GAZP	Gazprom	ГАЗПРОМ ао	Газпром (ПАО) ао	2014-06-09	
+Energy (Oil, Gas, Coal)	GAZS	Gaz-servis ao	ГАЗ-сервис	ГАЗ-сервис (ПАО) ао	2014-06-09	
+Energy (Oil, Gas, Coal)	JNOS	Slavneft-JANOS	Славн-ЯНОС	Славнефть-ЯНОС (ПАО) ао	2014-06-09	
+Energy (Oil, Gas, Coal)	JNOSP	Slavneft-JANOS (pref)	Слав-ЯНОСп	Славнефть-ЯНОС (ПАО) ап	2014-06-09	
+Energy (Oil, Gas, Coal)	KBTK	PJSC KTC	ПАО КТК	ПАО КТК	2014-06-09	2021-06-21
+Energy (Oil, Gas, Coal)	KRKN	Saratovskiy NPZ ao	СаратНПЗ	Саратовский НПЗ ПАО ао	2014-06-09	
+Energy (Oil, Gas, Coal)	KRKNP	Saratovskiy NPZ ap	СаратНПЗ-п	Саратовский НПЗ ПАО ап	2014-06-09	
+Energy (Oil, Gas, Coal)	LKOH	LUKOIL	ЛУКОЙЛ	НК ЛУКОЙЛ (ПАО) - ао	2013-03-25	
+Energy (Oil, Gas, Coal)	MFGS	Megion	Мегион-ао	ао Славнефть-Мегионнефтегаз	2014-06-09	
+Energy (Oil, Gas, Coal)	MFGSP	Megion (pref)	Мегион-ап	ап Славнефть-Мегионнефтегаз	2014-06-09	
+Energy (Oil, Gas, Coal)	NVTK	NOVATEK	Новатэк ао	ПАО НОВАТЭК ао	2013-03-25	
+Energy (Oil, Gas, Coal)	RNFT	RussNeft NK	РуссНфт ао	РуссНефть НК ПАО ао	2016-11-18	
+Energy (Oil, Gas, Coal)	ROSN	Rosneft	Роснефть	ПАО НК Роснефть	2014-06-09	
+Energy (Oil, Gas, Coal)	RTGZ	Gazprom gazorasp. Rostov ao	ГазпРнД ао	Газпром газорасп Р-н-Д ПАО ао	2014-06-09	
+Energy (Oil, Gas, Coal)	SIBN	Gazprom neft	Газпрнефть	Газпром нефть ПАО ао	2014-06-09	
+Energy (Oil, Gas, Coal)	SNGS	Surgut	Сургнфгз	Сургутнефтегаз ПАО акции об.	2014-06-09	
+Energy (Oil, Gas, Coal)	SNGSP	Surgut-pref	Сургнфгз-п	Сургутнефтегаз ПАО ап	2014-06-09	
+Energy (Oil, Gas, Coal)	TATN	Tatneft-3	Татнфт 3ао	ПАО Татнефть ао	2013-07-08 	
+Energy (Oil, Gas, Coal)	TATNP	Tatneft (pref)	Татнфт 3ап	ПАО Татнефть ап 3 вып.	2013-07-08 	
+Energy (Oil, Gas, Coal)	TRNFP	Transneft (pref)	Транснф ап	Транснефть ПАО акц.пр.	2013-12-16	
+Energy (Oil, Gas, Coal)	UKUZ	Uzhnyi Kuzbass	ЮжКузб. ао	Южный Кузбасс ПАО ао	2014-06-09	
+Energy (Oil, Gas, Coal)	VJGZ	Var'eganneftegaz ao	Варьеган	ННК-Варьеганнефтегаз ПАО ао	2014-06-09	
+Energy (Oil, Gas, Coal)	VJGZP	Var'eganneftegaz ap	Варьеган-п	ННК-Варьеганнефтегаз ПАО ап	2014-06-09	
+Energy (Oil, Gas, Coal)	YAKG	YaTEK ao	ЯТЭК ао	Якутская топл.-энерг. комп. ао	2014-06-09	
+Financials	ACKO	ASKO ao	АСКО ао	АСКО ПАО ао	2017-07-10	
+Financials	ARSA	UK Arsagera	Арсагера	УК Арсагера ПАО-ао	2014-06-09	
+Financials	AVAN	AKB AVANGARD	Авангрд-ао	АКБ АВАНГАРД ПАО ао	2014-06-09	
+Financials	BSPB	BSP	БСП ао	ПАО Банк Санкт-Петербург ао	2014-06-09	
+Financials	BSPBP	BSP ap	БСП ап	Банк Санкт-Петербург ап	2021-01-26	
+Financials	CARM	STG	СТГ	СТГ ао	2023-07-03	
+Financials	CBOM	MKB ao	МКБ ао	МКБ ПАО ао	2015-06-22	
+Financials	FTRE	PJSC FG FUTURE	ФГ БУДУЩЕЕ	ПАО ФГ БУДУЩЕЕ	2016-10-20	2020-04-09
+Financials	GAZC	Gazkon ao	ГАЗКОН-ао	ГАЗКОН (ПАО) ао	2014-06-09	
+Financials	GAZT	GAZ-Tek PAO ao	ГАЗ-Тек ао	ГАЗ-Тек ПАО ао	2014-06-09	
+Financials	KUZB	Bank Kuzneckiy	КузнецкийБ	Банк Кузнецкий ПАО ао	2014-06-09	
+Financials	MOEX	MoscowExchange	МосБиржа	ПАО Московская Биржа	2013-04-04	
+Financials	OFCB	PJSC Bank Otkritie Financial Corporation	Банк Открытие	Банк Финансовая Корпорация Открытие	2014-12-01	2017-12-01
+Financials	OPIN	PJSC INGRAD	ИНГРАД	ПАО ИНГРАД	2014-06-09	2020-03-27
+Financials	PRMB	AKB Primorye	Приморье	АКБ Приморье ао	2014-06-09	
+Financials	PSBR	PJSC Promsvyazbank	Промсвязьбанк	ПАО Промсвязьбанк	2014-06-09	2018-01-17
+Financials	QIWI	QIWI PLC	iQIWI	QIWI PLC	2014-06-06	
+Financials	RDRB	RosDor Bank ao	РДБанк ао	РоссийскийДорож Банк ПАО ао	2014-06-09	
+Financials	RENI	Renaissance Insurance	Ренессанс	Ренессанс Страхование ао	2021-10-20	
+Financials	RGSS	Rosgosstrakh ao	РГС СК ао	Росгосстрах СК ПАО ао	2013-12-26	
+Financials	ROSB	ROSBANK	Росбанк ао	РОСБАНК ПАО ао	2014-06-09	
+Financials	RUSI	RUSS-INVEST IC ao	ИКРУСС-ИНВ	РУСС-ИНВЕСТ ИК ПАО ао	2014-06-09	
+Financials	SBER	Sberbank	Сбербанк	Сбербанк России ПАО ао	2013-03-25	
+Financials	SBERP	Sberbank (pref)	Сбербанк-п	Сбербанк России ПАО ап	2013-03-25	
+Financials	SFIN	SFI ao	ЭсЭфАй ао	ЭсЭфАй ПАО ао	2018-01-03	
+Financials	SPBE	SPB Exchange	СПБ Биржа	СПБ Биржа ао	2021-11-19	
+Financials	TCSG	GDR TCS Group Holding ORD SHS	TCS-гдр	ГДР TCS Group Holding ORD SHS	2019-10-28	
+Financials	UCSS	PAO OKS ao	ОКС ао	ПАО ОКС ао	2014-06-09	
+Financials	USBN	BANK URALSIB ao	УралСиб ао	БАНК УРАЛСИБ ПАО ао	2014-06-09	
+Financials	VTBR	VTB	ВТБ ао	ао ПАО Банк ВТБ	2013-03-25	
+Financials	VZRZ	PJSC Vozrozhdenie Bank	Банк Возрождение	ПАО Банк Возрождение	2013-09-02	2021-06-10
+Financials	WTCM	CMT	ЦМТ ао	Центр междун. торговли ПАО ао	2014-06-09	
+Financials	WTCMP	CMT (pref)	ЦМТ ап	Центр междун. торговли ПАО ап	2014-06-09	
+Health Care	APTK	Apteki 36,6	Аптеки36и6	ПАО Аптечная сеть 36,6 ао	2014-06-09	
+Health Care	GECO	GENETICO	iГЕНЕТИКО	ЦГРМ ГЕНЕТИКО ао	2023-04-25	
+Health Care	GEMA	IMCB PJSC	iММЦБ ао	ПАО ММЦБ ао	2019-07-25	
+Health Care	GEMC	GDR UNITED MEDICAL GROUP GEMC	GEMC-гдр	ГДР ЕвроМедЦентр GEMC	2021-07-15	
+Health Care	ISKJ	HSCI ao	iИСКЧ ао	ПАО ИСКЧ	2014-06-09	
+Health Care	LIFE	Farmsintez ao	iФармсинтз	Фармсинтез ПАО ао	2014-06-09	
+Health Care	MDMG	GDR MD Medical Group Inv. PLC	MDMG Мать и дитя-гдр	ГДР MD Medical Group Inv. PLC  Мать и дитя	2020-11-09	
+Health Care	OTCP	PJSC OtisPharm	Отисифарм	Отисифарм	2014-12-30	2018-07-23
+Industrials	AMEZ	Ashinckiy metzavod PAO	АшинскийМЗ	Ашинский метзавод ПАО ао	2014-06-09	
+Industrials	CHKZ	CKPZ	ЧКПЗ ао	ЧКПЗ ПАО ао	2014-06-09	
+Industrials	DIOD	Zavod DIOD ao	ЗаводДИОД	Завод ДИОД ПАО ао	2014-06-09	
+Industrials	DZRD	DZRD ao	ДонскЗР	Донской завод радиодеталей ао	2014-06-09	
+Industrials	DZRDP	DZRD pref.	ДонскЗР п	Донской завод радиодеталей ап	2014-06-09	
+Industrials	EELT	European Eltech	ЕвроЭлтех	ЕвропЭлектротехника ПАО ао	2017-09-07	
+Industrials	GAZA	Gaz ao	ГАЗ ао	ГАЗ ПАО ао	2014-06-09	
+Industrials	GAZAP	Gaz (pref)	ГАЗ ап	ГАЗ ПАО ап	2014-06-09	
+Industrials	HMSG	GDR Hydraulic M&S Gr ORD SHS	HMSG-гдр	ГДР Hydraulic M&S Gr ORD SHS	2021-05-25	
+Industrials	KMAZ	KAMAZ	КАМАЗ	КАМАЗ ПАО	2014-06-09	
+Industrials	KMEZ	Kovrov Mech. Zavod	КМЗ	Ковровский механический завод	2014-06-09	
+Industrials	KRKO	TKZ Krasny Kotelshchik ao	ТКЗКК ао	ТКЗ Красный котельщик ПАО ао	2014-06-09	2022-12-13
+Industrials	KRKOP	TKZ Krasny Kotelshchik ap	ТКЗКК ап	ТКЗ Красный котельщик ПАО ап	2014-06-09	
+Industrials	KTSB	KSB	КСБ ао	Костромск.сбыт.комп ПАО	2014-06-09	
+Industrials	KTSBP	KSB ap	КСБ ап	Костромск.сбыт.комп ПАО	2014-06-09	
+Industrials	LVHK	Levenguk ao	Левенгук	Левенгук ПАО ао	2014-06-09	
+Industrials	MSTT	Mostotrest	Мостотрест	ПАО МОСТОТРЕСТ ао	2014-06-09	
+Industrials	NAUK	NPO Nauka ao	iНПОНаука	НПО Наука ао	2014-06-09	
+Industrials	NFAZ	NEFAZ PAO ao	НЕФАЗ	НЕФАЗ ПАО ао	2014-06-09	
+Industrials	NKSH	Nizhnekamskshina ao	Нижкамшина	Нижнекамскшина ПАО ао	2014-06-09	
+Industrials	NSVZ	Nauka-Svyaz ao	iНаукаСвяз	Наука-Связь ПАО ао	2014-06-09	
+Industrials	OMZZ	OMZ	ОМЗ-ао	ао Объединён. маш. заводы	2014-06-09	2014-08-07
+Industrials	OMZZP	OMZ (pref)	ОМЗ-ап	ап Объединён. маш. заводы	2014-06-09	
+Industrials	PAZA	Pavlovo Bus ao	ПавлАвт ао	Павловский автобус ПАО ао	2014-06-09	
+Industrials	RKKE	RKK Energia	ЭнергияРКК	РКК Энергия им.С.П.Королева ао	2014-06-09	
+Industrials	SGZH	Segezha	Сегежа	Сегежа ао	2021-04-28	
+Industrials	TUZA	Tuimaz. Zavod Avtobetonovozov	ТЗА ао	Туймаз. завод автобетоновозов	2014-06-09	
+Industrials	UNAC	Ob.aviastroitelnaya korp.	iАвиастКао	Об.авиастр.корп. ПАО ао	2014-06-09	
+Industrials	URKZ	Uralskaya kuznica ao	УрКузница	ПАО Уральская кузница ао	2014-06-09	
+Industrials	UWGN	PJSC RPC UWC	НПК ОВК	ПАО НПК ОВК	2015-04-29	2021-12-13
+Industrials	UWGN-001D	PJSC RPC UWC-001D	ОВК-001D	ПАО НПК ОВК-001D	2015-04-29		2015-06-16
+Industrials	VSYD	Viborgskii sudostr. Zavod ao	ВыбСудЗ ао	Выборгский Суд.Завод ПАО ао	2014-06-09	
+Industrials	VSYDP	Viborgskii sudostr. Zavod ap	ВыбСудЗ ап	Выборгский Суд.Завод ПАО ап	2014-06-09	
+Industrials	ZILL	ZIL ao	ЗИЛ ао	Завод им. И.А.Лихачева ПАО ао	2014-06-09	
+Industrials	ZVEZ	Zvezda ao	ЗВЕЗДА ао	ЗВЕЗДА ПАО ао	2014-06-09	
+Information Technologies	CIAN	ADR Cian PLC ORD SHS	CIAN-адр	АДР Cian PLC ORD SHS	2021-11-05	
+Information Technologies	HHRU	ADR HeadHunter Group ORD SHS	iHHRU-адр	АДР HeadHunter Group ORD SHS	2020-09-25	
+Information Technologies	MAIL	GDR VK Company Limited ORD SHS	VK-гдр	ГДР VK Company Limited ORD SHS	2020-07-02	2021-12-13
+Information Technologies	OZON	ADS Ozon Holdings PLC ORD SHS	OZON-адр	АДР Ozon Holdings PLC ORD SHS	2020-11-24	
+Information Technologies	POSI	PJSC Positive Group	iПозитив	Группа Позитив ао	2021-12-17	
+Information Technologies	SFTL	GDR Noventiq Holdings ORD SHS	iNVTQ-гдр	ГДР Noventiq Holdings ORD SHS	2021-11-01	
+Information Technologies	VKCO	GDR VK Company Limited ORD SHS	VK-гдр	ГДР VK Company Limited ORD SHS	2021-12-14	
+Information Technologies	YNDX	PLLC Yandex N.V.	Yandex clA	PLLC Yandex N.V. class A shs	2014-06-04	
+Metals and Mining	ALRS	ALROSA ao	АЛРОСА ао	АЛРОСА ПАО ао	2013-07-08	
+Metals and Mining	BRZL	Buryatzoloto ao	БурЗолото	Бурятзолото ПАО ао	2014-06-09	
+Metals and Mining	CHMF	Severstal - ao	СевСт-ао	Северсталь (ПАО)ао	2014-06-09	
+Metals and Mining	CHMK	CMK	ЧМК ао	ЧМК ПАО ао	2014-06-09	
+Metals and Mining	CHZN	PJSC Chelyabinsk Zinc Plant	Челябинский цинковый завод	ПАО Челябинский цинковый завод	2014-06-09	2018-10-09
+Metals and Mining	ELTZ	Elektrotsink ao	Электрцинк	Электроцинк ПАО ао	2014-06-09	
+Metals and Mining	GMKN	NorNickel GMK	ГМКНорНик	ГМК Нор.Никель ПАО ао	2014-06-09	
+Metals and Mining	IGST	Izhstal 2ao	Ижсталь2ао	Ижсталь ПАО ао 2в.	2014-06-09	
+Metals and Mining	IGST03	Izhstal 3ao	Ижсталь3ао	Ижсталь ПАО ао 3в.	2014-06-09	2016-11-03
+Metals and Mining	IGSTP	Izhstal ap	Ижсталь ап	Ижсталь ПАО ап	2014-06-09	
+Metals and Mining	KMTZ	KGIW ao	КосогМЗ ао	Косогорский метал. завод ПАО	2014-06-09	
+Metals and Mining	KOGK	Korshunovskii GOK	КоршГОК ао	Коршуновский ГОК ПАО ао	2014-06-09	
+Metals and Mining	LNZL	Lenzoloto	Лензолото	Лензолото ПАО ао	2014-06-09	
+Metals and Mining	LNZLP	Lenzoloto pref.	Лензол. ап	Лензолото ПАО ап	2014-06-09	
+Metals and Mining	MAGN	MMK	ММК	Магнитогорск.мет.комб ПАО ао	2014-06-09	
+Metals and Mining	MGNZ	SMZ	СМЗ-ао	Соликамский магн.завод(ОАО)ао	2014-06-09	
+Metals and Mining	MTLR	Mechel	Мечел ао	Мечел ПАО ао	2013-07-08	
+Metals and Mining	MTLRP	Mechel pref.	Мечел ап	Мечел ПАО ап	2013-07-08	
+Metals and Mining	NLMK	NLMK ao	НЛМК ао	ПАО НЛМК ао	2014-06-09	
+Metals and Mining	PLZL	Polus	Полюс	Полюс ПАО ао	2014-06-09	
+Metals and Mining	POGR	Petropavlovsk PLC	Петропавловск ПиЭлСи	Петропавловск ПиЭлСи	2020-06-25	2022-07-20
+Metals and Mining	POLY	Polymetal International plc	Polymetal	Polymetal International plc	2013-09-02	
+Metals and Mining	RASP	Raspadskaya	Распадская	ПАО Распадская ао	2014-06-09	
+Metals and Mining	ROLO	Rusolovo PAO ao	Русолово	Русолово ПАО ао	2014-06-09	
+Metals and Mining	RUAL	RUSAL ao	РУСАЛ ао	РУСАЛ ОК МКПАО ао	2015-03-30	
+Metals and Mining	SELG	Seligdar	Селигдар ао	ПАО Селигдар ао	2014-06-09	
+Metals and Mining	SELGP	Seligdar pref	Селигдар ап	ПАО Селигдар ап	2013-09-02	2021-12-23
+Metals and Mining	TRMK	TMK ao	ТМК ао	ПАО ТМК	2013-07-26	
+Metals and Mining	UNKL	Uzhno-Uralskiy nikel. komb. ao	ЮУНК ао	Южно-Уральский никел. комб. ао	2014-06-09	
+Metals and Mining	VSMO	Corp. VSMPO-AVISMA ao	ВСМПО-АВСМ	Корп. ВСМПО-АВИСМА (ПАО) ао	2014-06-09	
+Telecommunication Services	BISV	BashInformSvyaz ao	БашИнСв ао	Башинформсвязь(ПАО) ао	2014-06-09	2022-12-13
+Telecommunication Services	BISVP	BashInformSvyaz ap	БашИнСв ап	Башинформсвязь(ПАО) ап	2014-06-09	
+Telecommunication Services	CNTL	Centrlnyi Telegraf	Телеграф	Центральный Телеграф ПАО ао	2014-06-09	
+Telecommunication Services	CNTLP	Centrlnyi Telegraf ap	Телеграф-п	Центральный Телеграф ПАО ап	2014-06-09	
+Telecommunication Services	MFON	Megafon	Мегафон	Мегафон	2014-06-09	2022-12-13
+Telecommunication Services	MGTS	MGTS-5	МГТС-5ао	ПАО МГТС ао (5 в)	2014-06-09	
+Telecommunication Services	MGTSP	MGTS-4	МГТС-4ап	ПАО МГТС ап (4 в)	2014-06-09	
+Telecommunication Services	MTSS	MTS	МТС-ао	Мобильные ТелеСистемы ПАО	2013-07-08	
+Telecommunication Services	RTKM	Rostelecom	Ростел -ао	Ростелеком (ПАО) ао.	2013-07-08	
+Telecommunication Services	RTKMP	Rostelecom- (pref)	Ростел -ап	Ростелеком (ПАО) ап.	2013-07-08	
+Telecommunication Services	TTLK	Tattelekom	Таттел. ао	Таттелеком ПАО ао	2014-06-09	
+Telecommunication Services	VEON-RX	VEON Ltd. ORD SHS	VEON	VEON Ltd. ORD SHS	2021-11-26	
+Transportation	AFLT	Aeroflot	Аэрофлот	Аэрофлот-росс.авиалин(ПАО)ао	2013-10-31	
+Transportation	FESH	DVMP ao	ДВМП ао	ДВ морское пароходство ПАО ао	2014-06-09	
+Transportation	FLOT	Sovcomflot	Совкомфлот	Совкомфлот ао	2020-10-07	
+Transportation	GLTR	GDR Globaltrans Inves ORD SHS	GLTR-гдр	ГДР Globaltrans Invest ORD SHS	2020-10-28	
+Transportation	GTRK	GTM	ГТМ ао	ПАО ГТМ ао	2017-10-23	
+Transportation	NKHP	NKHP ao	НКХП ао	НКХП ПАО ао	2015-11-17	
+Transportation	NMTP	NMTP	НМТП ао	НМТП (ПАО) ао	2014-06-09	
+Transportation	TRCN	PJSC TransContainer	ТрансКонтейнер	ПАО ТрансКонтейнер	2014-06-09	2022-12-13
+Transportation	TRFM	PJSC TransFin	ТрансФин-М	ПАО ТрансФин-М	2018-08-15	2022-12-13
+Transportation	UTAR	UTAir Aviacompany	ЮТэйр ао	Авиакомпания ЮТэйр (ПАО) ао	2013-09-02	
+Others	IRKT	IRKUT-3	ИРКУТ-3	Корпорация ИРКУТ ПАО ак.об.-3	2014-06-09	
