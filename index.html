@@ -21,7 +21,7 @@
   0.3. Название компании латиницей получаем из https://iss.moex.com/iss/securities/AFKS
   1. Пользователь передаёт ДАТУ, за которую нужно построить график
   2  Из файла data.tsv получаем список secid для акций, у которых history_from <= ДАТА <= history_till
-  3. Переходим на страницу https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&from=2023-07-19&till=2023-07-19&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION
+  3. Переходим на страницу https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&date=2023-07-19&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION
   4. Получаем данные о стоиммости акции, об изменении стоимости и капитализации
   5. Мержим полученные данные в один JS Object и строим для него тримап
  -->
@@ -62,7 +62,7 @@
     <script src='https://code.jquery.com/jquery-3.7.0.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js'></script>
     <script>
-        d3.tsv('https://raw.githubusercontent.com/ruslanbay/moex/main/data.tsv?token=GHSAT0AAAAAACFQI5QZIFLRVPKQRAOLN4Z2ZF7YFHQ', function(err, rows){
+        d3.tsv('https://raw.githubusercontent.com/ruslanbay/moex/main/data.tsv?token=GHSAT0AAAAAACFVR45VTSZZ4642225WSZQOZGFDOAQ', function(err, rows){
             function unpack(rows, key) {
                 return rows.map(function(row) { return row[key]});
             }
@@ -83,40 +83,52 @@
             for (let i=0; i<=14; i++) {
               chartData["sector"].push(parents[i]);
               chartData["ticker"].push(labels[i]);
+              chartData["size"].push(0);
+              chartData["priceChange"].push(0);
+              chartData["customdata"].push(["Moscow Exchange", labels[i], 0, 0, labels[i], 0]);
             };
 
-            $.getJSON( "https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&from=2023-07-19&till=2023-07-19&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION", function( moexJson ) {
+            $.getJSON("https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&date=2023-07-19&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION", function( moexJson ) {
               moexJson.securities.data.forEach(item => {
-                var ticker = item[0];
-                var currency = item[1];
-                var openPrice = item[2];
-                var closePrice = item[3];
-                var volume = item[4];
-                var value = item[5];
-                var numTrades = item[6];
-                var marketCapDaily = item[7];
+                var ticker         = item[0];
+                var currency       = item[1];
+                var openPrice      = item[2] == null ? 0 : item[2];
+                var closePrice     = item[3] == null ? 0 : item[3];
+                var volume         = item[4] == null ? 0 : item[4];
+                var value          = item[5] == null ? 0 : item[5];
+                var numTrades      = item[6] == null ? 0 : item[6];
+                var marketCapDaily = item[7] == null ? 0 : item[7];
                 
+                var priceChange = 100*(closePrice - openPrice)/openPrice;
+
                 var sector = "Others";
 
                 var index = labels.indexOf(ticker);
-                // if (index != -1) {
-                //   sector = parents[index];
-                // }
-                var name = namesRus[index];
-                var priceChange = (closePrice - openPrice)/openPrice;
+                if(index == -1) {
+                  sector = "Others";
+                  chartData["size"][labels.indexOf("Others")] = chartData["size"][labels.indexOf("Others")] + marketCapDaily;
+                  chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, ticker, closePrice]);
+                }
+                else {
+                  sector = parents[index];
+                  chartData["size"][labels.indexOf(sector)] = chartData["size"][labels.indexOf(sector)] + marketCapDaily;
+
+                  var name = namesRus[index];
+                  chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, name, closePrice]);
+                };
                 
                 chartData["sector"].push(sector);
                 chartData["ticker"].push(ticker);
-                chartData["size"].push(1);
-                chartData["priceChange"].push(1);
-                // chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, name, closePrice]);
-                chartData["customdata"].push(["Others", "ticker", 1, 1, "name", 1]);
-              })
-            });
+                chartData["size"].push(marketCapDaily);
+                chartData["priceChange"].push(priceChange);
+              });
 
-            console.log(chartData);
-            console.log(chartData["sector"]);
-            console.log(chartData["ticker"]);
+              for (let i=1; i<=14; i++) {
+                chartData["size"][0] = chartData["size"][0] + chartData["size"][i];
+              };
+
+              chartData["customdata"][0] = ["Moscow Exchange", "Moscow Exchange", chartData["size"][0], 0, "Moscow Exchange", 0];
+            });
             
             var texttemplate = '<b>%{label}</b><br>%{customdata[4]}<br>%{customdata[5]:,.2f} (%{customdata[3]:.2f}%)<br>Mkt cap: %{value:$,.0f}';
             var hovertemplate = '<b>%{customdata[1]}</b><br>%{customdata[4]}<br>Share price: %{customdata[5]:,.4f}<br>Price change: %{customdata[3]:.2f}%<br>Mkt cap: %{customdata[2]:$,.0f}<br>percentParent: %{percentParent:.2p}<br>percentRoot: %{percentRoot:.2p}<extra></extra>';
