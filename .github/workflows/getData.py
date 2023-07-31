@@ -12,7 +12,6 @@ def getData(myDate):
     f.write(r.text)
     f.close()
 
-# start = date(2011, 12, 19) # Monday
 if(len(sys.argv) == 4):
   start = datetime.strptime(sys.argv[1], '%Y-%m-%d').date()
   end = datetime.strptime(sys.argv[2], '%Y-%m-%d').date()
