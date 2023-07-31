@@ -7,8 +7,7 @@ def daterange(start, end, stepDays):
     yield start + timedelta(n)
 
 def getData(myDate):
-  # data/iss/history/engines/stock/totals/boards/MRKT/securities-{myDate}.json
-  with open(f'tmp_data/securities-{myDate}.json', 'w', encoding='utf-8') as f:
+  with open(f'data/iss/history/engines/stock/totals/boards/MRKT/securities-{myDate}.json', 'w', encoding='utf-8') as f:
     r = requests.get(f'https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&date={myDate}&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION')
     f.write(r.text)
     f.close()
