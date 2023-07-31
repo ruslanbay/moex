@@ -5,8 +5,8 @@ def daterange(start, end):
     for n in range(int((end - start).days)):
         yield start + timedelta(n + 7)
 
-# start = date(2011, 12, 19) # Monday
-start = date(2023, 7, 3)
+start = date(2011, 12, 19) # Monday
+# start = date(2023, 7, 3)
 end = date(2023, 7, 28)
       
 for d in daterange(start, end):
