@@ -4,16 +4,18 @@
 name: '[daily] Get MOEX data'
 
 on: 
-  workflow_dispatch:
+  schedule:
+    - cron: '15 14 * * TUE-SAT' # run every day at 14:15 from Tuesday to Saturday
 
 permissions:
   contents: read
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    env: 
+      CI_COMMIT_MESSAGE: Upload yesterday's MOEX data
+      CI_COMMIT_AUTHOR: Github Actions
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
@@ -28,9 +30,15 @@ jobs:
     - name: Get data files from MOEX ISS
       run: |
         python .github/workflows/getData.py
-    - name: Archive MOEX data
+    # Commit and push all changed files
     # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html
-      uses: actions/upload-artifact@v3
-      with:
-        name: moex-iss-data
-        path: data/iss/history/engines/stock/totals/boards/MRKT/*.json
+    # Must only affect files that are listed in "paths-ignore"
+    - name: Commit and push build artifacts
+      # Only run on main branch push (e.g. pull request merge)
+      if: github.event_name == 'push'
+      run: |
+        git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+        git config --global user.email "username@users.noreply.github.com"
+        git add data/iss/history/engines/stock/totals/boards/MRKT/*.json
+        git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
+        git push
