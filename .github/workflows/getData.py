@@ -3,7 +3,7 @@ import requests
 
 def daterange(start, end):
     for n in range(int((end - start).days)):
-        yield start + timedelta(n) + 7
+        yield start + timedelta(n + 7)
 
 # start = date(2011, 12, 19) # Monday
 start = date(2023, 7, 3)
