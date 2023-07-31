@@ -12,7 +12,7 @@ end = datetime.strptime(sys.argv[2], '%Y-%m-%d').date()
 step = int(sys.argv[3])
 
 for d in daterange(start, end, step):
-  with open(f'securities-{d}.json', 'w', encoding='utf-8') as f:
+  with open(f'iss/history/engines/stock/totals/boards/MRKT/securities-{d}.json', 'w', encoding='utf-8') as f:
     r = requests.get(f'https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&date={d}&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION')
     f.write(r.text)
     f.close()
