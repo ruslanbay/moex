@@ -3,9 +3,10 @@
 
 name: '[daily] Get MOEX data'
 
-on: 
+on:
   schedule:
-    - cron: '15 17 * * 1-6' # run every day at 17:15 UTC from Tuesday to Saturday
+    - cron: '15 17 * * 2-6' # run every day at 17:15 UTC from Tuesday to Saturday
+  workflow_dispatch:
 
 permissions:
   contents: read
