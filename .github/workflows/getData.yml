@@ -34,9 +34,9 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Get data files from MOEX ISS
       run: |
-        python /moex/.github/workflows/getData.py
+        python /.github/workflows/getData.py
     - name: Archive MOEX data
       uses: actions/upload-artifact@v3
       with:
         name: moex-iss-data
-        path: /moex/data/iss/history/engines/stock/totals/boards/MRKT/*.json
+        path: /data/iss/history/engines/stock/totals/boards/MRKT/*.json
