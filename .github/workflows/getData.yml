@@ -9,7 +9,7 @@ on:
       startDate:
         description: 'Start date'
         required: true
-        default: '2023-07-24'
+        default: '2023-07-17'
       endDate:
         description: 'End date'
         required: true

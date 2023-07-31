@@ -7,8 +7,8 @@ def daterange(start, end, stepDays):
         yield start + timedelta(n)
 
 # start = date(2011, 12, 19) # Monday
-start = int(sys.argv[1])
-end = int(sys.argv[2])
+start = sys.argv[1]
+end = sys.argv[2]
 step = int(sys.argv[3])
       
 for d in daterange(start, end, step):
