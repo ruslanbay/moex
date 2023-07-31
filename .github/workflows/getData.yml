@@ -6,12 +6,18 @@ name: Python application
 on: 
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'     
+      startDate:
+        description: 'Start date'
         required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags' 
+        default: '2023-07-24'
+      endDate:
+        description: 'End date'
+        required: true
+        default: '2023-07-31'
+      stepDays:
+        description: 'Step in days'
+        required: true
+        default: '7'
 
 permissions:
   contents: read
@@ -34,9 +40,9 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Get data files from MOEX ISS
       run: |
-        python .github/workflows/getData.py
+        python .github/workflows/getData.py ${{ inputs.startDate }} ${{ inputs.endDate }} ${{ inputs.stepDays }}
     - name: Archive MOEX data
       uses: actions/upload-artifact@v3
       with:
         name: moex-iss-data
-        path: data/iss/history/engines/stock/totals/boards/MRKT/*.json
+        path: ./*.json
