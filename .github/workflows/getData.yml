@@ -3,13 +3,15 @@
 
 name: Python application
 
-on:
-  release:
-    branches: [ "main" ]
-#   push:
-#     branches: [ "main" ]
-#   pull_request:
-#     branches: [ "main" ]
+on: 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags' 
 
 permissions:
   contents: read
