@@ -5,7 +5,7 @@ name: '[daily] Get MOEX data'
 
 on: 
   schedule:
-    - cron: '57 19 * * MON-SAT' # run every day at 14:15 from Tuesday to Saturday
+    - cron: '59 16 * * MON-SAT' # run every day at 16:59 UTC from Tuesday to Saturday
 
 permissions:
   contents: read
