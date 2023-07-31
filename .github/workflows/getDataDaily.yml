@@ -35,8 +35,6 @@ jobs:
     # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html
     # Must only affect files that are listed in "paths-ignore"
     - name: Commit and push build artifacts
-      # Only run on main branch push (e.g. pull request merge)
-      if: github.event_name == 'push'
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "username@users.noreply.github.com"
