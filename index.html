@@ -62,7 +62,7 @@
     <script src='https://code.jquery.com/jquery-3.7.0.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js'></script>
     <script>
-        d3.tsv('https://raw.githubusercontent.com/ruslanbay/moex/main/data.tsv?token=GHSAT0AAAAAACFVR45VTSZZ4642225WSZQOZGFDOAQ', function(err, rows){
+        d3.tsv('https://raw.githubusercontent.com/ruslanbay/moex/main/data.tsv?token=GHSAT0AAAAAACFXQR2J4SKFOJ3EJAFPKSJCZGHTH7A', function(err, rows){
             function unpack(rows, key) {
                 return rows.map(function(row) { return row[key]});
             }
@@ -130,8 +130,8 @@
               chartData["customdata"][0] = ["Moscow Exchange", "Moscow Exchange", chartData["size"][0], 0, "Moscow Exchange", 0];
             });
             
-            var texttemplate = '<b>%{label}</b><br>%{customdata[4]}<br>%{customdata[5]:,.2f} (%{customdata[3]:.2f}%)<br>Mkt cap: %{value:$,.0f}';
-            var hovertemplate = '<b>%{customdata[1]}</b><br>%{customdata[4]}<br>Share price: %{customdata[5]:,.4f}<br>Price change: %{customdata[3]:.2f}%<br>Mkt cap: %{customdata[2]:$,.0f}<br>percentParent: %{percentParent:.2p}<br>percentRoot: %{percentRoot:.2p}<extra></extra>';
+            var texttemplate = '<b>%{label}</b><br>%{customdata[4]}<br>%{customdata[5]:,.2f} (%{customdata[3]:.2f}%)<br>Mkt cap: ₽%{value:,.0f}';
+            var hovertemplate = '<b>%{customdata[1]}</b><br>%{customdata[4]}<br>Share price: %{customdata[5]:,.4f}<br>Price change: %{customdata[3]:.2f}%<br>Mkt cap: ₽%{customdata[2]:,.0f}<br>percentParent: %{percentParent:.2p}<br>percentRoot: %{percentRoot:.2p}<extra></extra>';
             
             var data = [{
                 type: "treemap",
