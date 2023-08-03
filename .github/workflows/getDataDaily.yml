@@ -15,7 +15,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env: 
-      CI_COMMIT_MESSAGE: Upload yesterday's MOEX data
+      CI_COMMIT_MESSAGE: Upload yesterdays MOEX data
       CI_COMMIT_AUTHOR: Github Actions
     steps:
     - uses: actions/checkout@v3
@@ -37,7 +37,7 @@ jobs:
     - name: Commit and push build artifacts
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
-        git config --global user.email "username@users.noreply.github.com"
+        git config --global user.email "github-actions@github.com"
         git add data/iss/history/engines/stock/totals/boards/MRKT/*.json
         git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
         git push
