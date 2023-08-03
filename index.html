@@ -62,7 +62,7 @@
     <script src='https://code.jquery.com/jquery-3.7.0.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js'></script>
     <script>
-        d3.tsv('https://raw.githubusercontent.com/ruslanbay/moex/main/data.tsv?token=GHSAT0AAAAAACFXQR2J4SKFOJ3EJAFPKSJCZGHTH7A', function(err, rows){
+        d3.tsv('https://raw.githubusercontent.com/ruslanbay/moex/main/data.tsv?token=GHSAT0AAAAAACF37A77OFTA5VJX3MJ4QAEIZGLUHUA', function(err, rows){
             function unpack(rows, key) {
                 return rows.map(function(row) { return row[key]});
             }
@@ -88,8 +88,11 @@
               chartData["customdata"].push(["Moscow Exchange", labels[i], 0, 0, labels[i], 0]);
             };
 
+            var excludeList = ["EA-RM"] // exclude Electronic Art and other shares
+
             $.getJSON("https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&date=2023-07-19&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION", function( moexJson ) {
-              moexJson.securities.data.forEach(item => {
+              moexJson.securities.data.filter(v => !excludeList.includes(v[0])).forEach(item => {
+
                 var ticker         = item[0];
                 var currency       = item[1];
                 var openPrice      = item[2] == null ? 0 : item[2];
