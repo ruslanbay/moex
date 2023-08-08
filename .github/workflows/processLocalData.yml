@@ -44,10 +44,10 @@ jobs:
     # Commit and push all changed files
     # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html
     # Must only affect files that are listed in "paths-ignore"
-    # - name: Commit and push build artifacts
-    #   run: |
-    #     git config --global user.name "Github Actions"
-    #     git config --global user.email "github-actions@github.com"
-    #     git add data/iss/history/engines/stock/totals/boards/MRKT/*.json
-    #     git commit -m "Manually collect and upload data from MOEX"
-    #     git push
+    - name: Commit and push build artifacts
+      run: |
+        git config --global user.name "Github Actions"
+        git config --global user.email "github-actions@github.com"
+        git add data/barChartData.json
+        git commit -m "Manually upload processed data"
+        git push
