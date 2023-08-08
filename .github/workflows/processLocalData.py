@@ -60,6 +60,6 @@ if(len(sys.argv) == 4):
         chartData.ticket["y"].append(cap)
 else:
   # Rewrite with exceptions
-  print("Missing arguments:\nExample: processLocalData.py 2011-12-19 2011-12-20 1")
+  print("Missing arguments:\nExample: processLocalData.py 2011-12-19 2011-12-21 1")
 
 print(cahrtData)
