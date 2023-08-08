@@ -1,0 +1,53 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: '[manual] Process local data'
+
+on: 
+  workflow_dispatch:
+    inputs:
+      startDate:
+        description: 'Start date'
+        required: true
+        default: '2011-12-19'
+      endDate:
+        description: 'End date'
+        required: true
+        default: '2011-12-21'
+      stepDays:
+        description: 'Step in days'
+        required: true
+        default: '1'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Get data files from MOEX ISS
+      run: |
+        python .github/workflows/processLocalData.py ${{ inputs.startDate }} ${{ inputs.endDate }} ${{ inputs.stepDays }}
+    # Commit and push all changed files
+    # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html
+    # Must only affect files that are listed in "paths-ignore"
+    # - name: Commit and push build artifacts
+    #   run: |
+    #     git config --global user.name "Github Actions"
+    #     git config --global user.email "github-actions@github.com"
+    #     git add data/iss/history/engines/stock/totals/boards/MRKT/*.json
+    #     git commit -m "Manually collect and upload data from MOEX"
+    #     git push
