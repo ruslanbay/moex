@@ -9,7 +9,10 @@ def daterange(start, end, stepDays):
 def getData(myDate):
   with open(f'data/iss/history/engines/stock/totals/boards/MRKT/securities-{myDate}.json', 'w', encoding='utf-8') as f:
     r = requests.get(f'https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&date={myDate}&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION')
-    f.write(r.text)
+    if(r.status_code == 200):
+      f.write(r.text)
+    else:
+      echo f'ERROR: Wrong response code: {r.status_code}'
     f.close()
 
 if(len(sys.argv) == 4):
