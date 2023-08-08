@@ -3,7 +3,7 @@ import requests
 import sys
 
 def daterange(start, end, stepDays):
-  for n in range(0, int((end - start).days), stepDays):
+  for n in range(0, int((end - start).days) + 1, stepDays):
     yield start + timedelta(n)
 
 def getData(myDate):
