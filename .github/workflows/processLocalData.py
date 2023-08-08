@@ -59,7 +59,10 @@ if(len(sys.argv) == 4):
         chartData[ticket]["x"].append(f'{myDate}')
         chartData[ticket]["y"].append(cap)
 else:
-  # Rewrite with exceptions
+  # Rewrite this code using exceptions
   print("Missing arguments:\nExample: processLocalData.py 2011-12-19 2011-12-21 1")
 
-print(chartData)
+with open(f'data/barChartData.json', 'w', encoding='utf-8') as f:
+  data = json.dumps(f)
+  f.write(data)
+  f.close()
