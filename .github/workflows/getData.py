@@ -12,7 +12,7 @@ def getData(myDate):
     if(r.status_code == 200):
       f.write(r.text)
     else:
-      echo f'ERROR: Wrong response code: {r.status_code}'
+      print(f'ERROR: Wrong response code: {r.status_code}')
     f.close()
 
 if(len(sys.argv) == 4):
