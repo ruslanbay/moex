@@ -62,4 +62,4 @@ else:
   # Rewrite with exceptions
   print("Missing arguments:\nExample: processLocalData.py 2011-12-19 2011-12-21 1")
 
-print(cahrtData)
+print(chartData)
