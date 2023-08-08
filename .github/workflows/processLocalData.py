@@ -34,7 +34,7 @@ if(len(sys.argv) == 4):
   end = datetime.strptime(sys.argv[2], '%Y-%m-%d').date()
   step = int(sys.argv[3])
   for myDate in daterange(start, end, step):
-    data = readLocalData(myDate).securities.data
+    data = readLocalData(myDate)['securities']['data']
     for item in data:
       ticket = item[0]
       cap = item[7]
@@ -56,8 +56,8 @@ if(len(sys.argv) == 4):
         for d in daterange(lastDate, myDate - timedelta(days=step), step):
           chartData[ticket]["x"].append(f'{d}')
           chartData[ticket]["y"].append(0.00)
-        chartData.ticket["x"].append(f'{myDate}')
-        chartData.ticket["y"].append(cap)
+        chartData[ticket]["x"].append(f'{myDate}')
+        chartData[ticket]["y"].append(cap)
 else:
   # Rewrite with exceptions
   print("Missing arguments:\nExample: processLocalData.py 2011-12-19 2011-12-21 1")
