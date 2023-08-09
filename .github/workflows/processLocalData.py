@@ -50,7 +50,8 @@ if(len(sys.argv) == 4):
         for d in daterange(start + timedelta(days=step), myDate - timedelta(days=step), step):
           chartData[ticket]["x"].append(f'{d}')
           chartData[ticket]["y"].append(0.00)
-      if(ticket in chartData.keys()):
+      # if(ticket in chartData.keys()):
+      else:
         lastDate = chartData[ticket]["x"][-1]
         lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
         # if there are skips in dates, then fill capitalization values with 0.00
