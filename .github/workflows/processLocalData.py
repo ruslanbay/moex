@@ -46,7 +46,7 @@ if(len(sys.argv) == 4):
       # If the current ticket didn't appear before,
       # then set capitalization values for previuose dates as 0.00
       if(ticket not in chartData.keys()):
-        chartData[ticket] = {'x': [f'{start}'], 'y': [cap]}
+        chartData[ticket] = {'x': [], 'y': []}
         for d in daterange(start + timedelta(days=step), myDate - timedelta(days=step), step):
           chartData[ticket]["x"].append(f'{d}')
           chartData[ticket]["y"].append(0.00)
@@ -58,8 +58,8 @@ if(len(sys.argv) == 4):
           for d in daterange(lastDate, myDate - timedelta(days=step), step):
             chartData[ticket]["x"].append(f'{d}')
             chartData[ticket]["y"].append(0.00)
-        chartData[ticket]["x"].append(f'{myDate}')
-        chartData[ticket]["y"].append(cap)
+      chartData[ticket]["x"].append(f'{myDate}')
+      chartData[ticket]["y"].append(cap)
 else:
   # Rewrite this code using exceptions
   print("Missing arguments:\nExample: processLocalData.py 2011-12-19 2011-12-21 1")
