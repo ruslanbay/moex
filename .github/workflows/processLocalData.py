@@ -51,7 +51,6 @@ if(len(sys.argv) == 4):
           chartData[ticket]["x"].append(f'{d}')
           chartData[ticket]["y"].append(0.00)
       if(ticket in chartData.keys()):
-        # print(chartData)
         lastDate = chartData[ticket]["x"][-1]
         lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
         # if there are skips in dates, then fill capitalization values with 0.00
@@ -65,6 +64,5 @@ else:
   print("Missing arguments:\nExample: processLocalData.py 2011-12-19 2011-12-21 1")
 
 with open(f'data/barChartData.json', 'w', encoding='utf-8') as f:
-  data = json.dumps(f)
-  f.write(data)
+  f.write(json.dumps(chartData))
   f.close()
