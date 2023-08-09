@@ -63,6 +63,8 @@ else:
   # Rewrite this code using exceptions
   print("Missing arguments:\nExample: processLocalData.py 2011-12-19 2011-12-21 1")
 
-with open(f'data/barChartData.json', 'w', encoding='utf-8') as f:
-  f.write(json.dumps(chartData))
-  f.close()
+# with open(f'data/barChartData.json', 'w', encoding='utf-8') as f:
+#   f.write(json.dumps(chartData))
+#   f.close()
+with open('data/barChartData.json', 'w') as f:
+  json.dump(chartData, f)
