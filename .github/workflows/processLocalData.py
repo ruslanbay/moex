@@ -66,5 +66,11 @@ else:
 # with open(f'data/barChartData.json', 'w', encoding='utf-8') as f:
 #   f.write(json.dumps(chartData))
 #   f.close()
+
+def set_default(obj):
+  if isinstance(obj, set):
+    return list(obj)
+  raise TypeError
+  
 with open('data/barChartData.json', 'w') as f:
-  json.dump(chartData, f)
+  json.dump(chartData, f, default=set_default)
