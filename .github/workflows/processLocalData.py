@@ -27,7 +27,7 @@ def readLocalData(myDate):
     f.close()
     return data
 
-chartData = {}
+chartData = dict()
 
 if(len(sys.argv) == 4):
   start = datetime.strptime(sys.argv[1], '%Y-%m-%d').date()
