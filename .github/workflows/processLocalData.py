@@ -46,7 +46,9 @@ if(len(sys.argv) == 4):
       # If the current ticket didn't appear before,
       # then set capitalization values for previuose dates as 0.00
       if(ticket not in chartData.keys()):
-        for d in daterange(start, myDate - timedelta(days=step), step):
+        chartData[ticket]["x"] = f'{start}'
+        chartData[ticket]["y"] = 0.00
+        for d in daterange(start + timedelta(days=step), myDate - timedelta(days=step), step):
           chartData[ticket]["x"].append(f'{d}')
           chartData[ticket]["y"].append(0.00)
       if(ticket in chartData.keys()):
