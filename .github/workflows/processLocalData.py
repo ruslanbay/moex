@@ -25,13 +25,16 @@ if(len(sys.argv) == 4):
       ticket = item[0]
       cap = item[7]
       currency = item[1]
-      # пропускаем зарубежные акции, ETF и облигации
+      # skip forein shares
       if(re.search('^[a-zA-Z0-9]+-RM', ticket) != None):
         continue
+      # skip bonds
       if(re.search('^RU[0-9]+.*', ticket) != None):
         continue
+      # skip bonds
       if(re.search('^XS[0-9]+.*', ticket) != None):
         continue
+      # skip ETFs
       if(ticket in ['FXRB', 'FXGD', 'FXAU', 'FXDE', 'FXIT', 'FXJP', 'FXUK', 'FXUS', 'FXRU', 'FXCN', 'FXMM', 'FXRL', 'FXKZ', 'FXTB', 'FXRB', 'FXWO', 'FXTM', 'FXDM', 'FXFA', 'FXTP', 'FXIP', 'FXES', 'FXRD', 'FXRE', 'FXEM', 'FXBC']):
         continue
       # use only shares nominated in russian ruble
@@ -41,7 +44,14 @@ if(len(sys.argv) == 4):
       # If the current ticket didn't appear before,
       # then set capitalization values for previuose dates as 0.00
       if(ticket not in chartData.keys()):
-        chartData[ticket] = {'x': [], 'y': []}
+        chartData[ticket] = {
+          'x': [],
+          'y': [],
+          'type': 'bar',
+          'name': ticket,
+          'hoverinfo': 'skip',
+          'hovertemplate': ''
+        }
         for d in daterange(start, myDate - timedelta(days=step), step):
           chartData[ticket]["x"].append(f'{d}')
           chartData[ticket]["y"].append(0.00)
