@@ -45,5 +45,77 @@
 </head>
 
 <body>
-    <div id='treemap'><!-- Plotly chart will be drawn inside this DIV --></div>
+  <script>
+    var layout = {
+      barmode: "stack",
+      showlegend: true,
+      legend: {
+        traceorder: "normal"
+      },
+      yaxis: {
+        visible: true,
+        fixedrange: true,
+        side: "right",
+        showgrid: true
+      },
+      xaxis: {
+        fixedrange: true,
+        tickangle: -90,
+        type: "category",
+        // type: "date",
+        // tickformat: '<a href="#%Y-%m-%d" target="_self">%Y-%m-%d</a>',
+        tickmode: "array",
+        tickvals: chartData[0].x,
+        autorange: "reversed"
+        // rangeslider: {},
+        // rangeselector: {
+        //   visible: true,
+        //   buttons: [{
+        //       step: 'month',
+        //       stepmode: 'backward',
+        //       count: 1,
+        //       label: '1m'
+        //   }, {
+        //       step: 'month',
+        //       stepmode: 'backward',
+        //       count: 6,
+        //       label: '6m'
+        //   }, {
+        //       step: 'year',
+        //       stepmode: 'todate',
+        //       count: 1,
+        //       label: 'YTD'
+        //   }, {
+        //       step: 'year',
+        //       stepmode: 'backward',
+        //       count: 1,
+        //       label: '1y'
+        //   }, {
+        //       step: 'all',
+        //   }]
+        // }
+      },
+      autosize: true,
+      margin: {l:0, r:0, t:10, b:75},
+      // paper_bgcolor: "rgb(0,0,0,0)",
+      // plot_bgcolor: "rgb(0,0,0,0)",
+      plot_bgcolor: "rgb(65,69,84)",
+      paper_bgcolor: "rgb(65,69,85)",
+      font: {
+        family: "Arial",
+        size: 12,
+        color: "rgba(245,246,249,1)"
+      }
+    }
+
+    var config = {
+      responsive: true,
+      displaylogo: false,
+      displayModeBar: false,
+      scrollZoom: true
+    }
+
+    Plotly.react('treemap', chartData, layout, config);
+  </script>
+  <div id='treemap'><!-- Plotly chart will be drawn inside this DIV --></div>
 </body>
