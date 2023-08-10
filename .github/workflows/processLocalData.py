@@ -13,7 +13,7 @@ def readLocalData(myDate):
     f.close()
     return data
 
-chartData = dict()
+traces = dict()
 
 if(len(sys.argv) == 4):
   start = datetime.strptime(sys.argv[1], '%Y-%m-%d').date()
@@ -38,48 +38,47 @@ if(len(sys.argv) == 4):
       if(ticket in ['FXRB', 'FXGD', 'FXAU', 'FXDE', 'FXIT', 'FXJP', 'FXUK', 'FXUS', 'FXRU', 'FXCN', 'FXMM', 'FXRL', 'FXKZ', 'FXTB', 'FXRB', 'FXWO', 'FXTM', 'FXDM', 'FXFA', 'FXTP', 'FXIP', 'FXES', 'FXRD', 'FXRE', 'FXEM', 'FXBC']):
         continue
       # use only shares nominated in russian ruble
-      if(currency != "SUR"):
+      if(currency != 'SUR'):
         continue
       
       # If the current ticket didn't appear before,
       # then set capitalization values for previuose dates as 0.00
-      if(ticket not in chartData.keys()):
-        chartData[ticket] = {
-          'x': [],
-          'y': [],
-          'type': 'bar',
+      if(ticket not in traces.keys()):
+        traces[ticket] = {
           'name': ticket,
+          'type': 'bar',
           'hoverinfo': 'skip',
-          'hovertemplate': ''
+          'hovertemplate': '',
+          'x': [],
+          'y': []
         }
         for d in daterange(start, myDate - timedelta(days=step), step):
-          chartData[ticket]["x"].append(f'{d}')
-          chartData[ticket]["y"].append(0.00)
-      else: # if(ticket in chartData.keys()):
-        lastDate = chartData[ticket]["x"][-1]
+          traces[ticket]["x"].append(f'{d}')
+          traces[ticket]["y"].append(0.00)
+      else: # if(ticket in traces.keys()):
+        lastDate = traces[ticket]["x"][-1]
         lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
         # if there are skips in dates, then fill capitalization values with 0.00
         if(lastDate < myDate - timedelta(days=step)):
           for d in daterange(lastDate, myDate - timedelta(days=step), step):
-            chartData[ticket]["x"].append(f'{d}')
-            chartData[ticket]["y"].append(0.00)
-      chartData[ticket]["x"].append(f'{myDate}')
-      chartData[ticket]["y"].append(cap)
-  for ticket in chartData.keys():
-    lastDate = chartData[ticket]["x"][-1]
+            traces[ticket]["x"].append(f'{d}')
+            traces[ticket]["y"].append(0.00)
+      traces[ticket]["x"].append(f'{myDate}')
+      traces[ticket]["y"].append(cap)
+  for ticket in traces.keys():
+    lastDate = traces[ticket]["x"][-1]
     lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
     if(lastDate < end):
       for d in daterange(lastDate + timedelta(days=step), end, step):
-        chartData[ticket]["x"].append(f'{d}')
-        chartData[ticket]["y"].append(0.00)
+        traces[ticket]["x"].append(f'{d}')
+        traces[ticket]["y"].append(0.00)
 else:
   # Rewrite this code using exceptions
   print("Missing arguments:\nExample: processLocalData.py 2011-12-19 2011-12-21 1")
 
-def set_default(obj):
-  if isinstance(obj, set):
-    return list(obj)
-  raise TypeError
-  
+chartData = []
+for ticket in traces.keys():
+  chartData.append(traces[ticket])
+
 with open('data/barChartData.json', 'w') as f:
-  json.dump(chartData, f, default=set_default)
+  json.dump(chartData, f)
