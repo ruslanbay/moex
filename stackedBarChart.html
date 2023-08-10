@@ -44,7 +44,7 @@
 
 <body>
   <script>
-    $.getJSON("https://raw.githubusercontent.com/ruslanbay/moex/main/data/barChartData.json?token=GHSAT0AAAAAACGFF4W3FXZMIPIDFN3AZAXCZGVF23A", function( chartData ) {
+    $.getJSON("https://raw.githubusercontent.com/ruslanbay/moex/main/data/barChartData.json?token=GHSAT0AAAAAACGFF4W2TOL3LR2GQ3ORFYVEZGVKCQA", function( chartData ) {
       var layout = {
         barmode: "stack",
         showlegend: true,
@@ -60,39 +60,43 @@
         xaxis: {
           fixedrange: true,
           tickangle: -90,
-          type: "category",
-          // type: "date",
+          type: "date",
+          // type: "category",
           // tickformat: '<a href="#%Y-%m-%d" target="_self">%Y-%m-%d</a>',
           tickmode: "array",
           tickvals: chartData[0].x,
-          autorange: "reversed"
-          // rangeslider: {},
-          // rangeselector: {
-          //   visible: true,
-          //   buttons: [{
-          //       step: 'month',
-          //       stepmode: 'backward',
-          //       count: 1,
-          //       label: '1m'
-          //   }, {
-          //       step: 'month',
-          //       stepmode: 'backward',
-          //       count: 6,
-          //       label: '6m'
-          //   }, {
-          //       step: 'year',
-          //       stepmode: 'todate',
-          //       count: 1,
-          //       label: 'YTD'
-          //   }, {
-          //       step: 'year',
-          //       stepmode: 'backward',
-          //       count: 1,
-          //       label: '1y'
-          //   }, {
-          //       step: 'all',
-          //   }]
-          // }
+          // autorange: "reversed",
+          rangeslider: {
+            visible: true,
+            // autorange: true,
+            // range: ["2023-01-01", "2023-08-08"]
+          },
+          rangeselector: {
+            visible: true,
+            buttons: [{
+                step: 'month',
+                stepmode: 'backward',
+                count: 1,
+                label: '1m'
+            }, {
+                step: 'month',
+                stepmode: 'backward',
+                count: 6,
+                label: '6m'
+            }, {
+                step: 'year',
+                stepmode: 'todate',
+                count: 1,
+                label: 'YTD'
+            }, {
+                step: 'year',
+                stepmode: 'backward',
+                count: 1,
+                label: '1y'
+            }, {
+                step: 'all',
+            }]
+          }
         },
         autosize: true,
         margin: {l:0, r:0, t:10, b:75},
