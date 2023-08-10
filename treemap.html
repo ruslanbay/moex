@@ -1,11 +1,11 @@
 <!-- 
-  Для всех акций из списка data.tsv получить значение history_from из ISSUEDATE на странице https://iss.moex.com/iss/securities/AFKS.json
+  Для всех акций из списка issues-by-sector.tsv получить значение history_from из ISSUEDATE на странице https://iss.moex.com/iss/securities/AFKS.json
   Это требуется, тк для многих акций в поле history_from указана дата "2014-06-09", что не соответствует действительности
   Возможно, нет записей о стоимости акций за период до 2014-06-09, в этом случае может добавить отдельное поле ISSUEDATE????
 -->
 
 <!-- 
-  В файл data.tsv добавить поле "emitent"
+  В файл issues-by-sector.tsv добавить поле "emitent"
   https://iss.moex.com/iss/securities?engine=stock&market=shares&group_by=group&group_by_filter=stock_shares&securities.columns=secid,shortname,name,emitent_title&start=0
   parents || emitent || labels || shortname || shortname_rus || name_rus || history_from || history_till
   Это нужно, чтобы объединять обычные и привилегированные акции одного и того же эмитента.
@@ -14,13 +14,13 @@
 -->
 
 <!-- 
-  0. !!! РАЗ В ДЕНЬ ОБНОВЛЯТЬ СОДЕРЖИМОЕ ФАЙЛА data.tsv
+  0. !!! РАЗ В ДЕНЬ ОБНОВЛЯТЬ СОДЕРЖИМОЕ ФАЙЛА issues-by-sector.tsv
   0.0. Переходим на страницу https://iss.moex.com/iss/history/engines/stock/markets/shares/boards/TQBR/listing?status=all
   0.1. Находим все акции, которые перестали торговаться на Мосбирже, т.е. ДАТА ПРЕДЫДУЩЕЙ ПРОВЕРКИ <= history_till <= ТЕКУЩАЯ ДАТА
   0.2. Находим все новые акции, т.е. ДАТА ПРЕДЫДУЩЕЙ ПРОВЕРКИ <= history_from
   0.3. Название компании латиницей получаем из https://iss.moex.com/iss/securities/AFKS
   1. Пользователь передаёт ДАТУ, за которую нужно построить график
-  2  Из файла data.tsv получаем список secid для акций, у которых history_from <= ДАТА <= history_till
+  2  Из файла issues-by-sector.tsv получаем список secid для акций, у которых history_from <= ДАТА <= history_till
   3. Переходим на страницу https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&date=2023-07-19&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION
   4. Получаем данные о стоиммости акции, об изменении стоимости и капитализации
   5. Мержим полученные данные в один JS Object и строим для него тримап
@@ -62,7 +62,7 @@
     <script src='https://code.jquery.com/jquery-3.7.0.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js'></script>
     <script>
-        d3.tsv('https://raw.githubusercontent.com/ruslanbay/moex/main/data/data.tsv?token=GHSAT0AAAAAACF37A77OFTA5VJX3MJ4QAEIZGLUHUA', function(err, rows){
+        d3.tsv('https://raw.githubusercontent.com/ruslanbay/moex/main/data/issues-by-sector.tsv?token=GHSAT0AAAAAACF37A77OFTA5VJX3MJ4QAEIZGLUHUA', function(err, rows){
             function unpack(rows, key) {
                 return rows.map(function(row) { return row[key]});
             }
