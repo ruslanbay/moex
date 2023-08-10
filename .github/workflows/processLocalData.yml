@@ -33,11 +33,11 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.11"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install requests
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    # - name: Install dependencies
+    #   run: |
+    #     python -m pip install --upgrade pip
+    #     pip install requests
+    #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Get data files from MOEX ISS
       run: |
         python .github/workflows/processLocalData.py ${{ inputs.startDate }} ${{ inputs.endDate }} ${{ inputs.stepDays }}

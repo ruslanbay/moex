@@ -1,20 +1,6 @@
-# {
-#   "XYX": {
-#     "x": ["2011-12-19", "2011-12-20", "2011-12-21"],
-#     "y": [235423.45, 0.00, 564654.87]
-#   },
-#   "YYY": {
-#     "x": ["2011-12-19", "2011-12-20", "2011-12-21"],
-#     "y": [6546.45, 6546.00, 98794.46]
-#   },
-#   "ZZZ": {
-#     "x": ["2011-12-19", "2011-12-20", "2011-12-21"],
-#     "y": [0.00, 00.00, 46546.45]
-#   }
-# }
-
 from datetime import date, datetime, timedelta
 import json
+import re
 import sys
 
 def daterange(start, end, stepDays):
@@ -39,6 +25,15 @@ if(len(sys.argv) == 4):
       ticket = item[0]
       cap = item[7]
       currency = item[1]
+      # пропускаем зарубежные акции, ETF и облигации
+      if(re.search('^[a-zA-Z0-9]+-RM', ticket) != None):
+        continue
+      if(re.search('^RU[0-9]+.*', ticket) != None):
+        continue
+      if(re.search('^XS[0-9]+.*', ticket) != None):
+        continue
+      if(ticket in ['FXRB', 'FXGD', 'FXAU', 'FXDE', 'FXIT', 'FXJP', 'FXUK', 'FXUS', 'FXRU', 'FXCN', 'FXMM', 'FXRL', 'FXKZ', 'FXTB', 'FXRB', 'FXWO', 'FXTM', 'FXDM', 'FXFA', 'FXTP', 'FXIP', 'FXES', 'FXRD', 'FXRE', 'FXEM', 'FXBC']):
+        continue
       # use only shares nominated in russian ruble
       if(currency != "SUR"):
         continue
@@ -60,13 +55,16 @@ if(len(sys.argv) == 4):
             chartData[ticket]["y"].append(0.00)
       chartData[ticket]["x"].append(f'{myDate}')
       chartData[ticket]["y"].append(cap)
+  for ticket in chartData.keys():
+    lastDate = chartData[ticket]["x"][-1]
+    lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
+    if(lastDate < end):
+      for d in daterange(lastDate + timedelta(days=step), end, step):
+        chartData[ticket]["x"].append(f'{d}')
+        chartData[ticket]["y"].append(0.00)
 else:
   # Rewrite this code using exceptions
   print("Missing arguments:\nExample: processLocalData.py 2011-12-19 2011-12-21 1")
-
-# with open(f'data/barChartData.json', 'w', encoding='utf-8') as f:
-#   f.write(json.dumps(chartData))
-#   f.close()
 
 def set_default(obj):
   if isinstance(obj, set):
