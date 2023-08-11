@@ -50,7 +50,7 @@ if(len(sys.argv) == 4):
         traces[ticket] = {
           'name': ticket,
           'type': 'scatter',
-          'connectgaps': True,
+          'mode': 'lines',
           'stackgroup': 'one',
           'hoverinfo': 'skip',
           'hovertemplate': '',
