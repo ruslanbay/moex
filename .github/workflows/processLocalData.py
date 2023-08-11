@@ -74,13 +74,13 @@ if(len(sys.argv) == 4):
       for d in daterange(lastDate + timedelta(days=step), end, step):
         traces[ticket]["x"].append(f'{d}')
         traces[ticket]["y"].append(0.00)
+  
+  chartData = []
+  for ticket in traces.keys():
+    chartData.append(traces[ticket])
+
+  with open(f'data/barChartData_{start}_{end}_{step}.json', 'w') as f:
+    json.dump(chartData, f)
 else:
   # Rewrite this code using exceptions
   print("Missing arguments:\nExample: processLocalData.py 2011-12-19 2011-12-21 1")
-
-chartData = []
-for ticket in traces.keys():
-  chartData.append(traces[ticket])
-
-with open('data/barChartData.json', 'w') as f:
-  json.dump(chartData, f)
