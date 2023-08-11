@@ -22,7 +22,7 @@ if(len(sys.argv) == 4):
   for myDate in daterange(start, end, step):
     data = readLocalData(myDate)['securities']['data']
     while(len(data) == 0):
-      myDate = myDate + timedelta(days=step)
+      myDate = myDate + timedelta(days=1)
       data = readLocalData(myDate)['securities']['data']
     for item in data:
       ticket = item[0]
