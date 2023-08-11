@@ -49,7 +49,7 @@ if(len(sys.argv) == 4):
       if(ticket not in traces.keys()):
         traces[ticket] = {
           'name': ticket,
-          'type': 'bar',
+          'stackgroup': 'one',
           'hoverinfo': 'skip',
           'hovertemplate': '',
           'x': [],
@@ -80,7 +80,7 @@ if(len(sys.argv) == 4):
   for ticket in traces.keys():
     chartData.append(traces[ticket])
 
-  with open(f'data/barChartData_{start}_{end}_{step}.json', 'w') as f:
+  with open(f'data/chartData_{start}_{end}_{step}.json', 'w') as f:
     json.dump(chartData, f)
 else:
   # Rewrite this code using exceptions
