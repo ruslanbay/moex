@@ -23,7 +23,7 @@
     }
     main,
     section,
-    #treemap,
+    #chart,
     .page-content {
       height: 100%;
       overflow: hidden;
@@ -44,15 +44,19 @@
 
 <body>
   <script>
-    $.getJSON("https://raw.githubusercontent.com/ruslanbay/moex/main/data/barChartData_2011-12-19_2023-08-08_90.json?token=GHSAT0AAAAAACGFF4W33HLVGP675FG7HXCUZGVK62A", function( chartData ) {
+    $.getJSON("https://raw.githubusercontent.com/ruslanbay/moex/main/data/barChartData_2011-12-19_2023-08-08_90.json?token=GHSAT0AAAAAACGGE7PFFWUNN4RNIGFAXDZKZGWIGKA", function( chartData ) {
       var layout = {
         barmode: "stack",
         showlegend: true,
         legend: {
+          visible: false,
           traceorder: "normal",
           orientation: "h",     // show entries horizontally
+          x: 0.5,               // put legend in center of x-axis
           xanchor: "center",    // use center of legend as anchor
-          x: 0.5                // put legend in center of x-axis
+          y: -2.5,
+          yanchor: "bottom",
+          entrywidth: 0
         },
         yaxis: {
           visible: true,
