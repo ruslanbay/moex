@@ -21,6 +21,8 @@ if(len(sys.argv) == 4):
   step = int(sys.argv[3])
   for myDate in daterange(start, end, step):
     data = readLocalData(myDate)['securities']['data']
+    while(len(data) == 0):
+      data = readLocalData(myDate + timedelta(days=step))['securities']['data']
     for item in data:
       ticket = item[0]
       cap = item[7]
