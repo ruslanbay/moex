@@ -49,7 +49,10 @@
         barmode: "stack",
         showlegend: true,
         legend: {
-          traceorder: "normal"
+          traceorder: "normal",
+          orientation: "h",     // show entries horizontally
+          xanchor: "center",    // use center of legend as anchor
+          x: 0.5                // put legend in center of x-axis
         },
         yaxis: {
           visible: true,
