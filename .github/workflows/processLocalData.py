@@ -49,6 +49,8 @@ if(len(sys.argv) == 4):
       if(ticket not in traces.keys()):
         traces[ticket] = {
           'name': ticket,
+          'type': 'scatter',
+          'fill': 'tonexty',
           'stackgroup': 'one',
           'hoverinfo': 'skip',
           'hovertemplate': '',
