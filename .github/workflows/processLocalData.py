@@ -14,12 +14,13 @@ def readLocalData(myDate):
     return data
 
 traces = dict()
-listDate = [start]
+listDate = []
 
 if(len(sys.argv) == 4):
   start = datetime.strptime(sys.argv[1], '%Y-%m-%d').date()
   end = datetime.strptime(sys.argv[2], '%Y-%m-%d').date()
   step = int(sys.argv[3])
+  listDate = [start]
   for myDate in daterange(start, end, step):
     data = readLocalData(myDate)['securities']['data']
     while(len(data) == 0):
