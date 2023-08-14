@@ -69,7 +69,8 @@ if(len(sys.argv) == 4):
         lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
         # if there are skips in dates, then fill capitalization values with 0.00
         if(lastDate < dates[-2]):
-          for d in dates[0:-1]:
+          index = dates.index(lastDate) + 1
+          for d in dates[index:-1]:
             traces[ticket]["x"].append(f'{d}')
             traces[ticket]["y"].append(0.00)
       traces[ticket]["x"].append(f'{dates[-1]}')
