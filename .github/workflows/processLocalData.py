@@ -53,6 +53,7 @@ if(len(sys.argv) == 4):
           'name': ticket,
           'type': 'scatter',
           'mode': 'lines',
+          'fill': 'toself',
           'stackgroup': 'one',
           'hoverinfo': 'skip',
           'hovertemplate': '',
