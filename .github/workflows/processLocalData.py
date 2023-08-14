@@ -14,7 +14,7 @@ def readLocalData(myDate):
     return data
 
 traces = dict()
-listDate = []
+dates = []
 
 if(len(sys.argv) == 4):
   start = datetime.strptime(sys.argv[1], '%Y-%m-%d').date()
@@ -25,7 +25,7 @@ if(len(sys.argv) == 4):
     while(len(data) == 0):
       myDate = myDate + timedelta(days=1)
       data = readLocalData(myDate)['securities']['data']
-    listDate.append(myDate)
+    dates.append(myDate)
     for item in data:
       ticket = item[0]
       cap = item[7]
@@ -60,16 +60,16 @@ if(len(sys.argv) == 4):
           'x': [],
           'y': []
         }
-        if(len(listDate) >= 2):
-          for d in daterange(start, listDate[-2], step):
+        if(len(dates) >= 2):
+          for d in dates[0:-1]:
             traces[ticket]["x"].append(f'{d}')
             traces[ticket]["y"].append(0.00)
       else: # if(ticket in traces.keys()):
         lastDate = traces[ticket]["x"][-1]
         lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
         # if there are skips in dates, then fill capitalization values with 0.00
-        if(lastDate < listDate[-2]):
-          for d in daterange(lastDate, listDate[-2], step):
+        if(lastDate < dates[-2]):
+          for d in dates[0:-1]:
             traces[ticket]["x"].append(f'{d}')
             traces[ticket]["y"].append(0.00)
       traces[ticket]["x"].append(f'{myDate}')
@@ -78,7 +78,7 @@ if(len(sys.argv) == 4):
     lastDate = traces[ticket]["x"][-1]
     lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
     if(lastDate < end):
-      for d in daterange(lastDate + timedelta(days=step), end, step):
+      for d in dates[dates.index(lastDate):-1]:
         traces[ticket]["x"].append(f'{d}')
         traces[ticket]["y"].append(0.00)
   
