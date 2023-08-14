@@ -20,7 +20,6 @@ if(len(sys.argv) == 4):
   start = datetime.strptime(sys.argv[1], '%Y-%m-%d').date()
   end = datetime.strptime(sys.argv[2], '%Y-%m-%d').date()
   step = int(sys.argv[3])
-  listDate = [start]
   for myDate in daterange(start, end, step):
     data = readLocalData(myDate)['securities']['data']
     while(len(data) == 0):
@@ -60,9 +59,10 @@ if(len(sys.argv) == 4):
           'x': [],
           'y': []
         }
-        for d in daterange(start, listDate[-2], step):
-          traces[ticket]["x"].append(f'{d}')
-          traces[ticket]["y"].append(0.00)
+        if(len(listDate) >= 2):
+          for d in daterange(start, listDate[-2], step):
+            traces[ticket]["x"].append(f'{d}')
+            traces[ticket]["y"].append(0.00)
       else: # if(ticket in traces.keys()):
         lastDate = traces[ticket]["x"][-1]
         lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
