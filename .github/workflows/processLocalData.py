@@ -72,13 +72,13 @@ if(len(sys.argv) == 4):
           for d in dates[0:-1]:
             traces[ticket]["x"].append(f'{d}')
             traces[ticket]["y"].append(0.00)
-      traces[ticket]["x"].append(f'{myDate}')
+      traces[ticket]["x"].append(f'{dates[-1]}')
       traces[ticket]["y"].append(cap)
   for ticket in traces.keys():
     lastDate = traces[ticket]["x"][-1]
     lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
-    if(lastDate < end):
-      for d in dates[dates.index(lastDate):-1]:
+    if(lastDate < dates[-1]):
+      for d in dates[dates.index(lastDate):]:
         traces[ticket]["x"].append(f'{d}')
         traces[ticket]["y"].append(0.00)
   
