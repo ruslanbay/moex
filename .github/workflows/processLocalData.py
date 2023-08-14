@@ -78,7 +78,8 @@ if(len(sys.argv) == 4):
     lastDate = traces[ticket]["x"][-1]
     lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
     if(lastDate < dates[-1]):
-      for d in dates[dates.index(lastDate):]:
+      index = dates.index(lastDate) + 1
+      for d in dates[index:]:
         traces[ticket]["x"].append(f'{d}')
         traces[ticket]["y"].append(0.00)
   
