@@ -14,7 +14,7 @@ def readLocalData(myDate):
     return data
 
 traces = dict()
-listDate = []
+listDate = [start]
 
 if(len(sys.argv) == 4):
   start = datetime.strptime(sys.argv[1], '%Y-%m-%d').date()
