@@ -12,11 +12,10 @@ parser.add_argument('--end', nargs=1, type=str, required=True,
 parser.add_argument('--step', nargs=1, type=int, required=True,
                    help="step between data points in days")
 parser.add_argument('--mode', nargs=1, type=str, required=True,
-                   choices=['sum', 'ticket', 'sector', 'combined'],
-                   help='''sum - total capitalization,
+                   choices=['total', 'ticket', 'sector'],
+                   help='''total - total capitalization,
 ticket - capitalization by tickets,
-sector - capitalization by setctors,
-combined - capitalization by ticket and by sector''')
+sector - capitalization by setctors''')
 args=parser.parse_args()
 start = datetime.strptime(args.start, '%Y-%m-%d').date()
 end = datetime.strptime(args.end, '%Y-%m-%d').date()
@@ -56,7 +55,11 @@ for myDate in daterange(start, end, step):
     if(re.search('^XS[0-9]+.*', ticket) != None):
       continue
     # skip ETFs
-    if(ticket in ['FXRB', 'FXGD', 'FXAU', 'FXDE', 'FXIT', 'FXJP', 'FXUK', 'FXUS', 'FXRU', 'FXCN', 'FXMM', 'FXRL', 'FXKZ', 'FXTB', 'FXRB', 'FXWO', 'FXTM', 'FXDM', 'FXFA', 'FXTP', 'FXIP', 'FXES', 'FXRD', 'FXRE', 'FXEM', 'FXBC']):
+    if(ticket in ['FXRB', 'FXGD', 'FXAU', 'FXDE', 'FXIT',
+                  'FXJP', 'FXUK', 'FXUS', 'FXRU', 'FXCN',
+                  'FXMM', 'FXRL', 'FXKZ', 'FXTB', 'FXRB',
+                  'FXWO', 'FXTM', 'FXDM', 'FXFA', 'FXTP',
+                  'FXIP', 'FXES', 'FXRD', 'FXRE', 'FXEM', 'FXBC']):
       continue
     # use only shares nominated in russian ruble
     if(currency != 'SUR'):
@@ -103,8 +106,8 @@ for ticket in traces.keys():
 chartData = []
 
 match mode:
-  case 'sum':
-    ySum = traces.[traces.keys()[0]]["y"]
+  case 'total':
+    ySum = traces[traces.keys()[0]]["y"]
     for ticket in traces.keys():
       for i in range(1, len(ySum)):
         ySum[i] += traces[ticket]["y"][i]
@@ -115,7 +118,7 @@ match mode:
       "stackgroup": "one",
       "hoverinfo": "skip",
       "hovertemplate": "",
-      "x": traces.[traces.keys()[0]]["x"],
+      "x": traces[traces.keys()[0]]["x"],
       "y": ySum
     }]
   case 'ticket':
@@ -123,22 +126,37 @@ match mode:
       if(set(traces[ticket]["y"]) == {0}): # exclude tickets with capitalization == 0 for each date
         continue
       chartData.append(traces[ticket])
-  # case 'sector':
-  #   with open('data/issues-by-sector.tsv', 'r', newline='', encoding='utf-8') as f:
-  #     sectors = []
-  #     tsv = csv.reader(f, delimiter='\t')
-  #     for row in tsv:
-        
-  #     for ticket in traces.keys():
-  #       j
-  # case 'combined':
-  #   sdf
+  case 'sector':
+    with open('data/issues-by-sector.tsv', 'r', newline='', encoding='utf-8') as f:
+      tickets = []
+      sectors = []
+      sectorCap = dict()
+      tsv = csv.DictReader(f, delimiter='\t')
+      for row in tsv:
+        tickets.append(row['tickets'])
+        sectors.append(row['sectors'])
+      for sector in set(sectors):
+        sectorCap[sector] = [0] * len(dates)
+      for ticket in traces.keys():
+        if(set(traces[ticket]['y']) == {0}): # exclude tickets with capitalization == 0 for each date
+          continue
+        try:
+          index = tickets.index(ticket)
+          sector = sectors[index]
+          sectorCap[sector] = [sum(i) for i in zip(sectorCap[sector], traces[ticket]['y'])]
+        except ValueError:
+          sectorCap['Others'] = [sum(i) for i in zip(sectorCap['Others'], traces[ticket]['y'])]
+      for sector in sectorCap:
+        chartData.append({
+          "name": sector,
+          "type": "scatter",
+          "mode": "lines",
+          "stackgroup": "one",
+          "hoverinfo": "skip",
+          "hovertemplate": "",
+          "x": dates,
+          "y": sectorCap[sector]
+        })
 
-for ticket in traces.keys():
-  # exclude tickets with capitalization == 0
-  if(set(traces[ticket]["y"]) == {0}):
-    continue
-  chartData.append(traces[ticket])
-
-with open(f'data/chartData_{start}_{end}_{step}.json', 'w') as f:
+with open(f'data/chartData_{start}_{end}_{step}_{mode}.json', 'w') as f:
   json.dump(chartData, f)
