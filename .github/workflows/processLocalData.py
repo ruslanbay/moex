@@ -3,6 +3,7 @@ import csv
 from datetime import date, datetime, timedelta
 import json
 import re
+import sys
 
 parser = argparse.ArgumentParser(description='Process locally stored data')
 parser.add_argument('--start', nargs=1, type=str, required=True,
@@ -22,13 +23,10 @@ end = datetime.strptime(args.end[0], '%Y-%m-%d').date()
 step = int(args.step[0])
 mode = args.mode[0]
 
-try:
-  if(start > end):
-    raise Exception('End date has to be greater than start date')
-  if(step < 1):
-    raise Exception('Step has to be greater or equal to 1')
-except Exception as error:
-  print('Caught this error: ' + repr(error))
+if(start > end):
+  sys.exit('End date has to be greater than start date')
+if(step < 1):
+  sys.exit('Step has to be greater or equal to 1')
 
 def daterange(start, end, stepDays):
   for n in range(0, int((end - start).days) + 1, stepDays):
