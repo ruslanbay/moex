@@ -154,7 +154,7 @@ match mode:
           "stackgroup": "one",
           "hoverinfo": "skip",
           "hovertemplate": "",
-          "x": dates,
+          "x": traces[list(traces.keys())[0]]["x"],
           "y": sectorCap[sector]
         })
 
