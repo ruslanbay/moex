@@ -9,15 +9,27 @@ on:
       startDate:
         description: 'Start date'
         required: true
+        type: string
         default: '2011-12-19'
       endDate:
         description: 'End date'
         required: true
+        type: string
         default: '2011-12-21'
       stepDays:
         description: 'Step in days'
         required: true
         default: '1'
+        type: number
+      mode:
+        description: 'Show capitalization by ticket, sector or total'
+        required: true
+        default: 'total'
+        type: choice
+        options:
+          - total
+          - ticket
+          - sector
 
 permissions:
   contents: write
@@ -40,7 +52,7 @@ jobs:
     #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Get data files from MOEX ISS
       run: |
-        python .github/workflows/processLocalData.py ${{ inputs.startDate }} ${{ inputs.endDate }} ${{ inputs.stepDays }}
+        python .github/workflows/processLocalData.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }}
     # Commit and push all changed files
     # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html
     # Must only affect files that are listed in "paths-ignore"

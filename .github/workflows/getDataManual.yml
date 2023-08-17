@@ -21,15 +21,6 @@ on:
         required: true
         type: number
         default: '7'
-      mode:
-        description: 'Show capitalization by ticket, sector or total'
-        required: true
-        default: 'total'
-        type: choice
-        options:
-          - total
-          - ticket
-          - sector
 
 permissions:
   contents: write
@@ -52,7 +43,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Get data files from MOEX ISS
       run: |
-        python .github/workflows/getData.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }}
+        python .github/workflows/getData.py ${{ inputs.startDate }} ${{ inputs.endDate }} ${{ inputs.stepDays }}
     # Commit and push all changed files
     # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html
     # Must only affect files that are listed in "paths-ignore"
