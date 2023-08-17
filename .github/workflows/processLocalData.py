@@ -17,10 +17,10 @@ parser.add_argument('--mode', nargs=1, type=str, required=True,
 ticket - capitalization by tickets,
 sector - capitalization by setctors''')
 args=parser.parse_args()
-start = datetime.strptime(args.start, '%Y-%m-%d').date()
-end = datetime.strptime(args.end, '%Y-%m-%d').date()
-step = int(args.step)
-mode = args.mode
+start = datetime.strptime(args.start[0], '%Y-%m-%d').date()
+end = datetime.strptime(args.end[0], '%Y-%m-%d').date()
+step = int(args.step[0])
+mode = args.mode[0]
 
 def daterange(start, end, stepDays):
   for n in range(0, int((end - start).days) + 1, stepDays):
