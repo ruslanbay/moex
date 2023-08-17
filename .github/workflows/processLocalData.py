@@ -28,7 +28,7 @@ try:
   if(step < 1):
     raise Exception('Step has to be greater or equal to 1')
 except Exception as error:
-  print('Caught this error: ' + repr(error)
+  print('Caught this error: ' + repr(error))
 
 def daterange(start, end, stepDays):
   for n in range(0, int((end - start).days) + 1, stepDays):
