@@ -22,6 +22,14 @@ end = datetime.strptime(args.end[0], '%Y-%m-%d').date()
 step = int(args.step[0])
 mode = args.mode[0]
 
+try:
+  if(start > end):
+    raise Exception('End date has to be greater than start date')
+  if(step < 1):
+    raise Exception('Step has to be greater or equal to 1')
+except Exception as error:
+  print('Caught this error: ' + repr(error)
+
 def daterange(start, end, stepDays):
   for n in range(0, int((end - start).days) + 1, stepDays):
     yield start + timedelta(n)
@@ -147,6 +155,8 @@ match mode:
         except ValueError:
           sectorCap['Others'] = [sum(i) for i in zip(sectorCap['Others'], traces[ticket]['y'])]
       for sector in sectorCap:
+        if(sector in ['', 'Moscow Exchange']):
+          continue
         chartData.append({
           "name": sector,
           "type": "scatter",
