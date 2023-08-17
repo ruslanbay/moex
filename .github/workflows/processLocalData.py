@@ -107,7 +107,7 @@ chartData = []
 
 match mode:
   case 'total':
-    ySum = traces[traces.keys()[0]]["y"]
+    ySum = traces[list(traces.keys())[0]]['y']
     for ticket in traces.keys():
       for i in range(1, len(ySum)):
         ySum[i] += traces[ticket]["y"][i]
@@ -118,7 +118,7 @@ match mode:
       "stackgroup": "one",
       "hoverinfo": "skip",
       "hovertemplate": "",
-      "x": traces[traces.keys()[0]]["x"],
+      "x": traces[list(traces.keys())[0]]["x"],
       "y": ySum
     }]
   case 'ticket':
