@@ -133,8 +133,8 @@ match mode:
       sectorCap = dict()
       tsv = csv.DictReader(f, delimiter='\t')
       for row in tsv:
-        tickets.append(row['tickets'])
-        sectors.append(row['sectors'])
+        tickets.append(row['labels'])
+        sectors.append(row['parents'])
       for sector in set(sectors):
         sectorCap[sector] = [0] * len(dates)
       for ticket in traces.keys():
