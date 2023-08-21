@@ -1,9 +1,11 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: '[manual] Get MOEX data'
+name: 'Get MOEX data'
 
-on: 
+on:
+  schedule:
+    - cron: '15 17 * * 2-6' # run every day at 17:15 UTC from Tuesday to Saturday
   workflow_dispatch:
     inputs:
       startDate:
@@ -27,9 +29,10 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    env: 
+      CI_COMMIT_MESSAGE: Update MOEX data
+      CI_COMMIT_AUTHOR: Github Actions
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.11
@@ -41,16 +44,18 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Get data files from MOEX ISS
+    - name: DAILY. Get data files from MOEX ISS
+      if: ${{ github.event_name == 'schedule' }}
+      run: |
+        python .github/workflows/getData.py
+    - name: MANUAL. Get data files from MOEX ISS
+      if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
         python .github/workflows/getData.py ${{ inputs.startDate }} ${{ inputs.endDate }} ${{ inputs.stepDays }}
-    # Commit and push all changed files
-    # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html
-    # Must only affect files that are listed in "paths-ignore"
     - name: Commit and push build artifacts
       run: |
-        git config --global user.name "Github Actions"
+        git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "github-actions@github.com"
         git add data/iss/history/engines/stock/totals/boards/MRKT/*.json
-        git commit -m "Manually collect and upload data from MOEX"
+        git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
         git push
