@@ -17,11 +17,11 @@ def getData(myDate):
       print(f'{myDate} - ERROR: Wrong response code: {r.status_code}')
     f.close()
 
-if(len(sys.argv) == 4):
+if(len(sys.argv) == 1):
+  getData(date.today() - timedelta(days=1))
+else:
   start = datetime.strptime(sys.argv[1], '%Y-%m-%d').date()
   end = datetime.strptime(sys.argv[2], '%Y-%m-%d').date()
   step = int(sys.argv[3])
   for myDate in daterange(start, end, step):
     getData(myDate)
-else:
-  getData(date.today() - timedelta(days=1))
