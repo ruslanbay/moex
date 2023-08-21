@@ -22,7 +22,7 @@ on:
         description: 'Currency'
         required: true
         type: string
-        default: 'USDRUB EURRUB CNYRUB'
+        default: 'USDRUB,EURRUB,CNYRUB'
 
 permissions:
   contents: write
