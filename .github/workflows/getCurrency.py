@@ -28,7 +28,7 @@ def getData(start, end, currency):
   url = f'https://www.wsj.com/market-data/quotes/fx/{currency}/historical-prices/download?MOD_VIEW=page&num_rows=all&range_days=10&startDate={start}&endDate={end}'
   headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'}
   with requests.get(url, headers) as r:
-    for row in csv.DictReader(r.text(), delimiter=','):
+    for row in csv.DictReader(r.text, delimiter=','):
       dates.append(row['Date'])
       closePrice.append(row['Close'])
   data = {
