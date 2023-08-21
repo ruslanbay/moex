@@ -49,11 +49,11 @@ jobs:
       run: |
         start = `date --utc -d '2008-12-10' +%m/%d/%Y`
         end   = `date --utc -d 'yesterday'  +%m/%d/%Y`
-        python .github/workflows/getCurrency.py $start $end ${{ inputs.currency }}
+        python .github/workflows/getCurrency.py --start $start --end $end --currency ${{ inputs.currency }}
     - name: MANUAL. Get currencies from WSJ.com
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
-        python .github/workflows/getCurrency.py ${{ inputs.startDate }} ${{ inputs.endDate }} ${{ inputs.currency }}
+        python .github/workflows/getCurrency.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --currency ${{ inputs.currency }}
     - name: Commit and push build artifacts
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
