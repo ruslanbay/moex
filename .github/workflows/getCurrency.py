@@ -12,6 +12,15 @@ parser.add_argument('--end', nargs=1, type=str, required=True,
 parser.add_argument('--currency', nargs=1, type=str, required=True,
                    help="step between data points in days")
 
+args=parser.parse_args()
+currencyList = args.currency[0].split(' ')
+start = datetime.strptime(args.start[0], '%Y-%m-%d').date()
+start = start.strftime('%m/%d/%Y')
+end = datetime.strptime(args.end[0], '%Y-%m-%d').date()
+end = end.strftime('%m/%d/%Y')
+if(start > end):
+  sys.exit('End date has to be greater than start date')
+
 def getData(start, end, currency):
   dates = []
   closePrice = []
@@ -32,17 +41,7 @@ def getData(start, end, currency):
   }
   return data
 
-
-start = datetime.strptime(args.start[0], '%Y-%m-%d').date()
-start = start.strftime('%m/%d/%Y')
-end = datetime.strptime(args.end[0], '%Y-%m-%d').date()
-end = end.strftime('%m/%d/%Y')
-
-if(start > end):
-  sys.exit('End date has to be greater than start date')
-
 chartData = []
-currencyList = args.currency[0].split(' ')
 
 with open('data/currency.json', 'w', encoding='utf-8') as f:
   for currency in currencyList:
