@@ -30,8 +30,6 @@
       background-color: rgb(38, 38, 39);
     }
     </style>
-    
-    <script src='https://cdn.plot.ly/plotly-2.24.1.min.js'></script>
 
     <!--
     Работает только с версией D3 4.13.0 и ниже,
@@ -39,7 +37,11 @@
     https://github.com/d3/d3/blob/main/CHANGES.md#changes-in-d3-50
     -->
     <script src='https://code.jquery.com/jquery-3.7.0.min.js'></script>
+    <script src='https://cdn.plot.ly/plotly-2.27.1.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js'></script>
+    <script type="text/javascript">
+      document.addEventListener('contextmenu', event => event.preventDefault()); // TODO: customize context menu
+    </script>
 </head>
 
 <body>
