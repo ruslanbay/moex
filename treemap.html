@@ -91,7 +91,7 @@
             var excludeList = ["EA-RM"] // exclude Electronic Art and other shares
 
             // $.getJSON("https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&date=2023-07-19&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION", function( moexJson ) {
-            $.getJSON("/moex/data/iss/history/engines/stock/totals/boards/MRKT/securities-2023-07-19.json", function( moexJson ) {
+            $.getJSON("/moex/data/iss/history/engines/stock/totals/boards/MRKT/securities-2023-12-15.json", function( moexJson ) {
               moexJson.securities.data.filter(v => !excludeList.includes(v[0])).forEach(item => {
 
                 var ticker         = item[0];
