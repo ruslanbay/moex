@@ -38,27 +38,13 @@
     </script>
 
     <script type="text/javascript">
-        function formatDate(date) {
-            var d = new Date(date),
-            month = '' + (d.getMonth() + 1),
-            day = '' + d.getDate(),
-            year = d.getFullYear();
-            if (month.length < 2) 
-                month = '0' + month;
-            if (day.length < 2) 
-                day = '0' + day;
-            return [year, month, day].join('-');
-        }
-        window.date = formatDate(new Date());
-        // document.write(`<input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="${window.date}" min="2020-08-07" max="${window.date}" style="padding: 0; margin: 0; background-color: rgb(65,69,84); border: 0px; border-color: rgb(65,69,84); color: #ffffff; position: absolute; right: 0px; outline: none;">`);
-        document.write(`<input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="${window.date}" min="2011-12-19" max="2023-12-31" style="padding: 0; margin: 0; background-color: rgb(65,69,84); border: 0px; border-color: rgb(65,69,84); color: #ffffff; position: absolute; top: 0px; right: 0px; outline: none;">`);
-
-        const input = document.querySelector("input");
-        input.addEventListener("change", refreshChart);
-    </script>
+    const input = document.querySelector("input");
+    input.addEventListener("change", refreshChart);
     
-    <script>
     var date = { target: { value: "2023-12-15" } };
+    
+    document.write(`<input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="${date}" min="2011-12-19" max="2023-12-31" style="padding: 0; margin: 0; background-color: rgb(65,69,84); border: 0px; border-color: rgb(65,69,84); color: #ffffff; position: absolute; top: 0px; right: 0px; outline: none;">`);
+    
     function refreshChart(date) {
         date = date.target.value;
         
