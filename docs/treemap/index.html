@@ -162,10 +162,10 @@
 </head>
 
 <body>
+    <div id='chart'><!-- Plotly chart will be drawn inside this DIV --></div>
     <script type="text/javascript">
         refreshChart({ target: { value: "2023-12-15" } });
         const input = document.querySelector("input");
         input.addEventListener("change", refreshChart);
     </script>
-    <div id='chart'><!-- Plotly chart will be drawn inside this DIV --></div>
 </body>
