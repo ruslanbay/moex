@@ -40,7 +40,6 @@
     <script type="text/javascript">
     function refreshChart(date) {
         date = date.target.value;
-        document.write(`<input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="${date}" min="2011-12-19" max="2023-12-31" style="padding: 0; margin: 0; background-color: rgb(65,69,84); border: 0px; border-color: rgb(65,69,84); color: #ffffff; position: absolute; top: 0px; right: 0px; outline: none;">`);
         
         d3.tsv('/moex/data/issues-by-sector.tsv', function(err, rows){
             function unpack(rows, key) {
@@ -156,6 +155,8 @@
             }
             Plotly.react('chart', data, layout, config);
         })
+
+        document.write(`<input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="${date}" min="2011-12-19" max="2023-12-31" style="padding: 0; margin: 0; background-color: rgb(65,69,84); border: 0px; border-color: rgb(65,69,84); color: #ffffff; position: absolute; top: 0px; right: 0px; outline: none;">`);
     }
     </script>
     <script>
