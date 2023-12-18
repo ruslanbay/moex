@@ -41,7 +41,8 @@
     function refreshChart(date) {
         date = date.target.value;
 
-        document.write(`<input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="${date}" min="2011-12-19" max="2023-12-31" style="padding: 0; margin: 0; background-color: rgb(65,69,84); border: 0px; border-color: rgb(65,69,84); color: #ffffff; position: absolute; top: 0px; right: 0px; z-index: 1; outline: none;">`);
+        // document.write(`<input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="${date}" min="2011-12-19" max="2023-12-31" style="padding: 0; margin: 0; background-color: rgb(65,69,84); border: 0px; border-color: rgb(65,69,84); color: #ffffff; position: absolute; top: 0px; right: 0px; z-index: 1000; outline: none;">`);
+        document.write(`<input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="${date}" min="2011-12-19" max="2023-12-31" style="padding: 0; margin: 0; background-color: rgb(65,69,84); border: 0px; border-color: rgb(65,69,84); color: #ffffff; position: absolute; top: 0px; right: 0px; outline: none;">`);
         
         d3.tsv('/moex/data/issues-by-sector.tsv', function(err, rows){
             function unpack(rows, key) {
@@ -159,13 +160,13 @@
         })
     }
     </script>
+</head>
+
+<body>
+    <div id='chart'><!-- Plotly chart will be drawn inside this DIV --></div>
     <script type="text/javascript">
         refreshChart({ target: { value: "2023-12-15" } });
         const input = document.querySelector("input");
         input.addEventListener("change", refreshChart);
     </script>
-</head>
-
-<body>
-    <div id='chart'><!-- Plotly chart will be drawn inside this DIV --></div>
 </body>
