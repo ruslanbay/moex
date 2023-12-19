@@ -5,8 +5,7 @@
       position: relative;
       width: 99.5%;
       height: 100%;
-      background-color: transparent;
-      /* background-color: rgb(65,69,84); */
+      background-color: rgb(65,69,84);
     }
     * {
       -webkit-touch-callout: none;
@@ -20,8 +19,7 @@
       height: 100%;
       margin: 45px 0px 0px 0px;
       overflow: hidden;
-      background-color: transparent;
-      /* background-color: rgb(65,69,84); */
+      background-color: rgb(65,69,84);
     }
     </style>
 
@@ -128,7 +126,7 @@
                 values: chartData["size"],
                 marker: {
                       colors: chartData.priceChange,
-                      colorscale: [[0, 'rgb(246,53,56)'], [0.5, 'rgb(65,69,84)'], [1, 'rgb(48,204,90)']],
+                      colorscale: [[0, 'rgb(246,53,56)'], [0.5, 'rgba(65,69,84, 0.5)'], [1, 'rgb(48,204,90)']],
                       cmin: -3,
                       cmid: 0,
                       cmax: 3,
