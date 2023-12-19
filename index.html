@@ -126,11 +126,14 @@
                 values: chartData["size"],
                 marker: {
                       colors: chartData.priceChange,
-                      colorscale: [[0, 'rgb(246,53,56)'], [0.5, 'rgba(65,69,84, 0.5)'], [1, 'rgb(48,204,90)']],
+                      colorscale: [[0, 'rgb(246,53,56)'], [0.5, 'rgba(65, 69, 84, 1)'], [1, 'rgb(48,204,90)']],
                       cmin: -3,
                       cmid: 0,
                       cmax: 3,
-                      line: {width: 2, color: "rgb(64,68,83)"}
+                      line: {width: 2, color: "rgb(64,68,83)"},
+                      pattern: {
+                          fillmode: overlay
+                      }
                     },
                     text: 'chartData.customdata[4]',
                     textinfo: "label+text+value",
