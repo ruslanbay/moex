@@ -62,9 +62,9 @@
             for (let i=0; i<=14; i++) {
               chartData["sector"].push(parents[i]);
               chartData["ticker"].push(labels[i]);
-              chartData["size"].push(0);
-              chartData["priceChange"].push(0);
-              chartData["customdata"].push(["Moscow Exchange", labels[i], 0, 0, labels[i], 0]);
+              chartData["size"].push(NaN);
+              chartData["priceChange"].push(NaN);
+              chartData["customdata"].push(["Moscow Exchange", labels[i], NaN, NaN, labels[i], NaN]);
             };
 
             var excludeList = ["EA-RM"] // exclude Electronic Art and other shares
@@ -130,10 +130,7 @@
                       cmin: -3,
                       cmid: 0,
                       cmax: 3,
-                      line: {width: 2, color: "rgb(64,68,83)"},
-                      pattern: {
-                          fillmode: "overlay"
-                      }
+                      line: {width: 2, color: "rgb(64,68,83)"}
                     },
                     text: 'chartData.customdata[4]',
                     textinfo: "label+text+value",
