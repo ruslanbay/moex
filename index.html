@@ -190,11 +190,11 @@
         <a href="/moex/history">HISTORY</a>
         &nbsp;&nbsp;&nbsp;&nbsp;
     </header>
-    <div id="chart"></div>
     <script type="text/javascript">
         const input = document.querySelector("input");
         input.addEventListener("change", refreshChart);
         
         refreshChart({ target: { value: "2023-12-08" } });
     </script>
+    <div id="chart"></div>
 </body>
