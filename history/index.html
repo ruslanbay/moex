@@ -62,11 +62,11 @@
     <script type="text/javascript">
       document.addEventListener('contextmenu', event => event.preventDefault()); // TODO: customize context menu
     </script>
-</head>
-
-<body>
-  <script>
-    $.getJSON("/moex/history/2011-12-19_2023-12-19_30_total.json", function( chartData ) {
+    <script>
+    function refreshChart(date) {
+      date = date.target.value;
+      
+      $.getJSON(`/moex/history/${date}.json`, function( chartData ) {
       var layout = {
         // barmode: "stack",
         showlegend: true,
@@ -152,21 +152,21 @@
       
       Plotly.react('chart', chartData, layout, config);
     });
-  </script>
+    </script>
+</head>
+
+<body>
   <header>
-    <a href="">2012</a>
-    <a href="">2013</a>
-    <a href="">2014</a>
-    <a href="">2015</a>
-    <a href="">2016</a>
-    <a href="">2017</a>
-    <a href="">2018</a>
-    <a href="">2019</a>
-    <a href="">2020</a>
-    <a href="">2021</a>
-    <a href="">2022</a>
-    <a href="">2023</a>
+    <input type="date" id="dateInput" name="date" pattern="\d{4}" value="2023" min="2011" max="2023">
+    &nbsp;&nbsp;&nbsp;&nbsp;
     <a href="/moex">TREEMAP</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
   </header>
+  <script type="text/javascript">
+    const input = document.querySelector("input");
+    input.addEventListener("change", refreshChart);
+    
+    refreshChart({ target: { value: "2011-12-19_2023-12-19_30_total" } });
+  </script>
   <div id='chart'><!-- Plotly chart will be drawn inside this DIV --></div>
 </body>
