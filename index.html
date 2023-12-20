@@ -179,7 +179,7 @@
 
 <body>
     <header>
-        <input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="2023-12-15" min="2011-12-19" max="2023-12-31">
+        <input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="2023-12-08" min="2011-12-19" max="2023-12-31">
         &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="/moex/history">HISTORY</a>
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -189,6 +189,6 @@
         const input = document.querySelector("input");
         input.addEventListener("change", refreshChart);
         
-        refreshChart({ target: { value: "2023-12-15" } });
+        refreshChart({ target: { value: "2023-12-08" } });
     </script>
 </body>
