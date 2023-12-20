@@ -33,10 +33,16 @@ def daterange(start, end, stepDays):
     yield start + timedelta(n)
 
 def readLocalData(myDate):
-  with open(f'data/iss/history/engines/stock/totals/boards/MRKT/securities-{myDate}.json', 'r', encoding='utf-8') as f:
-    data = json.load(f)
-    f.close()
-    return data
+  try:
+    f = open(f'data/iss/history/engines/stock/totals/boards/MRKT/securities-{myDate}.json', 'r', encoding='utf-8')
+  except FileNotFoundError:
+    print(f"securities-{myDate}.jso doesn't exist")
+    return ''
+  else:
+    with f:
+      data = json.load(f)
+      f.close()
+      return data
 
 traces = dict()
 dates = []
