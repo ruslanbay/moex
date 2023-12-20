@@ -166,5 +166,5 @@ match mode:
           "y": sectorCap[sector]
         })
 
-with open(f'data/chartData_{start}_{end}_{step}_{mode}.json', 'w') as f:
+with open(f'history/{start}_{end}_{step}_{mode}.json', 'w') as f:
   json.dump(chartData, f)
