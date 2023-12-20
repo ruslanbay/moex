@@ -21,13 +21,27 @@
       -ms-user-select: none;
       user-select: none;
     }
-    main,
-    section,
-    #chart,
-    .page-content {
+    header {
+        padding: 0;
+        margin: 0;
+        background-color: rgb(65,69,84);
+        border: 0px;
+        border-color: rgb(65,69,84);
+        color: #ffffff;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        outline: none;
+    }
+    a:link, a:visited, a:hover, a:active {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    #chart {
       height: 100%;
+      margin: 45px 0px 0px 0px;
       overflow: hidden;
-      background-color: rgb(38, 38, 39);
+      background-color: rgb(65,69,84);
     }
     </style>
 
@@ -67,10 +81,10 @@
           showgrid: true
         },
         xaxis: {
+          type: "date",
           fixedrange: true,
           tickangle: -90,
-          tickwidth: 6,
-          type: "date",
+          // tickwidth: 6,
           // type: "category",
           // tickformat: '<a href="#%Y-%m-%d" target="_self">%Y-%m-%d</a>',
           tickmode: "array",
@@ -134,5 +148,20 @@
       Plotly.react('chart', chartData, layout, config);
     });
   </script>
+  <header>
+    <a href="">2012</a>
+    <a href="">2013</a>
+    <a href="">2014</a>
+    <a href="">2015</a>
+    <a href="">2016</a>
+    <a href="">2017</a>
+    <a href="">2018</a>
+    <a href="">2019</a>
+    <a href="">2020</a>
+    <a href="">2021</a>
+    <a href="">2022</a>
+    <a href="">2023</a>
+    <a href="/moex">TREEMAP</a>
+  </header>
   <div id='chart'><!-- Plotly chart will be drawn inside this DIV --></div>
 </body>
