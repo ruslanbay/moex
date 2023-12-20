@@ -9,19 +9,12 @@
     html, body {
       overflow: hidden;
       position: relative;
-      width: 100%;
+      width: 99.5%;
       height: 100%;
       background-color: rgb(65,69,84);
     }
-    * {
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
     header {
+        height: 45px;
         padding: 0;
         margin: 0;
         background-color: rgb(65,69,84);
@@ -37,11 +30,24 @@
         color: #ffffff;
         text-decoration: none;
     }
+    * {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
     #chart {
-      height: 100%;
-      margin: 45px 0px 0px 0px;
+      height: 92%;
+      width: 100%;
+      /* margin: 45px 0px 0px 0px; */
       overflow: hidden;
       background-color: rgb(65,69,84);
+      position: absolute;
+      top: 45px;
+      left: 0px;
+      outline: none;
     }
     </style>
 
@@ -100,6 +106,8 @@
             activecolor: "#000000",
             bgcolor: "rgb(38, 38, 39)",
             buttons: [{
+                step: 'all',
+            }, {
                 step: 'month',
                 stepmode: 'backward',
                 count: 1,
@@ -118,10 +126,7 @@
                 step: 'year',
                 stepmode: 'backward',
                 count: 1,
-                label: '1y',
-                active: true
-            }, {
-                step: 'all',
+                label: '1y'
             }]
           }
         },
