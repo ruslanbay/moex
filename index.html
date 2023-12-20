@@ -60,8 +60,6 @@
     <script type="text/javascript">
     function refreshChart(date) {
         date = date.target.value;
-        // let divChart = document.getElementById("chart");
-        // divChart.setAttribute('value', date);
         
         d3.tsv('/moex/data/issues-by-sector.tsv', function(err, rows){
             function unpack(rows, key) {
