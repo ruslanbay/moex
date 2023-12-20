@@ -158,28 +158,28 @@
 
 <body>
   <header>
-    <input list="browsers" name="browser" id="browser">
-    <datalist id="browsers">
-      <option value="2012">
-      <option value="2013">
-      <option value="2014">
-      <option value="2015">
-      <option value="2016">
-      <option value="2017">
-      <option value="2018">
-      <option value="2019">
-      <option value="2020">
-      <option value="2021">
-      <option value="2022">
-      <option value="2023">
-      <option value="2011-12-19_2023-12-19_30_total">
-    </datalist>
+    <select id="yearSelector">
+      <option value="2012">2012</option>
+      <option value="2013">2013</option>
+      <option value="2014">2013</option>
+      <option value="2015">2013</option>
+      <option value="2016">2013</option>
+      <option value="2017">2013</option>
+      <option value="2018">2013</option>
+      <option value="2019">2013</option>
+      <option value="2020">2013</option>
+      <option value="2021">2013</option>
+      <option value="2022">2013</option>
+      <option value="2023">2013</option>
+      <option value="2011-12-19_2023-12-19_30_total">2011-2023</option>
+    </select>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <a href="/moex">TREEMAP</a>
     &nbsp;&nbsp;&nbsp;&nbsp;
   </header>
   <script type="text/javascript">
-    const input = document.querySelector("input");
+
+    const input = document.getElementById("yearSelector");
     input.addEventListener("change", refreshChart);
     
     refreshChart({ target: { value: "2011-12-19_2023-12-19_30_total" } });
