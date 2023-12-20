@@ -7,6 +7,18 @@
       height: 100%;
       background-color: rgb(65,69,84);
     }
+    header {
+        padding: 0;
+        margin: 0;
+        background-color: rgb(65,69,84);
+        border: 0px;
+        border-color: rgb(65,69,84);
+        color: #ffffff;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        outline: none;
+    }
     * {
       -webkit-touch-callout: none;
       -webkit-user-select: none;
@@ -162,7 +174,11 @@
 </head>
 
 <body>
-    <input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="2023-12-15" min="2011-12-19" max="2023-12-31" style="padding: 0; margin: 0; background-color: rgb(65,69,84); border: 0px; border-color: rgb(65,69,84); color: #ffffff; position: absolute; top: 0px; right: 0px; outline: none;">
+    <header>
+        <input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="2023-12-15" min="2011-12-19" max="2023-12-31">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/moex/history">HISTORY</a>
+    </header>
     <div id="chart"></div>
     <script type="text/javascript">
         const input = document.querySelector("input");
