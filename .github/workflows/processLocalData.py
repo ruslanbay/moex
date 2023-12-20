@@ -42,16 +42,16 @@ def readLocalData(myDate):
     with f:
       data = json.load(f)
       f.close()
-      return data
+      return data['securities']['data']
 
 traces = dict()
 dates = []
 
 for myDate in daterange(start, end, step):
-  data = readLocalData(myDate)['securities']['data']
+  data = readLocalData(myDate)
   while(len(data) == 0):
     myDate = myDate + timedelta(days=1)
-    data = readLocalData(myDate)['securities']['data']
+    data = readLocalData(myDate)
   dates.append(myDate)
   for item in data:
     ticket = item[0]
