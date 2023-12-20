@@ -50,7 +50,7 @@ jobs:
     #     python -m pip install --upgrade pip
     #     pip install requests
     #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Get data files from MOEX ISS
+    - name: Process local files
       run: |
         python .github/workflows/processLocalData.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }}
     # Commit and push all changed files
