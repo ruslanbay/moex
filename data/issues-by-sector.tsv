@@ -42,6 +42,7 @@ Construction (Development)	INGR	INGRAD	ИНГРАД ао	ИНГРАД ПАО а�
 Construction (Development)	LSRG	LSR	ЛСР ао	Группа ЛСР ПАО ао	2013-07-08	
 Construction (Development)	MERF	Meridian	МЕРИДИАН	МЕРИДИАН ПАО ао	2014-06-09	2020-02-27
 Construction (Development)	PIKK	PIK SZ	ПИК ао	ПИК СЗ (ПАО) ао	2013-07-08	
+Construction (Development)	PRFN	Profnastil	ЧЗПСН-Профнастил	ЧЗПСН-Профнастил	2023-07-25	
 Construction (Development)	SMLT	Samolet	Самолет ао	ГК Самолет ао	2020-10-29	
 Construction (Development)	TUCH	Tuchkovskiy CSM	ТКСМ ао	Тучковский КСМ ао	2014-06-09	2016-12-02
 Construction (Development)	UTSY	Edinie Tehno Sistemi	ЕТС ао	Единые Техно Системы ПАО ао	2015-05-22	2016-02-15
@@ -60,6 +61,7 @@ Consumer	FIXP	GDR FixPrice Group PLC ORD SHS	FIXP-гдр	ГДР FixPrice Group P
 Consumer	GCHE	Cherkizovo Group ao	ЧеркизГ-ао	Группа Черкизово ПАО-ао	2013-09-02	
 Consumer	GTPR	GlavTorgProdukt	ГлТоргПрод	ГлавТоргПродукт ОАО ао	2014-06-09	2016-10-11
 Consumer	GUMM	GUM	ГУМ	ао ГУМ	2014-06-09	2015-10-26
+Consumer	HNFG	Henderson	ХЭНДЕРСОН ФЭШН ГРУПП	ХЭНДЕРСОН	2023-11-02	
 Consumer	KROT	KrasnyiOctyabr	КрасОкт-ао	КрасныйОктябрь ПАО - ао	2014-06-09	
 Consumer	KROTP	KrasnyiOctabr-1(pr)	КрасОкт-1п	КрасныйОктябрь-1п	2014-06-09	
 Consumer	LNTA	Lenta IPJSC ORD SHS	Лента ао	Лента МКПАО ао	2014-06-09	2022-04-18
@@ -185,6 +187,7 @@ Energy (Oil, Gas, Coal)	BANE	Bashneft ANK ao	Башнефт ао	Башнефт�
 Energy (Oil, Gas, Coal)	BANEP	Bashneft ANK ap	Башнефт ап	Башнефть АНК ап	2014-06-09	
 Energy (Oil, Gas, Coal)	BLNG	Belon ao	Белон ао	Белон ОАО ао	2014-06-09	
 Energy (Oil, Gas, Coal)	CHGZ	RN-Western Siberia ao	РН-ЗапСиб	РН-Западная Сибирь ПАО ао	2014-06-09	
+Energy (Oil, Gas, Coal)	EUTR	Eurotrans	Евротранс	Евротранс	2023-11-21	
 Energy (Oil, Gas, Coal)	GAZP	Gazprom	ГАЗПРОМ ао	Газпром (ПАО) ао	2014-06-09	
 Energy (Oil, Gas, Coal)	GAZS	Gaz-servis ao	ГАЗ-сервис	ГАЗ-сервис (ПАО) ао	2014-06-09	
 Energy (Oil, Gas, Coal)	JNOS	Slavneft-JANOS	Славн-ЯНОС	Славнефть-ЯНОС (ПАО) ао	2014-06-09	
@@ -253,6 +256,7 @@ Financials	SBER	Sberbank	Сбербанк	Сбербанк России ПАО �
 Financials	SBERP	Sberbank (pref)	Сбербанк-п	Сбербанк России ПАО ап	2013-03-25	
 Financials	SFIN	SFI ao	ЭсЭфАй ао	ЭсЭфАй ПАО ао	2018-01-03	
 Financials	SPBE	SPB Exchange	СПБ Биржа	СПБ Биржа ао	2021-11-19	
+Financials	SVCB	Sovcombank	Совкомбанк ПАО	Совкомбанк ао	2023-12-15	
 Financials	TAVR	Bank Tavricheskyi	Таврическ.	Банк Таврический(ОАО)	2014-06-09	2015-04-13
 Financials	TCSG	GDR TCS Group Holding ORD SHS	TCS-гдр	ГДР TCS Group Holding ORD SHS	2019-10-28	
 Financials	TFKF	TFK-Finance	ТФК-Финанс	ТФК-Финанс ао	2014-06-09	2016-03-10
@@ -273,7 +277,8 @@ Health Care	FORTP	Fort	Форт ап	Форт ОАО ап	2014-06-09	2017-04-13
 Health Care	GECO	GENETICO	iГЕНЕТИКО	ЦГРМ ГЕНЕТИКО ао	2023-04-25	
 Health Care	GEMA	IMCB PJSC	iММЦБ ао	ПАО ММЦБ ао	2019-07-25	
 Health Care	GEMC	GDR UNITED MEDICAL GROUP GEMC	GEMC-гдр	ГДР ЕвроМедЦентр GEMC	2021-07-15	
-Health Care	ISKJ	HSCI ao	iИСКЧ ао	ПАО ИСКЧ	2014-06-09	
+Health Care	ISKJ	HSCI ao	iИСКЧ ао	ПАО ИСКЧ	2014-06-09	2023-06-19
+Health Care	ABIO	Artgen Biotech	Артген биотех	ПАО Артген биотех	2023-08-19	
 Health Care	LIFE	Farmsintez ao	iФармсинтз	Фармсинтез ПАО ао	2014-06-09	
 Health Care	MDMG	GDR MD Medical Group Inv. PLC	MDMG Мать и дитя-гдр	ГДР MD Medical Group Inv. PLC  Мать и дитя	2020-11-09	
 Health Care	OTCP	PJSC OtisPharm	Отисифарм	Отисифарм	2014-12-30	2018-07-23
@@ -347,6 +352,7 @@ Industrials	ZMZN	ZMZ	ЗМЗ-ао	Заволжский мотор.з-д ПАО а
 Industrials	ZMZNP	ZMZ pref	ЗМЗ-ап	Заволжский мотор.завод ПАО ап	2014-06-09	2018-12-14
 Industrials	ZVEZ	Zvezda ao	ЗВЕЗДА ао	ЗВЕЗДА ПАО ао	2014-06-09	
 Information Technologies	ARMD	Armada	Армада	АРМАДА ПАО ао	2014-06-09	2015-05-21
+Information Technologies	ASTR	Astra Group	Астра	Астра ПАО ао	2023-10-13	
 Information Technologies	CIAN	ADR Cian PLC ORD SHS	CIAN-адр	АДР Cian PLC ORD SHS	2021-11-05	
 Information Technologies	HHRU	ADR HeadHunter Group ORD SHS	iHHRU-адр	АДР HeadHunter Group ORD SHS	2020-09-25	
 Information Technologies	MAIL	GDR VK Company Limited ORD SHS	VK-гдр	ГДР VK Company Limited ORD SHS	2020-07-02	2021-12-13
@@ -354,6 +360,7 @@ Information Technologies	OZON	ADS Ozon Holdings PLC ORD SHS	OZON-адр	АДР O
 Information Technologies	POSI	PJSC Positive Group	iПозитив	Группа Позитив ао	2021-12-17	
 Information Technologies	SFTL	GDR Noventiq Holdings ORD SHS	iNVTQ-гдр	ГДР Noventiq Holdings ORD SHS	2021-11-01	
 Information Technologies	SKYC	SkyComputing	СкайКо-ао	СкайКомпьютинг (ОАО) ао	2014-06-09	2017-03-01
+Information Technologies	SOFL	Softline	Софтлайн	Софтлайн	2023-11-10	
 Information Technologies	UTII	UTINET.RU	Ютинет.Ру	Платформа ЮТИНЕТ.РУ ПАО - ао	2014-06-09	2016-03-25
 Information Technologies	VKCO	GDR VK Company Limited ORD SHS	VK-гдр	ГДР VK Company Limited ORD SHS	2021-12-14	
 Information Technologies	YNDX	PLLC Yandex N.V.	Yandex clA	PLLC Yandex N.V. class A shs	2014-06-04	
@@ -390,6 +397,7 @@ Metals and Mining	RUSP	Ruspolimet	Русполимет	Русполимет ПА
 Metals and Mining	SELG	Seligdar	Селигдар ао	ПАО Селигдар ао	2014-06-09	
 Metals and Mining	SELGP	Seligdar pref	Селигдар ап	ПАО Селигдар ап	2013-09-02	2021-12-23
 Metals and Mining	TRMK	TMK ao	ТМК ао	ПАО ТМК	2013-07-26	
+Metals and Mining	TRMK	Uzhuralzoloto	Южуралзолото	Южуралзолото	2023-11-22	
 Metals and Mining	UNKL	Uzhno-Uralskiy nikel. komb. ao	ЮУНК ао	Южно-Уральский никел. комб. ао	2014-06-09	
 Metals and Mining	VTRS	VTORRESURSY	ВТОРРЕСУРСЫ	ВТОРРЕСУРСЫ ПАО ао	2014-06-09	2016-12-02
 Metals and Mining	VSMO	Corp. VSMPO-AVISMA ao	ВСМПО-АВСМ	Корп. ВСМПО-АВИСМА (ПАО) ао	2014-06-09	
