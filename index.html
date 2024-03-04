@@ -83,7 +83,7 @@
                   chartData["customdata"].push(["Moscow Exchange", labels[i], NaN, NaN, labels[i], NaN]);
                 };
 
-                var excludeList = ["EA-RM"] // exclude Electronic Art and other shares
+                var excludeList = ["EA-RM"]; // exclude Electronic Art and other shares
 
                 return $.getJSON(`/moex/data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`)
                     .then(function(moexJson) {
@@ -147,7 +147,7 @@
                                   cmax: 3,
                                   line: {width: 2, color: "rgb(64,68,83)"}
                                 },
-                                text: 'chartData.customdata[4]',
+                                text: chartData.customdata[4],
                                 textinfo: "label+text+value",
                                 customdata: chartData.customdata,
                                 branchvalues: "total",
@@ -185,7 +185,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
     </header>
     <script type="text/javascript">
-        const input = document.querySelector("input");
+        const input = document.querySelector("#dateInput"); // Added "#" to select the element by ID
         input.addEventListener("change", refreshChart);
         
         refreshChart({ target: { value: "2023-12-08" } });
