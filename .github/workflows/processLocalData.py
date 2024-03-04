@@ -1,17 +1,17 @@
 import argparse
 import csv
-from datetime import date, datetime, timedelta
+from datetime import datetime, timedelta
 import json
 import re
 import sys
 
 parser = argparse.ArgumentParser(description='Process locally stored data')
 parser.add_argument('--start', nargs=1, type=str, required=True,
-                   help="start date, YYYY-MM-DD")
+           help="start date, YYYY-MM-DD")
 parser.add_argument('--end', nargs=1, type=str, required=True,
-                   help="end date, YYYY-MM-DD")
+           help="end date, YYYY-MM-DD")
 parser.add_argument('--step', nargs=1, type=int, required=True,
-                   help="step between data points in days")
+           help="step between data points in days")
 parser.add_argument('--mode', nargs=1, type=str, required=True,
                    choices=['total', 'ticket', 'sector'],
                    help='''total - total capitalization,

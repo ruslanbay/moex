@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       CI_COMMIT_MESSAGE: Update currency data
-      CI_COMMIT_AUTHOR: Github Actions
+      CI_COMMIT_AUTHOR: GitHub Actions
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.11
