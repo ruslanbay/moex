@@ -152,7 +152,12 @@
                                 customdata: chartData.customdata,
                                 branchvalues: "total",
                                 texttemplate: texttemplate,
-                                hovertemplate: hovertemplate
+                                hovertemplate: hovertemplate,
+                                pathbar: {
+                                  visible: true,
+                                  edgeshape: ">",
+                                  side: "top"
+                                }
                         }];
 
                         var layout = {
@@ -160,8 +165,7 @@
                             autosize: true,
                             margin: {l:0, r:0, t:0, b:0},
                             paper_bgcolor: "rgb(0,0,0,0)",
-                            plot_bgcolor: "rgb(0,0,0,0)",
-                            pathbar: {visible: true}
+                            plot_bgcolor: "rgb(0,0,0,0)"
                           }
 
                         var config = {
