@@ -6,7 +6,7 @@ const DATA_CACHE_NAME = 'my-app-data-cache-v1';
 const FILES_TO_CACHE = [
     '/moex/',
     '/moex/index.html',
-    '/moex/images/favicon.ico',
+    '/moex/images/icons/favicon.ico',
     '/moex/scripts/main.js',
     '/moex/scripts/install.js',
     'https://code.jquery.com/jquery-3.7.1.min.js',
