@@ -225,6 +225,17 @@
       }
     });
   </script>
+  <!--   PWA: Install script -->
+  <!-- <script src="/scripts/install.js"></script> -->
+  
+  <!--   PWA Register service-worker.js -->
+  <script>
+    if('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+      });
+    }
+  </script>
 </body>
 
 </html>
