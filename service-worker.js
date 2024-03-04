@@ -4,11 +4,11 @@ const CACHE_NAME = 'my-app-static-cache-v1';
 const DATA_CACHE_NAME = 'my-app-data-cache-v1';
 
 const FILES_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/images/favicon.ico',
-    '/scripts/main.js',
-    '/scripts/install.js',
+    '/moex/',
+    '/moex/index.html',
+    '/moex/images/favicon.ico',
+    '/moex/scripts/main.js',
+    '/moex/scripts/install.js',
     'https://code.jquery.com/jquery-3.7.1.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.29.1/plotly.min.js'
