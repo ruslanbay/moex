@@ -226,13 +226,13 @@
     });
   </script>
   <!--   PWA: Install script -->
-  <!-- <script src="/scripts/install.js"></script> -->
+  <!-- <script src="/moex/scripts/install.js"></script> -->
   
   <!--   PWA Register service-worker.js -->
   <script>
     if('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('/moex/service-worker.js')
       });
     }
   </script>
