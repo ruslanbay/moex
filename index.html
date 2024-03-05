@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moex</title>
+  <title>MOEX</title>
   <link rel="icon" href="/moex/images/icons/favicon.ico" type="image/x-icon">
   <link rel="manifest" href="/moex/manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -76,7 +76,8 @@
 
 <body>
   <header>
-    <input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="2023-12-08" min="2011-12-19" max="2023-12-31">
+    <input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="2023-12-08" min="2011-12-19"
+      max="2023-12-31">
     &nbsp;&nbsp;&nbsp;&nbsp;
     <a href="/moex/history">HISTORY</a>
     &nbsp;&nbsp;&nbsp;&nbsp;
@@ -87,9 +88,9 @@
       date = date.target.value;
 
       d3.tsv('/moex/data/issues-by-sector.tsv')
-        .then(function(rows) {
+        .then(function (rows) {
           function unpack(rows, key) {
-            return rows.map(function(row) {
+            return rows.map(function (row) {
               return row[key]
             });
           }
@@ -118,7 +119,7 @@
           var excludeList = ["EA-RM"]; // exclude Electronic Art and other shares
 
           return $.getJSON(`/moex/data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`)
-            .then(function(moexJson) {
+            .then(function (moexJson) {
               moexJson.securities.data.filter(v => !excludeList.includes(v[0])).forEach(item => {
 
                 var ticker = item[0];
@@ -227,10 +228,10 @@
   </script>
   <!--   PWA: Install script -->
   <!-- <script src="/moex/scripts/install.js"></script> -->
-  
+
   <!--   PWA Register service-worker.js -->
   <script>
-    if('serviceWorker' in navigator) {
+    if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/moex/service-worker.js')
       });
