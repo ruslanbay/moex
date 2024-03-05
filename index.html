@@ -99,6 +99,7 @@
           chartData["ticker"] = [];
           chartData["size"] = [];
           chartData["priceChange"] = [];
+          chartData["prevSize"] = [];
           chartData["customdata"] = [];
 
           var labels = unpack(rows, 'labels');
@@ -112,6 +113,7 @@
             chartData["ticker"].push(labels[i]);
             chartData["size"].push(0);
             chartData["priceChange"].push(NaN);
+            chartData["prevSize"].push(0);
             chartData["customdata"].push(["Moscow Exchange", labels[i], NaN, NaN, labels[i], NaN]);
           };
 
@@ -132,16 +134,21 @@
 
                 var priceChange = 100 * (closePrice - openPrice) / openPrice;
 
+                var prevMarketCap = marketCapDaily * priceChange + marketCapDaily
+
+                
                 var sector = "Others";
 
                 var index = labels.indexOf(ticker);
                 if (index == -1) {
                   sector = "Others";
                   chartData["size"][labels.indexOf("Others")] = chartData["size"][labels.indexOf("Others")] + marketCapDaily;
+                  chartData["prevSize"][labels.indexOf("Others")] = chartData["prevSize"][labels.indexOf("Others")] + prevMarketCap;
                   chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, ticker, closePrice]);
                 } else {
                   sector = parents[index];
                   chartData["size"][labels.indexOf(sector)] = chartData["size"][labels.indexOf(sector)] + marketCapDaily;
+                  chartData["prevSize"][labels.indexOf(sector)] = chartData["prevSize"][labels.indexOf(sector)] + prevMarketCap;
 
                   var name = namesRus[index];
                   chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, name, closePrice]);
@@ -151,16 +158,22 @@
                 chartData["ticker"].push(ticker);
                 chartData["size"].push(marketCapDaily);
                 chartData["priceChange"].push(priceChange);
+                chartData["prevSize"].push(prevMarketCap);
               });
 
               for (let i = 1; i <= 14; i++) {
+                chartData["customdata"][i][2] = chartData["size"][i];
+                chartData["priceChange"][i] = 100 * (chartData["size"][i] - chartData["prevSize"][i]) / chartData["prevSize"][i];
+                chartData["customdata"][i][3] = chartData["priceChange"][i];
+
                 chartData["size"][0] = chartData["size"][0] + chartData["size"][i];
+                chartData["prevSize"][0] = chartData["prevSize"][0] + chartData["prevSize"][i];
+                chartData["priceChange"][0] = 100 * (chartData["size"][0] - chartData["prevSize"][0]) / chartData["prevSize"][0];
               };
+              chartData["customdata"][0] = ["Moscow Exchange", "Moscow Exchange", chartData["size"][0], chartData["priceChange"][0], "Moscow Exchange", NaN];
 
-              chartData["customdata"][0] = ["Moscow Exchange", "Moscow Exchange", chartData["size"][0], NaN, "Moscow Exchange", NaN];
-
-              var texttemplate = '<b>%{label}</b><br>%{customdata[4]}<br>%{customdata[5]:,.2f} (%{customdata[3]:.2f}%)<br>Mkt cap: ₽%{value:,.0f}';
-              var hovertemplate = '<b>%{customdata[1]}</b><br>%{customdata[4]}<br>Share price: %{customdata[5]:,.4f}<br>Price change: %{customdata[3]:.2f}%<br>Mkt cap: ₽%{customdata[2]:,.0f}<br>percentParent: %{percentParent:.2p}<br>percentRoot: %{percentRoot:.2p}<extra></extra>';
+              var texttemplate = '<b>%{label}</b><br>%{customdata[4]}<br>%{customdata[5]:,.2f} (%{customdata[3]:.2f}%)<br>Cap: ₽%{value:,.0f}';
+              var hovertemplate = '<b>%{customdata[1]}</b><br>%{customdata[4]}<br>Share price: %{customdata[5]:,.4f}<br>Price change: %{customdata[3]:.2f}%<br>Cap: ₽%{customdata[2]:,.0f}<br>percentParent: %{percentParent:.2p}<br>percentRoot: %{percentRoot:.2p}<extra></extra>';
 
               var data = [{
                 type: "treemap",
