@@ -119,6 +119,11 @@
 
           return $.getJSON(`/moex/data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`)
             .then(function (moexJson) {
+              if (moexJson.status === 404) {
+                alert("Данные отсутствуют. Пожалуйста, выберете другую дату.");
+                return;
+              }
+
               moexJson.securities.data.filter(v => !excludeList.includes(v[0])).forEach(item => {
 
                 var ticker = item[0];
