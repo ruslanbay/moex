@@ -35,6 +35,7 @@ Conglomerate	AFKS	AFK Sistema	Система ао	АФК Система ПАО �
 Conglomerate	ENPG	EN+ GROUP IPJSC ORD SHS	ЭН+ГРУП ао	МКПАО ЭН+ ГРУП ао	2020-02-18	
 Conglomerate	ENPL	GDR En+Group ORD SHS	ENPL-гдр	ГДР МКПАО ЭН+ ГРУП ORD SHS	2017-11-08	2020-04-17
 Conglomerate	GRNT	GIT	ГИТ ао	Городские Инновационные Технологии ао	2015-10-21	2019-08-13
+Construction (Development)	APRI	ПАО АПРИ	ПАО АПРИ	ПАО АПРИ	2024-07-30	
 Construction (Development)	ETLN	GDR ETALON GROUP PLC ORD SHS	ETLN-гдр	ГДР ETALON GROUP PLC ORD SHS	2020-02-03	
 Construction (Development)	HALS	SG-Development	СГ-Девел	ПАО СГ-Девелопмент	2014-06-09	2021-05-17
 Construction (Development)	IDVP	PAO INVEST-DEVELOPMENT	Инв-Девел	ПАО ИНВЕСТ-ДЕВЕЛОПМЕНТ - ао	2015-03-06	2020-06-18
@@ -62,6 +63,7 @@ Consumer	GCHE	Cherkizovo Group ao	ЧеркизГ-ао	Группа Черкиз�
 Consumer	GTPR	GlavTorgProdukt	ГлТоргПрод	ГлавТоргПродукт ОАО ао	2014-06-09	2016-10-11
 Consumer	GUMM	GUM	ГУМ	ао ГУМ	2014-06-09	2015-10-26
 Consumer	HNFG	Henderson	ХЭНДЕРСОН ФЭШН ГРУПП	ХЭНДЕРСОН	2023-11-02	
+Consumer	KLVZ	Кристалл	КАЛУЖСКИЙ ЛИКЕРО-ВОДОЧНЫЙ ЗАВОД КРИСТАЛЛ	КАЛУЖСКИЙ ЛИКЕРО-ВОДОЧНЫЙ ЗАВОД КРИСТАЛЛ	2024-02-22	
 Consumer	KROT	KrasnyiOctyabr	КрасОкт-ао	КрасныйОктябрь ПАО - ао	2014-06-09	
 Consumer	KROTP	KrasnyiOctabr-1(pr)	КрасОкт-1п	КрасныйОктябрь-1п	2014-06-09	
 Consumer	LNTA	Lenta IPJSC ORD SHS	Лента ао	Лента МКПАО ао	2014-06-09	2022-04-18
@@ -82,6 +84,7 @@ Consumer	SIBG	Ice stim Rus	АйсCтим ао	Айс стим Рус ПАО ао
 Consumer	SVAV	Sollers Avto	СОЛЛЕРС	ПАО СОЛЛЕРС	2014-06-09	
 Consumer	SVET	Svetofor Group	Светофор	Светофор Групп ао	2021-01-15	
 Consumer	SYNG	Beluga Group	Белуга ао	Белуга Групп ПАО ао	2014-06-09	2017-07-31
+Consumer	VSEH	ВсеИнструменты (ВИ.ру)	ВсеИнструменты	ВсеИнструменты	2024-07-05	
 Consumer	WUSH	WHOOSH Holding	iВУШХолднг	ВУШ Холдинг ао	2022-12-14	
 Consumer	ZHIV	Jivoy office	Живой Оф	Живой офис ОАО ао	2014-06-09	2017-03-01
 Electric Utilities	ASSB	Astrakhan Energo Sbyt	АстрЭнСб	Астраханская ЭСК ПАО	2014-06-09	
@@ -233,6 +236,9 @@ Financials	GAZT	GAZ-Tek PAO ao	ГАЗ-Тек ао	ГАЗ-Тек ПАО ао	2014
 Financials	GTLC	GTL PJSC	ПАО ДжиТиЭл	ПАО ДжиТиЭл ао	2014-06-09	2016-03-18
 Financials	HMBO	Khanty-M bank Otkritie ao	ХМБОткр ао	ПАО Ханты-М банк Открытие ао	2015-04-01	2016-08-19
 Financials	KUZB	Bank Kuzneckiy	КузнецкийБ	Банк Кузнецкий ПАО ао	2014-06-09	
+Financials	LEAS	Europlan (DeltaLeasing)	Европлан	Европлан	2024-03-29	
+Financials	MBNK	MTS Bank	МТС Банк	ПАО МТС Банк ао	2024-04-26
+Financials	MGKL	МосГорЛомбард	МосГорЛомбард	ПАО Московский Городской Комбинат Ломбардов	2024-02-07	
 Financials	MMBM	BM-Bank	БМ-Банк	БМ-Банк акции об.	2014-06-09	2016-08-30
 Financials	MNFD	MN-fond	МН-фонд ао	МН-фонд ПАО ао	2014-06-09	2019-03-18
 Financials	MOEX	MoscowExchange	МосБиржа	ПАО Московская Биржа	2013-04-04	
@@ -271,6 +277,7 @@ Financials	WTCM	CMT	ЦМТ ао	Центр междун. торговли ПАО
 Financials	WTCMP	CMT (pref)	ЦМТ ап	Центр междун. торговли ПАО ап	2014-06-09	
 Financials	YRSL	Bank VVB	БанкВВБ ао	ПАО Банк ВВБ ао	2014-06-09	2016-01-18
 Financials	ZAPD-004D	Zapadny Bank 0004D	Запад ао04	Западный Банк ао 004D	2014-06-09	2014-07-21
+Financials	ZAYM	Займер	ПАО МФК Займер ао	ПАО МФК Займер ао	2024-04-12	
 Health Care	APTK	Apteki 36,6	Аптеки36и6	ПАО Аптечная сеть 36,6 ао	2014-06-09	
 Health Care	EM44	EuroMedCenter	EM44-гдр	ГДР ЕвроМедЦентр EM44	2021-07-15	2022-12-13
 Health Care	FORTP	Fort	Форт ап	Форт ОАО ап	2014-06-09	2017-04-13
@@ -283,6 +290,7 @@ Health Care	LIFE	Farmsintez ao	iФармсинтз	Фармсинтез ПАО �
 Health Care	MDMG	GDR MD Medical Group Inv. PLC	MDMG Мать и дитя-гдр	ГДР MD Medical Group Inv. PLC  Мать и дитя	2020-11-09	
 Health Care	OTCP	PJSC OtisPharm	Отисифарм	Отисифарм	2014-12-30	2018-07-23
 Health Care	PHST	Pharmstandard JSC	Фармстанд	Фармстандарт ПАО ао	2014-06-09	2017-03-23
+Health Care	PRMD	Промомед	ГК Промомед	ГК Промомед	2024-07-12
 Health Care	VRPH	VEROFARM	ВЕРОФАРМ	ВЕРОФАРМ ПАО ао	2014-06-09	2015-03-20
 Industrials	AMEZ	Ashinckiy metzavod PAO	АшинскийМЗ	Ашинский метзавод ПАО ао	2014-06-09	
 Industrials	CHKZ	CKPZ	ЧКПЗ ао	ЧКПЗ ПАО ао	2014-06-09	
@@ -291,6 +299,7 @@ Industrials	DIOD	Zavod DIOD ao	ЗаводДИОД	Завод ДИОД ПАО а�
 Industrials	DZRD	DZRD ao	ДонскЗР	Донской завод радиодеталей ао	2014-06-09	
 Industrials	DZRDP	DZRD pref.	ДонскЗР п	Донской завод радиодеталей ап	2014-06-09	
 Industrials	EELT	European Eltech	ЕвроЭлтех	ЕвропЭлектротехника ПАО ао	2017-09-07	
+Industrials	ELMT	Элемент	Элемент	ПАО Элемент	2024-06-06	
 Industrials	ERCO	Energ.Rus.Company	ЭРКО ао	Энергетическая Русская Компания ОАО ао	2014-06-09	2018-03-06
 Industrials	GAZA	Gaz ao	ГАЗ ао	ГАЗ ПАО ао	2014-06-09	
 Industrials	GAZAP	Gaz (pref)	ГАЗ ап	ГАЗ ПАО ап	2014-06-09	
@@ -354,7 +363,9 @@ Industrials	ZVEZ	Zvezda ao	ЗВЕЗДА ао	ЗВЕЗДА ПАО ао	2014-06-09
 Information Technologies	ARMD	Armada	Армада	АРМАДА ПАО ао	2014-06-09	2015-05-21
 Information Technologies	ASTR	Astra Group	Астра	Астра ПАО ао	2023-10-13	
 Information Technologies	CIAN	ADR Cian PLC ORD SHS	CIAN-адр	АДР Cian PLC ORD SHS	2021-11-05	
+Information Technologies	DIAS	iДиасофт	Диасофт	ПАО Диасофт ао	2024-02-13	
 Information Technologies	HHRU	ADR HeadHunter Group ORD SHS	iHHRU-адр	АДР HeadHunter Group ORD SHS	2020-09-25	
+Information Technologies	IVAT	IVA Technologies	ПАО ИВА ао	ПАО ИВА ао	2024-06-04	
 Information Technologies	MAIL	GDR VK Company Limited ORD SHS	VK-гдр	ГДР VK Company Limited ORD SHS	2020-07-02	2021-12-13
 Information Technologies	OZON	ADS Ozon Holdings PLC ORD SHS	OZON-адр	АДР Ozon Holdings PLC ORD SHS	2020-11-24	
 Information Technologies	POSI	PJSC Positive Group	iПозитив	Группа Позитив ао	2021-12-17	
@@ -363,6 +374,7 @@ Information Technologies	SKYC	SkyComputing	СкайКо-ао	СкайКомпь�
 Information Technologies	SOFL	Softline	Софтлайн	Софтлайн	2023-11-10	
 Information Technologies	UTII	UTINET.RU	Ютинет.Ру	Платформа ЮТИНЕТ.РУ ПАО - ао	2014-06-09	2016-03-25
 Information Technologies	VKCO	GDR VK Company Limited ORD SHS	VK-гдр	ГДР VK Company Limited ORD SHS	2021-12-14	
+Information Technologies	YDEX	Yandex	Yandex	Yandex	2024-07-24	
 Information Technologies	YNDX	PLLC Yandex N.V.	Yandex clA	PLLC Yandex N.V. class A shs	2014-06-04	2024-07-09
 Metals and Mining	ALRS	ALROSA ao	АЛРОСА ао	АЛРОСА ПАО ао	2013-07-08	
 Metals and Mining	ALNU	ALROSA-Nyurba	АЛРОСА-Нюр	АЛРОСА-Нюрба ПАО ао	2014-06-09	2021-12-24
@@ -418,6 +430,7 @@ Transportation	FESH	DVMP ao	ДВМП ао	ДВ морское пароходст
 Transportation	FLOT	Sovcomflot	Совкомфлот	Совкомфлот ао	2020-10-07	
 Transportation	GLTR	GDR Globaltrans Inves ORD SHS	GLTR-гдр	ГДР Globaltrans Invest ORD SHS	2020-10-28	
 Transportation	GTRK	GTM	ГТМ ао	ПАО ГТМ ао	2017-10-23	
+Transportation	DELI	iКаршеринг	Каршеринг Руссия ао	ПАО Каршеринг Руссия ао	2024-02-07	
 Transportation	NKHP	NKHP ao	НКХП ао	НКХП ПАО ао	2015-11-17	
 Transportation	NMTP	NMTP	НМТП ао	НМТП (ПАО) ао	2014-06-09	
 Transportation	PRIM	Primorsk Shipping Corp.	ПМП ао	Приморское морское пароходство	2014-06-09	2017-06-27
