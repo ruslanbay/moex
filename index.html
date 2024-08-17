@@ -148,11 +148,9 @@
 
                 var priceChange = 100 * (closePrice - openPrice) / openPrice;
 
-                var prevMarketCap = marketCapDaily * priceChange * 0.01 + marketCapDaily
+                var prevMarketCap = marketCapDaily / (1 + priceChange * 0.01)
 
-                
                 var sector = "Others";
-
                 var index = labels.indexOf(ticker);
                 if (index == -1) {
                   sector = "Others";
