@@ -34,9 +34,9 @@ jobs:
       CI_COMMIT_MESSAGE: Update currency data
       CI_COMMIT_AUTHOR: GitHub Actions
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python 3.11
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v5
       with:
         python-version: "3.11"
     - name: Install dependencies
