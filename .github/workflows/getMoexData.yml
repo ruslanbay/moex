@@ -2,7 +2,7 @@ name: 'Get MOEX data'
 
 on:
   schedule:
-    - cron: '00 00 * * 2-6' # run every day at 00:00 UTC from Tuesday to Saturday
+    - cron: '15 03 * * 2-6' # run every day at 03:15 UTC from Tuesday to Saturday
   workflow_dispatch:
     inputs:
       startDate:

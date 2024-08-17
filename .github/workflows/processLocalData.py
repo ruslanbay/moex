@@ -17,11 +17,14 @@ parser.add_argument('--mode', nargs=1, type=str, required=True,
                    help='''total - total capitalization,
 ticket - capitalization by tickets,
 sector - capitalization by setctors''')
+parser.add_argument('--filename', nargs=1, type=str, required=True,
+           help="Example: total.json")
 args=parser.parse_args()
 start = datetime.strptime(args.start[0], '%Y-%m-%d').date()
 end = datetime.strptime(args.end[0], '%Y-%m-%d').date()
 step = int(args.step[0])
 mode = args.mode[0]
+filename = args.filename[0]
 
 if(start > end):
   sys.exit('End date has to be greater than start date')
@@ -172,5 +175,5 @@ match mode:
           "y": sectorCap[sector]
         })
 
-with open(f'history/{start}_{end}_{step}_{mode}.json', 'w') as f:
+with open(f'history/{filename}', 'w') as f:
   json.dump(chartData, f)
