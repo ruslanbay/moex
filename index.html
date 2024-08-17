@@ -146,9 +146,14 @@
                 var numTrades = item[6] == null ? 0 : item[6];
                 var marketCapDaily = item[7] == null ? 0 : item[7];
 
-                var priceChange = 100 * (closePrice - openPrice) / openPrice;
-
-                var prevMarketCap = marketCapDaily / (1 + priceChange * 0.01)
+                if (openPrice == 0) {
+                  var priceChange = 0;
+                  var prevMarketCap = marketCapDaily;
+                }
+                else {
+                  var priceChange = 100 * (closePrice - openPrice) / openPrice;
+                  var prevMarketCap = marketCapDaily / (1 + priceChange * 0.01)
+                }
 
                 var sector = "Others";
                 var index = labels.indexOf(ticker);
