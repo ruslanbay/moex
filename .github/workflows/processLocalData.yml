@@ -56,7 +56,7 @@ jobs:
     - name: YEARLY. Process local files
       if: ${{ github.event_name == 'schedule' }}
       run: |
-        LAST_YEAR=$(date -d "last year" +"%Y")
+        LAST_YEAR=$(date --utc -d "last year" +"%Y")
         python .github/workflows/processLocalData.py --start $LAST_YEAR-01-01 --end $LAST_YEAR-12-31 --step 7 --mode sector --filename $LAST_YEAR.json
     
     - name: MANUAL. Process local files
