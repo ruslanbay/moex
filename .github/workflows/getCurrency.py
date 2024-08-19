@@ -1,44 +1,29 @@
 import argparse
-import csv
-from datetime import datetime
 import requests
+import sys
 
-def get_currency_data(start, end, currency):
-  dates = []
-  close_prices = []
-  url = f'https://www.wsj.com/market-data/quotes/fx/{currency}/historical-prices/download?MOD_VIEW=page&num_rows=all&range_days=10&startDate={start}&endDate={end}'
+parser = argparse.ArgumentParser(description='Get currency exchange rate')
+parser.add_argument('--start', nargs=1, type=str, required=True, help="start date, YYYY-MM-DD")
+parser.add_argument('--end', nargs=1, type=str, required=True, help="end date, YYYY-MM-DD")
+parser.add_argument('--currency', nargs=1, type=str, required=True, choices=['USDFIXME', 'CNYFIXME', 'EURFIXME', 'BYNFIXME', 'CNYFIX', 'EURUSDFIXME', 'GOLDFIXME', 'HKDFIXME', 'TRYFIXME', 'USDCNYFIXME', 'USDKZTFIXME'])
+args=parser.parse_args()
+start = args.start[0]
+end = args.end[0]
+currency = args.currency[0]
+filename = f'{currency}.csv'
+
+if(start > end):
+  sys.exit('ERROR: End date has to be greater than start date')
+
+with open(filename, 'a') as f:
+  url = f'https://iss.moex.com/iss/history/engines/currency/markets/index/securities/{currency}.json?iss.meta=on&history.columns=TRADEDATE,OPEN,HIGH,LOW,CLOSE&sort_column=TRADEDATE&sort_order=asc&FROM={start}&TILL={end}'
   headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'}
-  with requests.get(url, headers=headers) as r:
-    for row in csv.DictReader(r.text.splitlines()):
-      dates.append(row['Date'])
-      close_prices.append(row['Close'])
-  data = {
-    "name": currency,
-    "type": "scatter",
-    "hoverinfo": "skip",
-    "hovertemplate": "",
-    "x": dates,
-    "y": close_prices
-  }
-  return data
-
-def main():
-  parser = argparse.ArgumentParser(description='Get historical currency data from WSJ.com')
-  parser.add_argument('--start', type=str, required=True, help="start date, YYYY-MM-DD")
-  parser.add_argument('--end', type=str, required=True, help="end date, YYYY-MM-DD")
-  parser.add_argument('--currency', type=str, required=True, help="currency list separated by commas")
-
-  args = parser.parse_args()
-  currency_list = args.currency.split(',')
-  start = datetime.strptime(args.start, '%Y-%m-%d').strftime('%m/%d/%Y')
-  end = datetime.strptime(args.end, '%Y-%m-%d').strftime('%m/%d/%Y')
-
-  chart_data = []
-  for currency in currency_list:
-    chart_data.append(get_currency_data(start, end, currency))
-
-  with open('data/currency.json', 'w', encoding='utf-8') as f:
-    f.write(str(chart_data))
-
-if __name__ == '__main__':
-  main()
+  try:
+    r = requests.get(url, headers)
+    if(r.status_code == 200):
+      for row in r.json['history']['data']:)
+        f.write(','.join(map(str, row)) + '\n')
+    else:
+      print(f'Unexpected response code: {r.status_code}')
+  except Exception as e:
+    print("ERROR:", str(e))
