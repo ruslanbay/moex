@@ -51,13 +51,14 @@ jobs:
       if: ${{ github.event_name == 'workflow_run' }}
       run: |
         CURRENT_DATE=$(date --utc +'%Y-%m-%d')
-        python .github/workflows/processLocalData.py --start 2011-12-19 --end $CURRENT_DATE --step 15 --mode total --filename total.json
+        echo "${CURRENT_DATE}"
+        python .github/workflows/processLocalData.py --start 2011-12-19 --end "${CURRENT_DATE}" --step 15 --mode total --filename total.json
     
     - name: YEARLY. Process local files
       if: ${{ github.event_name == 'schedule' }}
       run: |
         LAST_YEAR=$(date --utc -d "last year" +"%Y")
-        python .github/workflows/processLocalData.py --start $LAST_YEAR-01-01 --end $LAST_YEAR-12-31 --step 7 --mode sector --filename $LAST_YEAR.json
+        python .github/workflows/processLocalData.py --start "${LAST_YEAR}-01-01" --end "${LAST_YEAR}-12-31" --step 7 --mode sector --filename "${LAST_YEAR}.json"
     
     - name: MANUAL. Process local files
       if: ${{ github.event_name == 'workflow_dispatch' }}
