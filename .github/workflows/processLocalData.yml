@@ -72,5 +72,9 @@ jobs:
         git config --global user.name "Github Actions"
         git config --global user.email "github-actions@github.com"
         git add history/*.json
-        git commit -m "[manual] Process local data for the history chart"
-        git push
+        if [ $? -ne 0 ]; then
+          git commit -m "Process local data for the history chart"
+          git push
+        else
+          echo "No changes to commit"
+        fi
