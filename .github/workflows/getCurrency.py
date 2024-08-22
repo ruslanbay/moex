@@ -20,7 +20,7 @@ with open(f'history/{currency}.csv', 'a') as f:
   try:
     r = requests.get(url, headers)
     if(r.status_code == 200):
-      for row in r.json['history']['data']:
+      for row in r.json()['history']['data']:
         f.write(','.join(map(str, row)) + '\n')
     else:
       print(f'Unexpected response code: {r.status_code}')
