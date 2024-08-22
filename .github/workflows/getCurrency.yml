@@ -52,20 +52,19 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
     - name: DAILY. Get currency exchange rate
-      if: ${{ github.event_name == 'workflow_dispatch' }}
-      # if: ${{ github.event_name == 'schedule' }}
+      if: ${{ github.event_name == 'schedule' }}
       run: |
         start=$(date --utc -d 'yesterday'  +%Y-%m-%d)
         end=$start
         python .github/workflows/getCurrency.py --start $start --end $end --currency USDFIXME
-    # - name: MANUAL. Get currency exchange rate
-    #   if: ${{ github.event_name == 'workflow_dispatch' }}
-    #   run: |
-    #     python .github/workflows/getCurrency.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --currency ${{ inputs.currency }}
+    - name: MANUAL. Get currency exchange rate
+      if: ${{ github.event_name == 'workflow_dispatch' }}
+      run: |
+        python .github/workflows/getCurrency.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --currency ${{ inputs.currency }}
     - name: Commit and push build artifacts
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "github-actions@github.com"
-        git add -n --ignore-missing history/{USDFIXME,CNYFIXME,EURFIXME,BYNFIXME,CNYFIX,EURUSDFIXME,GOLDFIXME,HKDFIXME,TRYFIXME,USDCNYFIXME,USDKZTFIXME}.csv
+        # git add -n --ignore-missing history/{USDFIXME,CNYFIXME,EURFIXME,BYNFIXME,CNYFIX,EURUSDFIXME,GOLDFIXME,HKDFIXME,TRYFIXME,USDCNYFIXME,USDKZTFIXME}.csv
         git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
         git push
