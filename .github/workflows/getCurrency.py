@@ -10,12 +10,11 @@ args=parser.parse_args()
 start = args.start[0]
 end = args.end[0]
 currency = args.currency[0]
-filename = f'{currency}.csv'
 
 if(start > end):
   sys.exit('ERROR: End date has to be greater than start date')
 
-with open(filename, 'a') as f:
+with open(f'history/{currency}.csv', 'a') as f:
   url = f'https://iss.moex.com/iss/history/engines/currency/markets/index/securities/{currency}.json?iss.meta=on&history.columns=TRADEDATE,OPEN,HIGH,LOW,CLOSE&sort_column=TRADEDATE&sort_order=asc&FROM={start}&TILL={end}'
   headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'}
   try:
