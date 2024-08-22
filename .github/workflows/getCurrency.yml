@@ -48,15 +48,16 @@ jobs:
       with:
         python-version: "3.11"
     - name: DAILY. Get currency exchange rate
-      if: ${{ github.event_name == 'schedule' }}
+      if: ${{ github.event_name == 'workflow_dispatch' }}
+      # if: ${{ github.event_name == 'schedule' }}
       run: |
         start=$(date --utc -d 'yesterday'  +%Y-%m-%d)
         end=$start
-        python .github/workflows/getCurrency.py --start $start --end $end --currency ${{ inputs.currency }}
-    - name: MANUAL. Get currency exchange rate
-      if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: |
-        python .github/workflows/getCurrency.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --currency ${{ inputs.currency }}
+        python .github/workflows/getCurrency.py --start $start --end $end --currency USDFIXME
+    # - name: MANUAL. Get currency exchange rate
+    #   if: ${{ github.event_name == 'workflow_dispatch' }}
+    #   run: |
+    #     python .github/workflows/getCurrency.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --currency ${{ inputs.currency }}
     - name: Commit and push build artifacts
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
