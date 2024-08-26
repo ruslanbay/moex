@@ -39,7 +39,7 @@ def readLocalData(myDate):
   try:
     f = open(f'data/iss/history/engines/stock/totals/boards/MRKT/securities-{myDate}.json', 'r', encoding='utf-8')
   except FileNotFoundError:
-    print(f"securities-{myDate}.jso doesn't exist")
+    # print(f"securities-{myDate}.json doesn't exist")
     return ''
   else:
     with f:
