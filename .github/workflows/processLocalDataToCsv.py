@@ -122,11 +122,6 @@ match mode:
         ySum[i] += traces[ticket]["y"][i]
     chartData = [{
       "name": "total",
-      "type": "scatter",
-      "mode": "lines",
-      "stackgroup": "one",
-      "hoverinfo": "skip",
-      "hovertemplate": "",
       "x": traces[list(traces.keys())[0]]["x"],
       "y": ySum
     }]
@@ -165,7 +160,7 @@ match mode:
         })
 
 with open(f'history/{filename}', 'w', newline='') as f:
-  fieldnames = ['date', 'marketCap', 'traceName']
+  fieldnames = ['x', 'y', 'name']
   writer = csv.DictWriter(f, fieldnames=fieldnames)
 
   writer.writeheader()
