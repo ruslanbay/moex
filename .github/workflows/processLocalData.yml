@@ -51,18 +51,18 @@ jobs:
       if: ${{ github.event_name == 'workflow_run' }}
       run: |
         CURRENT_DATE=$(date --utc +'%Y-%m-%d')
-        python .github/workflows/processLocalData.py --start 2011-12-19 --end "${CURRENT_DATE}" --step 14 --mode total --filename total.json
+        python .github/workflows/processLocalDataToCsv.py --start 2011-12-19 --end "${CURRENT_DATE}" --step 14 --mode total --filename total.json
     
     - name: YEARLY. Process local files
       if: ${{ github.event_name == 'schedule' }}
       run: |
         LAST_YEAR=$(date --utc -d "last year" +"%Y")
-        python .github/workflows/processLocalData.py --start "${LAST_YEAR}-01-01" --end "${LAST_YEAR}-12-31" --step 7 --mode sector --filename "${LAST_YEAR}.json"
+        python .github/workflows/processLocalDataToCsv.py --start "${LAST_YEAR}-01-01" --end "${LAST_YEAR}-12-31" --step 7 --mode sector --filename "${LAST_YEAR}.json"
     
     - name: MANUAL. Process local files
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
-        python .github/workflows/processLocalData.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }} --filename "${{ inputs.startDate }}_${{ inputs.endDate }}_${{ inputs.stepDays }}_${{ inputs.mode }}.json"
+        python .github/workflows/processLocalDataToCsv.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }} --filename "${{ inputs.startDate }}_${{ inputs.endDate }}_${{ inputs.stepDays }}_${{ inputs.mode }}.json"
     
     # Commit and push all changed files
     # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html
