@@ -84,28 +84,55 @@ for myDate in daterange(start, end, step):
     # then set capitalization values for previuose dates as 0.00
     if(ticket not in traces.keys()):
       traces[ticket] = {
-        'date': dates,
-        'market_cap': [0.00] * len(dates),
-        'trace_name': ticket * len(dates)
+        'name': ticket,
+        'x': [],
+        'y': []
       }
-    traces[ticket]['market_cap'][-1] = cap
+      if(len(dates) >= 2):
+        for d in dates[0:-1]:
+          traces[ticket]["x"].append(f'{d}')
+          traces[ticket]["y"].append(0.00)
+    else: # if(ticket in traces.keys()):
+      lastDate = traces[ticket]["x"][-1]
+      lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
+      # if there are skips in dates, then fill capitalization values with 0.00
+      if(lastDate < dates[-2]):
+        index = dates.index(lastDate) + 1
+        for d in dates[index:-1]:
+          traces[ticket]["x"].append(f'{d}')
+          traces[ticket]["y"].append(0.00)
+    traces[ticket]["x"].append(f'{dates[-1]}')
+    traces[ticket]["y"].append(cap)
+for ticket in traces.keys():
+  lastDate = traces[ticket]["x"][-1]
+  lastDate = datetime.strptime(lastDate, '%Y-%m-%d').date()
+  if(lastDate < dates[-1]):
+    index = dates.index(lastDate) + 1
+    for d in dates[index:]:
+      traces[ticket]["x"].append(f'{d}')
+      traces[ticket]["y"].append(0.00)
 
 chartData = []
 
 match mode:
   case 'total':
-    total_cap = [0] * len(dates)
+    ySum = traces[list(traces.keys())[0]]['y']
     for ticket in traces.keys():
-      for i in range(len(dates)):
-        total_cap[i] += traces[ticket]["market_cap"][i]
-    chartData.append({
-      "date": dates,
-      "market_cap": total_cap,
-      "trace_name": "total"
-    })
+      for i in range(1, len(ySum)):
+        ySum[i] += traces[ticket]["y"][i]
+    chartData = [{
+      "name": "total",
+      "type": "scatter",
+      "mode": "lines",
+      "stackgroup": "one",
+      "hoverinfo": "skip",
+      "hovertemplate": "",
+      "x": traces[list(traces.keys())[0]]["x"],
+      "y": ySum
+    }]
   case 'ticket':
     for ticket in traces.keys():
-      if(set(traces[ticket]["market_cap"]) == {0}): # exclude tickets with capitalization == 0 for each date
+      if(set(traces[ticket]["y"]) == {0}): # exclude tickets with capitalization == 0 for each date
         continue
       chartData.append(traces[ticket])
   case 'sector':
@@ -120,26 +147,26 @@ match mode:
       for sector in set(sectors):
         sectorCap[sector] = [0] * len(dates)
       for ticket in traces.keys():
-        if(set(traces[ticket]['market_cap']) == {0}): # exclude tickets with capitalization == 0 for each date
+        if(set(traces[ticket]['y']) == {0}): # exclude tickets with capitalization == 0 for each date
           continue
         try:
           index = tickets.index(ticket)
           sector = sectors[index]
-          sectorCap[sector] = [sum(i) for i in zip(sectorCap[sector], [traces[ticket]['market_cap']])]
+          sectorCap[sector] = [sum(i) for i in zip(sectorCap[sector], traces[ticket]['y'])]
         except ValueError:
-          sectorCap['Others'] = [sum(i) for i in zip(sectorCap['Others'], [traces[ticket]['market_cap']])]
+          sectorCap['Others'] = [sum(i) for i in zip(sectorCap['Others'], traces[ticket]['y'])]
       for sector in sectorCap:
         if(sector in ['', 'Moscow Exchange']):
           continue
         chartData.append({
-          "date": dates,
-          "market_cap": sectorCap[sector],
-          "trace_name": sector
+          "name": sector,
+          "x": traces[list(traces.keys())[0]]["x"],
+          "y": sectorCap[sector]
         })
 
-with open(f'history/{filename}', 'w', newline='') as csvfile:
-  fieldnames = ['date', 'market_cap', 'trace_name']
-  writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+with open(f'history/{filename}', 'w', newline='') as f:
+  fieldnames = ['date', 'marketCap', 'traceName']
+  writer = csv.DictWriter(f, fieldnames=fieldnames)
 
   writer.writeheader()
   for row in chartData:
