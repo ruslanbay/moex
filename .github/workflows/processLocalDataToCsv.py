@@ -121,7 +121,7 @@ match mode:
       for i in range(1, len(ySum)):
         ySum[i] += traces[ticket]["y"][i]
     chartData = [{
-      "name": "total",
+      "name": ["total"] * len(ySum),
       "x": traces[list(traces.keys())[0]]["x"],
       "y": ySum
     }]
