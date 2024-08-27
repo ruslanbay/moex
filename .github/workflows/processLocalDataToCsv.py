@@ -165,9 +165,10 @@ with open(f'history/{filename}', 'w', newline='') as f:
 
   writer.writeheader()
   
-  for i in range(len(chartData[0]['x'])):
-    writer.writerow({
-      'date': chartData[0]['x'][i],
-      'marketCap': chartData[0]['y'][i],
-      'traceName': chartData[0]['name'][i]
-    })
+  for entry in chartData:
+    for i in range(len(entry['x'])):
+      writer.writerow({
+        'date': entry['x'][i],
+        'marketCap': entry['y'][i],
+        'traceName': entry['name'][i]
+      })
