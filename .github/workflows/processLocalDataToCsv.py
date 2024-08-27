@@ -154,7 +154,7 @@ match mode:
         if(sector in ['', 'Moscow Exchange']):
           continue
         chartData.append({
-          "name": sector,
+          "name": ["sector"] * len(sectorCap[sector]),
           "x": traces[list(traces.keys())[0]]["x"],
           "y": sectorCap[sector]
         })
