@@ -160,14 +160,14 @@ match mode:
         })
 
 with open(f'history/{filename}', 'w', newline='') as f:
-  fieldnames = ['x', 'y', 'name']
+  fieldnames = ['date', 'marketCap', 'traceName']
   writer = csv.DictWriter(f, fieldnames=fieldnames)
 
   writer.writeheader()
   
   for i in range(len(chartData[0]['x'])):
     writer.writerow({
-      'x': chartData[0]['x'][i],
-      'y': chartData[0]['y'][i],
-      'name': chartData[0]['name'][i]
+      'date': chartData[0]['x'][i],
+      'marketCap': chartData[0]['y'][i],
+      'traceName': chartData[0]['name'][i]
     })
