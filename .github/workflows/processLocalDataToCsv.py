@@ -164,5 +164,10 @@ with open(f'history/{filename}', 'w', newline='') as f:
   writer = csv.DictWriter(f, fieldnames=fieldnames)
 
   writer.writeheader()
-  for row in chartData:
-    writer.writerow(row)
+  
+  for i in range(len(chartData[0]['x'])):
+    writer.writerow({
+      'x': chartData[0]['x'][i],
+      'y': chartData[0]['y'][i],
+      'name': chartData[0]['name'][i]
+    })
