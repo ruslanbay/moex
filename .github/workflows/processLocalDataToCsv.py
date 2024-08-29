@@ -159,6 +159,8 @@ match mode:
           "y": sectorCap[sector]
         })
 
+chartData.sort(key=lambda entry: entry['name'][0])
+
 with open(f'history/{filename}', 'w', newline='') as f:
   fieldnames = ['date', 'marketCap', 'traceName']
   writer = csv.DictWriter(f, fieldnames=fieldnames)
