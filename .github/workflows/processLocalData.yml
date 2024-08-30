@@ -18,7 +18,7 @@ on:
         description: 'End date'
         required: true
         type: string
-        default: '2011-12-21'
+        default: '2011-12-31'
       stepDays:
         description: 'Step in days'
         required: true
