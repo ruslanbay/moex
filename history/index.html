@@ -29,6 +29,10 @@
       outline: none;
     }
 
+    form {
+      display: inline-block;
+    }
+
     a:link,
     a:visited,
     a:hover,
@@ -61,22 +65,35 @@
 
 <body>
   <header>
-    <select id="yearSelector">
-      <option value="2012">2012</option>
-      <option value="2013">2013</option>
-      <option value="2014">2014</option>
-      <option value="2015">2015</option>
-      <option value="2016">2016</option>
-      <option value="2017">2017</option>
-      <option value="2018">2018</option>
-      <option value="2019">2019</option>
-      <option value="2020">2020</option>
-      <option value="2021">2021</option>
-      <option value="2022">2022</option>
-      <option value="2023">2023</option>
-      <option value="2024">2024</option>
-      <option value="total" selected="selected">total</option>
-    </select>
+    <!--
+    <form id="myForm">
+      -->
+      <select id="periodSelector">
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="total" selected="selected">total</option>
+      </select>
+      <select id="currencySelector">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="CNY">CNY</option>
+        <option value="RUB" selected="selected">RUB</option>
+      </select>
+      <!--
+      <button type="submit">refresh</button>
+    </form>
+    -->
     &nbsp;&nbsp;&nbsp;&nbsp;
     <a href="/moex">TREEMAP</a>
     &nbsp;&nbsp;&nbsp;&nbsp;
@@ -90,29 +107,47 @@
   <script type="text/javascript">
     document.addEventListener('contextmenu', event => event.preventDefault()); // TODO: customize context menu
 
-    async function getChartData(date) {
+    async function prepChartData(period, currency) {
       try {
-        const response = await fetch('/moex/history/issues-by-sector.tsv');
-        const tsv = await response.text();
-
-        const data = tsv.split('\n')
+        var response = await fetch('/moex/history/issues-by-sector.tsv');
+        response = await response.text();
+        var data = response.split('\n')
           .slice(1, 16)
           .map(row => row.split('\t'));
 
         const traceColors = {};
-
         data.forEach(row => {
           const [, label, , , , , , traceColor] = row;
           traceColors[label] = traceColor;
         });
+
+
+        response = await fetch(`/moex/history/${currency}FIXME.csv`);
+        response = await response.text();
+        data = response.split('\n')
+          .map(row => row.split(','));
+        
+        const currencyRates = {};
+        data.forEach(row => {
+          const [Date, , , , Close] = row;
+          currencyRates[Date] = Number(Close);
+        });
       
-        const rows = await d3.csv(`/moex/history/${date}.csv`);
+        const rows = await d3.csv(`/moex/history/${period}.csv`);
 
         const chartData = {};
         rows.forEach(row => {
           const traceName = row.traceName;
           const date = row.date;
-          const marketCap = parseFloat(row.marketCap);
+          var marketCap = parseFloat(row.marketCap);
+
+          if (currency !== 'RUB') {
+              var rate = 0.0;
+            if (currencyRates[date] !== -1) {
+              rate = currencyRates[date];
+              marketCap = marketCap / rate;
+            }
+          }
 
           if (!chartData[traceName]) {
             chartData[traceName] = {
@@ -121,7 +156,7 @@
               mode: "lines",
               stackgroup: "one",
               hoverinfo: "all",
-              hovertemplate: "%{x|%x}<br>₽%{y:,.0f}<br>%{fullData.name}<extra></extra>",
+              hovertemplate: "%{x|%x}<br>%{y:,.0f}<br>%{fullData.name}<extra></extra>",
               marker: {
                 color: traceColors[traceName]
               },
@@ -143,13 +178,14 @@
       }
     };
 
-    function refreshChart(date) {
-      date = date.target.value;
+    function refreshChart() {
+      var period = document.getElementById('periodSelector').value;
+      var currency = document.getElementById('currencySelector').value;
 
-      getChartData(date)
+      prepChartData(period, currency)
         .then(function(chartData) {
           var tickvals, tickformat;
-          if (date === "total") {
+          if (period === "total") {
             tickformat = "%Y";
             tickvals = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035]
           }
@@ -267,14 +303,13 @@
         });
     }
 
-    const input = document.getElementById("yearSelector");
-    input.addEventListener("change", refreshChart);
+    const inputPeriodSelector = document.getElementById("periodSelector");
+    inputPeriodSelector.addEventListener("change", refreshChart);
 
-    refreshChart({
-      target: {
-        value: "total"
-      }
-    });
+    const inputCurrencySelector = document.getElementById("currencySelector");
+    inputCurrencySelector.addEventListener("change", refreshChart);
+
+    refreshChart();
   </script>
 </body>
 
