@@ -2,7 +2,7 @@ name: 'Get currency exchange rate'
 
 on:
   schedule:
-    - cron: '30 03 * * 2-6' # run every day at 03:30 UTC from Tuesday to Saturday
+    - cron: '20 03 * * 2-6' # run every day at 03:30 UTC from Tuesday to Saturday
   workflow_dispatch:
     inputs:
       startDate:
