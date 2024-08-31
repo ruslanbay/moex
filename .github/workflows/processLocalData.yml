@@ -1,11 +1,12 @@
 name: 'Process local data for the history chart'
 
 on:
-  workflow_run:
-    workflows: ["Get MOEX data"]
-    types:
-      - completed
+  # workflow_run:
+  #   workflows: ["Get MOEX data"]
+  #   types:
+  #     - completed
   schedule:
+    - cron: '30 03 * * 6' # run every Saturday at 03:30 am
     - cron: '15 21 2 1 *' # run every year at Jan 1st 21:15 UTC
   workflow_dispatch:
     inputs:
@@ -48,16 +49,16 @@ jobs:
         python-version: "3.11"
     
     - name: DAILY. Process local files
-      if: ${{ github.event_name == 'workflow_run' }}
+      if: ${{ github.event.schedule == '30 03 * * 6' }}
       run: |
         CURRENT_DATE=$(date --utc +'%Y-%m-%d')
-        python .github/workflows/processLocalDataToCsv.py --start 2011-12-19 --end "${CURRENT_DATE}" --step 14 --mode total --filename total.json
+        python .github/workflows/processLocalDataToCsv.py --start 2011-12-19 --end "${CURRENT_DATE}" --step 14 --mode total --filename total.csv
     
     - name: YEARLY. Process local files
-      if: ${{ github.event_name == 'schedule' }}
+      if: ${{ github.event.schedule == '15 21 2 1 *' }}
       run: |
         LAST_YEAR=$(date --utc -d "last year" +"%Y")
-        python .github/workflows/processLocalDataToCsv.py --start "${LAST_YEAR}-01-01" --end "${LAST_YEAR}-12-31" --step 7 --mode sector --filename "${LAST_YEAR}.json"
+        python .github/workflows/processLocalDataToCsv.py --start "${LAST_YEAR}-01-01" --end "${LAST_YEAR}-12-31" --step 7 --mode sector --filename "${LAST_YEAR}.csv"
     
     - name: MANUAL. Process local files
       if: ${{ github.event_name == 'workflow_dispatch' }}
