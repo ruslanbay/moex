@@ -57,6 +57,8 @@ jobs:
         start=$(date --utc -d 'yesterday'  +%Y-%m-%d)
         end=$start
         python .github/workflows/getCurrency.py --start $start --end $end --currency USDFIXME
+        python .github/workflows/getCurrency.py --start $start --end $end --currency EURFIXME
+        python .github/workflows/getCurrency.py --start $start --end $end --currency CNYFIXME
     - name: MANUAL. Get currency exchange rate
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
