@@ -65,6 +65,6 @@ jobs:
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "github-actions@github.com"
-        git add -n --ignore-missing history/{USDFIXME,CNYFIXME,EURFIXME,BYNFIXME,CNYFIX,EURUSDFIXME,GOLDFIXME,HKDFIXME,TRYFIXME,USDCNYFIXME,USDKZTFIXME}.csv
+        git add history/{USDFIXME,CNYFIXME,EURFIXME,BYNFIXME,CNYFIX,EURUSDFIXME,GOLDFIXME,HKDFIXME,TRYFIXME,USDCNYFIXME,USDKZTFIXME}.csv
         git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
         git push
