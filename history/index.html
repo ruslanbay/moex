@@ -29,10 +29,6 @@
       outline: none;
     }
 
-    form {
-      display: inline-block;
-    }
-
     a:link,
     a:visited,
     a:hover,
@@ -109,12 +105,13 @@
 
     async function prepChartData(period, currency) {
       try {
+        const chartData = {};
+
         var response = await fetch('/moex/history/issues-by-sector.tsv');
         response = await response.text();
         var data = response.split('\n')
           .slice(1, 16)
           .map(row => row.split('\t'));
-
         const traceColors = {};
         data.forEach(row => {
           const [, label, , , , , , traceColor] = row;
@@ -126,28 +123,32 @@
         response = await response.text();
         data = response.split('\n')
           .map(row => row.split(','));
-        
         const currencyRates = {};
         data.forEach(row => {
           const [Date, , , , Close] = row;
           currencyRates[Date] = Number(Close);
         });
-      
+
+        if (!chartData[currency] && period == 'total') {
+            chartData[currency] = {
+              name: currency,
+              type: "line",
+              mode: "lines",
+              yaxis: "y2",
+              hoverinfo: "all",
+              hovertemplate: "%{x|%x}<br>%{y:,.0f}<br>RUB per %{fullData.name}<extra></extra>",
+              x: Object.keys(currencyRates),
+              y: Object.values(currencyRates)
+            };
+          }
+
+
         const rows = await d3.csv(`/moex/history/${period}.csv`);
 
-        const chartData = {};
         rows.forEach(row => {
           const traceName = row.traceName;
           const date = row.date;
           var marketCap = parseFloat(row.marketCap);
-
-          if (currency !== 'RUB') {
-              var rate = 0.0;
-            if (currencyRates[date] !== -1) {
-              rate = currencyRates[date];
-              marketCap = marketCap / rate;
-            }
-          }
 
           if (!chartData[traceName]) {
             chartData[traceName] = {
@@ -163,6 +164,13 @@
               x: [],
               y: []
             };
+          }
+
+          if (currency !== 'RUB') {
+            if (currencyRates[date] !== undefined) {
+              rate = currencyRates[date];
+            }
+            marketCap = marketCap / rate;
           }
 
           chartData[traceName].x.push(date);
@@ -233,7 +241,18 @@
               visible: true,
               fixedrange: true,
               side: "right",
-              showgrid: true
+              showgrid: true,
+              // titlefont: { color: 'blue' },
+              // tickfont: { color: 'blue' },
+            },
+            yaxis2: {
+              title: 'Currency Rate',
+              overlaying: 'y',
+              visible: true,
+              fixedrange: true,
+              side: 'left',
+              // titlefont: { color: 'red' },
+              // tickfont: { color: 'red' },
             },
             xaxis: {
               type: "date",
