@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MOEX</title>
-  <link rel="icon" href="/moex/images/icons/favicon.ico" type="image/x-icon">
-  <link rel="manifest" href="/moex/manifest.json">
+  <link rel="icon" href="/images/icons/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="MOEX">
-  <link rel="apple-touch-icon" href="/moex/images/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
   <meta name="description" content="Russian Stock Market Visualization">
   <meta name="theme-color" content="#414554" />
 
@@ -78,7 +78,7 @@
   <header>
     <input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="2023-12-08" min="2011-12-19" max="2024-03-04">
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="/moex/history">HISTORY</a>
+    <a href="/history">HISTORY</a>
     &nbsp;&nbsp;&nbsp;&nbsp;
   </header>
   <div id="chart"></div>
@@ -86,7 +86,7 @@
     function refreshChart(date) {
       date = date.target.value;
 
-      d3.tsv('/moex/data/issues-by-sector.tsv')
+      d3.tsv('/data/issues-by-sector.tsv')
         .then(function (rows) {
           function unpack(rows, key) {
             return rows.map(function (row) {
@@ -117,7 +117,7 @@
             chartData["customdata"].push(["Moscow Exchange", labels[i], NaN, NaN, labels[i], NaN]);
           };
 
-          return $.getJSON(`/moex/data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`)
+          return $.getJSON(`/data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`)
             .then(function (moexJson) {
               moexJson.securities.data.forEach(item => {
                 var ticker = item[0];
@@ -266,13 +266,13 @@
     });
   </script>
   <!--   PWA: Install script -->
-  <!-- <script src="/moex/scripts/install.js"></script> -->
+  <!-- <script src="/scripts/install.js"></script> -->
 
   <!--   PWA Register service-worker.js -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/moex/service-worker.js')
+        navigator.serviceWorker.register('/service-worker.js')
       });
     }
   </script>
