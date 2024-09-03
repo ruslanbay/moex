@@ -4,11 +4,11 @@ const CACHE_NAME = 'my-app-static-cache-v3';
 const DATA_CACHE_NAME = 'my-app-data-cache-v3';
 
 const FILES_TO_CACHE = [
-    '/moex/',
-    '/moex/index.html',
-    '/moex/history/index.html',
-    '/moex/images/icons/favicon.ico',
-    '/moex/scripts/install.js',
+    '/',
+    '/index.html',
+    '/history/index.html',
+    '/images/icons/favicon.ico',
+    '/scripts/install.js',
     'https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js',
     'https://cdn.jsdelivr.net/npm/d3/dist/d3.min.js',
     'https://cdn.jsdelivr.net/npm/plotly.js/dist/plotly.min.js'
@@ -41,7 +41,7 @@ self.addEventListener('activate', (evt) => {
 });
 
 self.addEventListener('fetch', (evt) => {
-    if (evt.request.url.includes('/moex/data/') || evt.request.url.includes('/moex/history/')) {
+    if (evt.request.url.includes('/data/') || evt.request.url.includes('/history/')) {
         evt.respondWith(
             caches.open(DATA_CACHE_NAME).then(async (cache) => {
                 try {
