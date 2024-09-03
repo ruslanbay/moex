@@ -107,7 +107,7 @@
       try {
         const chartData = {};
 
-        var response = await fetch('/history/issues-by-sector.tsv');
+        var response = await fetch('/data/issues-by-sector.tsv');
         response = await response.text();
         var data = response.split('\n')
           .slice(1, 16)
