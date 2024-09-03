@@ -107,7 +107,7 @@
       try {
         const chartData = {};
 
-        var response = await fetch('/moex/history/issues-by-sector.tsv');
+        var response = await fetch('/history/issues-by-sector.tsv');
         response = await response.text();
         var data = response.split('\n')
           .slice(1, 16)
@@ -119,7 +119,7 @@
         });
 
 
-        response = await fetch(`/moex/history/${currency}FIXME.csv`);
+        response = await fetch(`/history/${currency}FIXME.csv`);
         response = await response.text();
         data = response.split('\n')
           .map(row => row.split(','));
@@ -143,7 +143,7 @@
           }
 
 
-        const rows = await d3.csv(`/moex/history/${period}.csv`);
+        const rows = await d3.csv(`/history/${period}.csv`);
 
         rows.forEach(row => {
           const traceName = row.traceName;
