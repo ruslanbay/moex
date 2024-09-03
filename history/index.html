@@ -4,7 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>History</title>
+  <title>MOEX History</title>
+  <link rel="icon" href="/images/icons/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="MOEX History">
+  <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
+  <meta name="description" content="Russian Stock Market Visualization">
   <style>
     html,
     body {
@@ -57,6 +64,12 @@
       outline: none;
     }
   </style>
+  <script src='https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/plotly.js/dist/plotly.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/d3/dist/d3.min.js'></script>
+  <script type="text/javascript">
+    document.addEventListener('contextmenu', event => event.preventDefault()); // TODO: customize context menu
+  </script>
 </head>
 
 <body>
@@ -96,12 +109,7 @@
   </header>
 
   <div id='chart'></div>
-  
-  <script src='https://cdn.jsdelivr.net/npm/d3/dist/d3.min.js'></script>
-  <script src='https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js'></script>
-  <script src='https://cdn.jsdelivr.net/npm/plotly.js/dist/plotly.min.js'></script>
   <script type="text/javascript">
-    document.addEventListener('contextmenu', event => event.preventDefault()); // TODO: customize context menu
 
     async function prepChartData(period, currency) {
       try {
