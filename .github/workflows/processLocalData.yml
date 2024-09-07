@@ -52,7 +52,7 @@ jobs:
       if: ${{ github.event.schedule == '30 03 * * 6' }}
       run: |
         CURRENT_DATE=$(date --utc +'%Y-%m-%d')
-        python .github/workflows/processLocalDataToCsv.py --start 2011-12-19 --end "${CURRENT_DATE}" --step 14 --mode total --filename total.csv
+        python .github/workflows/processLocalDataToCsv.py --start 2011-12-19 --end "${CURRENT_DATE}" --step 7 --mode sector --filename total.csv
     
     - name: YEARLY. Process local files
       if: ${{ github.event.schedule == '15 21 2 1 *' }}
