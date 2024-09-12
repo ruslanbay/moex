@@ -8,7 +8,7 @@ on:
   schedule:
     - cron: '20 21 * * 2-6' # run every work day at 21:20 am utc
     - cron: '30 21 * * 6' # run every Saturday at 21:30 am utc
-    - cron: '15 21 2 1 *' # run every year at Jan 1st 21:15 UTC
+    - cron: '45 21 2 1 *' # run every year at Jan 1st 21:15 UTC
   workflow_dispatch:
     inputs:
       startDate:
