@@ -6,9 +6,9 @@ on:
   #   types:
   #     - completed
   schedule:
-    - cron: '20 21 * * 2-6' # run every work day at 21:20 am utc
-    - cron: '30 21 * * 6' # run every Saturday at 21:30 am utc
-    - cron: '45 21 2 1 *' # run every year at Jan 1st 21:45 UTC
+    - cron: '20 00 * * 2-6' # run every work day at 00:20 am utc
+    - cron: '30 00 * * 6' # run every Saturday at 00:30 am utc
+    - cron: '45 00 2 1 *' # run every year at Jan 1st 00:45 UTC
   workflow_dispatch:
     inputs:
       startDate:
@@ -50,20 +50,20 @@ jobs:
         python-version: "3.11"
 
     - name: DAYLY. Process local files
-      if: ${{ github.event.schedule == '20 21 * * 2-6' }}
+      if: ${{ github.event.schedule == '20 00 * * 2-6' }}
       run: |
         CURRENT_DATE=$(date --utc +'%Y-%m-%d')
         CURRENT_YEAR=$(date --utc +"%Y")
         python .github/workflows/processLocalDataToCsv.py --start "${CURRENT_YEAR}-01-01" --end "${CURRENT_DATE}" --step 1 --mode sector --filename "${CURRENT_YEAR}.csv"
         
     - name: WEEKLY. Process local files
-      if: ${{ github.event.schedule == '30 21 * * 6' }}
+      if: ${{ github.event.schedule == '30 00 * * 6' }}
       run: |
         CURRENT_DATE=$(date --utc +'%Y-%m-%d')
         python .github/workflows/processLocalDataToCsv.py --start 2011-12-19 --end "${CURRENT_DATE}" --step 7 --mode sector --filename total.csv
     
     - name: YEARLY. Process local files
-      if: ${{ github.event.schedule == '45 21 2 1 *' }}
+      if: ${{ github.event.schedule == '45 00 2 1 *' }}
       run: |
         LAST_YEAR=$(date --utc -d "last year" +"%Y")
         python .github/workflows/processLocalDataToCsv.py --start "${LAST_YEAR}-01-01" --end "${LAST_YEAR}-12-31" --step 7 --mode sector --filename "${LAST_YEAR}.csv"
