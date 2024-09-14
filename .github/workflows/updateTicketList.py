@@ -3,7 +3,7 @@ import requests
 import json
 
 # Load the TSV file into a DataFrame
-df = pd.read_csv('data/issues-by-sector.tsv', sep='\t', skiprows=15)
+df = pd.read_csv('data/issues-by-sector.tsv', sep='\t', skiprows=15, header=0)
 
 # Function to fetch the history_from date for a given label
 def fetch_history_from(label):
