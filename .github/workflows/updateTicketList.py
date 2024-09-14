@@ -14,7 +14,7 @@ def fetch_history_from(label):
         data = response.json()
 
         # Save the response as a JSON file
-        with open(f"data/securities/{label}.json", 'w', encoding='utf-8') as json_file:
+        with open(f"data/iss/securities/{label}.json", 'w', encoding='utf-8') as json_file:
             json.dump(data, json_file, ensure_ascii=False, indent=4)
         
         # Extract the ISSUEDATE from the description.data
