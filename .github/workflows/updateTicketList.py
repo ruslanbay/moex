@@ -19,7 +19,7 @@ def fetch_history_from(label):
         
         # Extract the ISSUEDATE from the description.data
         try:
-            issuedate = data['description']['data'][0]['ISSUEDATE']
+            issuedate = data['description']['data'][8][2]
             return issuedate
         except (IndexError, KeyError):
             return None
