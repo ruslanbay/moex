@@ -1,5 +1,6 @@
 import pandas as pd
 import requests
+import json
 
 # Load the TSV file into a DataFrame
 df = pd.read_csv('data/issues-by-sector.tsv', sep='\t')
@@ -11,6 +12,11 @@ def fetch_history_from(label):
     
     if response.status_code == 200:
         data = response.json()
+
+        # Save the response as a JSON file
+        with open(f"data/securities/{label}.json", 'w', encoding='utf-8') as json_file:
+            json.dump(data, json_file, ensure_ascii=False, indent=4)
+        
         # Extract the ISSUEDATE from the description.data
         try:
             issuedate = data['description']['data'][0]['ISSUEDATE']
