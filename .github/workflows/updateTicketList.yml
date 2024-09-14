@@ -1,4 +1,4 @@
-name: 'Get currency exchange rate'
+name: 'Update /data/issues-by-sector.tsv'
 
 on:
   workflow_dispatch:
