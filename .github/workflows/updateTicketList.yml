@@ -31,7 +31,7 @@ jobs:
     - name: Update /data/issues-by-sector.tsv
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
-        python .github/workflows/getCurrency.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --currency ${{ inputs.currency }}
+        python .github/workflows/updateTicketList.py
     - name: Commit and push build artifacts
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
