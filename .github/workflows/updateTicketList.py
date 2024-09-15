@@ -17,15 +17,16 @@ def getCompanyInfo(ticker):
     try:
       companyInfo = dict()
       for item in data['description']['data']:
+        value = item[2].replace('"').replace(',').replace("'")
         match item[0]:
           case 'NAME':
-            companyInfo['NAME'] = item[2]
+            companyInfo['NAME'] = value
           case 'SHORTNAME':
-            companyInfo['SHORTNAME'] = item[2]
+            companyInfo['SHORTNAME'] = value
           case 'LATNAME':
-            companyInfo['LATNAME'] = item[2]
+            companyInfo['LATNAME'] = value
           case 'ISSUEDATE':
-            companyInfo['ISSUEDATE'] = item[2]
+            companyInfo['ISSUEDATE'] = value
           case _:
             continue
       return companyInfo
