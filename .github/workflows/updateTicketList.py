@@ -15,7 +15,12 @@ def getCompanyInfo(ticker):
       json.dump(data, json_file, ensure_ascii=False, indent=4)
     
     try:
-      companyInfo = dict()
+      companyInfo = {
+        'NAME': ticker,
+        'SHORTNAME': ticker,
+        'LATNAME': ticker,
+        'ISSUEDATE': '2014-06-09',
+      }
       for item in data['description']['data']:
         value = item[2].replace('"', '').replace(',', '').replace("'", '')
         match item[0]:
