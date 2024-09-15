@@ -17,7 +17,7 @@ def getCompanyInfo(ticker):
     try:
       companyInfo = dict()
       for item in data['description']['data']:
-        value = item[2].replace('"').replace(',').replace("'")
+        value = item[2].replace('"', '').replace(',', '').replace("'", '')
         match item[0]:
           case 'NAME':
             companyInfo['NAME'] = value
