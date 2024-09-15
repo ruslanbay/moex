@@ -170,7 +170,7 @@
                   chartData["size"][labels.indexOf(sector)] = chartData["size"][labels.indexOf(sector)] + marketCapDaily;
                   chartData["prevSize"][labels.indexOf(sector)] = chartData["prevSize"][labels.indexOf(sector)] + prevMarketCap;
 
-                  var name = namesRus[index];
+                  var name = shortnames[index];
                   chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, name, closePrice]);
                 };
 
