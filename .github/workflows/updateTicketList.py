@@ -20,6 +20,7 @@ def getCompanyInfo(ticker):
         'SHORTNAME': ticker,
         'LATNAME': ticker,
         'ISSUEDATE': '2014-06-09',
+        'listed_till': ''
       }
       for item in data['description']['data']:
         value = item[2].replace('"', '').replace(',', '').replace("'", '')
@@ -34,6 +35,14 @@ def getCompanyInfo(ticker):
             companyInfo['ISSUEDATE'] = value
           case _:
             continue
+
+      work_days_range = pd.date_range(periods=7)
+      for row in data['boards']['data']:
+        if row[1] == 'TQBR':
+          listed_till = row[13]
+          if pd.to_datetime(listed_till) not in work_days_range:
+            companyInfo['listed_till'] = listed_till
+          break
       return companyInfo
     except (IndexError, KeyError):
       return None
