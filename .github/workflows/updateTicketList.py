@@ -36,7 +36,8 @@ def getCompanyInfo(ticker):
           case _:
             continue
 
-      work_days_range = pd.date_range(periods=7)
+      current_date = pd.Timestamp.now()
+      work_days_range = pd.date_range(start=current_date - pd.Timedelta(days=7), end=current_date)
       for row in data['boards']['data']:
         if row[1] == 'TQBR':
           listed_till = row[13]
