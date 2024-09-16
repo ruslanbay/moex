@@ -33,6 +33,7 @@ def getCompanyInfo(ticker):
             companyInfo['LATNAME'] = value
           case 'ISSUEDATE':
             companyInfo['ISSUEDATE'] = value
+            listed_from = value
           case _:
             continue
 
@@ -43,6 +44,8 @@ def getCompanyInfo(ticker):
           listed_till = row[13]
           if pd.to_datetime(listed_till) not in work_days_range:
             companyInfo['listed_till'] = listed_till
+          if datetime.strptime(listed_from, "%Y-%m-%d") > datetime.strptime(listed_till, "%Y-%m-%d"):
+            companyInfo['listed_from'] = row[12]
           break
       return companyInfo
     except (IndexError, KeyError):
@@ -59,4 +62,4 @@ for index, row in df.iterrows():
   df.at[index, 'shortname'] = companyInfo['LATNAME']
   df.at[index, 'history_from'] = companyInfo['ISSUEDATE']
 
-df.to_csv('data/updated_issues-by-sector.tsv', sep='\t', index=False)
+df.to_csv('data/issues-by-sector.tsv', sep='\t', index=False)
