@@ -1,4 +1,19 @@
 parents	labels	shortname	shortname_rus	name_rus	history_from	history_till	trace_color
+	Moscow Exchange		Московская биржа				
+Moscow Exchange	Chemicals and Pertochemicals		Химия и нефтехимия				rgba(54,114,64,1)
+Moscow Exchange	Conglomerate		Холдинги				rgba(160,98,49,1)
+Moscow Exchange	Construction (Development)		Строительство				rgba(106,86,137,1)
+Moscow Exchange	Consumer		Потребительский сектор				rgba(102,77,80,1)
+Moscow Exchange	Electricity, Utilities		Электроэнергетика				rgba(96,98,106,1)
+Moscow Exchange	Energy (Oil, Gas, Coal)		Энергоресурсы (Нефть, газ, уголь)				rgba(44,129,146,1)
+Moscow Exchange	Financials		Финансы				rgba(139,54,62,1)
+Moscow Exchange	Health Care		Здравоохранение				rgba(163,90,253,1)
+Moscow Exchange	Industrials		Промышленность				rgba(202,224,92,1)
+Moscow Exchange	Information Technologies		Информационные технологии				rgba(183,50,68,1)
+Moscow Exchange	Metals and Mining		Металлы и добыча				rgba(199,131,37,1)
+Moscow Exchange	Telecommunication Services		Телекоммуникации				rgba(106,228,127,1)
+Moscow Exchange	Transportation		Транспорт				rgba(54,104,114,1)
+Moscow Exchange	Others		Прочее				rgba(199,78,165,1)
 Chemicals and Pertochemicals	URKA	Uralkaliy	Уркалий-ао	Уралкалий ПАО ао	2007-11-07	2022-12-13	
 Chemicals and Pertochemicals	VLHZ	VHZ	ВХЗ-ао	Владимирский химич.з-д(ПАО) ао	2006-07-12		
 Conglomerate	AFKS	AFK Sistema	Система ао	АФК Система ПАО ао	2007-12-12		
