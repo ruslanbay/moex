@@ -1,6 +1,7 @@
+from datetime import datetime
+import json
 import pandas as pd
 import requests
-import json
 
 df = pd.read_csv('data/issues-by-sector.tsv', sep='\t', skiprows=range(1, 16), header=0)
 
