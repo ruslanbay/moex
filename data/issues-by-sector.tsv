@@ -40,12 +40,14 @@ Construction (Development)	ETLN	GDR ETALON GROUP PLC ORD SHS	ETLN-гдр	ГДР 
 Construction (Development)	HALS	SG-Development ao	СГ-Девел	ПАО СГ-Девелопмент	2005-05-27	2021-05-17	
 Construction (Development)	IDVP	PAO INVEST-DEVELOPMENT	Инв-Девел	ПАО ИНВЕСТ-ДЕВЕЛОПМЕНТ - ао	2015-03-06	2020-06-18	
 Construction (Development)	INGR	INGRAD	ИНГРАД ао	ИНГРАД ПАО ао	2020-03-30		
+Construction (Development)	KDSK	Kamskiy domostr. kombinat ao	КамскДК ао	Камский домостр.комбинат ОАОао	2011-03-09	2012-12-28	
 Construction (Development)	LSRG	LSR	ЛСР ао	Группа ЛСР ПАО ао	2007-11-09		
 Construction (Development)	MERF	Meridian ao	МЕРИДИАН	МЕРИДИАН ПАО ао	2008-11-26	2020-02-27	
 Construction (Development)	PIKK	PIK SZ	ПИК ао	ПИК СЗ (ПАО) ао	2007-06-13		
 Construction (Development)	PRFN	CZPSN-Profnasteel	ЧЗПСН ао	ЧЗПСН-Профнастил (ПАО) ао	2012-08-28		
 Construction (Development)	SMLT	Samolet	Самолет ао	ГК Самолет ао	2020-10-29		
 Construction (Development)	TUCH	Tuchkovsk. CSM	ТКСМ ао	Тучковский КСМ ао	2010-12-30	2016-12-02	
+Construction (Development)	TUCH-001D	Tuchkovsk. CSM 001D	ТКСМ ао 1D	Тучковский КСМ ао 001D	2011-11-22		
 Construction (Development)	UTSY	Edinie Tehno Sistemi PAO ao	ЕТС ао	Единые Техно Системы ПАО ао	2015-05-22	2016-02-15	
 Consumer	AESL	TPG AESSEL ao	АЭССЕЛЬао	ТПГ АЭССЕЛЬ ПАО ао	2013-11-12	2017-03-01	
 Consumer	ABRD	Abrau-Durso ao	АбрауДюрсо	Абрау-Дюрсо ПАО ао	2012-10-02		
@@ -87,10 +89,17 @@ Consumer	SIBG	PAO Ice stim Rus ao	АйсCтим ао	Айс стим Рус ПА
 Consumer	SVAV	Sollers Avto	СОЛЛЕРС	ПАО СОЛЛЕРС	2005-04-22		
 Consumer	SVET	Svetofor Group	Светофор	Светофор Групп ао	2021-01-15		
 Consumer	SYNG	Beluga Group ao	Белуга ао	Белуга Групп ПАО ао	2007-11-20	2017-07-31	
+Consumer	TZUM	TzUM	ЦУМ-2	ЦУМ-2	2004-04-28		
 Consumer	VSEH	VI.ru	ВИ.ру	ВИ.ру	2024-07-05		
 Consumer	WUSH	WHOOSH Holding	iВУШХолднг	ВУШ Холдинг ао	2022-12-14		
 Consumer	ZHIV	Jivoy office ao	Живой Оф	Живой офис ОАО ао	2013-10-17	2017-03-01	
+Electricity, Utilities	ARSB	Public Joint-Stock Company Arkhangelsk Energy Retail Company	ПАО Архэнергосбыт	Публичное акционерное общество Архангельская сбытовая компания	2005-11-18	2012-08-15	
+Electricity, Utilities	ARSBP	Аrhenergosbyt ap	АрханСб ап	Архангельская сбыт.комп.ОАО-ап	2005-11-18	2012-08-15	
 Electricity, Utilities	ASSB	Astrakhan Energo Sbyt	АстрЭнСб	Астраханская ЭСК ПАО	2005-09-16		
+Electricity, Utilities	BNSB	Bryanskenergosbyt ao	БрянЭнС ао	Брянскэнергосбыт ОАО-ао	2005-12-22	2012-06-07	
+Electricity, Utilities	BNSBP	Bryanskenergosbyt ap	БрянЭнС ап	Брянскэнергосбыт ОАО-ап	2005-12-22	2012-06-07	
+Electricity, Utilities	CHSB	Chita Energo Sbyt	ЧитЭнСб ао	Читаэнергосбыт ОАО ао	2006-09-29	2020-06-01	
+Electricity, Utilities	CHSBP	Chita Energo Sbyt (pref)	ЧитЭнСб ап	Читаэнергосбыт ОАО ап	2006-09-29	2020-06-01	
 Electricity, Utilities	CLSB	Chelyab Energo Sbyt ao	ЧелябЭС ао	Челябэнергосбыт ПАО	2005-12-09	2019-07-24	
 Electricity, Utilities	CLSBP	Chelyab Energo Sbyt ap	ЧелябЭС ап	Челябэнергосбыт ПАО ап	2005-12-09	2019-07-24	
 Electricity, Utilities	DASB	Dagestan energosbyt. company	ДагСб ао	ао Дагестанская энергосб.комп.	2006-01-12	2020-09-04	
@@ -103,6 +112,8 @@ Electricity, Utilities	HYDR	RusGidro	РусГидро	ПАО РусГидро	20
 Electricity, Utilities	HYDR-041D	RusGidro 041D	РусГидр41D	ОАО РусГидро041D	2014-02-25	2014-07-11	
 Electricity, Utilities	IRAO	Inter RAO ao	ИнтерРАОао	Интер РАО ПАО ао	2009-12-01		
 Electricity, Utilities	IRGZ	IrkutskEnrg	ИркЭнерго	Иркутскэнерго(ПАО)-ао	2003-07-10	2023-02-28	
+Electricity, Utilities	IVSB	Ivenergosbyt ao	ИвЭнСб ао	Ивэнергосбыт ОАО ао	2005-09-01	2012-06-07	
+Electricity, Utilities	IVSBP	Ivenergosbyt ap	ИвЭнСб ап	Ивэнергосбыт ОАО ап	2005-09-01	2012-06-07	
 Electricity, Utilities	KBSB	TNS energo Kuban Company	ТНСэКубань	ТНС энерго Кубань ПАО ао	2008-02-08		
 Electricity, Utilities	KCHE	Kamchatskenergo	КамчатЭ ао	Камчатскэнерго ПАО ао	2008-03-14		
 Electricity, Utilities	KCHEP	Kamchatskenergo (pref)	КамчатЭ ап	Камчатскэнерго ПАО ап	2008-07-09		
@@ -111,10 +122,16 @@ Electricity, Utilities	KGKCP	Kurganskaja Gener.Kompanija ap	КурганГКап
 Electricity, Utilities	KISB	Kirov Energo Sbyt	КировЭС ао	Кировэнергосбыт ОАО	2005-12-02	2014-09-26	
 Electricity, Utilities	KISBP	Kirov Energo Sbyt ap	КировЭС ап	Кировэнергосбыт ОАО	2005-12-02	2014-09-26	
 Electricity, Utilities	KLSB	Kalugsk. Sbyt. Company ao	КалужскСК	аоКалужская сбыт.комп.ПАО	2005-08-26		
+Electricity, Utilities	KOSB	KolEnergoSbyt	КолЭС ао	Колэнергосбыт ОАО ао	2008-10-14	2012-12-25	
+Electricity, Utilities	KOSBP	KolEnergoSbyt (pref)	КолЭС ап	Колэнергосбыт ОАО ап	2011-12-08	2012-12-25	
 Electricity, Utilities	KRSB	Krashojarskenergosbyt	Красэсб ао	Красноярскэнергосбыт ао	2008-10-23		
 Electricity, Utilities	KRSBP	Krashojarskenergosbyt pref.	Красэсб ап	Красноярскэнергосбыт ап	2008-10-23		
 Electricity, Utilities	KRSG	KrasnGES	КраснГЭС	Красноярская ГЭС(ПАО) ао	2004-02-04	2017-06-19	
 Electricity, Utilities	KUBE	Rosseti Kuban	РСетКубань	Россети Кубань ПАО	2003-09-30		
+Electricity, Utilities	KUSB	Kurskregionenergosby ao	КурскЭнСб	Курскрегионэнергосбыт ОАО ао	2005-08-25	2012-05-24	
+Electricity, Utilities	KUSBP	Kurskregionenergosby (pref)	КурскЭнС-п	Курскрегионэнергосбыт ОАО ап	2005-08-25	2014-05-24	
+Electricity, Utilities	KRGE	Kurganenergo ao	КурганЭн	Курганэнерго ОАО ао	2011-12-08	2013-03-29	
+Electricity, Utilities	KRGEP	Kurganenergo ap	КурганЭн-п	Курганэнерго ОАО ап	2011-12-08	2013-03-29	
 Electricity, Utilities	KZBE	KuzbassEnergo	Кузбасэнрг	Кузбасэнерго(ОАО)-ао	2008-05-13	2016-01-19	
 Electricity, Utilities	LPSB	LESK ao	ЛЭСК ао	Липецкая энергосбыт.ком.ОАО ао	2005-08-16		
 Electricity, Utilities	LSNG	Rosseti LenEnrg	РСетиЛЭ	Россети Ленэнерго ПАО-ао	2003-07-16		
@@ -125,9 +142,11 @@ Electricity, Utilities	MISB	TNS energo Mariy El ao	ТНСэнМарЭл	ТНС �
 Electricity, Utilities	MISBP	TNS energo Mariy El (pref)	ТНСэМаЭл-п	ТНС энерго Марий Эл ПАО ап	2005-08-26		
 Electricity, Utilities	MRKC	Rosseti Centr	РоссЦентр	ПАО Россети Центр ао	2008-05-21		
 Electricity, Utilities	MRKH	Rosseti ao	Россети ао	Российские сети ОАО ао	2008-12-09	2013-10-24	
+Electricity, Utilities	MRKHP	Rosseti ap	Россети ап	Российские сети ОАО ап	2008-12-09		
 Electricity, Utilities	MRKK	Rosseti Severnyy Kavkaz ao	Россети СК	Россети Сев. Кавказ ао	2008-06-19		
 Electricity, Utilities	MRKP	Rosseti Centr i Privoljye ao	РСетиЦП ао	Россети Центр и Приволжье ао	2008-04-07		
 Electricity, Utilities	MRKS	Rosseti Sibir	РсетСиб ао	Россети Сибирь ао	2008-06-05		
+Electricity, Utilities	MRKS-014D	MRSK Sibiri - 014D	МРСКСиб014	МРСК Сибири ао - 014D	2011-12-08		
 Electricity, Utilities	MRKU	Rosseti Ural ao	Россети Ур	Россети Урал (ПАО) ао	2008-06-18		
 Electricity, Utilities	MRKV	Rosseti Volga	РсетВол ао	Россети Волга ао	2008-05-23		
 Electricity, Utilities	MRKY	Rosseti South ao	РоссЮг ао	Россети Юг  (ПАО) ао	2008-08-22		
@@ -148,8 +167,14 @@ Electricity, Utilities	OGKB	OGK-2	ОГК-2 ао	ОГК-2 ПАО ао	2007-06-22	
 Electricity, Utilities	OGKB-004D	OGK-2-004D	ОГК-2-004D	ОГК-2 ОАО ао 004D	2007-01-12	2017-05-15	
 Electricity, Utilities	OGKC	OGK-3	ОГК-3 ао	ОГК-3 ОАО ао	2006-06-15	2012-10-03	
 Electricity, Utilities	OGKE	Enel Russia	ЭнелРос ао	Энел Россия ОАО	2005-09-14	2014-11-28	
+Electricity, Utilities	OMSB	Omskenergosbyt ao	ОмскЭнСб	Омскэнергосбыт ОАО ао	2006-06-16		
+Electricity, Utilities	OMSBP	Omskenergosbyt (pref)	ОмскЭнСб-п	Омскэнергосбыт ОАО ап	2006-06-16		
+Electricity, Utilities	ORSB	Orelenergosbyt ao	ОрлЭнСб ао	Орелэнергосбыт ОАО ао	2005-12-22		
+Electricity, Utilities	ORSBP	Orelenergosbyt (pref)	ОрлЭнСб ап	Орелэнергосбыт ОАО ап	2005-12-22		
 Electricity, Utilities	PMSB	Perm EnergoSbyt	ПермьЭнСб	Пермэнергосбыт ПАО ао	2006-02-09		
 Electricity, Utilities	PMSBP	Perm EnergoSbyt (pref)	ПермьЭнС-п	Пермэнергосбыт ПАО ап	2006-02-09		
+Electricity, Utilities	PZSB	Penzaenergosbyt  ao	ПензаЭС ао	Пензаэнергосбыт ОАО ао	2005-09-13		
+Electricity, Utilities	PZSBP	Penzaenergosbyt (pref)	ПензаЭС ап	Пензаэнергосбыт ОАО ап	2005-09-13		
 Electricity, Utilities	RSTI	Rosseti ao	Россети ао	Российские сети ПАО ао	2014-01-06	2022-12-30	
 Electricity, Utilities	RSTIP	Rosseti ap	Россети ап	Российские сети ПАО ап	2014-01-06	2022-12-30	
 Electricity, Utilities	RTSB	TNS energo Rostov-na-Dony ao	ТНСэнРст	ТНС энерго Ростов. ПАО ао	2005-12-26		
@@ -160,6 +185,8 @@ Electricity, Utilities	SAGOP	SamaraEnergo(pref)	СамарЭн-ап	Самара
 Electricity, Utilities	SARE	SaratovEnergo ao	СаратЭн-ао	Саратовэнерго(ПАО)-ао	2011-11-24		
 Electricity, Utilities	SAREP	SaratovEnergo (pref)	СаратЭн-ап	Саратовэнерго(ПАО)-ап	2011-11-24		
 Electricity, Utilities	SLEN	Sakhalinenergo ao	Сахэнер ао	ПАО Сахалинэнерго ао	2017-02-06		
+Electricity, Utilities	SMSB	Smolenskenergosbyt  ao	СмолЭнСб	Смоленскэнергосбыт ОАО ао	2005-08-16		
+Electricity, Utilities	SMSBP	Smolenskenergosbyt  (pref)	СмолЭнСб-п	Смоленскэнергосбыт ОАО ап	2005-08-16		
 Electricity, Utilities	STSB	StavropolEnergoSbyt	СтаврЭнСб	Ставрополэнергосбыт ПАО ао	2008-03-28		
 Electricity, Utilities	STSBP	StavropolEnergoSbyt (pref)	СтаврЭнСбп	Ставрополэнергосбыт ПАО ап	2008-03-28		
 Electricity, Utilities	SVSB	Sverdlov Energo Sbyt	СвердЭС ао	Свердловэнергосбыт ОАО ао	2006-12-21	2014-09-26	
@@ -175,15 +202,21 @@ Electricity, Utilities	TGKE	TGK-5	ТГК-5	ТГК-5 ОАО ао	2006-07-19	2014-
 Electricity, Utilities	TGKF	TGK-6	ТГК-6	ТГК-6 ОАО ао	2006-10-23	2014-11-27	
 Electricity, Utilities	TGKI	TGK-9	ТГК-9	ТГК-9 ОАО ао	2006-09-22	2014-11-27	
 Electricity, Utilities	TGKN	TGK-14	ТГК-14	ао ПАО ТГК-14	2007-01-25		
+Electricity, Utilities	TLSB	Tulaenergosby ao	ТулаЭнСб	Тулаэнергосбыт ОАО ао	2005-10-14		
 Electricity, Utilities	TNSE	PAO GK TNS energo ao	ТНСэнрг ао	ПАО ГК ТНС энерго ао	2015-06-17		
 Electricity, Utilities	TORS	PAO Rosseti Tomsk ao	РСТомск ао	ао ПАО Россети Томск	2005-12-28		
 Electricity, Utilities	TORSP	PAO Rosseti Tomsk ap	РСТомск ап	ап ПАО Россети Томск	2005-12-28		
+Electricity, Utilities	TOSB	Tomsk Power Supply Company Joint-Stock Company	АО Томскэнергосбыт	Акционерное общество Томская энергосбытовая компания	2005-11-08		
+Electricity, Utilities	TOSBP	Tomskenergosbyt (pref)	ТомскЭнСбп	Томская энергсбыт.комп.ОАО ап	2005-11-08		
+Electricity, Utilities	TVSB	TverEnergoSbyt	ТверЭнСб	Тверьэнергосбыт ОАО ао	2005-08-09		
+Electricity, Utilities	TVSBP	TverEnergoSbyt (pref)	ТверЭнСб-п	Тверьэнергосбыт ОАО ап	2005-08-09		
 Electricity, Utilities	UDSB	Udmurt Energo Sbyt	УдмуртЭС	Удмурт.энергосбыт.комп ОАО	2005-10-07	2014-09-26	
 Electricity, Utilities	UDSBP	Udmurt Energo Sbyt (pref)	УдмуртЭС-п	Удмурт.энергосбыт.компОАО-п	2005-10-07	2014-09-26	
 Electricity, Utilities	UPRO	Unipro PAO ao	Юнипро ао	Юнипро ПАО ао	2007-05-24		
 Electricity, Utilities	VDSB	VEK ao	ВЭК 01 ао	Владимирэнергосбыт ПАО	2005-08-31	2020-03-18	
 Electricity, Utilities	VGSB	Volgograd Energo Sbyt	ВолгЭнСб	Волгоград.энергосбыткомп ПАО	2005-09-16		
 Electricity, Utilities	VGSBP	Volgograd Energo Sbyt (pref)	ВолгЭнСб-п	Волгоград.энергосбыткомп ПАО	2005-09-16		
+Electricity, Utilities	VOSB	Public joint-stock company Vologda Energy Retail Company	ПАО Вологдаэнергосбыт	Публичное акционерное общество Вологодская сбытовая компания	2006-09-15		
 Electricity, Utilities	VTGK	T Plus ao	ТПлюс ао	Т Плюс ПАО ао.	2007-11-09	2016-12-16	
 Electricity, Utilities	VRAO	RAO ES Vostoka ao	ВостРАО ао	РАО ЭС Востока ПАО ао	2008-12-02	2017-10-04	
 Electricity, Utilities	VRAOP	RAO ES Vostoka ap	ВостРАО ап	РАО ЭС Востока ПАО ап	2010-02-09	2017-10-04	
@@ -241,8 +274,13 @@ Financials	BSPB	BSP	БСП ао	ПАО Банк Санкт-Петербург а
 Financials	BSPBP	BSP ap	БСП ап	Банк Санкт-Петербург ап	2021-01-26		
 Financials	CARM	STG	СТГ	СТГ ао	2023-07-03		
 Financials	CBOM	MKB ao	МКБ ао	МКБ ПАО ао	2015-06-22		
+Financials	CITB	KIT Finans Bank ao	КитФинБ ао	КИТ Финанс Инвест. Банк ОАО ао	2011-12-16	2014-05-08	
+Financials	DLVB	DalVostochny Bank	ДальВостБ	Дальневосточный банк ОАО	2000-08-07	2017-05-15	
+Financials	DLVBP	DalVostochny Bank p	ДальВостБп	Дальневосточный банк ОАО	2005-06-07	2017-05-15	
 Financials	EPLN	SAFMAR Fin.Invest. ao	САФМАР ао	САФМАР Фин.Инвестиции ПАО ао	2015-12-04	2017-12-29	
 Financials	EPLN-002D	Europlan 002D	Европлан2D	Европлан ПАО ао 002D	2016-11-28	2017-03-27	
+Financials	ERAV	Era Vodoleya	ЭраВодолея	Эра Водолея (инв.компания) ОАО	2010-08-03	2012-12-28	
+Financials	ERMK	Ermak-invest	ЕрмакИнв	Ермак-инвест ОАО ао	2009-07-14	2012-12-28	
 Financials	DERZP	DERZHAVA pref	Держава ап	Держава ап	2020-10-09	2022-12-13	
 Financials	FTRE	FG FUTURE ao	БУДУЩЕЕ ао	Финансовая группа БУДУЩЕЕ ао	2016-10-20	2020-04-09	
 Financials	GAZC	Gazkon ao	ГАЗКОН-ао	ГАЗКОН (ПАО) ао	2011-09-28	2017-05-15	
@@ -254,6 +292,7 @@ Financials	HMBO	Khanty-M bank Otkritie ao	ХМБОткр ао	ПАО Ханты-
 Financials	KUZB	Bank Kuzneckiy	КузнецкийБ	Банк Кузнецкий ПАО ао	2012-09-05		
 Financials	LEAS	Europlan	Европлан	ПАО «ЛК «Европлан»	2024-03-29		
 Financials	MBNK	MTS Bank	МТС Банк	МТС-Банк ао	2024-04-26		
+Financials	MFBA	Moskovskaya Fond. Birja OAO ao	МФБ ао	Московская Фонд. Биржа ОАО ао	2011-04-07		
 Financials	MGKL	MGKL	МГКЛ	МГКЛ ао	2023-12-28		
 Financials	MMBM	BM-Bank	БМ-Банк	БМ-Банк акции об.	2014-06-09	2016-08-30	
 Financials	MNFD	MN-fond ao	МН-фонд ао	МН-фонд ПАО ао	2011-03-18	2019-03-18	
@@ -264,7 +303,14 @@ Financials	NMOS	OTKRITIE FK Bank OAO ao	ОткрФКБ ао	ОАО ОТКРЫТ�
 Financials	OFCB	OTKRITIE FK Bank PAO ao	ОткрФКБ ао	ПАО ОТКРЫТИЕ ФК Банк ао	2014-12-01	2017-12-01	
 Financials	OPIN	INGRAD	ИНГРАД ао	ИНГРАД ПАО ао	2008-08-28	2020-03-27	
 Financials	PETR	Petrokommerzbank ao	Петр ао	Петрокоммерц КБ ОАО ао	2011-12-09	2015-06-11	
+Financials	PETR02	Petrokommerzbank 02 ao	Петр02 ао	Петрокоммерц КБ ОАО ао 02	2011-12-09		
+Financials	PETR03	Petrokommerzbank 03 ao	Петр03 ао	Петрокоммерц КБ ОАО ао 03	2011-12-09		
+Financials	PETR04	Petrokommerzbank 04 ao	Петр04 ао	Петрокоммерц КБ ОАО ао 04	2011-12-09		
+Financials	PETR05	Petrokommerzbank 05 ao	Петр05 ао	Петрокоммерц КБ ОАО ао 05	2011-12-09		
+Financials	PETR06	Petrokommerzbank 06 ao	Петр06 ао	Петрокоммерц КБ ОАО ао 06	2011-12-09		
+Financials	PRIN	Proektnie Investitsii	ПроектИ ао	ПРОЕКТНЫЕ ИНВЕСТИЦИИ (ОАО) ао	2009-12-28		
 Financials	PRMB	AKB Primorye	Приморье	АКБ Приморье ао	2011-05-03		
+Financials	PRMI	PROMINVEST ao	ПРОМИНВЕСТ	ПРОМИНВЕСТ ОАО ао	2012-03-05		
 Financials	PSBR	Promsvyazbank PAO ao	Промсвб ао	Промсвязьбанк ПАО ао	2012-10-10	2018-01-17	
 Financials	QIWI	QIWI PLC	iQIWI	QIWI PLC	2013-10-08		
 Financials	RAVN	Raven Property Group Limited	Raven	Raven Property Group Limited	2018-10-03	2022-06-28	
@@ -274,6 +320,7 @@ Financials	RENI	Renaissance Insurance	Ренессанс	Ренессанс Ст
 Financials	RGSS	Rosgosstrakh ao	РГС СК ао	Росгосстрах СК ПАО ао	2013-11-19		
 Financials	ROSB	ROSBANK	Росбанк ао	РОСБАНК ПАО ао	2006-01-30		
 Financials	RUSI	RUSS-INVEST IC ao	ИКРУСС-ИНВ	РУСС-ИНВЕСТ ИК ПАО ао	2011-11-23		
+Financials	RVST	Public Joint-Stock Company ROSINVEST	ОАО РОСИНВЕСТ	Открытое акционерное общество РОСИНВЕСТ	2010-09-28		
 Financials	SBER	Sberbank	Сбербанк	Сбербанк России ПАО ао	2007-07-20		
 Financials	SBERP	Sberbank (pref)	Сбербанк-п	Сбербанк России ПАО ап	2007-07-20		
 Financials	SFIN	SFI ao	ЭсЭфАй ао	ЭсЭфАй ПАО ао	2015-12-04		
@@ -327,6 +374,8 @@ Industrials	GRAZ	Gruppa Razguliay ao	Разгуляй	Группа Разгул�
 Industrials	GTSS	GEOTECH Seismic Services ao	ГЕОТЕК ао	ГЕОТЕК Сейсморазведка ПАО ао	2015-08-07	2022-09-29	
 Industrials	HMSG	GDR Hydraulic M&S Gr ORD SHS	HMSG-гдр	ГДР Hydraulic M&S Gr ORD SHS	2021-05-25		
 Industrials	IRKT	Yakovlev-3	Яковлев-3	Яковлев ПАО ак.об.-3	2005-01-11		
+Industrials	KHEL	Kazanskyi vertoletn. zavod ao	КазанскВЗ	Казанский вертолет. завод ОАО	2008-08-28	2012-10-01	
+Industrials	KHELP	Joint Stock Company Kazan Helicopters	АО Казанский вертолетный завод	Акционерное общество Казанский вертолетный завод	2014-06-09	2012-10-01	
 Industrials	KMAZ	KAMAZ	КАМАЗ	КАМАЗ ПАО	2004-02-26		
 Industrials	KMEZ	Kovrov Mech. Zavod	КМЗ	Ковровский механический завод	2009-09-07		
 Industrials	KOMM	BF Kommunar ao	Коммунар	Бумажная фабрика Коммунар ОАО	2011-12-09	2014-11-14	
@@ -467,82 +516,41 @@ Others	AKHA	PAVA	ПАВА ао	ОАО ПАВА ао	2005-09-02	2014-01-09
 Others	ANGA	ANGA	Ангара ао	Ангара ИЦ ОАО ао	2014-06-09	2014-05-30	
 Others	APDS	Apparatura dal. svyazi ao	АпДалСв ао	Аппарат. дальней связи ОАО ао	2010-06-07	2012-08-14	
 Others	APDSP	Apparatura dal. svyazi ap	АпДалСв ап	Аппарат. дальней связи ОАО ап	2010-06-07	2012-08-14	
-Others	ARSB	Public Joint-Stock Company Arkhangelsk Energy Retail Company	ПАО Архэнергосбыт	Публичное акционерное общество Архангельская сбытовая компания	2005-11-18	2012-08-15	
-Others	ARSBP	Аrhenergosbyt ap	АрханСб ап	Архангельская сбыт.комп.ОАО-ап	2005-11-18	2012-08-15	
 Others	AZKM	Azot	Азот ао	КОАО Азот ао	2008-08-28	2012-12-25	
 Others	BACT	Public Joint-Stock Company BiznesAktiv	ОАО БизнесАктив	Открытое акционерное общество БизнесАктив	2009-09-30	2012-12-28	
-Others	BNSB	Bryanskenergosbyt ao	БрянЭнС ао	Брянскэнергосбыт ОАО-ао	2005-12-22	2012-06-07	
-Others	BNSBP	Bryanskenergosbyt ap	БрянЭнС ап	Брянскэнергосбыт ОАО-ап	2005-12-22	2012-06-07	
 Others	CHMZ	ChMW ao	ЧМЗ ао	Чусовской мет.завод ОАО ао	2011-12-08	2012-07-10	
 Others	CHMZ-001D	ChMW 001D ao	ЧМЗ-01D ао	Чусовской мет.завод ОАО 001D	2011-12-08	2012-07-10	
-Others	CHSB	Chita Energo Sbyt	ЧитЭнСб ао	Читаэнергосбыт ОАО ао	2006-09-29	2020-06-01	
-Others	CHSBP	Chita Energo Sbyt (pref)	ЧитЭнСб ап	Читаэнергосбыт ОАО ап	2006-09-29	2020-06-01	
-Others	CITB	KIT Finans Bank ao	КитФинБ ао	КИТ Финанс Инвест. Банк ОАО ао	2011-12-16	2014-05-08	
 Others	DIKO	DIK ao	ДИК ао	Дон.инвест.компания (ОАО) ао	2010-05-31	2012-12-28	
-Others	DLVB	DalVostochny Bank	ДальВостБ	Дальневосточный банк ОАО	2000-08-07	2017-05-15	
-Others	DLVBP	DalVostochny Bank p	ДальВостБп	Дальневосточный банк ОАО	2005-06-07	2017-05-15	
 Others	ELSI	Ligal Capital Investments ao	ЛигалКэп	Лигал Кэпитал Инвестментс ОАО	2011-11-18	2012-12-28	
 Others	EMTI	Asset management technologies	ЭссетМен	Эссет менеджмент технолоджиз	2011-11-18	2012-12-28	
-Others	ERAV	Era Vodoleya	ЭраВодолея	Эра Водолея (инв.компания) ОАО	2010-08-03	2012-12-28	
-Others	ERMK	Ermak-invest	ЕрмакИнв	Ермак-инвест ОАО ао	2009-07-14	2012-12-28	
 Others	ETGK	TGK-13	ТГК-13	ОАО Енисейская ТГК (ТГК-13)	2008-02-15	2012-10-05	
 Others	FLKO	FLK	ФЛК 01	ОАО Финанс-Лизинг	2014-06-09	2013-11-28	
 Others	FSRV	FinServis	ФинСерв ао	ФинСервис (ОАО) ао	2009-09-30	2012-12-28	
 Others	IKAR	Ikar	Икар ао	Икар ОАО ао	2008-12-12	2012-10-18	
 Others	IKARP	IKARP	IKARP	IKARP	2014-06-09	2012-10-18	
 Others	IRSG	Mezhreg.stabilizats.gruppa	МежрегСГ	Межрег.стабилизац.группа ОАО	2009-10-16	2012-12-28	
-Others	IVSB	Ivenergosbyt ao	ИвЭнСб ао	Ивэнергосбыт ОАО ао	2005-09-01	2012-06-07	
-Others	IVSBP	Ivenergosbyt ap	ИвЭнСб ап	Ивэнергосбыт ОАО ап	2005-09-01	2012-06-07	
-Others	KDSK	Kamskiy domostr. kombinat ao	КамскДК ао	Камский домостр.комбинат ОАОао	2011-03-09	2012-12-28	
-Others	KHEL	Kazanskyi vertoletn. zavod ao	КазанскВЗ	Казанский вертолет. завод ОАО	2008-08-28	2012-10-01	
-Others	KHELP	Joint Stock Company Kazan Helicopters	АО Казанский вертолетный завод	Акционерное общество Казанский вертолетный завод	2014-06-09	2012-10-01	
-Others	KOSB	KolEnergoSbyt	КолЭС ао	Колэнергосбыт ОАО ао	2008-10-14	2012-12-25	
-Others	KOSBP	KolEnergoSbyt (pref)	КолЭС ап	Колэнергосбыт ОАО ап	2011-12-08	2012-12-25	
-Others	KRGE	Kurganenergo ao	КурганЭн	Курганэнерго ОАО ао	2011-12-08	2013-03-29	
-Others	KRGEP	Kurganenergo ap	КурганЭн-п	Курганэнерго ОАО ап	2011-12-08	2013-03-29	
 Others	KUOS	KNOS	КНОС-ао	Куйбышевнефтеоргсинтез (ОАО)ао	2008-10-14	2011-08-09	
-Others	KUSB	Kurskregionenergosby ao	КурскЭнСб	Курскрегионэнергосбыт ОАО ао	2005-08-25	2012-05-24	
-Others	KUSBP	Kurskregionenergosby (pref)	КурскЭнС-п	Курскрегионэнергосбыт ОАО ап	2005-08-25	2014-05-24	
 Others	LINK	Link Holdings ao	Линк Холд	Линк Холдингс (ОАО) ао	2011-11-11	2017-05-15	
 Others	LOMO	LOMO ao	ЛОМО ао	ЛОМО ОАО ао	2011-12-08	2012-08-10	
 Others	LOMOP	LOMO ap	ЛОМО ап	ЛОМО ОАО ап	2011-12-08	2012-08-10	
-Others	MFBA	Moskovskaya Fond. Birja OAO ao	МФБ ао	Московская Фонд. Биржа ОАО ао	2011-04-07		
 Others	MGVM	War and Peace Media Group ao	МедиаВиМ	Медиа гр.Война и Мир ОАО ао	2011-11-30		
-Others	MRKHP	Rosseti ap	Россети ап	Российские сети ОАО ап	2008-12-09		
-Others	MRKS-014D	MRSK Sibiri - 014D	МРСКСиб014	МРСК Сибири ао - 014D	2011-12-08		
 Others	NPE1	Promavtomatika	Промавт-ао	Промавтоматика НПО (ОАО) ао	2008-10-10		
 Others	NTRI	NUTRINBESTHOLDING	НутрИнвХол	НУТРИНВЕСТХОЛДИНГ ОАО ак.об.	2007-04-27		
 Others	NZGZ	Nizhnevartovskneftegaz	НижНФГЗ ао	Нижневартовскнефтегаз ао	2008-10-14		
-Others	OMSB	Omskenergosbyt ao	ОмскЭнСб	Омскэнергосбыт ОАО ао	2006-06-16		
-Others	OMSBP	Omskenergosbyt (pref)	ОмскЭнСб-п	Омскэнергосбыт ОАО ап	2006-06-16		
 Others	OMSH	Omskshina ao	Омскшина	Омскшина  (ПАО)	2010-03-09		
 Others	OPTI	Optima Invest ao	ОптИнв ао	Оптима Инвест ОАО ао	2009-12-10		
-Others	ORSB	Orelenergosbyt ao	ОрлЭнСб ао	Орелэнергосбыт ОАО ао	2005-12-22		
-Others	ORSBP	Orelenergosbyt (pref)	ОрлЭнСб ап	Орелэнергосбыт ОАО ап	2005-12-22		
 Others	OSFD	Ob.Sibirskiy Fond	ОбСибФ ао	Объединенный Сиб.фонд (ОАО) ао	2009-09-10		
 Others	PBSB	Peterburg Sbyt.Komp.	ПетербСК	Петербург.сбытовая комп.ОАО ао	2008-10-14		
 Others	PBSBP	Peterburg Sbyt.Komp.(pref)	ПетербСК-п	Петербург.сбытовая комп.ОАО ап	2011-12-08		
 Others	PDMS	Podolskiy mash.zavod ao	ПодМашЗ ао	Подольский маш.завод ОАО ао	2011-12-08		
-Others	PETR02	Petrokommerzbank 02 ao	Петр02 ао	Петрокоммерц КБ ОАО ао 02	2011-12-09		
-Others	PETR03	Petrokommerzbank 03 ao	Петр03 ао	Петрокоммерц КБ ОАО ао 03	2011-12-09		
-Others	PETR04	Petrokommerzbank 04 ao	Петр04 ао	Петрокоммерц КБ ОАО ао 04	2011-12-09		
-Others	PETR05	Petrokommerzbank 05 ao	Петр05 ао	Петрокоммерц КБ ОАО ао 05	2011-12-09		
-Others	PETR06	Petrokommerzbank 06 ao	Петр06 ао	Петрокоммерц КБ ОАО ао 06	2011-12-09		
 Others	PLNT	Planeta ao	Планета ао	Планета ОАО ао	2012-03-28		
 Others	PMOT	Permskie motory	ПермМот ао	Пермские моторы (ОАО) ао	2008-10-14		
-Others	PRIN	Proektnie Investitsii	ПроектИ ао	ПРОЕКТНЫЕ ИНВЕСТИЦИИ (ОАО) ао	2009-12-28		
-Others	PRMI	PROMINVEST ao	ПРОМИНВЕСТ	ПРОМИНВЕСТ ОАО ао	2012-03-05		
 Others	PTRM	ProfTehResurs M ao	ПрофТехР М	ПрофТехРесурс М ОАО ао	2012-03-28		
-Others	PZSB	Penzaenergosbyt  ao	ПензаЭС ао	Пензаэнергосбыт ОАО ао	2005-09-13		
-Others	PZSBP	Penzaenergosbyt (pref)	ПензаЭС ап	Пензаэнергосбыт ОАО ап	2005-09-13		
 Others	RSAM	Russkie Samotsvety ao	РусСамоцв	Русские Самоцветы ОАО ао	2008-10-14		
 Others	RSTR	PIF IndexRTSStandard UKSber	ПИФИндРТС	ПИФИндексРТС Стандарт УКСбер	2011-11-21		
 Others	RTMC	RTM	РТМ ао	РТМ ОАО ао	2007-10-26		
-Others	RVST	Public Joint-Stock Company ROSINVEST	ОАО РОСИНВЕСТ	Открытое акционерное общество РОСИНВЕСТ	2010-09-28		
 Others	SCON	7Kontinent	7Континент	Седьмой Континент (ОАО)	2005-03-29		
 Others	SITR	SITRONICS ao	iСИТРОНИКС	СИТРОНИКС ОАО ао	2011-09-30		
-Others	SMSB	Smolenskenergosbyt  ao	СмолЭнСб	Смоленскэнергосбыт ОАО ао	2005-08-16		
-Others	SMSBP	Smolenskenergosbyt  (pref)	СмолЭнСб-п	Смоленскэнергосбыт ОАО ап	2005-08-16		
 Others	SNTZ	AO Sinarsky Pipe Plant ORD	Синтз	АО СИНТЗ ао	2024-09-11		
 Others	SUMZ	AO SUMZ ORD	СУМЗ-ао	ПАО СУМЗ ао	2008-12-12		
 Others	SVTZ	AO Seversky Pipe Plant ORD	СТЗ	АО СТЗ ао	2024-09-11		
@@ -552,19 +560,11 @@ Others	TGKJ	Forward Energy	Форвард Эн	Форвард Энерго ПА�
 Others	TGKK	TGK-11	ТГК-11	ао ОАО ТГК-11	2007-12-28		
 Others	TGMK	TAMP	ТАМП ао	ТАМП ОАО ао	2006-02-11		
 Others	TGVK	Tulagorvodokanal ao	ТулаГВК ао	Тулагорводоканал ОАО ао	2011-12-16		
-Others	TLSB	Tulaenergosby ao	ТулаЭнСб	Тулаэнергосбыт ОАО ао	2005-10-14		
-Others	TOSB	Tomsk Power Supply Company Joint-Stock Company	АО Томскэнергосбыт	Акционерное общество Томская энергосбытовая компания	2005-11-08		
-Others	TOSBP	Tomskenergosbyt (pref)	ТомскЭнСбп	Томская энергсбыт.комп.ОАО ап	2005-11-08		
 Others	TPLF	TEPLOFON ao	iТеплофон	Теплофон ОАО  ао	2011-09-12		
 Others	TSKA	TSK-1 ao	ТСК-1 ао	ТСК-1 ОАО ао	2010-12-24		
-Others	TUCH-001D	Tuchkovsk. CSM 001D	ТКСМ ао 1D	Тучковский КСМ ао 001D	2011-11-22		
-Others	TVSB	TverEnergoSbyt	ТверЭнСб	Тверьэнергосбыт ОАО ао	2005-08-09		
-Others	TVSBP	TverEnergoSbyt (pref)	ТверЭнСб-п	Тверьэнергосбыт ОАО ап	2005-08-09		
-Others	TZUM	TzUM	ЦУМ-2	ЦУМ-2	2004-04-28		
 Others	USYN	UK Sinergia OAO	УКСинергия	УК Синергия ОАО ао	2011-03-04		
 Others	UUAZ	U-UAZ ao	У-УАЗ ао	У-УАЗ  ОАО ао	2008-08-28		
 Others	VERT	VERT	Вертикаль	ПО Вертикаль ОАО ао	2014-06-09		
-Others	VOSB	Public joint-stock company Vologda Energy Retail Company	ПАО Вологдаэнергосбыт	Публичное акционерное общество Вологодская сбытовая компания	2006-09-15		
 Others	VTLD	Vital ao	iВитал	Витал Девел.Корпорэйшн ОАО ао	2011-12-20		
 Others	WBDF	WBDF	ВБД ПП ао	ВБД ПП (ОАО) ао	2004-02-26		
 Others	YKST	Strategia	Стратег ао	УК Стратегия ОАО ао	2009-02-09		
