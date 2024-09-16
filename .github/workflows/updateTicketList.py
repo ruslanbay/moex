@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import requests
 
-df = pd.read_csv('data/issues-by-sector.tsv', sep='\t', skiprows=range(1, 16), header=0)
+df = pd.read_csv('data/issues-by-sector.tsv', sep='\t', header=0)
 
 def getCompanyInfo(ticker):
   url = f"https://iss.moex.com/iss/securities/{ticker}.json?iss.meta=off"
@@ -58,6 +58,11 @@ def getCompanyInfo(ticker):
 
 for index, row in df.iterrows():
   ticker = row['labels']
+  if ticker in ['labels', 'Moscow Exchange', 'Chemicals and Pertochemicals', 'Conglomerate',
+                'Construction (Development)', 'Consumer', 'Electricity, Utilities', 'Energy (Oil, Gas, Coal)',
+                'Financials', 'Health Care', 'Industrials', 'Information Technologies',
+                'Metals and Mining', 'Telecommunication Services', 'Transportation', 'Others']:
+    continue
   companyInfo = getCompanyInfo(ticker)
   df.at[index, 'name_rus'] = companyInfo['NAME']
   df.at[index, 'shortname_rus'] = companyInfo['SHORTNAME']
