@@ -35,6 +35,11 @@ on:
           - total
           - ticket
           - sector
+      filename:
+        description: 'File name'
+        required: false
+        type: string
+        default: ''
 
 permissions:
   contents: write
@@ -71,7 +76,11 @@ jobs:
     - name: MANUAL. Process local files
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
-        python .github/workflows/processLocalData.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }} --filename "${{ inputs.startDate }}_${{ inputs.endDate }}_${{ inputs.stepDays }}_${{ inputs.mode }}.csv"
+        if [ "${{ inputs.filename }}" != "" ]; then
+          FILENAME=${{ inputs.filename }}
+        else
+          FILENAME="${{ inputs.startDate }}_${{ inputs.endDate }}_${{ inputs.stepDays }}_${{ inputs.mode }}.csv"
+        python .github/workflows/processLocalData.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }} --filename "${FILENAME}"
     
     # Commit and push all changed files
     # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html
