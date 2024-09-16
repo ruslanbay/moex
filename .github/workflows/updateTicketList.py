@@ -47,7 +47,7 @@ def getCompanyInfo(ticker):
           if pd.to_datetime(listed_till) not in work_days_range:
             companyInfo['listed_till'] = listed_till
           if datetime.strptime(listed_from, "%Y-%m-%d") > datetime.strptime(listed_till, "%Y-%m-%d"):
-            companyInfo['listed_from'] = row[12]
+            companyInfo['ISSUEDATE'] = row[12]
           break
       return companyInfo
     except (IndexError, KeyError):
