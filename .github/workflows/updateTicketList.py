@@ -23,6 +23,7 @@ def getCompanyInfo(ticker):
         'ISSUEDATE': '2014-06-09',
         'listed_till': ''
       }
+      listed_from = '2014-06-09'
       for item in data['description']['data']:
         value = item[2].replace('"', '').replace(',', '').replace("'", '')
         match item[0]:
