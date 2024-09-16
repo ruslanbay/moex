@@ -76,10 +76,8 @@ jobs:
     - name: MANUAL. Process local files
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
-        if [ "${{ inputs.filename }}" != "" ]; then
-          FILENAME=${{ inputs.filename }}
-        else
-          FILENAME="${{ inputs.startDate }}_${{ inputs.endDate }}_${{ inputs.stepDays }}_${{ inputs.mode }}.csv"
+        FILENAME="${{ inputs.filename }}"
+        [ -z "$FILENAME" ] && FILENAME="${{ inputs.startDate }}_${{ inputs.endDate }}_${{ inputs.stepDays }}_${{ inputs.mode }}.csv"
         python .github/workflows/processLocalData.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }} --filename "${FILENAME}"
     
     # Commit and push all changed files
