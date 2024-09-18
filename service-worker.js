@@ -7,7 +7,7 @@ const FILES_TO_CACHE = [
     '/',
     '/index.html',
     '/history/index.html',
-    'listings/index.html',
+    '/listings/index.html',
     '/images/icons/favicon.ico',
     '/images/icons/github.svg',
     '/images/icons/linkedin.svg',
