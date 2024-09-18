@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOEX History</title>
+  <link rel="icon" href="/images/icons/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="MOEX History">
+  <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
+  <meta name="description" content="Russian Stock Market Visualization">
+  <style>
+    html,
+    body {
+      overflow: hidden;
+      position: relative;
+      width: 99.5%;
+      height: 100%;
+      background-color: rgb(65, 69, 84);
+    }
+
+    header {
+      height: 45px;
+      padding: 0;
+      margin: 0;
+      background-color: rgb(65, 69, 84);
+      border: 0px;
+      border-color: rgb(65, 69, 84);
+      color: #ffffff;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      outline: none;
+    }
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    * {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    #chart {
+      height: 91%;
+      width: 100%;
+      overflow: hidden;
+      background-color: rgb(65, 69, 84);
+      position: absolute;
+      top: 45px;
+      left: 0px;
+      outline: none;
+    }
+  </style>
+  <script src='https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/plotly.js/dist/plotly.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/d3/dist/d3.min.js'></script>
+  <script type="text/javascript">
+    document.addEventListener('contextmenu', event => event.preventDefault()); // TODO: customize context menu
+  </script>
+</head>
+
+<body>
+  <header>
+    <a href="https://github.com/ruslanbay" title="GitHub">
+      <img src="/images/icons/github.svg" height="30" />&nbsp;&nbsp;&nbsp;
+    </a>
+    <a href="https://www.linkedin.com/in/ruslanbay" title="Linkedin">
+      <img src="/images/icons/linkedin.svg" height="30" />&nbsp;&nbsp;&nbsp;
+    </a>
+    <a href="mailto:mail@rusland.live" title="Email">
+      <img src="/images/icons/email.svg" height="30" />&nbsp;&nbsp;&nbsp;
+    </a>
+    <a href="/" title="MOEX Treemap">
+      <img src="/images/icons/treemap.jpeg" height="40" style="outline: 3px solid white; outline-offset: -4px;" />
+    </a>
+    <a href="/history" title="MOEX History">
+      <img src="/images/icons/scatter.jpeg" height="40" style="outline: 3px solid white; outline-offset: -4px;" />
+    </a>
+    <a href="/listings" title="MOEX Listings">
+      <img src="/images/icons/bar.jpeg"     height="40" style="outline: 3px solid white; outline-offset: -4px;" />
+    </a>
+    &nbsp;&nbsp;&nbsp;
+  </header>
+
+  <div id='chart'></div>
+  <script type="text/javascript">
+    async function loadData() {
+      const totalSecurities = new Map();
+      const today = new Date();
+      const startDate = new Date('2000-01-01');
+
+      for (let date = startDate; date <= today; date.setMonth(date.getMonth() + 1)) {
+        const dateString = date.toISOString().slice(0, 7); // Format to 'YYYY-MM'
+        totalSecurities.set(`${dateString}`, 0);
+      }
+
+      const newSecurities = new Map(totalSecurities);
+      const delistedSecurities = new Map(totalSecurities);
+
+      const response = await fetch('/data/issues-by-sector.tsv');
+      const data = await response.text();
+      const rows = data.split('\n').slice(16);
+
+      rows.forEach(row => {
+        const columns = row.split('\t');
+        const historyFrom = String(columns[5]).slice(0, 7);
+        const historyTill = String(columns[6]).slice(0, 7);
+
+        if (historyFrom !== '') {
+          if (totalSecurities.has(historyFrom)) {
+            totalSecurities.set(historyFrom, totalSecurities.get(historyFrom) + 1);
+            newSecurities.set(historyFrom, newSecurities.get(historyFrom) + 1);
+          } else {
+            totalSecurities.set(historyFrom, 1);
+            newSecurities.set(historyFrom, 1);
+          }
+        }
+
+        if (historyTill !== '') {
+          if (totalSecurities.has(historyTill)) {
+            totalSecurities.set(historyTill, totalSecurities.get(historyTill) - 1);
+            delistedSecurities.set(historyTill, delistedSecurities.get(historyTill) - 1);
+          } else {
+            totalSecurities.set(historyTill, -1);
+            delistedSecurities.set(historyTill, -1);
+          }
+        }
+      });
+
+      const dates = Array.from(totalSecurities.keys());
+      const values = Array.from(totalSecurities.values());
+
+      return { dates, values };
+    }
+
+    async function drawChart(div) {
+      const { dates, values } = await loadData();
+
+      const trace = {
+        name: 'new/delisted securities',
+        type: 'bar',
+        x: dates,
+        y: values,
+        connector: { line: { color: 'rgb(63, 63, 63)' } },
+        textposition: "outside",
+        hoverinfo: "x+y+text+value",
+        hovertemplate: '%{x|%x}<br>%{y}<extra></extra>',
+        text: values.map(v => v > 0 ? '+' + v : v),
+        marker: {
+          color: values.map(value => value >= 0 ? 'green' : 'red'),
+        },
+        xaxis: 'x',
+        yaxis: 'y2',
+      };
+
+      let total = [];
+      let sum = 0;
+      for (let i = 0; i < values.length; i++) {
+        sum += values[i];
+        total.push(sum);
+      }
+      const traceTotal = {
+        name: 'total',
+        type: 'bar',
+        x: dates,
+        y: total,
+        connector: { line: { color: 'rgb(63, 63, 63)' } },
+        textposition: "outside",
+        hoverinfo: "x+y+text+value",
+        text: total.map(v => v > 0 ? + v : v),
+        marker: {
+          color: 'blue',
+        },
+        xaxis: 'x',
+        yaxis: 'y',
+      };
+
+      function getYearsArray(startYear = 2000) {
+        const currentYear = new Date().getFullYear();
+        return Array.from({ length: currentYear - startYear + 1 }, (_, i) => startYear + i);
+      }
+      const tickvals = getYearsArray();
+
+      const layout = {
+        grid: { rows: 1, columns: 1, pattern: 'independent' },
+        // barmode: 'relative',
+        // title: '',
+        annotations: [{
+          name: 'wm',
+          text: 'www.rusland.live<br><br>Ruslan Bay<br><br>mail@rusland.live',
+          xref: 'paper',
+          yref: 'paper',
+          x: 0.5,
+          y: 0.5,
+          showarrow: false,
+          opacity: 0.5,
+          font: {
+            size: 50,
+            color: 'rgb(120, 108, 144)'
+          }
+        }],
+        dragmode: false,
+        showlegend: true,
+        legend: {
+          visible: true,
+          traceorder: "normal",
+          orientation: "h",
+          x: 0,
+          xanchor: "left",
+          y: 0.89,
+          yanchor: "bottom",
+          bgcolor: 'rgba(0, 0, 0, 0)',
+          bordercolor: 'rgba(0, 0, 0, 0)',
+          borderwidth: 0,
+        },
+        xaxis: {
+          type: "date",
+          fixedrange: false,
+          tickangle: -35, // -90,
+          tickmode: "array",
+          tickformat: "%Y",
+          tickvals: tickvals,
+          rangeslider: {
+            visible: true,
+          },
+          rangeselector: {
+            visible: true,
+            activecolor: "#000000",
+            bgcolor: "rgb(38, 38, 39)",
+            buttons: [{
+              step: 'month',
+              stepmode: 'backward',
+              count: 1,
+              label: '1m'
+            }, {
+              step: 'month',
+              stepmode: 'backward',
+              count: 6,
+              label: '6m'
+            }, {
+              step: 'year',
+              stepmode: 'todate',
+              count: 1,
+              label: 'YTD'
+            }, {
+              step: 'year',
+              stepmode: 'backward',
+              count: 1,
+              label: '1y'
+            }, {
+              step: 'all',
+            }]
+          }
+        },
+        yaxis: {
+          title: 'total # of securities',
+          range: [0, 500],
+          side: 'right',
+          domain: [0.175, 1.0],
+          showgrid: false,
+        },
+        yaxis2: {
+          title: '# of new/delisted securities',
+          range: [-15, 70],
+          domain: [0.0, 1.0],
+          showgrid: false,
+          fixedrange: true,
+        },
+        autosize: true,
+        margin: {
+          l: 0,
+          r: 30,
+          t: 0,
+          b: 0
+        },
+        plot_bgcolor: "rgba(65, 69, 84, 0)",
+        paper_bgcolor: "rgba(65, 69, 85, 0)",
+        font: {
+          family: "Arial",
+          size: 12,
+          color: "rgba(245, 246, 249, 1)"
+        }
+      };
+      var config = {
+        responsive: true,
+        displaylogo: false,
+        displayModeBar: false,
+        scrollZoom: true
+      }
+
+      Plotly.react(div, [traceTotal, trace], layout, config);
+    }
+
+    drawChart('chart');
+  </script>
+
+</body>
+
+</html>
