@@ -136,9 +136,23 @@
             chartData["customdata"].push(["Moscow Exchange", labels[i], NaN, NaN, labels[i], NaN]);
           };
 
-          return $.getJSON(`/data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`)
+          if(date === new Date().toISOString().split('T')[0]) {
+            var isToday = true;
+            var path = `/data/iss/engines/stock/markets/shares/securities-${date}.json?_=' + new Date().getTime()`;
+          }
+          else {
+            isToday = false;
+            path = `/data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`;
+          }
+          return $.getJSON(`${path}`)
             .then(function (moexJson) {
-              moexJson.securities.data.forEach(item => {
+              if(isToday) {
+                moexJson = moexJson.marketdata.data.filter(entry => entry[1] === 'TQBR')
+              }
+              else {
+                moexJson = moexJson.securities.data
+              }
+              moexJson.forEach(item => {
                 var ticker = item[0];
                 // exclude foreign shares
                 if(RegExp('^[a-zA-Z0-9]+-RM').test(ticker))
@@ -157,13 +171,24 @@
                   'FXIP', 'FXES', 'FXRD', 'FXRE', 'FXEM', 'FXBC'].includes(ticker))
                   return;
                 
-                var currency = item[1];
-                var openPrice = item[2] == null ? 0 : item[2];
-                var closePrice = item[3] == null ? 0 : item[3];
-                var volume = item[4] == null ? 0 : item[4];
-                var value = item[5] == null ? 0 : item[5];
-                var numTrades = item[6] == null ? 0 : item[6];
-                var marketCapDaily = item[7] == null ? 0 : item[7];
+                if(isToday) {
+                  var currency = '';
+                  var openPrice = item[9] == null ? 0 : item[9];
+                  var closePrice = item[12] == null ? 0 : item[12];
+                  var volume = item[27] == null ? 0 : item[27];
+                  var value = item[16] == null ? 0 : item[16];
+                  var numTrades = item[26] == null ? 0 : item[26];
+                  var marketCapDaily = item[50] == null ? 0 : item[50];
+                }
+                else {
+                  var currency = item[1];
+                  var openPrice = item[2] == null ? 0 : item[2];
+                  var closePrice = item[3] == null ? 0 : item[3];
+                  var volume = item[4] == null ? 0 : item[4];
+                  var value = item[5] == null ? 0 : item[5];
+                  var numTrades = item[6] == null ? 0 : item[6];
+                  var marketCapDaily = item[7] == null ? 0 : item[7];
+                }
 
                 if (openPrice == 0) {
                   var priceChange = 0;
@@ -284,7 +309,7 @@
     input.addEventListener("change", refreshChart);
 
     var currentDate = new Date();
-    currentDate.setDate(currentDate.getDate() - 1);
+    // currentDate.setDate(currentDate.getDate() - 1);
     while (currentDate.getDay() === 0 || currentDate.getDay() === 6) {
       currentDate.setDate(currentDate.getDate() - 1);
     }
