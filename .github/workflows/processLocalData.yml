@@ -6,9 +6,9 @@ on:
   #   types:
   #     - completed
   schedule:
-    - cron: '45 00 * * 2-6' # run every day at 00:45 am utc
-    - cron: '45 01 * * 6' # run every Saturday at 01:45 am utc
-    - cron: '45 02 2 1 *' # run every year at Jan 1st 02:45 UTC
+    - cron: '35 00 * * 2-6' # run every day at 00:45 am utc
+    - cron: '35 01 * * 6' # run every Saturday at 01:45 am utc
+    - cron: '35 02 2 1 *' # run every year at Jan 1st 02:45 UTC
   workflow_dispatch:
     inputs:
       startDate:
