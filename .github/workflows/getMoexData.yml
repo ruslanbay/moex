@@ -47,7 +47,7 @@ jobs:
     - name: EVERY 15 MIN. Get current market data
       if: ${{ github.event.schedule == '0,15,30,45 5-20 * * 1-5' }}
       run: |
-        CURRENT_DAY=$(date --utc +'%Y-%m-%d')
+        CURRENT_DAY=$(TZ='UTC+3' date +'%Y-%m-%d')
         url="https://iss.moex.com/iss/engines/stock/markets/shares/securities.json?iss.meta=off"
         response_code=$(curl --silent --output "data/iss/engines/stock/markets/shares/securities-${CURRENT_DAY}.json" "${url}")
         if [ "${response_code}" -ne 200 ]; then
