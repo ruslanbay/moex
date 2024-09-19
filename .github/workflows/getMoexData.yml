@@ -46,8 +46,8 @@ jobs:
       if: ${{ github.event.schedule == '*/15 * * * 1-5' }}
       run: |
         url="https://iss.moex.com/iss/engines/stock/markets/shares/securities.json?iss.meta=off"
-        response_code=$(curl --write-out "%{http_code}" --silent --output data/iss/engines/stock/markets/shares/securities.json "$url")
-        if [ "$response_code" -ne 200 ]; then "Request failed with response code: $response_code"; fi
+        response_code=$(curl --silent --output data/iss/engines/stock/markets/shares/securities.json "${url}")
+        if [ "${response_code}" -ne 200 ]; then "Request failed with response code: ${response_code}"; fi
     - name: DAILY. Get data files from MOEX ISS
       if: ${{ github.event.schedule == '20 00 * * 2-6' }}
       run: |
