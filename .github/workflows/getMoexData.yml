@@ -3,6 +3,7 @@ name: 'Get MOEX data'
 on:
   schedule:
     - cron: '20 00 * * 2-6' # run every day at 00:20 UTC from Tuesday to Saturday
+    - cron: '*/15 * * * 1-5' # run every 15 minutes UTC from Monday to Friday
   workflow_dispatch:
     inputs:
       startDate:
@@ -41,8 +42,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: EVERY 15 MIN. Get current market data
+      if: ${{ github.event.schedule == '*/15 * * * 1-5' }}
+      run: |
+        url="https://iss.moex.com/iss/engines/stock/markets/shares/securities.json?iss.meta=off"
+        response_code=$(curl --write-out "%{http_code}" --silent --output data/iss/engines/stock/markets/shares/securities.json "$url")
+        if [ "$response_code" -ne 200 ]; then "Request failed with response code: $response_code"; fi
     - name: DAILY. Get data files from MOEX ISS
-      if: ${{ github.event_name == 'schedule' }}
+      if: ${{ github.event.schedule == '20 00 * * 2-6' }}
       run: |
         python .github/workflows/getMoexData.py
     - name: MANUAL. Get data files from MOEX ISS
@@ -54,5 +61,6 @@ jobs:
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "github-actions@github.com"
         git add data/iss/history/engines/stock/totals/boards/MRKT/*.json
+        git add data/iss/engines/stock/markets/shares/securities.json
         git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
         git push
