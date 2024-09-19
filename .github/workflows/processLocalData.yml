@@ -57,15 +57,15 @@ jobs:
     - name: DAYLY. Process local files
       if: ${{ github.event.schedule == '45 00 * * 2-6' }}
       run: |
-        CURRENT_DATE=$(date --utc +'%Y-%m-%d')
+        YESTERDAY=$(date --utc -d 'yesterday' +'%Y-%m-%d')
         CURRENT_YEAR=$(date --utc +"%Y")
-        python .github/workflows/processLocalData.py --start "${CURRENT_YEAR}-01-01" --end "${CURRENT_DATE}" --step 1 --mode sector --filename "${CURRENT_YEAR}.csv"
+        python .github/workflows/processLocalData.py --start "${CURRENT_YEAR}-01-01" --end "${YESTERDAY}" --step 1 --mode sector --filename "${CURRENT_YEAR}.csv"
         
     - name: WEEKLY. Process local files
       if: ${{ github.event.schedule == '45 01 * * 6' }}
       run: |
-        CURRENT_DATE=$(date --utc +'%Y-%m-%d')
-        python .github/workflows/processLocalData.py --start 2011-12-19 --end "${CURRENT_DATE}" --step 7 --mode sector --filename total.csv
+        YESTERDAY=$(date --utc -d 'yesterday' +'%Y-%m-%d')
+        python .github/workflows/processLocalData.py --start 2011-12-19 --end "${YESTERDAY}" --step 7 --mode sector --filename total.csv
     
     - name: YEARLY. Process local files
       if: ${{ github.event.schedule == '45 02 2 1 *' }}
