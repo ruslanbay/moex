@@ -1,7 +1,7 @@
 'use strict';
 
-const CACHE_NAME = 'my-app-static-cache-v4';
-const DATA_CACHE_NAME = 'my-app-data-cache-v4';
+const CACHE_NAME = 'my-app-static-cache-v5';
+const DATA_CACHE_NAME = 'my-app-data-cache-v5';
 
 const FILES_TO_CACHE = [
     '/',
@@ -48,7 +48,7 @@ self.addEventListener('activate', (evt) => {
 });
 
 self.addEventListener('fetch', (evt) => {
-    if (evt.request.url.includes('/data/') || evt.request.url.includes('/history/')) {
+    if (evt.request.url.includes('/data/iss/history/engines/stock/totals/boards/MRKT/') || evt.request.url.includes('/history/')) {
         evt.respondWith(
             caches.open(DATA_CACHE_NAME).then(async (cache) => {
                 try {
