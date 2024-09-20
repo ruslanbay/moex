@@ -3,7 +3,7 @@ name: 'Get MOEX data'
 on:
   schedule:
     - cron: '20 00 * * 2-6' # run every day at 00:20 UTC from Tuesday to Saturday
-    - cron: '0,15,30,45 * * * *' # run every 15 minutes from Monday to Friday
+    - cron: '0,15,30,45 7-21 * * *' # run every 15 minutes from Monday to Friday
   workflow_dispatch:
     inputs:
       startDate:
@@ -34,18 +34,18 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.11
-      if: ${{ github.event.schedule != '0,15,30,45 * * * *' }}
+      if: ${{ github.event.schedule != '0,15,30,45 7-21 * * *' }}
       uses: actions/setup-python@v5
       with:
         python-version: "3.11"
     - name: Install dependencies
-      if: ${{ github.event.schedule != '0,15,30,45 * * * *' }}
+      if: ${{ github.event.schedule != '0,15,30,45 7-21 * * *' }}
       run: |
         python -m pip install --upgrade pip
         pip install requests
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: EVERY 15 MIN. Get current market data
-      if: ${{ github.event.schedule == '0,15,30,45 * * * *' }}
+      if: ${{ github.event.schedule == '0,15,30,45 7-21 * * *' }}
       run: |
         CURRENT_DAY=$(TZ='UTC+3' date +'%Y-%m-%d')
         url="https://iss.moex.com/iss/engines/stock/markets/shares/securities.json?iss.meta=off"
