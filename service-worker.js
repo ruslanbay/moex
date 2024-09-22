@@ -4,18 +4,18 @@ const CACHE_NAME = 'my-app-static-cache-v7';
 const DATA_CACHE_NAME = 'my-app-data-cache-v7';
 
 const FILES_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/history/index.html',
-    '/listings/index.html',
-    '/images/icons/favicon.ico',
-    '/images/icons/github.svg',
-    '/images/icons/linkedin.svg',
-    '/images/icons/email.svg',
-    '/images/icons/treemap.jpeg',
-    '/images/icons/scatter.jpeg',
-    '/images/icons/bar.jpeg',
-    '/scripts/install.js',
+    '/moex/',
+    '/moex/index.html',
+    '/moex/history/index.html',
+    '/moex/listings/index.html',
+    '/moex/images/icons/favicon.ico',
+    '/moex/images/icons/github.svg',
+    '/moex/images/icons/linkedin.svg',
+    '/moex/images/icons/email.svg',
+    '/moex/images/icons/treemap.jpeg',
+    '/moex/images/icons/scatter.jpeg',
+    '/moex/images/icons/bar.jpeg',
+    '/moex/scripts/install.js',
     'https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js',
     'https://cdn.jsdelivr.net/npm/d3/dist/d3.min.js',
     'https://cdn.jsdelivr.net/npm/plotly.js/dist/plotly.min.js'
@@ -48,7 +48,7 @@ self.addEventListener('activate', (evt) => {
 });
 
 self.addEventListener('fetch', (evt) => {
-    if (evt.request.url.includes('/data/iss/history/engines/stock/totals/boards/MRKT/') || evt.request.url.includes('/history/')) {
+    if (evt.request.url.includes('/moex/data/iss/history/engines/stock/totals/boards/MRKT/') || evt.request.url.includes('/moex/history/')) {
         evt.respondWith(
             caches.open(DATA_CACHE_NAME).then(async (cache) => {
                 try {
