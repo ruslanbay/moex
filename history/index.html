@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MOEX History</title>
-  <link rel="icon" href="/images/icons/favicon.ico" type="image/x-icon">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/moex/images/icons/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/moex/manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="MOEX History">
-  <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" href="/moex/images/icons/icon-152x152.png">
   <meta name="description" content="Russian Stock Market Visualization">
   <style>
     html,
@@ -100,22 +100,22 @@
     </select>
     &nbsp;&nbsp;
     <a href="https://github.com/ruslanbay" title="GitHub">
-      <img src="/images/icons/github.svg" height="30" />&nbsp;&nbsp;
+      <img src="/moex/images/icons/github.svg" height="30" />&nbsp;&nbsp;
     </a>
     <a href="https://www.linkedin.com/in/ruslanbay" title="Linkedin">
-      <img src="/images/icons/linkedin.svg" height="30" />&nbsp;&nbsp;
+      <img src="/moex/images/icons/linkedin.svg" height="30" />&nbsp;&nbsp;
     </a>
     <a href="mailto:mail@rusland.live" title="Email">
-      <img src="/images/icons/email.svg" height="30" />&nbsp;&nbsp;
+      <img src="/moex/images/icons/email.svg" height="30" />&nbsp;&nbsp;
     </a>
     <a href="/" title="MOEX Treemap">
-      <img src="/images/icons/treemap.jpeg" height="40" style="outline: 3px solid white; outline-offset: -4px;" />
+      <img src="/moex/images/icons/treemap.jpeg" height="40" style="outline: 3px solid white; outline-offset: -4px;" />
     </a>
     <a href="/history" title="MOEX History">
-      <img src="/images/icons/scatter.jpeg" height="40" style="outline: 3px solid white; outline-offset: -4px;" />
+      <img src="/moex/images/icons/scatter.jpeg" height="40" style="outline: 3px solid white; outline-offset: -4px;" />
     </a>
     <a href="/listings" title="MOEX Listings">
-      <img src="/images/icons/bar.jpeg"     height="40" style="outline: 3px solid white; outline-offset: -4px;" />
+      <img src="/moex/images/icons/bar.jpeg" height="40" style="outline: 3px solid white; outline-offset: -4px;" />
     </a>
     &nbsp;
   </header>
@@ -127,7 +127,7 @@
       try {
         const chartData = {};
 
-        var response = await fetch('/data/issues-by-sector.tsv');
+        var response = await fetch('/moex/data/issues-by-sector.tsv');
         response = await response.text();
         var data = response.split('\n')
           .slice(1, 16)
@@ -139,7 +139,7 @@
         });
 
 
-        response = await fetch(`/history/${currency}FIXME.csv`);
+        response = await fetch(`/moex/history/${currency}FIXME.csv`);
         response = await response.text();
         data = response.split('\n')
           .map(row => row.split(','));
@@ -163,7 +163,7 @@
           }
 
 
-        const rows = await d3.csv(`/history/${period}.csv`);
+        const rows = await d3.csv(`/moex/history/${period}.csv`);
 
         rows.forEach(row => {
           const traceName = row.traceName;
