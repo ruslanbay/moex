@@ -51,7 +51,7 @@ jobs:
         CURRENT_DAY=$(TZ='UTC+3' date +'%Y-%m-%d')
         url="https://iss.moex.com/iss/engines/stock/markets/shares/securities.json?iss.meta=off"
         ua="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0"
-        response_code=$(curl --silent --output "data/iss/engines/stock/markets/shares/securities-${CURRENT_DAY}.json" --user-agent "${ua}" "${url}")
+        response_code=$(curl --silent --output "data/iss/history/engines/stock/totals/boards/MRKT/securities-${CURRENT_DAY}.json" --user-agent "${ua}" "${url}")
         if [ "${response_code}" -ne 200 ]; then
           echo "Request failed with response code: ${response_code}"
           exit 1
@@ -69,6 +69,5 @@ jobs:
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "github-actions@github.com"
         git add data/iss/history/engines/stock/totals/boards/MRKT/*.json
-        git add data/iss/engines/stock/markets/shares/*.json
         git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
         git push
