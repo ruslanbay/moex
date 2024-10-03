@@ -9,7 +9,7 @@ def daterange(start, end, stepDays):
 def getData(myDate):
   with open(f'data/iss/history/engines/stock/totals/boards/MRKT/securities-{myDate}.json', 'w', encoding='utf-8') as f:
     url = f'https://iss.moex.com/iss/history/engines/stock/totals/boards/MRKT/securities.json?iss.meta=off&date={myDate}&securities.columns=SECID,CURRENCYID,OPEN,CLOSE,VOLUME,VALUE,NUMTRADES,DAILYCAPITALIZATION'
-    headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'}
+    headers = {'User-Agent': 'MMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0'}
     r = requests.get(url, headers)
     if(r.status_code == 200):
       f.write(r.text)
