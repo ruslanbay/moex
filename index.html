@@ -143,7 +143,7 @@
 
           if(date === new Date().toISOString().split('T')[0]) {
             var isToday = true;
-            var path = `/moex/data/iss/engines/stock/markets/shares/securities-${date}.json?_=' + new Date().getTime()`;
+            var path = `/moex/data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json?_=' + new Date().getTime()`;
           }
           else {
             isToday = false;
