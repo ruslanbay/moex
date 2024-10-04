@@ -43,7 +43,6 @@ jobs:
       if: ${{ github.event.schedule != '0,15,30,45 7-20 * * 1-5' }}
       run: |
         python -m pip install --upgrade pip
-        pip install requests
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: EVERY 15 MIN. Get current market data
       if: ${{ github.event.schedule == '0,15,30,45 7-20 * * 1-5' }}
