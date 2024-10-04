@@ -38,7 +38,7 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: "3.11"
-        cache: 'python-dependencies'
+        cache: "pip"
     - name: Install dependencies
       if: ${{ github.event.schedule != '0,15,30,45 7-20 * * 1-5' }}
       run: |
