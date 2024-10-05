@@ -71,7 +71,7 @@ jobs:
       if: ${{ github.event.schedule == '35 02 2 1 *' }}
       run: |
         LAST_YEAR=$(date --utc -d "last year" +"%Y")
-        python .github/workflows/processLocalData.py --start "${LAST_YEAR}-01-01" --end "${LAST_YEAR}-12-31" --step 7 --mode sector --filename "${LAST_YEAR}.csv"
+        python .github/workflows/processLocalData.py --start "${LAST_YEAR}-01-01" --end "${LAST_YEAR}-12-31" --step 1 --mode sector --filename "${LAST_YEAR}.csv"
     
     - name: MANUAL. Process local files
       if: ${{ github.event_name == 'workflow_dispatch' }}
