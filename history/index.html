@@ -149,43 +149,46 @@
           }
         });
 
+        const oneOverY = Object.values(currencyRates);
+
         if (!chartData[currency] && period == 'total') {
           chartData[currency] = {
             name: currency,
+            customdata: oneOverY,
             type: "line",
             mode: "lines",
             yaxis: "y2",
             hoverinfo: "all",
-            hovertemplate: "%{x|%x}<br>%{y:,.2f}<br>RUB per %{fullData.name}<extra></extra>",
+            hovertemplate: "%{x|%x}<br>%{customdata:,.2f}<br>RUB per %{fullData.name}<extra></extra>",
             x: Object.keys(currencyRates),
-            y: Object.values(currencyRates)
+            y: Object.values(currencyRates).map(y => y > 0 ? 1 / y : null)
           };
         }
 
         response = await fetch(`https://raw.githubusercontent.com/ruslanbay/oil-prices/refs/heads/main/data/brent-daily.csv`);
-          response = await response.text();
-          data = response.split('\n')
-            .map(row => row.split(','));
-          const brentRates = {};
-          data.forEach(row => {
-            const [Date, Close] = row;
-            if (Date >= startDate) {
-              brentRates[Date] = Number(Close);
-            }
-          });
-
-          if (!chartData['brent'] && period == 'total') {
-            chartData['brent'] = {
-              name: 'brent',
-              type: "line",
-              mode: "lines",
-              yaxis: "y2",
-              hoverinfo: "all",
-              hovertemplate: "%{x|%x}<br>%{y:,.2f}<br>USD per %{fullData.name}<extra></extra>",
-              x: Object.keys(brentRates),
-              y: Object.values(brentRates)
-            };
+        response = await response.text();
+        data = response.split('\n')
+          .map(row => row.split(','));
+        const brentRates = {};
+        data.forEach(row => {
+          const [Date, Close] = row;
+          if (Date >= startDate) {
+            brentRates[Date] = Number(Close);
           }
+        });
+
+        if (!chartData['brent'] && period == 'total') {
+          chartData['brent'] = {
+            name: 'brent',
+            type: "line",
+            mode: "lines",
+            yaxis: "y3",
+            hoverinfo: "all",
+            hovertemplate: "%{x|%x}<br>%{y:,.2f}<br>USD per %{fullData.name}<extra></extra>",
+            x: Object.keys(brentRates),
+            y: Object.values(brentRates)
+          };
+        }
 
         const rows = await d3.csv(`/moex/history/${period}.csv`);
 
@@ -309,7 +312,16 @@
             yaxis2: {
               title: 'Currency Rate',
               overlaying: 'y',
-              visible: true,
+              visible: false,
+              fixedrange: true,
+              side: 'left',
+              // titlefont: { color: 'red' },
+              // tickfont: { color: 'red' },
+            },
+            yaxis3: {
+              title: 'Oil prices',
+              overlaying: 'y',
+              visible: false,
               fixedrange: true,
               side: 'left',
               // titlefont: { color: 'red' },
