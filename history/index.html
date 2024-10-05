@@ -123,6 +123,7 @@
     async function prepChartData(period, currency) {
       try {
         const chartData = {};
+        const startDate = '2011-12-19';
 
         var response = await fetch('/moex/data/issues-by-sector.tsv');
         response = await response.text();
@@ -143,22 +144,48 @@
         const currencyRates = {};
         data.forEach(row => {
           const [Date, , , , Close] = row;
-          currencyRates[Date] = Number(Close);
+          if (Date >= startDate) {
+            currencyRates[Date] = Number(Close);
+          }
         });
 
         if (!chartData[currency] && period == 'total') {
-            chartData[currency] = {
-              name: currency,
+          chartData[currency] = {
+            name: currency,
+            type: "line",
+            mode: "lines",
+            yaxis: "y2",
+            hoverinfo: "all",
+            hovertemplate: "%{x|%x}<br>%{y:,.2f}<br>RUB per %{fullData.name}<extra></extra>",
+            x: Object.keys(currencyRates),
+            y: Object.values(currencyRates)
+          };
+        }
+
+        response = await fetch(`https://raw.githubusercontent.com/ruslanbay/oil-prices/refs/heads/main/data/brent-daily.csv`);
+          response = await response.text();
+          data = response.split('\n')
+            .map(row => row.split(','));
+          const brentRates = {};
+          data.forEach(row => {
+            const [Date, Close] = row;
+            if (Date >= startDate) {
+              brentRates[Date] = Number(Close);
+            }
+          });
+
+          if (!chartData['brent'] && period == 'total') {
+            chartData['brent'] = {
+              name: 'brent',
               type: "line",
               mode: "lines",
               yaxis: "y2",
               hoverinfo: "all",
-              hovertemplate: "%{x|%x}<br>%{y:,.2f}<br>RUB per %{fullData.name}<extra></extra>",
-              x: Object.keys(currencyRates),
-              y: Object.values(currencyRates)
+              hovertemplate: "%{x|%x}<br>%{y:,.2f}<br>USD per %{fullData.name}<extra></extra>",
+              x: Object.keys(brentRates),
+              y: Object.values(brentRates)
             };
           }
-
 
         const rows = await d3.csv(`/moex/history/${period}.csv`);
 
