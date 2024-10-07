@@ -165,7 +165,7 @@
           };
         }
 
-        response = await fetch(`https://raw.githubusercontent.com/ruslanbay/oil-prices/refs/heads/main/data/brent-daily.csv`);
+        response = await fetch(`https://raw.githubusercontent.com/datasets/oil-prices/refs/heads/main/data/brent-daily.csv`);
         response = await response.text();
         data = response.split('\n')
           .map(row => row.split(','));
