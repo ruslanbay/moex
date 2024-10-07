@@ -36,6 +36,10 @@ Chemicals and Pertochemicals	NKNC	Niznekamskneftekhim ao	НКНХ ао	Нижн�
 Chemicals and Pertochemicals	NKNCP	Niznekamskneftekhim (pref)	НКНХ ап	Нижнекамскнефтехим ПАО ап	2008-04-04		
 Chemicals and Pertochemicals	PHOR	PhosAgro ao	ФосАгро ао	ФосАгро ПАО ао	2011-07-18		
 Chemicals and Pertochemicals	PHOR-001D	PhosAgro ao 001D	ФосАгро 1D	ФосАгро ОАО ао 001D	2013-07-03	2013-10-22	
+Chemicals and Pertochemicals	UFNC	Ufaneftekhim	Уфанефтехим-ао	Уфанефтехим ПАО ао	2004-08-06	2012-10-02	
+Chemicals and Pertochemicals	UFNCP	Ufaneftekhim pref	Уфанефтехим-ап	Уфанефтехим ПАО ап	2009-04-29	2012-10-02	
+Chemicals and Pertochemicals	UFOS	Ufaorgsyntez	Уфаоргсинтез-ао	Уфаоргсинтез ПАО ао	2004-08-09	2014-06-24	
+Chemicals and Pertochemicals	UFOSP	Ufaorgsyntez pref	Уфаоргсинтез-ап	Уфаоргсинтез ПАО ап	2004-08-09		
 Chemicals and Pertochemicals	URKA	Uralkaliy	Уркалий-ао	Уралкалий ПАО ао	2007-11-07	2022-12-13	
 Chemicals and Pertochemicals	VLHZ	VHZ	ВХЗ-ао	Владимирский химич.з-д(ПАО) ао	2006-07-12		
 Conglomerate	AFKS	AFK Sistema	Система ао	АФК Система ПАО ао	2007-12-12		
@@ -460,12 +464,15 @@ Industrials	RUGR	Rusgrain Holding ao	Русгрэйн	Русгрэйн Холд�
 Industrials	SGZH	Segezha	Сегежа	Сегежа ао	2021-04-28		
 Industrials	SELL	Selestra	Селестра	Селестра (ОАО) ао	2009-04-03	2017-03-01	
 Industrials	SEMZ	SEMZ ao	СЭМЗ ао	СофринЭкспМехЗавод ОАО ао	2010-10-22	2015-05-19	
+Industrials	SILM	Silovye Mashiny	Силовые машины	Силовые машины - ЗТЛ, ЛМЗ, Электросила, Энергомашэкспор	2003-05-23	2013-05-20	
 Industrials	SXPNP	Novoplastunovskoe (pref)	Новопл ап	Новопластуновское ПАО ап	2010-07-08	2015-09-21	
 Industrials	TANL	TANTAL ao	ТАНТАЛ ао	ТАНТАЛ ПАО ао	2011-12-09	2019-10-08	
 Industrials	TANLP	TANTAL ap	ТАНТАЛ ап	ТАНТАЛ ПАО ап	2011-12-09	2019-10-08	
 Industrials	TGKO	Taganrogskiy komb.zavod ao	ТКЗ ао	Таганрогский комб.завод ОАО ао	2011-12-08	2015-10-27	
 Industrials	TRAV	Travers ao	Траверс ао	Траверс ОАО ао	2011-12-09	2014-09-16	
 Industrials	TRUDP	Trud PAO ap	Труд ап	Труд ПАО ап	2012-02-10	2016-07-14	
+Industrials	TUMA	Tulamashzavod	Туламашзавод	Туламашзавод	2009-07-06		
+Industrials	TUMAP	Tulamashzavod pref	Туламашзавод ап	Туламашзавод ап	2009-07-06		
 Industrials	TUZA	Tuimaz. Zavod Avtobetonovozov	ТЗА ао	Туймаз. завод автобетоновозов	2008-08-28		
 Industrials	UAZA	UAZ	УАЗ ао	ао УАЗ (ОАО)	2005-12-29	2015-07-07	
 Industrials	UFMO	UMPO ao	УМПО ао	УМПО ао	2011-12-13	2015-02-20	
@@ -487,6 +494,7 @@ Information Technologies	ASTR	Astra Group	Астра ао	Группа Астр�
 Information Technologies	CIAN	ADR Cian PLC ORD SHS	CIAN-адр	АДР Cian PLC ORD SHS	2021-11-05		
 Information Technologies	DATA	Arenadata Group	Аренадата	Группа Аренадата	2024-10-01		
 Information Technologies	DIAS	Diasoft	iДиасофт	Диасофт ао	2024-02-13		
+Information Technologies	ELIB	ELSIB	ЭЛСИБ	Научно-производственное объединение ЭЛСИБ	2007-05-22		
 Information Technologies	HEAD	IPJSC Headhunter	Хэдхантер	МКПАО Хэдхантер	2024-08-16		
 Information Technologies	HHRU	ADR HeadHunter Group ORD SHS	HHRU-адр	АДР HeadHunter Group ORD SHS	2020-09-25	2024-09-27	
 Information Technologies	IVAT	PJSC IVA	iИВА	ПАО ИВА ао	2024-06-04		
@@ -539,6 +547,7 @@ Metals and Mining	RUALR	RDR United Company RUSAL Plc	Русал рдр	РДР Ю
 Metals and Mining	RUSP	Ruspolimet ao	Русполимет	Русполимет ПАО ао	2008-08-28	2022-06-15	
 Metals and Mining	SELG	Seligdar	Селигдар	ПАО Селигдар  ао	2011-09-22		
 Metals and Mining	SELGP	Seligdar ap	Селигдар-п	ПАО Селигдар ап	2012-05-11	2021-12-23	
+Metals and Mining	SELG-002D	Seligdar-002D	Селигдар-002D	ПАО Селигдар ао 002D	2011-06-28	2012-01-13	
 Metals and Mining	SNTZ	AO Sinarsky Pipe Plant ORD	Синтз	АО СИНТЗ ао	2024-09-11		
 Metals and Mining	SUMZ	AO SUMZ ORD	СУМЗ-ао	ПАО СУМЗ ао	2008-12-12	2012-09-18	
 Metals and Mining	SVTZ	AO Seversky Pipe Plant ORD	СТЗ	АО СТЗ ао	2024-09-11		
