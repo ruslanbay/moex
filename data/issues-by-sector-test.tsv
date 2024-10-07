@@ -13,19 +13,21 @@ Moscow Exchange	Information Technologies		Информационные техн�
 Moscow Exchange	Metals and Mining		Металлы и добыча				rgba(199,131,37,1)
 Moscow Exchange	Telecommunication Services		Телекоммуникации				rgba(106,228,127,1)
 Moscow Exchange	Transportation		Транспорт				rgba(54,104,114,1)
-Moscow Exchange	Others		Прочее				rgba(199,78,165,1)
 Moscow Exchange	TQFD. PAI (USD)		TQFD. ПАИ (USD)				rgba(105,34,166,1)
 Moscow Exchange	TQIF. PAI		TQIF. ПАИ				rgba(77,192,166,1)
 Moscow Exchange	TQPI. Shares PIR		TQPI. Акции ПИР				rgba(150,113,120,1)
 Moscow Exchange	TQTF. ETF		TQTF. ETF				rgba(222,217,139,1)
 Moscow Exchange	TQTY. PAI (CNY)		TQTY. ПАИ (CNY)				rgba(222,127,107,1)
+Moscow Exchange	Others		Прочее				rgba(199,78,165,1)
 Chemicals and Pertochemicals	AKRN	Acron	Акрон	Акрон ПАО ао	2006-10-11		
+Chemicals and Pertochemicals	AZKM	Azot	Азот ао	КОАО Азот ао	2008-08-28	2012-12-25	
 Chemicals and Pertochemicals	DGBZ	Dorogobuzh	Дорогбж ао	Дорогобуж ПАО ао	2006-12-21	2018-02-28	
 Chemicals and Pertochemicals	DGBZP	Dorogobuzh ap	Дорогбж ап	Дорогобуж ПАО ап	2006-12-21	2016-02-02	
 Chemicals and Pertochemicals	HIMC	Himprom ao	Химпром ао	Химпром ПАО ао	2011-12-14	2022-12-13	
 Chemicals and Pertochemicals	HIMCP	Himprom ap	Химпром ап	Химпром ПАО ап	2011-12-14		
 Chemicals and Pertochemicals	KAZT	Kuib.Azot ao	Куйбазот	Куйбышевазот ПАО ао	2011-12-14		
 Chemicals and Pertochemicals	KAZTP	Kuibishevazot ap	Куйбазот-п	Куйбышевазот ПАО ап	2011-12-14		
+Chemicals and Pertochemicals	KUOS	KNOS	КНОС-ао	Куйбышевнефтеоргсинтез (ОАО)ао	2008-10-14	2011-08-09	
 Chemicals and Pertochemicals	KSGR	Koks ao	Кокс ао	Кокс ПАО ао	2011-02-04	2022-12-13	
 Chemicals and Pertochemicals	KZOS	PAO Organicheskiy Sintez ao	ОргСинт ао	ПАО Органический синтез ао	2011-12-05		
 Chemicals and Pertochemicals	KZOSP	PAO Organicheskiy Sintez ap	ОргСинт ап	ПАО Органический синтез ап	2011-12-05		
@@ -50,6 +52,7 @@ Construction (Development)	LSRG	LSR	ЛСР ао	Группа ЛСР ПАО ао	
 Construction (Development)	MERF	Meridian ao	МЕРИДИАН	МЕРИДИАН ПАО ао	2008-11-26	2020-02-27	
 Construction (Development)	PIKK	PIK SZ	ПИК ао	ПИК СЗ (ПАО) ао	2007-06-13		
 Construction (Development)	PRFN	CZPSN-Profnasteel	ЧЗПСН ао	ЧЗПСН-Профнастил (ПАО) ао	2012-08-28		
+Construction (Development)	RTMC	RTM	РТМ ао	РТМ ОАО ао	2007-10-26	2011-12-19	
 Construction (Development)	SMLT	Samolet	Самолет ао	ГК Самолет ао	2020-10-29		
 Construction (Development)	TUCH	Tuchkovsk. CSM	ТКСМ ао	Тучковский КСМ ао	2010-12-30	2016-12-02	
 Construction (Development)	TUCH-001D	Tuchkovsk. CSM 001D	ТКСМ ао 1D	Тучковский КСМ ао 001D	2011-11-22		
@@ -57,6 +60,7 @@ Construction (Development)	UTSY	Edinie Tehno Sistemi PAO ao	ЕТС ао	Един
 Consumer	AESL	TPG AESSEL ao	АЭССЕЛЬао	ТПГ АЭССЕЛЬ ПАО ао	2013-11-12	2017-03-01	
 Consumer	ABRD	Abrau-Durso ao	АбрауДюрсо	Абрау-Дюрсо ПАО ао	2012-10-02		
 Consumer	AGRO	GDR ROS AGRO PLC ORD SHS	AGRO-гдр	ГДР ROS AGRO PLC ORD SHS	2014-12-01		
+Consumer	AKHA	PAVA	ПАВА ао	ОАО ПАВА ао	2005-09-02	2014-01-09	
 Consumer	AQUA	INARCTIKA	ИНАРКТИКА	ПАО ИНАРКТИКА	2010-04-16		
 Consumer	AVAZ	AVTOVAZ	АВТОВАЗ ао	АВТОВАЗ (ПАО) ао	2007-11-27	2019-04-09	
 Consumer	AVAZP	AVTOVAZ pref.	АВТОВАЗ ап	АВТОВАЗ (ПАО) ап	2009-04-21	2019-04-09	
@@ -69,8 +73,9 @@ Consumer	FIVE	GDR X5 RetailGroup N.V.ORD SHS	FIVE-гдр	ГДР X5 RetailGroup N
 Consumer	FIXP	GDR FixPrice Group PLC ORD SHS	FIXP-гдр	ГДР FixPrice Group PLC ORD SHS	2021-03-10		
 Consumer	GCHE	Cherkizovo Group ao	ЧеркизГ-ао	Группа Черкизово ПАО-ао	2008-04-08		
 Consumer	GTPR	GlavTorgProdukt ao	ГлТоргПрод	ГлавТоргПродукт ОАО ао	2012-10-22	2016-10-11	
-Consumer	GUMM	GUM	ГУМ	ао ГУМ	2014-06-09	2015-10-26	
+Consumer	GUMM	GUM	ГУМ	ао ГУМ	1997-08-15	2015-10-26	
 Consumer	HNFG	HENDERSON	ХЭНДЕРСОН	ХЭНДЕРСОН ао	2023-11-02		
+Consumer	IRSG	Mezhreg.stabilizats.gruppa	МежрегСГ	Межрег.стабилизац.группа ОАО	2009-10-16	2012-12-28	
 Consumer	KLNA	Kalina-ao	Калина-ао	Концерн Калина(ОАО) ао	2004-04-26	2012-02-24	
 Consumer	KLVZ	KLVZ KRISTALL	Кристалл	Алкогольная Группа Кристалл	2024-02-22		
 Consumer	KROT	KrasnyiOctyabr	КрасОкт-ао	КрасныйОктябрь ПАО - ао	2003-09-09		
@@ -79,8 +84,10 @@ Consumer	LNTA	IPJSC Lenta dr	Лента др	МКПАО Лента др	2014-03-
 Consumer	LENT	Lenta IPJSC ORD SHS	Лента ао	Лента МКПАО ао	2021-12-01		
 Consumer	MGNT	Magnit	Магнит ао	Магнит ПАО ао	2006-04-24		
 Consumer	MGNT-006D	Magnit-006D	Магнит-006	Магнит ОАО ао -006D	2011-12-23	2012-04-20	
+Consumer	MGVM	War and Peace Media Group ao	МедиаВиМ	Медиа гр.Война и Мир ОАО ао	2011-11-30		
 Consumer	MSST	Multisistema ao	МультиСис	Мультисистема ОАО ао	2012-12-19	2019-07-11	
 Consumer	MVID	M.video	М.видео	М.видео ПАО ао	2007-11-01		
+Consumer	NTRI	NUTRINBESTHOLDING	НутрИнвХол	НУТРИНВЕСТХОЛДИНГ ОАО ак.об.	2007-04-27		
 Consumer	OBUV	OR	ОР ао	ПАО ОР ао	2017-10-20	2021-03-25	
 Consumer	ODVA	MediaHolding	Медиахолд	Медиахолдинг (ПАО) ао	2008-09-02	2016-12-02	
 Consumer	OKEY	GDR OKEY Group ORD SHS	OKEY-гдр	ГДР OKEY Group S.A. ORD SHS	2020-12-14		
@@ -89,15 +96,22 @@ Consumer	OSMP	OMPK	ОМПК ао	ОМПК ОАО ао	2008-12-12	2017-12-27
 Consumer	PRTK	PROTEK ao	ПРОТЕК ао	ПРОТЕК (ПАО) ао	2010-04-27	2020-12-29	
 Consumer	RBCM	GK RBK ao	ГК РБК ао	ГК РБК ПАО ао	2011-01-19		
 Consumer	ROST	ROSINTER RESTAURANTS ao	РОСИНТЕРао	РОСИНТЕР РЕСТОРАНТС (ПАО)	2008-08-11		
+Consumer	RSAM	Russkie Samotsvety ao	РусСамоцв	Русские Самоцветы ОАО ао	2008-10-14	2012-09-18	
 Consumer	RSEA	Russkaya Akvakultura	РусАква ао	Русская Аквакультура ПАО ао	2010-04-16	2015-06-09	
+Consumer	SCON	7Kontinent	7Континент	Седьмой Континент (ОАО)	2005-03-29	2012-09-27	
 Consumer	SIBG	PAO Ice stim Rus ao	АйсCтим ао	Айс стим Рус ПАО ао	2015-08-05	2019-07-04	
 Consumer	SVAV	Sollers Avto	СОЛЛЕРС	ПАО СОЛЛЕРС	2005-04-22		
 Consumer	SVET	Svetofor Group	Светофор	Светофор Групп ао	2021-01-15		
 Consumer	SYNG	Beluga Group ao	Белуга ао	Белуга Групп ПАО ао	2007-11-20	2017-07-31	
+Consumer	TGMK	TAMP	ТАМП ао	ТАМП ОАО ао	2006-02-11	2012-09-04	
+Consumer	TPLF	TEPLOFON ao	iТеплофон	Теплофон ОАО  ао	2011-09-12	2013-04-19
 Consumer	TZUM	TzUM	ЦУМ-2	ЦУМ-2	2004-04-28		
+Consumer	USYN	UK Sinergia OAO	УКСинергия	УК Синергия ОАО ао	2011-03-04	2012-12-28	
 Consumer	VSEH	VI.ru	ВИ.ру	ВИ.ру	2024-07-05		
+Consumer	WBDF	WBDF	ВБД ПП ао	ВБД ПП (ОАО) ао	2004-02-26	2014-01-10
 Consumer	WUSH	WHOOSH Holding	iВУШХолднг	ВУШ Холдинг ао	2022-12-14		
 Consumer	ZHIV	Jivoy office ao	Живой Оф	Живой офис ОАО ао	2013-10-17	2017-03-01	
+Consumer	ZIRE	ZIRERA OAO ao	ЗИРЕРА ао	ЗИРЕРА ОАО - ао	2011-05-20	2014-05-30	
 Electricity, Utilities	ARSB	Public Joint-Stock Company Arkhangelsk Energy Retail Company	ПАО Архэнергосбыт	Публичное акционерное общество Архангельская сбытовая компания	2005-11-18	2012-08-15	
 Electricity, Utilities	ARSBP	Аrhenergosbyt ap	АрханСб ап	Архангельская сбыт.комп.ОАО-ап	2005-11-18	2012-08-15	
 Electricity, Utilities	ASSB	Astrakhan Energo Sbyt	АстрЭнСб	Астраханская ЭСК ПАО	2005-09-16		
@@ -176,6 +190,8 @@ Electricity, Utilities	OMSB	Omskenergosbyt ao	ОмскЭнСб	Омскэнер�
 Electricity, Utilities	OMSBP	Omskenergosbyt (pref)	ОмскЭнСб-п	Омскэнергосбыт ОАО ап	2006-06-16		
 Electricity, Utilities	ORSB	Orelenergosbyt ao	ОрлЭнСб ао	Орелэнергосбыт ОАО ао	2005-12-22		
 Electricity, Utilities	ORSBP	Orelenergosbyt (pref)	ОрлЭнСб ап	Орелэнергосбыт ОАО ап	2005-12-22		
+Electricity, Utilities	PBSB	Peterburg Sbyt.Komp.	ПетербСК	Петербургская сбытовая компания ОАО ао	2008-10-14		
+Electricity, Utilities	PBSBP	Peterburg Sbyt.Komp.(pref)	ПетербСК-п	Петербургская сбытовая компания ОАО ап	2011-12-08		
 Electricity, Utilities	PMSB	Perm EnergoSbyt	ПермьЭнСб	Пермэнергосбыт ПАО ао	2006-02-09		
 Electricity, Utilities	PMSBP	Perm EnergoSbyt (pref)	ПермьЭнС-п	Пермэнергосбыт ПАО ап	2006-02-09		
 Electricity, Utilities	PZSB	Penzaenergosbyt  ao	ПензаЭС ао	Пензаэнергосбыт ОАО ао	2005-09-13		
@@ -210,6 +226,7 @@ Electricity, Utilities	TGKJ	Forward Energy	Форвард Эн	Форвард Э
 Electricity, Utilities	TGKK	TGK-11	ТГК-11	ао ОАО ТГК-11	2007-12-28		
 Electricity, Utilities	ETGK	TGK-13	ТГК-13	ОАО Енисейская ТГК (ТГК-13)	2008-02-15	2012-10-05	
 Electricity, Utilities	TGKN	TGK-14	ТГК-14	ао ПАО ТГК-14	2007-01-25		
+Electricity, Utilities	TGVK	Tulagorvodokanal ao	ТулаГВК ао	Тулагорводоканал ОАО ао	2011-12-16	2012-10-08	
 Electricity, Utilities	TLSB	Tulaenergosby ao	ТулаЭнСб	Тулаэнергосбыт ОАО ао	2005-10-14		
 Electricity, Utilities	TNSE	PAO GK TNS energo ao	ТНСэнрг ао	ПАО ГК ТНС энерго ао	2015-06-17		
 Electricity, Utilities	TORS	PAO Rosseti Tomsk ao	РСТомск ао	ао ПАО Россети Томск	2005-12-28		
@@ -254,6 +271,7 @@ Energy (Oil, Gas, Coal)	MFGS	Megion	Мегион-ао	ао Славнефть-М
 Energy (Oil, Gas, Coal)	MFGSP	Megion (pref)	Мегион-ап	ап Мегионнефтегаз	2005-01-11		
 Energy (Oil, Gas, Coal)	MNPZ	Gazpromneft-MNPZ	ГазпрМНПЗ	Газпромнефть-МНПЗ ОАО ао	2008-12-12	2014-11-14	
 Energy (Oil, Gas, Coal)	NVTK	NOVATEK	Новатэк ао	ПАО НОВАТЭК ао	2006-08-18		
+Energy (Oil, Gas, Coal)	NZGZ	Nizhnevartovskneftegaz	НижНФГЗ ао	Нижневартовскнефтегаз ао	2008-10-14		
 Energy (Oil, Gas, Coal)	RNFT	RussNeft NK	РуссНфт ао	РуссНефть НК ПАО ао	2016-11-18		
 Energy (Oil, Gas, Coal)	RNHS	RN Holding ao	РН Холд ао	РН Холдинг ОАО ао	2013-10-28	2014-08-15	
 Energy (Oil, Gas, Coal)	RNHSP	RN Holding ap	РН Холд ап	РН Холдинг ОАО ап	2013-10-28	2014-08-15	
@@ -276,6 +294,7 @@ Energy (Oil, Gas, Coal)	YAKG	YaTEK ao	ЯТЭК ао	Якутская топл.-�
 Financials	ABBN	Bank of Astana	БанкАстаны	АО Банк Астаны	2017-12-05	2018-09-27	
 Financials	ACKO	ASKO ao	АСКО ао	АСКО ПАО ао	2017-07-11		
 Financials	ALBK	Best Efforts Bank ao	БестЭфБ ао	Бест Эффортс Банк ПАО ао	2012-05-15	2021-10-11	
+Financials	ANGA	ANGA	Ангара ао	Ангара ИЦ ОАО ао	2007-05-15	2014-05-30	
 Financials	ARSA	UK Arsagera	Арсагера	УК Арсагера ПАО-ао	2008-04-07		
 Financials	AVAN	AKB AVANGARD	Авангрд-ао	АКБ АВАНГАРД ПАО ао	2012-07-09		
 Financials	BACT	Public Joint-Stock Company BiznesAktiv	ОАО БизнесАктив	Открытое акционерное общество БизнесАктив	2009-09-30	2012-12-28	
@@ -294,7 +313,7 @@ Financials	EPLN	SAFMAR Fin.Invest. ao	САФМАР ао	САФМАР Фин.Ин
 Financials	EPLN-002D	Europlan 002D	Европлан2D	Европлан ПАО ао 002D	2016-11-28	2017-03-27	
 Financials	ERAV	Era Vodoleya	ЭраВодолея	Эра Водолея (инв.компания) ОАО	2010-08-03	2012-12-28	
 Financials	ERMK	Ermak-invest	ЕрмакИнв	Ермак-инвест ОАО ао	2009-07-14	2012-12-28	
-Financials	FLKO	FLK	ФЛК 01	ОАО Финанс-Лизинг	2014-06-09	2013-11-28	
+Financials	FLKO	FLK	ФЛК 01	ОАО Финанс-Лизинг	2004-05-18	2013-11-28	
 Financials	FSRV	FinServis	ФинСерв ао	ФинСервис (ОАО) ао	2009-09-30	2012-12-28	
 Financials	FTRE	FG FUTURE ao	БУДУЩЕЕ ао	Финансовая группа БУДУЩЕЕ ао	2016-10-20	2020-04-09	
 Financials	GAZC	Gazkon ao	ГАЗКОН-ао	ГАЗКОН (ПАО) ао	2011-09-28	2017-05-15	
@@ -305,10 +324,11 @@ Financials	GTLC	PAO GTL ao	ПАОДжиТиЭл	ПАО ДжиТиЭл ао	2013-
 Financials	HMBO	Khanty-M bank Otkritie ao	ХМБОткр ао	ПАО Ханты-М банк Открытие ао	2015-04-01	2016-08-19	
 Financials	KUZB	Bank Kuzneckiy	КузнецкийБ	Банк Кузнецкий ПАО ао	2012-09-05		
 Financials	LEAS	Europlan	Европлан	ПАО «ЛК «Европлан»	2024-03-29		
+Financials	LINK	Link Holdings ao	Линк Холд	Линк Холдингс (ОАО) ао	2011-11-11	2017-05-15	
 Financials	MBNK	MTS Bank	МТС Банк	МТС-Банк ао	2024-04-26		
 Financials	MFBA	Moskovskaya Fond. Birja OAO ao	МФБ ао	Московская Фонд. Биржа ОАО ао	2011-04-07		
 Financials	MGKL	MGKL	МГКЛ	МГКЛ ао	2023-12-28		
-Financials	MMBM	BM-Bank	БМ-Банк	БМ-Банк акции об.	2014-06-09	2016-08-30	
+Financials	MMBM	BM-Bank	БМ-Банк	БМ-Банк акции об.	1994-12-28	2016-08-30	
 Financials	MNFD	MN-fond ao	МН-фонд ао	МН-фонд ПАО ао	2011-03-18	2019-03-18	
 Financials	MOEX	MoscowExchange	МосБиржа	ПАО Московская Биржа	2013-02-04		
 Financials	MOBB	Moskovskii oblastnoi bank PAO	МосОблБанк	Московский областной банк ПАО	2012-07-20	2021-09-14	
@@ -316,6 +336,8 @@ Financials	NBTR	NB TRAST ao	ТРАСТ ао	НБ ТРАСТ ОАО ао	2014-03-
 Financials	NMOS	OTKRITIE FK Bank OAO ao	ОткрФКБ ао	ОАО ОТКРЫТИЕ ФК Банк ао	2011-04-19	2014-11-28	
 Financials	OFCB	OTKRITIE FK Bank PAO ao	ОткрФКБ ао	ПАО ОТКРЫТИЕ ФК Банк ао	2014-12-01	2017-12-01	
 Financials	OPIN	INGRAD	ИНГРАД ао	ИНГРАД ПАО ао	2008-08-28	2020-03-27	
+Financials	OPTI	Optima Invest ao	ОптИнв ао	Оптима Инвест ОАО ао	2009-12-10	2012-12-28	
+Financials	OSFD	Ob.Sibirskiy Fond	ОбСибФ ао	Объединенный Сибирский Фонд (ОАО) ао	2009-09-10		
 Financials	PETR	Petrokommerzbank ao	Петр ао	Петрокоммерц КБ ОАО ао	2011-12-09	2015-06-11	
 Financials	PETR02	Petrokommerzbank 02 ao	Петр02 ао	Петрокоммерц КБ ОАО ао 02	2011-12-09		
 Financials	PETR03	Petrokommerzbank 03 ao	Петр03 ао	Петрокоммерц КБ ОАО ао 03	2011-12-09		
@@ -333,6 +355,7 @@ Financials	REBR	Region. bank razvitiya ao	РегБР ао	Регион.банк 
 Financials	RENI	Renaissance Insurance	Ренессанс	Ренессанс Страхование ао	2021-10-20		
 Financials	RGSS	Rosgosstrakh ao	РГС СК ао	Росгосстрах СК ПАО ао	2013-11-19		
 Financials	ROSB	ROSBANK	Росбанк ао	РОСБАНК ПАО ао	2006-01-30		
+Financials	RSTR	PIF IndexRTSStandard UKSber	ПИФИндРТС	ПИФИндексРТС Стандарт УКСбер	2011-11-21	2013-08-09	
 Financials	RUSI	RUSS-INVEST IC ao	ИКРУСС-ИНВ	РУСС-ИНВЕСТ ИК ПАО ао	2011-11-23		
 Financials	RVST	Public Joint-Stock Company ROSINVEST	ОАО РОСИНВЕСТ	Открытое акционерное общество РОСИНВЕСТ	2010-09-28		
 Financials	SBER	Sberbank	Сбербанк	Сбербанк России ПАО ао	2007-07-20		
@@ -345,6 +368,7 @@ Financials	TCBN	TransKreditBank	ТрКред ао	ОАО ТрансКредит�
 Financials	TCSG	IPJSC TCS Holding	ТКСХолд ао	ТКС Холдинг МКПАО ао	2019-10-28		
 Financials	TFKF	TFK-Finance ao	ТФК-Финанс	ТФК-Финанс ао	2014-05-05	2016-03-10	
 Financials	TFKF-001D	TFK-Finance  ao 001D	ТФК-Ф ао01	ТФК-Финанс  ао 001D	2013-12-18	2015-01-26	
+Financials	TSKA	TSK-1 ao	ТСК-1 ао	ТСК-1 ОАО ао	2010-12-24	2012-12-28	
 Financials	UCSS	PAO OKS ao	ОКС ао	ПАО ОКС ао	2013-05-14		
 Financials	URFD	UKORF ao	УКОРФ ао	УК Объед.резерв.фондов ПАО ао	2011-02-10	2017-06-29	
 Financials	USBN	BANK URALSIB ao	УралСиб ао	БАНК УРАЛСИБ ПАО ао	2011-12-14		
@@ -353,6 +377,7 @@ Financials	VZRZ	Vozrojdenie	Возрожд-ао	Банк Возрождение-
 Financials	VZRZP	Vozrojdenie (pref)	Возрожд-п	Банк Возрождение - ап	2005-01-11	2021-06-10	
 Financials	WTCM	CMT	ЦМТ ао	Центр междун. торговлиПАО ао	2007-09-27		
 Financials	WTCMP	CMT (pref)	ЦМТ ап	Центр междун. торговлиПАО ап	2007-09-27		
+Financials	YKST	Strategia	Стратег ао	УК Стратегия ОАО ао	2009-02-09	2012-12-28	
 Financials	YRSL	Bank VVB ao	БанкВВБ ао	ПАО Банк ВВБ ао	2004-05-21	2016-01-18	
 Financials	ZAPD-004D	Zapadny Bank ao 004D	Запад ао04	Западный Банк ао 004D	2013-08-09	2014-07-21	
 Financials	ZAYM	Zaymer	Займер ао	Займер ао	2024-04-12		
@@ -393,7 +418,7 @@ Industrials	GTSS	GEOTECH Seismic Services ao	ГЕОТЕК ао	ГЕОТЕК Се
 Industrials	HMSG	GDR Hydraulic M&S Gr ORD SHS	HMSG-гдр	ГДР Hydraulic M&S Gr ORD SHS	2021-05-25		
 Industrials	IRKT	Yakovlev-3	Яковлев-3	Яковлев ПАО ак.об.-3	2005-01-11		
 Industrials	KHEL	Kazanskyi vertoletn. zavod ao	КазанскВЗ	Казанский вертолет. завод ОАО	2008-08-28	2012-10-01	
-Industrials	KHELP	Joint Stock Company Kazan Helicopters	АО Казанский вертолетный завод	Акционерное общество Казанский вертолетный завод	2014-06-09	2012-10-01	
+Industrials	KHELP	Joint Stock Company Kazan Helicopters	АО Казанский вертолетный завод	Акционерное общество Казанский вертолетный завод	2013-10-29		
 Industrials	KMAZ	KAMAZ	КАМАЗ	КАМАЗ ПАО	2004-02-26		
 Industrials	KMEZ	Kovrov Mech. Zavod	КМЗ	Ковровский механический завод	2009-09-07		
 Industrials	KOMM	BF Kommunar ao	Коммунар	Бумажная фабрика Коммунар ОАО	2011-12-09	2014-11-14	
@@ -403,7 +428,9 @@ Industrials	KTSB	KSB	КСБ ао	Костромск.сбыт.комп АО	2005-
 Industrials	KTSBP	KSB ap	КСБ ап	Костромск.сбыт.комп АО	2005-08-18		
 Industrials	KUNF	KUZOCM ao	КУЗОЦМ ао	Каменск-Уральский завод ПАО ао	2011-12-14	2021-10-11	
 Industrials	KUSTP	Kubanskaya step (pref)	КубанСт ап	Кубанская степь ПАО ап	2010-07-08	2015-11-27	
-Industrials	KZMS	PAO Krasn zav met setok ORD	КЗМС	ПАО КЗМС ао	2014-06-09	2022-12-13	
+Industrials	KZMS	PAO Krasn zav met setok ORD	КЗМС	ПАО КЗМС ао	2006-05-11	2022-12-13	
+Industrials	LOMO	LOMO ao	ЛОМО ао	ЛОМО ОАО ао	2011-12-08	2012-08-10	
+Industrials	LOMOP	LOMO ap	ЛОМО ап	ЛОМО ОАО ап	2011-12-08	2012-08-10	
 Industrials	LVHK	Levenguk ao	Левенгук	Левенгук ПАО ао	2012-11-28		
 Industrials	MASZ	Mash.Zavod ao	МашЗавод	Машиностроит. завод ПАО ао	2011-12-09	2015-11-11	
 Industrials	MORI	Morion ao	Морион ао	Морион ПАО ао	2011-12-14	2022-12-13	
@@ -412,12 +439,18 @@ Industrials	MSTT	Mostotrest	Мостотрест	ПАО МОСТОТРЕСТ а�
 Industrials	NAUK	NPO Nauka ao	iНПОНаука	НПО Наука ао	2011-12-15		
 Industrials	NFAZ	NEFAZ PAO ao	НЕФАЗ	НЕФАЗ ПАО ао	2011-09-09		
 Industrials	NKSH	Nizhnekamskshina ao	Нижкамшина	Нижнекамскшина ПАО ао	2011-12-14		
-Industrials	NPOF	PAO FIZIKA ORD	Физика	ПАО НПО ФИЗИКА ао	2014-06-09	2022-12-13	
+Industrials	NPE1	Promavtomatika	Промавт-ао	Промавтоматика НПО (ОАО) ао	2008-10-10		
+Industrials	NPOF	PAO FIZIKA ORD	Физика	ПАО НПО ФИЗИКА ао	2001-04-18	2022-12-13	
 Industrials	NSVZ	Nauka-Svyaz ao	iНаукаСвяз	Наука-Связь ПАО ао	2011-12-13		
+Industrials	OMSH	Omskshina ao	Омскшина	Омскшина  (ПАО)	2010-03-09		
 Industrials	OMZZ	OMZ	ОМЗ-ао	аоОбъединён. маш. заводы	2004-09-28	2014-08-07	
 Industrials	OMZZP	OMZ (pref)	ОМЗ-ап	апОбъединён.  маш. заводы	2004-09-28		
 Industrials	PAZA	Pavlovo Bus ao	ПавлАвт ао	Павловский автобус ПАО ао	2011-12-08		
+Industrials	PDMS	Podolskiy mash.zavod ao	ПодМашЗ ао	Подольский маш.завод ОАО ао	2011-12-08		
+Industrials	PLNT	Planeta ao	Планета ао	Планета ОАО ао	2012-03-28	2012-12-28	
 Industrials	PLSM	Plazmek ao	Плазмек	Плазмек ПАО ао	2011-08-31	2019-06-19	
+Industrials	PMOT	Permskie motory	ПермМот ао	Пермские моторы (ОАО) ао	2008-10-14	2013-10-11	
+Industrials	PTRM	ProfTehResurs M ao	ПрофТехР М	ПрофТехРесурс М ОАО ао	2012-03-28		
 Industrials	RKKE	RKK Energia	ЭнергияРКК	РКК Энергия им.С.П.Королева ао	2008-05-29		
 Industrials	RLMN	Rollman GK ao	Роллман	Группа Компаний Роллман ПАО ао	2012-12-19	2020-11-13	
 Industrials	RLMNP	Rollman GK ap	Роллман-п	Группа Компаний Роллман ПАО ап	2014-05-05	2020-11-13	
@@ -438,6 +471,7 @@ Industrials	UAZA	UAZ	УАЗ ао	ао УАЗ (ОАО)	2005-12-29	2015-07-07
 Industrials	UFMO	UMPO ao	УМПО ао	УМПО ао	2011-12-13	2015-02-20	
 Industrials	UNAC	Ob.aviastroitelnaya korp.	iАвиастКао	Об.авиастр.корп. ПАО ао	2013-09-17		
 Industrials	URKZ	Uralskaya kuznica ao	УрКузница	ПАО Уральская кузница ао	2012-05-11		
+Industrials	UUAZ	U-UAZ ao	У-УАЗ ао	У-УАЗ  ОАО ао	2008-08-28	2012-04-20	
 Industrials	UWGN	OVK ao	ОВК ао	ПАО НПК ОВК ао	2015-04-29	2021-12-13	
 Industrials	UWGN-001D	OVK-001D ao	ОВК-001D	ПАО НПК ОВК 001D ао	2015-04-29	2015-06-16	
 Industrials	VSYD	Viborgskii sudostr. Zavod ao	ВыбСудЗ ао	Выборгский Суд.Завод ПАО ао	2012-09-25		
@@ -460,12 +494,16 @@ Information Technologies	MAIL	GDR VK Company Limited ORD SHS	VK-гдр	ГДР VK
 Information Technologies	OZON	ADS Ozon Holdings PLC ORD SHS	OZON-адр	АДР Ozon Holdings PLC ORD SHS	2020-11-24		
 Information Technologies	POSI	PJSC Positive Group	iПозитив	Группа Позитив ао	2021-12-17		
 Information Technologies	SFTL	GDR Noventiq Holdings ORD SHS	NVTQ-гдр	ГДР Noventiq Holdings ORD SHS	2021-11-01		
+Information Technologies	SITR	SITRONICS ao	iСИТРОНИКС	СИТРОНИКС ОАО ао	2011-09-30	2013-11-22	
 Information Technologies	SKYC	SkyComputing	СкайКо-ао	СкайКомпьютинг (ОАО) ао	2012-08-28	2017-03-01	
 Information Technologies	SOFL	Softline	iСофтлайн	Софтлайн ао	2023-09-25		
 Information Technologies	UTII	Platforma UTINET.RU PAO ao	Ютинет.Ру	Платформа ЮТИНЕТ.РУ ПАО - ао	2011-06-23	2016-03-25	
+Information Technologies	VERT	VERT	Вертикаль	ПО Вертикаль ОАО ао	2005-11-30	2014-05-30	
 Information Technologies	VKCO	VK International Public JS Com	МКПАО ВК	Международная компания ПАО ВК	2020-07-02		
+Information Technologies	VTLD	Vital ao	iВитал	Витал Девел.Корпорэйшн ОАО ао	2011-12-20	2013-10-25	
 Information Technologies	YDEX	YANDEX	ЯНДЕКС	МКПАО ЯНДЕКС	2024-07-08		
 Information Technologies	YNDX	PLLC Yandex N.V.	Yandex clA	PLLC Yandex N.V. class A shs	2014-06-04	2024-07-09	
+Metals and Mining	AGRE	AGAVA-Resurs ao	АГАВА-Рес	АГАВА-Ресурс ОАО ао	2010-12-24	2012-12-28	
 Metals and Mining	ALRS	ALROSA ao	АЛРОСА ао	АЛРОСА ПАО ао	2011-11-29		
 Metals and Mining	ALNU	ALROSA-Nurba ao	АЛРОСА-Нюр	АЛРОСА-Нюрба ПАО ао	2011-12-08	2021-12-24	
 Metals and Mining	BRZL	Buryatzoloto ao	БурЗолото	Бурятзолото ПАО ао	2011-12-09		
@@ -478,6 +516,8 @@ Metals and Mining	GMKN	NorNickel GMK	ГМКНорНик	ГМК Нор.Никел
 Metals and Mining	IGST	Izhstal 2ao	Ижсталь2ао	Ижсталь ПАО ао 2в.	2011-12-08		
 Metals and Mining	IGST03	Izhstal 3ao	Ижсталь3ао	Ижсталь ОАО ао 3в.	2011-12-08	2016-11-03	
 Metals and Mining	IGSTP	Izhstal ap	Ижсталь ап	Ижсталь ПАО ап	2011-12-08		
+Metals and Mining	IKAR	Ikar	Икар ао	Икар ОАО ао	2001-11-08	2012-10-18	
+Metals and Mining	IKARP	IKARP	IKARP	IKARP	2001-11-08	2012-10-18	
 Metals and Mining	KMTZ	KGIW ao	КосогМЗ ао	Косогорский метал. завод ПАО	2011-12-09		
 Metals and Mining	KOGK	Korshunovskii GOK	КоршГОК ао	Коршуновский ГОК ПАО ао	2008-08-28		
 Metals and Mining	LNZL	Lenzoloto	Лензолото	Лензолото ПАО ао	2008-12-12		
@@ -499,12 +539,18 @@ Metals and Mining	RUALR	RDR United Company RUSAL Plc	Русал рдр	РДР Ю
 Metals and Mining	RUSP	Ruspolimet ao	Русполимет	Русполимет ПАО ао	2008-08-28	2022-06-15	
 Metals and Mining	SELG	Seligdar	Селигдар	ПАО Селигдар  ао	2011-09-22		
 Metals and Mining	SELGP	Seligdar ap	Селигдар-п	ПАО Селигдар ап	2012-05-11	2021-12-23	
+Metals and Mining	SNTZ	AO Sinarsky Pipe Plant ORD	Синтз	АО СИНТЗ ао	2024-09-11		
+Metals and Mining	SUMZ	AO SUMZ ORD	СУМЗ-ао	ПАО СУМЗ ао	2008-12-12	2012-09-18	
+Metals and Mining	SVTZ	AO Seversky Pipe Plant ORD	СТЗ	АО СТЗ ао	2024-09-11		
+Metals and Mining	TAMZ	TAGMET ao	ТАГМЕТ ао	ТАГМЕТ ОАО ао	2008-08-28		
+Metals and Mining	TATB	TATBENTO ao	ТАТБЕНТОао	ТАТБЕНТО ОАО  ао	2010-09-07	2012-12-28	
 Metals and Mining	TRMK	TMK ao	ТМК ао	ПАО ТМК	2007-04-10		
 Metals and Mining	UGLD	UGC	ЮГК	ЮГК	2023-11-22		
 Metals and Mining	UNKL	Uzhno-Uralskiy nikel. komb. ao	ЮУНК ао	Южно-Уральский никел. комб. ао	2012-04-20		
 Metals and Mining	VTRS	VTORRESURSY ao	ВТОРРЕСао	ВТОРРЕСУРСЫ ПАО ао	2012-07-19	2016-12-02	
 Metals and Mining	VSMO	Corp. VSMPO-AVISMA ao	ВСМПО-АВСМ	Корп. ВСМПО-АВИСМА (ПАО) ао	2004-11-11		
 Metals and Mining	VSMZ	Vyksynskii matall. zavod	ВМЗ ао	Выксунский мет. завод ОАО ао	2008-08-28	2013-02-28	
+Metals and Mining	ZOYA	Zoloto Yakutii ao	ЗолЯкутии	Золото Якутии ОАО ао	2010-05-27		
 Telecommunication Services	BISV	BashInformSvyaz ao	БашИнСв ао	Башинформсвязь(ПАО) ао	2010-04-23	2022-12-13	
 Telecommunication Services	BISVP	BashInformSvyaz ap	БашИнСв ап	Башинформсвязь(ПАО) ап	2010-04-23		
 Telecommunication Services	CNTL	Centrlnyi Telegraf	Телеграф	Центральный Телеграф ПАО ао	2008-12-12		
@@ -531,162 +577,115 @@ Transportation	TRFM	TransFin-M	ТрансФ ао	ПАО ТрансФин-М ао
 Transportation	SZPR	Severo-Zapadnoe Parokhodstvo	СЗПароход	Сев.-зап. пароходство ПАО	2009-07-08	2020-06-29	
 Transportation	TAER	TRANSAERO ao	ТРАНСАЭРао	ТРАНСАЭРО АК (ОАО) ао	2011-03-29	2015-12-21	
 Transportation	UTAR	UTAir Aviacompany	ЮТэйр ао	Авиакомпания ЮТэйр (ПАО) ао	2005-01-11		
-Others	DNKOP	Danilch (pref)	Данильч ап	ОАО героя ВОВ Данильченко ап	2010-10-08	2014-10-13	
-Others	AGRE	AGAVA-Resurs ao	АГАВА-Рес	АГАВА-Ресурс ОАО ао	2010-12-24	2012-12-28	
-Others	AKHA	PAVA	ПАВА ао	ОАО ПАВА ао	2005-09-02	2014-01-09	
-Others	ANGA	ANGA	Ангара ао	Ангара ИЦ ОАО ао	2014-06-09	2014-05-30	
-Others	AZKM	Azot	Азот ао	КОАО Азот ао	2008-08-28	2012-12-25	
-Others	IKAR	Ikar	Икар ао	Икар ОАО ао	2008-12-12	2012-10-18	
-Others	IKARP	IKARP	IKARP	IKARP	2014-06-09	2012-10-18	
-Others	IRSG	Mezhreg.stabilizats.gruppa	МежрегСГ	Межрег.стабилизац.группа ОАО	2009-10-16	2012-12-28	
-Others	KUOS	KNOS	КНОС-ао	Куйбышевнефтеоргсинтез (ОАО)ао	2008-10-14	2011-08-09	
-Others	LINK	Link Holdings ao	Линк Холд	Линк Холдингс (ОАО) ао	2011-11-11	2017-05-15	
-Others	LOMO	LOMO ao	ЛОМО ао	ЛОМО ОАО ао	2011-12-08	2012-08-10	
-Others	LOMOP	LOMO ap	ЛОМО ап	ЛОМО ОАО ап	2011-12-08	2012-08-10	
-Others	MGVM	War and Peace Media Group ao	МедиаВиМ	Медиа гр.Война и Мир ОАО ао	2011-11-30		
-Others	NPE1	Promavtomatika	Промавт-ао	Промавтоматика НПО (ОАО) ао	2008-10-10		
-Others	NTRI	NUTRINBESTHOLDING	НутрИнвХол	НУТРИНВЕСТХОЛДИНГ ОАО ак.об.	2007-04-27		
-Others	NZGZ	Nizhnevartovskneftegaz	НижНФГЗ ао	Нижневартовскнефтегаз ао	2008-10-14		
-Others	OMSH	Omskshina ao	Омскшина	Омскшина  (ПАО)	2010-03-09		
-Others	OPTI	Optima Invest ao	ОптИнв ао	Оптима Инвест ОАО ао	2009-12-10		
-Others	OSFD	Ob.Sibirskiy Fond	ОбСибФ ао	Объединенный Сиб.фонд (ОАО) ао	2009-09-10		
-Others	PBSB	Peterburg Sbyt.Komp.	ПетербСК	Петербург.сбытовая комп.ОАО ао	2008-10-14		
-Others	PBSBP	Peterburg Sbyt.Komp.(pref)	ПетербСК-п	Петербург.сбытовая комп.ОАО ап	2011-12-08		
-Others	PDMS	Podolskiy mash.zavod ao	ПодМашЗ ао	Подольский маш.завод ОАО ао	2011-12-08		
-Others	PLNT	Planeta ao	Планета ао	Планета ОАО ао	2012-03-28		
-Others	PMOT	Permskie motory	ПермМот ао	Пермские моторы (ОАО) ао	2008-10-14		
-Others	PTRM	ProfTehResurs M ao	ПрофТехР М	ПрофТехРесурс М ОАО ао	2012-03-28		
-Others	RSAM	Russkie Samotsvety ao	РусСамоцв	Русские Самоцветы ОАО ао	2008-10-14		
-Others	RSTR	PIF IndexRTSStandard UKSber	ПИФИндРТС	ПИФИндексРТС Стандарт УКСбер	2011-11-21		
-Others	RTMC	RTM	РТМ ао	РТМ ОАО ао	2007-10-26		
-Others	SCON	7Kontinent	7Континент	Седьмой Континент (ОАО)	2005-03-29		
-Others	SITR	SITRONICS ao	iСИТРОНИКС	СИТРОНИКС ОАО ао	2011-09-30		
-Others	SNTZ	AO Sinarsky Pipe Plant ORD	Синтз	АО СИНТЗ ао	2024-09-11		
-Others	SUMZ	AO SUMZ ORD	СУМЗ-ао	ПАО СУМЗ ао	2008-12-12		
-Others	SVTZ	AO Seversky Pipe Plant ORD	СТЗ	АО СТЗ ао	2024-09-11		
-Others	TAMZ	TAGMET ao	ТАГМЕТ ао	ТАГМЕТ ОАО ао	2008-08-28		
-Others	TATB	TATBENTO ao	ТАТБЕНТОао	ТАТБЕНТО ОАО  ао	2010-09-07		
-Others	TGMK	TAMP	ТАМП ао	ТАМП ОАО ао	2006-02-11		
-Others	TGVK	Tulagorvodokanal ao	ТулаГВК ао	Тулагорводоканал ОАО ао	2011-12-16		
-Others	TPLF	TEPLOFON ao	iТеплофон	Теплофон ОАО  ао	2011-09-12		
-Others	TSKA	TSK-1 ao	ТСК-1 ао	ТСК-1 ОАО ао	2010-12-24		
-Others	USYN	UK Sinergia OAO	УКСинергия	УК Синергия ОАО ао	2011-03-04		
-Others	UUAZ	U-UAZ ao	У-УАЗ ао	У-УАЗ  ОАО ао	2008-08-28		
-Others	VERT	VERT	Вертикаль	ПО Вертикаль ОАО ао	2014-06-09		
-Others	VTLD	Vital ao	iВитал	Витал Девел.Корпорэйшн ОАО ао	2011-12-20		
-Others	WBDF	WBDF	ВБД ПП ао	ВБД ПП (ОАО) ао	2004-02-26		
-Others	YKST	Strategia	Стратег ао	УК Стратегия ОАО ао	2009-02-09		
-Others	ZIRE	ZIRERA OAO ao	ЗИРЕРА ао	ЗИРЕРА ОАО - ао	2011-05-20		
-Others	ZOYA	Zoloto Yakutii ao	ЗолЯкутии	Золото Якутии ОАО ао	2010-05-27		
-TQFD. ПАИ (USD)	RU000A1007R9	OPIF BCS Fundamental Choice	БКСФундВыб	ОПИФ БКС Фундаментальный Выбор			
-TQIF. ПАИ	RU0005418747	Fund-1 IP	  ФондПервый	ОПИФ Фонд Первый			
-TQIF. ПАИ	RU0006922010	Fund-Konservativniy IP	  ФондКонс	ОПИФ Фонд Консервативный			
-TQIF. ПАИ	RU0006922044	Fund-Professional IP	  ФондПроф	ОПИФ Фонд Профессиональный			
-TQIF. ПАИ	RU0006922051	Fond Otrasl Inv	  АкцииРоста	ОПИФ Акции роста			
-TQIF. ПАИ	RU000A0ERGA7	PIF Kommercheskaya Nedvizhimos	  ПИФСбер-КН	ПИФСбербанк Комм.недвижимость			
-TQIF. ПАИ	RU000A0HGNG6	OPIF Arsaguera - Stock Fund	  АрсагераФА	ОПИФ Арсагера - фонд акций			
-TQIF. ПАИ	RU000A0HGNH4	Arsagera fund mixed investment	  ПИФАрсСИ	Арсагера фонд смеш. инвестиц.			
-TQIF. ПАИ	RU000A0JNK00	Pervyi IPIF UK Kapit	  ПервыйИПИФ	Первый ИПИФ УК КапиталЪ			
-TQIF. ПАИ	RU000A0JNK34	Universalnyi IPIF UK Kapital	  УниверИПИФ	Универсальный ИПИФ УК КапиталЪ			
-TQIF. ПАИ	RU000A0JP4U1	PIF InvBalance UK Kapital	  ПИФКапИнвб	ПИФ УК КапиталЪ Ивестбаланс			
-TQIF. ПАИ	RU000A0JP773	PIF BKS-Indeks MMVB	  БКС РосАкц	ОПИФ БКС Российские Акции			
-TQIF. ПАИ	RU000A0JP799	PIF BKS RossObl	  БКС РосОбл	ОПИФ БКС Российские облигации			
-TQIF. ПАИ	RU000A0JPGC6	Straji Yrala -IF comb. YK Sodr	  СтражУрСод	ЗПИФ комб. Стражи Урала Содр			
-TQIF. ПАИ	RU000A0JPMD2	Arsagera-akcii 6.4 IP	  ПИФАрс6.4	Арсагера-акции 6.4 ПИФ			
-TQIF. ПАИ	RU000A0JPZL7	AK BARS-Investitsii	  АкБрс-Инв	Ак Барс ПИФ АК БАРС-Инвестиц			
-TQIF. ПАИ	RU000A0JPZP8	AK BARS-Perspektiva	  АкБрс-Прсп	УКАкБарсКап ПИФ АК БАРС-Персп.			
-TQIF. ПАИ	RU000A0JR282	Equity Fund	  ПИФАкции	ПИФ Акции УК ВИМИнвест			
-TQIF. ПАИ	RU000A0JR290	Index Moex Fund	  ПИФИнМосБр	ПИФ ИндексМосБиржи УКВИМИнвест			
-TQIF. ПАИ	RU000A0JR2A5	Balanced Fund	  ПИФСбалан	ПИФ Сбалансир Инв УК ВИМИнвест			
-TQIF. ПАИ	RU000A0JR2C1	Treasury Fund	  ПИФКазна	ПИФ Казначейский УК ВИМИнвест			
-TQIF. ПАИ	RU000A0JR7X6	PIF Effective	  ПИФЭффект	УК Русь Менедж. ПИФЭффективный			
-TQIF. ПАИ	RU000A0JR7Z1	PIF Domodedovskiy prom.	  ПИФДомПром	УК Русь Менедж. ПИФДом.пром.			
-TQIF. ПАИ	RU000A0JR811	PIF Odintsovskiy promishlenniy	  ПИФОдинцПр	УК Русь Менедж. ПИФОдинцПром			
-TQIF. ПАИ	RU000A0JRHC0	ATRIUM UK VELES TR	  ПИФ АТРИУМ	ПИФ АТРИУМ УК ВЕЛЕС ТР			
-TQIF. ПАИ	RU000A0JRUQ3	TKBIP Sbl	  ТКБИП Сбал	ОПИФ ТКБИП Сбалансированный			
-TQIF. ПАИ	RU000A0JS991	Kommercheskie Investicii	  ПИФКоммИнв	ПИФ Коммерческие Инвестиции			
-TQIF. ПАИ	RU000A0JT4S1	OPIF Cumulative reserve	  НакопРез	ОПИФ Накопительный резерв			
-TQIF. ПАИ	RU000A0JTVY1	PIF Nevskiy UK EMRIS	  ПИФНевский	ПИФ Невский УК ЭМРИС			
-TQIF. ПАИ	RU000A0JUR61	UK PERAMO IN PIF CONSERVATORia	  ПИФ КОНСЕР	УК ПЕРАМО ИН ПИФ КОНСЕРВАТОРия			
-TQIF. ПАИ	RU000A0JUTH8	ZPIF Variant UK TETIS Kapital	  ПИФВариант	ЗПИФ Вариант УК ТЕТИС Кэпитал			
-TQIF. ПАИ	RU000A0JUYB1	ZPIF Loftinvest	  ЗПИФЛофтин	ЗПИФ Лофтинвест			
-TQIF. ПАИ	RU000A0JVGP6	ZPIF Prom.In PI UK	  ЗПИФПромИн	ЗПИФ Пром.Ин УК ПИ			
-TQIF. ПАИ	RU000A0JVHY6	OPIF BCS Imperia	  БКСИмперия	ОПИФ БКС Империя			
-TQIF. ПАИ	RU000A0JVJ29	OPIF BCS Precious Metals	  БКСДрагМет	ОПИФ БКС Драгоценные Металлы			
-TQIF. ПАИ	RU000A0JWAW3	SFNArendBiznes	  СФНАрБизн	ПИФ СФН - Арендный бизнес			
-TQIF. ПАИ	RU000A0JWCE7	ZPIF Perlovsky	  Перловский	ЗПИФ Недвижимости Перловский			
-TQIF. ПАИ	RU000A0JXP78	ZPIF DOM.RF	  ЗПИФДОМ.РФ	ЗПИФ недвижимости ДОМ.РФ			
-TQIF. ПАИ	RU000A0JXWF0	Arsagera bonds KP 1.55	  АрсКР1.55	Арсагера фонд обл КР 1.55			
-TQIF. ПАИ	RU000A0ZYC64	SovrArendBiznes 2	  СоврАрБиз2	ЗПИФ СовременАрендный бизнес 2			
-TQIF. ПАИ	RU000A0ZZ5R2	PIF SovrArendBiznes3	  СоврАрБиз3	ПИФ Современ Арендный бизнес 3			
-TQIF. ПАИ	RU000A0ZZAU6	ZPIF ACCENT FUND I - LOGISTICS	  ЗПИФ АКЦ 1	ЗПИФ АКЦЕНТ ФОНД I - ЛОГИСТИКА			
-TQIF. ПАИ	RU000A0ZZCD8	IPIF Mirovye invest MC Aton	  ИПИФМирИнв	ИПИФ Мировые инвестиции УКАтон			
-TQIF. ПАИ	RU000A0ZZMD7	OPIF RSHB Fund Bonds	  РСХБ Облиг	ОПИФ РСХБ – Фонд Облигаций			
-TQIF. ПАИ	RU000A0ZZML0	OPIF RSHB Balanced Fund	  РСХБ Сбал	ОПИФ РСХБ Сбалансированный			
-TQIF. ПАИ	RU000A0ZZMN6	OPIF RSHB Fund Shares	  РСХБ Акции	ОПИФ РСХБ – Фонд Акций			
-TQIF. ПАИ	RU000A0ZZVH9	PIF Gazprombank Eurobonds	  ГПБУАЕОбИП	ПИФ Газпромбанк-Еврооблигации			
-TQIF. ПАИ	RU000A1000Y0	PIF  pre IPO Fund	  iпре-АйПиО	ПИФ ВИМ пре-АйПиО фонд			
-TQIF. ПАИ	RU000A100EQ2	OPIF BCS Russian Eurobonds	  БКС РосЕвр	ОПИФ БКС Российские Еврообл			
-TQIF. ПАИ	RU000A101HY7	PIF Alfa-Capital Arendn.potok	  ПИФАльфаАП	ПИФ Альфа-К Арендн. поток			
-TQIF. ПАИ	RU000A101NK4	ZPIF Primary placement fund	  ЗПИФ ФПР	ЗПИФ Фонд первичных размещений			
-TQIF. ПАИ	RU000A101UY0	OPIF MKB Money market	  ОПИФ MM	ОПИФ МКБ Денежный рынок			
-TQIF. ПАИ	RU000A101YY2	PIF Alfa-Capital Arendn.potok2	  ПИФАльфАП2	ЗПИФ Альфа-К Арендный поток-2			
-TQIF. ПАИ	RU000A1022Z1	ZPIF PARUS-OZN	  ПАРУС-ОЗН	ЗПИФ ПАРУС-ОЗН			
-TQIF. ПАИ	RU000A102AH5	ZPIF Sovremenniy 6	  ЗПИФСовр 6	ЗПИФ Современный 6			
-TQIF. ПАИ	RU000A102N77	ZPIF RI	  ЗПИФРД	ЗПИФ РД			
-TQIF. ПАИ	RU000A102P67	IPIF Raiffeisen World Bonds	  ИПИФРайфМО	ИПИФ Райффайзен Мир Облигации			
-TQIF. ПАИ	RU000A102PE0	Fund Subord USD	  ФондсубUSD	ИПИФ ВИМ Фонд Суборд Доллары			
-TQIF. ПАИ	RU000A102PF7	Fund Subord EURO	  ФондсубEUR	ИПИФ ВИМ Фонд Суборд Евро			
-TQIF. ПАИ	RU000A102PN1	PIF Alfa-Capital FastFood	  ПИФАльфаФФ	ЗПИФ Альфа-К ФастФуд			
-TQIF. ПАИ	RU000A102PQ4	Fund Subord RUB	  ФондСубРуб	ИПИФ ВИМ Фонд Суборд Рубли			
-TQIF. ПАИ	RU000A102Q33	OPIF BCS World Resources	  БКС Миррес	ОПИФ БКС Мировые ресурсы			
-TQIF. ПАИ	RU000A103B62	Rental income PRO	  РенДохПРО	Рентный доход ПРО			
-TQIF. ПАИ	RU000A103HD7	ZPIF RI 2	  ЗПИФРД2	ЗПИФ РД 2			
-TQIF. ПАИ	RU000A104172	ZPIF PARUS-SBL	  ПАРУС-СБЛ	ЗПИФ ПАРУС-СБЛ			
-TQIF. ПАИ	RU000A104FB3	MF Gazprombank - Hyperion	  Гиперион	ИПИФ Газпромбанк - Гиперион			
-TQIF. ПАИ	RU000A104KU3	ZPIF PARUS-Nordway	  ПАРУС-НОРД	ЗПИФ ПАРУС-Нордвей			
-TQIF. ПАИ	RU000A104M43	OPIF Alenka-Capital	  ПИФ Аленка	ОПИФ Аленка-Капитал			
-TQIF. ПАИ	RU000A104YX8	ZPIF Commercial Real Estate	  ЗПИФКомНед	ЗПИФ СФН Совр Ком недвиж			
-TQIF. ПАИ	RU000A105153	IPIF Astra Hedge Fund P5	  ХеджФондР5	ИПИФ Астра Хедж-фонд Р5			
-TQIF. ПАИ	RU000A105328	ZPIF PARUS-LOGISTICS	  ПАРУС-ЛОГ	ЗПИФ ПАРУС-ЛОГИСТИКА			
-TQIF. ПАИ	RU000A105GY0	ZPIF Gamma First Sports	  ЗПИФПервСп	ЗПИФ Гамма Первый спортивный			
-TQIF. ПАИ	RU000A105R70	IPIF Annapurna	  Аннапурна	ИПИФ Аннапурна			
-TQIF. ПАИ	RU000A105RJ8	OPIF RSHB Debt Market	  РСХБДолРын	ОПИФ РСХБ Долговой рынок			
-TQIF. ПАИ	RU000A105TU1	BCS Capital	  БКСКапитал	ОПИФ БКС Капитал			
-TQIF. ПАИ	RU000A1068X9	ZPIF PARUS-Dvincev	  ПАРУС-ДВН	ЗПИФ ПАРУС-Двинцев			
-TQIF. ПАИ	RU000A106G80	ZPIF Tinkoff Replacement bonds	  ТКЗамещОбл	ЗПИФ Тинькофф Замещающие облиг			
-TQIF. ПАИ	RU000A106MG3	IPIF Astra Hedge Fund D5	  ХеджФондД5	ИПИФ Астра Хедж-фонд Д5			
-TQIF. ПАИ	RU000A1075T2	MF Gazprombank - Ruby	  ЗПИФ Рубин	ЗПИФ Газпромбанк – Рубин			
-TQIF. ПАИ	RU000A107860	IPIF Astra Hedge Fund U5	  ХеджФондЮ5	ИПИФ Астра Хедж-фонд Ю5			
-TQIF. ПАИ	RU000A1079J5	IPIF Astra Hedge Fund D1	  ХеджФондД1	ИПИФ Астра Хедж-фонд Д1			
-TQIF. ПАИ	RU000A107J37	PIF Alfa Samolet Jilay Nedvij	  ПИФ СЖилН	ПИФ Альфа Самолет Жилая недвиж			
-TQIF. ПАИ	RU000A107RE5	PIF Alfa Skladskaya kollekciya	  ПИФ СкладК	ЗПИФ Альфа Складская коллекция			
-TQIF. ПАИ	RU000A108157	Rental PRO	  Рентал ПРО	ЗПИФ Рентал ПРО			
-TQIF. ПАИ	RU000A108751	ZPIF Alfa Industrial parks	  ПИФПромПар	ЗПИФ Альфа Промышленные парки			
-TQIF. ПАИ	RU000A108KP4	IPIF Astra Hedge Fund A+	  ХеджФондА+	ИПИФ Астра Хедж-фонд А+			
-TQIF. ПАИ	RU000A108RS3	ZPIF Zalogovye zajmy	  ПИФЗалЗайм	ЗПИФ Залоговые займы			
-TQIF. ПАИ	RU000A108TT7	BCS Equities with dividends	  БКСДивАкци	БКС Дивиденд акции с выплатой			
-TQIF. ПАИ	RU000A108VR7	ZPIF PARUS-MAX	  ПАРУС-МАКС	ЗПИФ ПАРУС-МАКС			
-TQIF. ПАИ	RU000A108ZB2	WIM Investments 2x OFZ	  2хОФЗ	ВИМ Инвестиции 2х ОФЗ			
-TQIF. ПАИ	RU000A1092L4	ZPIF AKTIVO 20	  ПИФАКТИВ20	ЗПИФ АКТИВО ДВАДЦАТЬ			
-TQIF. ПАИ	RU000A109G79	ZPIF GREENFLOW SCANDINAVIA	  ПИФГРИНФЛО	ЗПИФ ГРИНФЛОУ СКАНДИНАВИЯ			
-TQPI. Акции ПИР	BLNG	Belon ao	  Белон ао	Белон ОАО ао			
-TQPI. Акции ПИР	DSKY	Detsky mir	  ДетскийМир	ПАО Детский мир			
-TQPI. Акции ПИР	GAZA	Gaz ao	  ГАЗ ао	ГАЗ ПАО ао			
-TQPI. Акции ПИР	GAZAP	Gaz (pref)	  ГАЗ ап	ГАЗ ПАО ап			
-TQPI. Акции ПИР	GTRK	GTM	  ГТМ ао	ПАО ГТМ ао			
-TQPI. Акции ПИР	LIFE	Farmsintez ao	  Фармсинтез	Фармсинтез ПАО ао			
-TQPI. Акции ПИР	LPSB	LESK ao	  ЛЭСК ао	Липецкая энергосбыт.ком.ОАО ао			
-TQPI. Акции ПИР	PAZA	Pavlovo Bus ao	  ПавлАвт ао	Павловский автобус ПАО ао			
-TQPI. Акции ПИР	RBCM	GK RBK ao	  ГК РБК ао	ГК РБК ПАО ао			
-TQPI. Акции ПИР	RU000A0JNUM1	UKNavigator Kapital. vlozh.	  ЗПИФ КапВл	ПИФ Капитал.влож УК Навигатор			
-TQPI. Акции ПИР	RU000A0JVEZ0	ISU GK-3 Ai Kiu Dzhi UA	  ИСУ ГК-3	ИСУ ГК-3 Ай Кью Джи УА			
-TQPI. Акции ПИР	RU000A0ZZ422	Torgovye ryady ZPIF	  ТРЗПИФ	ЗПИФ Торговые ряды			
-TQPI. Акции ПИР	RU000A0ZZX84	ZPIF Solid Rental - 2	  СолидРент2	ЗПИФ Солид Рентный - 2			
-TQPI. Акции ПИР	RU000A101UK9	ZPIF STROYPROEKT AM OREOL	  ОРЕОЛСтрой	ЗПИФ СТРОЙПРОЕКТ УК ОРЕОЛ			
-TQPI. Акции ПИР	RU000A1027E5	ZPIF VDO Fund for Dev RusComp	  ЗПИФ ВДО	ЗПИФ Фонд ВДО разв. росс. комп			
-TQPI. Акции ПИР	RU000A1034U7	SFNArendBiznes 7	  СФНАрБиз7	ПИФ СФН Арендный бизнес 7			
-TQPI. Акции ПИР	UWGN	OVK ao	  ОВК ао	ПАО НПК ОВК ао			
+TQFD. PAI (USD)	RU000A1007R9	OPIF BCS Fundamental Choice	БКСФундВыб	ОПИФ БКС Фундаментальный Выбор			
+TQIF. PAI	RU0005418747	Fund-1 IP	  ФондПервый	ОПИФ Фонд Первый			
+TQIF. PAI	RU0006922010	Fund-Konservativniy IP	  ФондКонс	ОПИФ Фонд Консервативный			
+TQIF. PAI	RU0006922044	Fund-Professional IP	  ФондПроф	ОПИФ Фонд Профессиональный			
+TQIF. PAI	RU0006922051	Fond Otrasl Inv	  АкцииРоста	ОПИФ Акции роста			
+TQIF. PAI	RU000A0ERGA7	PIF Kommercheskaya Nedvizhimos	  ПИФСбер-КН	ПИФСбербанк Комм.недвижимость			
+TQIF. PAI	RU000A0HGNG6	OPIF Arsaguera - Stock Fund	  АрсагераФА	ОПИФ Арсагера - фонд акций			
+TQIF. PAI	RU000A0HGNH4	Arsagera fund mixed investment	  ПИФАрсСИ	Арсагера фонд смеш. инвестиц.			
+TQIF. PAI	RU000A0JNK00	Pervyi IPIF UK Kapit	  ПервыйИПИФ	Первый ИПИФ УК КапиталЪ			
+TQIF. PAI	RU000A0JNK34	Universalnyi IPIF UK Kapital	  УниверИПИФ	Универсальный ИПИФ УК КапиталЪ			
+TQIF. PAI	RU000A0JP4U1	PIF InvBalance UK Kapital	  ПИФКапИнвб	ПИФ УК КапиталЪ Ивестбаланс			
+TQIF. PAI	RU000A0JP773	PIF BKS-Indeks MMVB	  БКС РосАкц	ОПИФ БКС Российские Акции			
+TQIF. PAI	RU000A0JP799	PIF BKS RossObl	  БКС РосОбл	ОПИФ БКС Российские облигации			
+TQIF. PAI	RU000A0JPGC6	Straji Yrala -IF comb. YK Sodr	  СтражУрСод	ЗПИФ комб. Стражи Урала Содр			
+TQIF. PAI	RU000A0JPMD2	Arsagera-akcii 6.4 IP	  ПИФАрс6.4	Арсагера-акции 6.4 ПИФ			
+TQIF. PAI	RU000A0JPZL7	AK BARS-Investitsii	  АкБрс-Инв	Ак Барс ПИФ АК БАРС-Инвестиц			
+TQIF. PAI	RU000A0JPZP8	AK BARS-Perspektiva	  АкБрс-Прсп	УКАкБарсКап ПИФ АК БАРС-Персп.			
+TQIF. PAI	RU000A0JR282	Equity Fund	  ПИФАкции	ПИФ Акции УК ВИМИнвест			
+TQIF. PAI	RU000A0JR290	Index Moex Fund	  ПИФИнМосБр	ПИФ ИндексМосБиржи УКВИМИнвест			
+TQIF. PAI	RU000A0JR2A5	Balanced Fund	  ПИФСбалан	ПИФ Сбалансир Инв УК ВИМИнвест			
+TQIF. PAI	RU000A0JR2C1	Treasury Fund	  ПИФКазна	ПИФ Казначейский УК ВИМИнвест			
+TQIF. PAI	RU000A0JR7X6	PIF Effective	  ПИФЭффект	УК Русь Менедж. ПИФЭффективный			
+TQIF. PAI	RU000A0JR7Z1	PIF Domodedovskiy prom.	  ПИФДомПром	УК Русь Менедж. ПИФДом.пром.			
+TQIF. PAI	RU000A0JR811	PIF Odintsovskiy promishlenniy	  ПИФОдинцПр	УК Русь Менедж. ПИФОдинцПром			
+TQIF. PAI	RU000A0JRHC0	ATRIUM UK VELES TR	  ПИФ АТРИУМ	ПИФ АТРИУМ УК ВЕЛЕС ТР			
+TQIF. PAI	RU000A0JRUQ3	TKBIP Sbl	  ТКБИП Сбал	ОПИФ ТКБИП Сбалансированный			
+TQIF. PAI	RU000A0JS991	Kommercheskie Investicii	  ПИФКоммИнв	ПИФ Коммерческие Инвестиции			
+TQIF. PAI	RU000A0JT4S1	OPIF Cumulative reserve	  НакопРез	ОПИФ Накопительный резерв			
+TQIF. PAI	RU000A0JTVY1	PIF Nevskiy UK EMRIS	  ПИФНевский	ПИФ Невский УК ЭМРИС			
+TQIF. PAI	RU000A0JUR61	UK PERAMO IN PIF CONSERVATORia	  ПИФ КОНСЕР	УК ПЕРАМО ИН ПИФ КОНСЕРВАТОРия			
+TQIF. PAI	RU000A0JUTH8	ZPIF Variant UK TETIS Kapital	  ПИФВариант	ЗПИФ Вариант УК ТЕТИС Кэпитал			
+TQIF. PAI	RU000A0JUYB1	ZPIF Loftinvest	  ЗПИФЛофтин	ЗПИФ Лофтинвест			
+TQIF. PAI	RU000A0JVGP6	ZPIF Prom.In PI UK	  ЗПИФПромИн	ЗПИФ Пром.Ин УК ПИ			
+TQIF. PAI	RU000A0JVHY6	OPIF BCS Imperia	  БКСИмперия	ОПИФ БКС Империя			
+TQIF. PAI	RU000A0JVJ29	OPIF BCS Precious Metals	  БКСДрагМет	ОПИФ БКС Драгоценные Металлы			
+TQIF. PAI	RU000A0JWAW3	SFNArendBiznes	  СФНАрБизн	ПИФ СФН - Арендный бизнес			
+TQIF. PAI	RU000A0JWCE7	ZPIF Perlovsky	  Перловский	ЗПИФ Недвижимости Перловский			
+TQIF. PAI	RU000A0JXP78	ZPIF DOM.RF	  ЗПИФДОМ.РФ	ЗПИФ недвижимости ДОМ.РФ			
+TQIF. PAI	RU000A0JXWF0	Arsagera bonds KP 1.55	  АрсКР1.55	Арсагера фонд обл КР 1.55			
+TQIF. PAI	RU000A0ZYC64	SovrArendBiznes 2	  СоврАрБиз2	ЗПИФ СовременАрендный бизнес 2			
+TQIF. PAI	RU000A0ZZ5R2	PIF SovrArendBiznes3	  СоврАрБиз3	ПИФ Современ Арендный бизнес 3			
+TQIF. PAI	RU000A0ZZAU6	ZPIF ACCENT FUND I - LOGISTICS	  ЗПИФ АКЦ 1	ЗПИФ АКЦЕНТ ФОНД I - ЛОГИСТИКА			
+TQIF. PAI	RU000A0ZZCD8	IPIF Mirovye invest MC Aton	  ИПИФМирИнв	ИПИФ Мировые инвестиции УКАтон			
+TQIF. PAI	RU000A0ZZMD7	OPIF RSHB Fund Bonds	  РСХБ Облиг	ОПИФ РСХБ – Фонд Облигаций			
+TQIF. PAI	RU000A0ZZML0	OPIF RSHB Balanced Fund	  РСХБ Сбал	ОПИФ РСХБ Сбалансированный			
+TQIF. PAI	RU000A0ZZMN6	OPIF RSHB Fund Shares	  РСХБ Акции	ОПИФ РСХБ – Фонд Акций			
+TQIF. PAI	RU000A0ZZVH9	PIF Gazprombank Eurobonds	  ГПБУАЕОбИП	ПИФ Газпромбанк-Еврооблигации			
+TQIF. PAI	RU000A1000Y0	PIF  pre IPO Fund	  iпре-АйПиО	ПИФ ВИМ пре-АйПиО фонд			
+TQIF. PAI	RU000A100EQ2	OPIF BCS Russian Eurobonds	  БКС РосЕвр	ОПИФ БКС Российские Еврообл			
+TQIF. PAI	RU000A101HY7	PIF Alfa-Capital Arendn.potok	  ПИФАльфаАП	ПИФ Альфа-К Арендн. поток			
+TQIF. PAI	RU000A101NK4	ZPIF Primary placement fund	  ЗПИФ ФПР	ЗПИФ Фонд первичных размещений			
+TQIF. PAI	RU000A101UY0	OPIF MKB Money market	  ОПИФ MM	ОПИФ МКБ Денежный рынок			
+TQIF. PAI	RU000A101YY2	PIF Alfa-Capital Arendn.potok2	  ПИФАльфАП2	ЗПИФ Альфа-К Арендный поток-2			
+TQIF. PAI	RU000A1022Z1	ZPIF PARUS-OZN	  ПАРУС-ОЗН	ЗПИФ ПАРУС-ОЗН			
+TQIF. PAI	RU000A102AH5	ZPIF Sovremenniy 6	  ЗПИФСовр 6	ЗПИФ Современный 6			
+TQIF. PAI	RU000A102N77	ZPIF RI	  ЗПИФРД	ЗПИФ РД			
+TQIF. PAI	RU000A102P67	IPIF Raiffeisen World Bonds	  ИПИФРайфМО	ИПИФ Райффайзен Мир Облигации			
+TQIF. PAI	RU000A102PE0	Fund Subord USD	  ФондсубUSD	ИПИФ ВИМ Фонд Суборд Доллары			
+TQIF. PAI	RU000A102PF7	Fund Subord EURO	  ФондсубEUR	ИПИФ ВИМ Фонд Суборд Евро			
+TQIF. PAI	RU000A102PN1	PIF Alfa-Capital FastFood	  ПИФАльфаФФ	ЗПИФ Альфа-К ФастФуд			
+TQIF. PAI	RU000A102PQ4	Fund Subord RUB	  ФондСубРуб	ИПИФ ВИМ Фонд Суборд Рубли			
+TQIF. PAI	RU000A102Q33	OPIF BCS World Resources	  БКС Миррес	ОПИФ БКС Мировые ресурсы			
+TQIF. PAI	RU000A103B62	Rental income PRO	  РенДохПРО	Рентный доход ПРО			
+TQIF. PAI	RU000A103HD7	ZPIF RI 2	  ЗПИФРД2	ЗПИФ РД 2			
+TQIF. PAI	RU000A104172	ZPIF PARUS-SBL	  ПАРУС-СБЛ	ЗПИФ ПАРУС-СБЛ			
+TQIF. PAI	RU000A104FB3	MF Gazprombank - Hyperion	  Гиперион	ИПИФ Газпромбанк - Гиперион			
+TQIF. PAI	RU000A104KU3	ZPIF PARUS-Nordway	  ПАРУС-НОРД	ЗПИФ ПАРУС-Нордвей			
+TQIF. PAI	RU000A104M43	OPIF Alenka-Capital	  ПИФ Аленка	ОПИФ Аленка-Капитал			
+TQIF. PAI	RU000A104YX8	ZPIF Commercial Real Estate	  ЗПИФКомНед	ЗПИФ СФН Совр Ком недвиж			
+TQIF. PAI	RU000A105153	IPIF Astra Hedge Fund P5	  ХеджФондР5	ИПИФ Астра Хедж-фонд Р5			
+TQIF. PAI	RU000A105328	ZPIF PARUS-LOGISTICS	  ПАРУС-ЛОГ	ЗПИФ ПАРУС-ЛОГИСТИКА			
+TQIF. PAI	RU000A105GY0	ZPIF Gamma First Sports	  ЗПИФПервСп	ЗПИФ Гамма Первый спортивный			
+TQIF. PAI	RU000A105R70	IPIF Annapurna	  Аннапурна	ИПИФ Аннапурна			
+TQIF. PAI	RU000A105RJ8	OPIF RSHB Debt Market	  РСХБДолРын	ОПИФ РСХБ Долговой рынок			
+TQIF. PAI	RU000A105TU1	BCS Capital	  БКСКапитал	ОПИФ БКС Капитал			
+TQIF. PAI	RU000A1068X9	ZPIF PARUS-Dvincev	  ПАРУС-ДВН	ЗПИФ ПАРУС-Двинцев			
+TQIF. PAI	RU000A106G80	ZPIF Tinkoff Replacement bonds	  ТКЗамещОбл	ЗПИФ Тинькофф Замещающие облиг			
+TQIF. PAI	RU000A106MG3	IPIF Astra Hedge Fund D5	  ХеджФондД5	ИПИФ Астра Хедж-фонд Д5			
+TQIF. PAI	RU000A1075T2	MF Gazprombank - Ruby	  ЗПИФ Рубин	ЗПИФ Газпромбанк – Рубин			
+TQIF. PAI	RU000A107860	IPIF Astra Hedge Fund U5	  ХеджФондЮ5	ИПИФ Астра Хедж-фонд Ю5			
+TQIF. PAI	RU000A1079J5	IPIF Astra Hedge Fund D1	  ХеджФондД1	ИПИФ Астра Хедж-фонд Д1			
+TQIF. PAI	RU000A107J37	PIF Alfa Samolet Jilay Nedvij	  ПИФ СЖилН	ПИФ Альфа Самолет Жилая недвиж			
+TQIF. PAI	RU000A107RE5	PIF Alfa Skladskaya kollekciya	  ПИФ СкладК	ЗПИФ Альфа Складская коллекция			
+TQIF. PAI	RU000A108157	Rental PRO	  Рентал ПРО	ЗПИФ Рентал ПРО			
+TQIF. PAI	RU000A108751	ZPIF Alfa Industrial parks	  ПИФПромПар	ЗПИФ Альфа Промышленные парки			
+TQIF. PAI	RU000A108KP4	IPIF Astra Hedge Fund A+	  ХеджФондА+	ИПИФ Астра Хедж-фонд А+			
+TQIF. PAI	RU000A108RS3	ZPIF Zalogovye zajmy	  ПИФЗалЗайм	ЗПИФ Залоговые займы			
+TQIF. PAI	RU000A108TT7	BCS Equities with dividends	  БКСДивАкци	БКС Дивиденд акции с выплатой			
+TQIF. PAI	RU000A108VR7	ZPIF PARUS-MAX	  ПАРУС-МАКС	ЗПИФ ПАРУС-МАКС			
+TQIF. PAI	RU000A108ZB2	WIM Investments 2x OFZ	  2хОФЗ	ВИМ Инвестиции 2х ОФЗ			
+TQIF. PAI	RU000A1092L4	ZPIF AKTIVO 20	  ПИФАКТИВ20	ЗПИФ АКТИВО ДВАДЦАТЬ			
+TQIF. PAI	RU000A109G79	ZPIF GREENFLOW SCANDINAVIA	  ПИФГРИНФЛО	ЗПИФ ГРИНФЛОУ СКАНДИНАВИЯ			
+TQPI. Shares PIR	BLNG	Belon ao	  Белон ао	Белон ОАО ао			
+TQPI. Shares PIR	DSKY	Detsky mir	  ДетскийМир	ПАО Детский мир			
+TQPI. Shares PIR	GAZA	Gaz ao	  ГАЗ ао	ГАЗ ПАО ао			
+TQPI. Shares PIR	GAZAP	Gaz (pref)	  ГАЗ ап	ГАЗ ПАО ап			
+TQPI. Shares PIR	GTRK	GTM	  ГТМ ао	ПАО ГТМ ао			
+TQPI. Shares PIR	LIFE	Farmsintez ao	  Фармсинтез	Фармсинтез ПАО ао			
+TQPI. Shares PIR	LPSB	LESK ao	  ЛЭСК ао	Липецкая энергосбыт.ком.ОАО ао			
+TQPI. Shares PIR	PAZA	Pavlovo Bus ao	  ПавлАвт ао	Павловский автобус ПАО ао			
+TQPI. Shares PIR	RBCM	GK RBK ao	  ГК РБК ао	ГК РБК ПАО ао			
+TQPI. Shares PIR	RU000A0JNUM1	UKNavigator Kapital. vlozh.	  ЗПИФ КапВл	ПИФ Капитал.влож УК Навигатор			
+TQPI. Shares PIR	RU000A0JVEZ0	ISU GK-3 Ai Kiu Dzhi UA	  ИСУ ГК-3	ИСУ ГК-3 Ай Кью Джи УА			
+TQPI. Shares PIR	RU000A0ZZ422	Torgovye ryady ZPIF	  ТРЗПИФ	ЗПИФ Торговые ряды			
+TQPI. Shares PIR	RU000A0ZZX84	ZPIF Solid Rental - 2	  СолидРент2	ЗПИФ Солид Рентный - 2			
+TQPI. Shares PIR	RU000A101UK9	ZPIF STROYPROEKT AM OREOL	  ОРЕОЛСтрой	ЗПИФ СТРОЙПРОЕКТ УК ОРЕОЛ			
+TQPI. Shares PIR	RU000A1027E5	ZPIF VDO Fund for Dev RusComp	  ЗПИФ ВДО	ЗПИФ Фонд ВДО разв. росс. комп			
+TQPI. Shares PIR	RU000A1034U7	SFNArendBiznes 7	  СФНАрБиз7	ПИФ СФН Арендный бизнес 7			
+TQPI. Shares PIR	UWGN	OVK ao	  ОВК ао	ПАО НПК ОВК ао			
 TQTF. ETF	AKGD	AKGD ETF Gold	  AKGD ETF	БПИФ Альфа Капитал Золото			
 TQTF. ETF	AKIE	ETF Alfa Managed Income Shares	  ETF AKIE	БПИФ Альфа Упр Акции с доходом			
 TQTF. ETF	AKMB	ETF AKMB Alfa Managed Bonds	  ETF AKMB	БПИФ Альфа Управляем облигации			
@@ -759,8 +758,9 @@ TQTF. ETF	TPAY	TPAY ETF T-Capital Passive Inc	  TPAY ETF	Т-Капитал Па�
 TQTF. ETF	TRUR	TRUR ETF ALL-WEATHER RUB	  TRUR ETF	БПИФ Т-Кап ВЕЧНЫЙ ПОРТФ РУБ			
 TQTF. ETF	TUSD	TCAPITAL ETF ALL-WEATHER D	  TUSD ETF	БПИФ ТКАПИТАЛ ВЕЧНЫЙ ПОРТФ Д			
 TQTF. ETF	YUAN	YUAN Bonds ETF	  YUAN ETF	БПИФ Облигации в юанях			
-TQTY. ПАИ (CNY)	AMNY	AMNY ETF Cumulative in yuan	  AMNY ETF	АТОН - Накопительный в юанях			
-TQTY. ПАИ (CNY)	CNYM	CNYM ETF Liquidity. CNY	  CNYM ETF	Ликвидность. Юань			
-TQTY. ПАИ (CNY)	SBBY	SBBY ETF Instrum Fund in CNY	  SBBY ETF	БПИФ Фонд Инструменты в юанях			
-TQTY. ПАИ (CNY)	SBCN	SBCN ETF First Savings in cny	  SBCN ETF	БПИФ Первая Сберегат. в юанях			
-TQTY. ПАИ (CNY)	YUAN	YUAN Bonds ETF	  YUAN ETF	БПИФ Облигации в юанях			
+TQTY. PAI (CNY)	AMNY	AMNY ETF Cumulative in yuan	  AMNY ETF	АТОН - Накопительный в юанях			
+TQTY. PAI (CNY)	CNYM	CNYM ETF Liquidity. CNY	  CNYM ETF	Ликвидность. Юань			
+TQTY. PAI (CNY)	SBBY	SBBY ETF Instrum Fund in CNY	  SBBY ETF	БПИФ Фонд Инструменты в юанях			
+TQTY. PAI (CNY)	SBCN	SBCN ETF First Savings in cny	  SBCN ETF	БПИФ Первая Сберегат. в юанях			
+TQTY. PAI (CNY)	YUAN	YUAN Bonds ETF	  YUAN ETF	БПИФ Облигации в юанях			
+Others	DNKOP	Danilch (pref)	Данильч ап	ОАО героя ВОВ Данильченко ап	2010-10-08	2014-10-13			
