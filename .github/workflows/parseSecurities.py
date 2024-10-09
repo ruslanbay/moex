@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 def read_issues_by_sector(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         reader = csv.reader(file, delimiter='\t')
-        return [row[0] for row in reader]
+        return [row[1] for row in reader]
 
 # Function to get a list of new values from JSON files
 def get_new_values(start_date, end_date, existing_values):
