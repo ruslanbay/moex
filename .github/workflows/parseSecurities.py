@@ -15,7 +15,7 @@ def get_new_values(start_date, end_date, existing_values):
     current_date = start_date
 
     while current_date <= end_date:
-        file_name = f'/data/iss/history/engines/stock/totals/boards/MRKT/securities-{current_date.strftime("%Y-%m-%d")}.json'
+        file_name = f'data/iss/history/engines/stock/totals/boards/MRKT/securities-{current_date.strftime("%Y-%m-%d")}.json'
         
         if os.path.exists(file_name):
             with open(file_name, 'r', encoding='utf-8') as json_file:
@@ -40,7 +40,7 @@ def append_to_issues_by_sector(file_path, new_values):
 # Main logic of the script
 def main():
     # Path to the TSV file
-    tsv_file_path = '/data/issues-by-sector-test.tsv'
+    tsv_file_path = 'data/issues-by-sector-test.tsv'
     
     # Read existing values
     existing_values = read_issues_by_sector(tsv_file_path)
