@@ -280,6 +280,7 @@ date,marketCap,traceName
 2024-10-07,1736123787024.48,Chemicals and Pertochemicals
 2024-10-07,1736123787024.48,Chemicals and Pertochemicals
 2024-10-07,1736123787024.48,Chemicals and Pertochemicals
+2024-10-08,1738283698797.04,Chemicals and Pertochemicals
 2024-01-03,442320798278.4,Conglomerate
 2024-01-03,442320798278.4,Conglomerate
 2024-01-03,442320798278.4,Conglomerate
@@ -561,6 +562,7 @@ date,marketCap,traceName
 2024-10-07,358880827446.4,Conglomerate
 2024-10-07,358880827446.4,Conglomerate
 2024-10-07,358880827446.4,Conglomerate
+2024-10-08,358417558345.6,Conglomerate
 2024-01-03,838640695506.7001,Construction (Development)
 2024-01-03,838640695506.7001,Construction (Development)
 2024-01-03,838640695506.7001,Construction (Development)
@@ -842,6 +844,7 @@ date,marketCap,traceName
 2024-10-07,676684765360.2001,Construction (Development)
 2024-10-07,676684765360.2001,Construction (Development)
 2024-10-07,676684765360.2001,Construction (Development)
+2024-10-08,677811161050.14,Construction (Development)
 2024-01-03,1342983606457.3599,Consumer
 2024-01-03,1342983606457.3599,Consumer
 2024-01-03,1342983606457.3599,Consumer
@@ -1123,6 +1126,7 @@ date,marketCap,traceName
 2024-10-07,1123710054433.52,Consumer
 2024-10-07,1123710054433.52,Consumer
 2024-10-07,1123710054433.52,Consumer
+2024-10-08,1108200476022.42,Consumer
 2024-01-03,2306154345091.8994,"Electricity, Utilities"
 2024-01-03,2306154345091.8994,"Electricity, Utilities"
 2024-01-03,2306154345091.8994,"Electricity, Utilities"
@@ -1404,6 +1408,7 @@ date,marketCap,traceName
 2024-10-07,1917739439796.7397,"Electricity, Utilities"
 2024-10-07,1917739439796.7397,"Electricity, Utilities"
 2024-10-07,1917739439796.7397,"Electricity, Utilities"
+2024-10-08,1920939325144.3293,"Electricity, Utilities"
 2024-01-03,27615550398442.883,"Energy (Oil, Gas, Coal)"
 2024-01-03,27615550398442.883,"Energy (Oil, Gas, Coal)"
 2024-01-03,27615550398442.883,"Energy (Oil, Gas, Coal)"
@@ -1685,6 +1690,7 @@ date,marketCap,traceName
 2024-10-07,23456593095494.23,"Energy (Oil, Gas, Coal)"
 2024-10-07,23456593095494.23,"Energy (Oil, Gas, Coal)"
 2024-10-07,23456593095494.23,"Energy (Oil, Gas, Coal)"
+2024-10-08,23467183557929.31,"Energy (Oil, Gas, Coal)"
 2024-01-03,9457090345977.95,Financials
 2024-01-03,9457090345977.95,Financials
 2024-01-03,9457090345977.95,Financials
@@ -1966,6 +1972,7 @@ date,marketCap,traceName
 2024-10-07,8805167987593.75,Financials
 2024-10-07,8805167987593.75,Financials
 2024-10-07,8805167987593.75,Financials
+2024-10-08,8795973497945.67,Financials
 2024-01-03,198382127854.61,Health Care
 2024-01-03,198382127854.61,Health Care
 2024-01-03,198382127854.61,Health Care
@@ -2247,6 +2254,7 @@ date,marketCap,traceName
 2024-10-07,308356438192.4,Health Care
 2024-10-07,308356438192.4,Health Care
 2024-10-07,308356438192.4,Health Care
+2024-10-08,302998392245.94,Health Care
 2024-01-03,1529413868506.62,Industrials
 2024-01-03,1529413868506.62,Industrials
 2024-01-03,1529413868506.62,Industrials
@@ -2528,6 +2536,7 @@ date,marketCap,traceName
 2024-10-07,1939476334014.26,Industrials
 2024-10-07,1939476334014.26,Industrials
 2024-10-07,1939476334014.26,Industrials
+2024-10-08,1984505699865.94,Industrials
 2024-01-03,1251861107798.0,Information Technologies
 2024-01-03,1251861107798.0,Information Technologies
 2024-01-03,1251861107798.0,Information Technologies
@@ -2809,6 +2818,7 @@ date,marketCap,traceName
 2024-10-07,2199029987034.5,Information Technologies
 2024-10-07,2199029987034.5,Information Technologies
 2024-10-07,2199029987034.5,Information Technologies
+2024-10-08,2210021705815.5,Information Technologies
 2024-01-03,9523133610218.209,Metals and Mining
 2024-01-03,9523133610218.209,Metals and Mining
 2024-01-03,9523133610218.209,Metals and Mining
@@ -3090,6 +3100,7 @@ date,marketCap,traceName
 2024-10-07,7800854795541.5205,Metals and Mining
 2024-10-07,7800854795541.5205,Metals and Mining
 2024-10-07,7800854795541.5205,Metals and Mining
+2024-10-08,7771700056986.749,Metals and Mining
 2024-01-03,0.0,Others
 2024-01-03,0.0,Others
 2024-01-03,0.0,Others
@@ -3371,6 +3382,7 @@ date,marketCap,traceName
 2024-10-07,70102375,Others
 2024-10-07,70102375,Others
 2024-10-07,70102375,Others
+2024-10-08,68737550,Others
 2024-01-03,979276573460.8201,Telecommunication Services
 2024-01-03,979276573460.8201,Telecommunication Services
 2024-01-03,979276573460.8201,Telecommunication Services
@@ -3652,6 +3664,7 @@ date,marketCap,traceName
 2024-10-07,837565698179.14,Telecommunication Services
 2024-10-07,837565698179.14,Telecommunication Services
 2024-10-07,837565698179.14,Telecommunication Services
+2024-10-08,846164143848.3699,Telecommunication Services
 2024-01-03,1159766326615.95,Transportation
 2024-01-03,1159766326615.95,Transportation
 2024-01-03,1159766326615.95,Transportation
@@ -3933,3 +3946,4 @@ date,marketCap,traceName
 2024-10-07,971780619731.36,Transportation
 2024-10-07,971780619731.36,Transportation
 2024-10-07,971780619731.36,Transportation
+2024-10-08,970881833384.7,Transportation
