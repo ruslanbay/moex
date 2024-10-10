@@ -52,7 +52,7 @@ jobs:
       uses: actions/checkout@v4
       
     - name: Cache files
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: data/iss/history/engines/stock/totals/boards/MRKT
         key: ruslanbay-moex-cache-${{ hashFiles('data/iss/history/engines/stock/totals/boards/MRKT/securities-2011*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2012*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2013*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2014*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2015*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2016*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2017*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2018*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2019*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2020*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2021*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2022*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2023*') }}
