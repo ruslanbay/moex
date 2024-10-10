@@ -2,12 +2,27 @@ name: 'Update /data/issues-by-sector.tsv'
 
 on:
   workflow_dispatch:
-    # inputs:
-    #   startDate:
-    #     description: 'Start date'
-    #     required: true
-    #     type: string
-    #     default: '2024-08-19'
+    inputs:
+      inputFile:
+        description: 'Input file'
+        required: true
+        type: string
+        default: 'data/issues-by-sector.tsv'
+      skipRowsRangeStart:
+        description: 'skipRowsRangeStart'
+        required: true
+        type: number
+        default: '1'
+      skipRowsRangeEnd:
+        description: 'skipRowsRangeEnd'
+        required: true
+        type: number
+        default: '775'
+      outputFile:
+        description: 'Output file'
+        required: true
+        type: string
+        default: 'data/issues-by-sector-test.tsv'
 
 permissions:
   contents: write
@@ -31,7 +46,7 @@ jobs:
     - name: Update /data/issues-by-sector.tsv
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
-        python .github/workflows/updateTicketList.py
+        python .github/workflows/updateTicketList.py --inputFile ${{ inputs.inputFile }} --skipRowsRangeStart ${{ inputs.skipRowsRangeStart }} --skipRowsRangeEnd ${{ inputs.skipRowsRangeEnd }} --outputFile ${{ inputs.outputFile }}
     - name: Commit and push build artifacts
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
