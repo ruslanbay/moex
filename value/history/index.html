@@ -78,26 +78,20 @@
 <body>
   <header>
     <select id="periodSelector">
-      <option value="2012">2012</option>
-      <option value="2013">2013</option>
-      <option value="2014">2014</option>
-      <option value="2015">2015</option>
-      <option value="2016">2016</option>
-      <option value="2017">2017</option>
-      <option value="2018">2018</option>
-      <option value="2019">2019</option>
-      <option value="2020">2020</option>
-      <option value="2021">2021</option>
-      <option value="2022">2022</option>
-      <option value="2023">2023</option>
-      <option value="2024">2024</option>
       <option value="total" selected="selected">total</option>
-    </select>
-    <select id="currencySelector">
-      <option value="USD" selected="selected">USD</option>
-      <option value="EUR">EUR</option>
-      <option value="CNY">CNY</option>
-      <option value="RUB">RUB</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+      <option value="2019">2019</option>
+      <option value="2018">2018</option>
+      <option value="2017">2017</option>
+      <option value="2016">2016</option>
+      <option value="2015">2015</option>
+      <option value="2014">2014</option>
+      <option value="2013">2013</option>
+      <option value="2012">2012</option>
     </select>
     &nbsp;&nbsp;
     <a href="https://github.com/ruslanbay" title="GitHub">
@@ -121,7 +115,7 @@
   <div id='chart'></div>
   <script type="text/javascript">
 
-    async function prepChartData(period, currency) {
+    async function prepChartData(period) {
       try {
         const chartData = {};
         const startDate = '2011-12-19';
@@ -236,9 +230,9 @@
 
     function refreshChart() {
       var period = document.getElementById('periodSelector').value;
-      var currency = document.getElementById('currencySelector').value;
+      // var currency = document.getElementById('currencySelector').value;
 
-      prepChartData(period, currency)
+      prepChartData(period)
         .then(function(chartData) {
           var tickvals, tickformat;
           if (period === "total") {
@@ -311,24 +305,24 @@
               // titlefont: { color: 'blue' },
               // tickfont: { color: 'blue' },
             },
-            yaxis2: {
-              title: 'Currency Rate',
-              overlaying: 'y',
-              visible: false,
-              fixedrange: true,
-              side: 'left',
-              // titlefont: { color: 'red' },
-              // tickfont: { color: 'red' },
-            },
-            yaxis3: {
-              title: 'Oil prices',
-              overlaying: 'y',
-              visible: false,
-              fixedrange: true,
-              side: 'left',
-              // titlefont: { color: 'red' },
-              // tickfont: { color: 'red' },
-            },
+            // yaxis2: {
+            //   title: 'Currency Rate',
+            //   overlaying: 'y',
+            //   visible: false,
+            //   fixedrange: true,
+            //   side: 'left',
+            //   // titlefont: { color: 'red' },
+            //   // tickfont: { color: 'red' },
+            // },
+            // yaxis3: {
+            //   title: 'Oil prices',
+            //   overlaying: 'y',
+            //   visible: false,
+            //   fixedrange: true,
+            //   side: 'left',
+            //   // titlefont: { color: 'red' },
+            //   // tickfont: { color: 'red' },
+            // },
             xaxis: {
               type: "date",
               fixedrange: true,
@@ -399,9 +393,6 @@
 
     const inputPeriodSelector = document.getElementById("periodSelector");
     inputPeriodSelector.addEventListener("change", refreshChart);
-
-    const inputCurrencySelector = document.getElementById("currencySelector");
-    inputCurrencySelector.addEventListener("change", refreshChart);
 
     refreshChart();
   </script>
