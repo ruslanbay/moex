@@ -32,7 +32,7 @@ on:
         default: 'sector'
         type: choice
         options:
-          - total
+          - sum
           - ticket
           - sector
       filename:
@@ -89,7 +89,7 @@ jobs:
       run: |
         FILENAME="${{ inputs.filename }}"
         [ -z "$FILENAME" ] && FILENAME="${{ inputs.startDate }}_${{ inputs.endDate }}_${{ inputs.stepDays }}_${{ inputs.mode }}.csv"
-        python .github/workflows/processLocalData.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }} --filename "${FILENAME}"
+        python .github/workflows/processLocalData.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }} --filename "${FILENAME}.csv"
     
     # Commit and push all changed files
     # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html
