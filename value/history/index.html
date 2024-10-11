@@ -138,65 +138,65 @@
         });
 
 
-        response = await fetch(`/moex/history/${currency}FIXME.csv`);
-        response = await response.text();
-        data = response.split('\n')
-          .map(row => row.split(','));
-        const currencyRates = {};
-        data.forEach(row => {
-          const [Date, , , , Close] = row;
-          if (Date >= startDate) {
-            currencyRates[Date] = Number(Close);
-          }
-        });
+        // response = await fetch(`/moex/history/${currency}FIXME.csv`);
+        // response = await response.text();
+        // data = response.split('\n')
+        //   .map(row => row.split(','));
+        // const currencyRates = {};
+        // data.forEach(row => {
+        //   const [Date, , , , Close] = row;
+        //   if (Date >= startDate) {
+        //     currencyRates[Date] = Number(Close);
+        //   }
+        // });
 
-        const oneOverY = Object.values(currencyRates);
+        // const oneOverY = Object.values(currencyRates);
 
-        if (!chartData[currency] && period == 'total') {
-          chartData[currency] = {
-            name: currency,
-            customdata: oneOverY,
-            type: "line",
-            mode: "lines",
-            yaxis: "y2",
-            hoverinfo: "all",
-            hovertemplate: "%{x|%x}<br>%{customdata:,.2f}<br>RUB per %{fullData.name}<extra></extra>",
-            x: Object.keys(currencyRates),
-            y: Object.values(currencyRates).map(y => y > 0 ? 1 / y : null)
-          };
-        }
+        // if (!chartData[currency] && period == 'total') {
+        //   chartData[currency] = {
+        //     name: currency,
+        //     customdata: oneOverY,
+        //     type: "line",
+        //     mode: "lines",
+        //     yaxis: "y2",
+        //     hoverinfo: "all",
+        //     hovertemplate: "%{x|%x}<br>%{customdata:,.2f}<br>RUB per %{fullData.name}<extra></extra>",
+        //     x: Object.keys(currencyRates),
+        //     y: Object.values(currencyRates).map(y => y > 0 ? 1 / y : null)
+        //   };
+        // }
 
-        response = await fetch(`https://raw.githubusercontent.com/datasets/oil-prices/refs/heads/main/data/brent-daily.csv`);
-        response = await response.text();
-        data = response.split('\n')
-          .map(row => row.split(','));
-        const brentRates = {};
-        data.forEach(row => {
-          const [Date, Close] = row;
-          if (Date >= startDate) {
-            brentRates[Date] = Number(Close);
-          }
-        });
+        // response = await fetch(`https://raw.githubusercontent.com/datasets/oil-prices/refs/heads/main/data/brent-daily.csv`);
+        // response = await response.text();
+        // data = response.split('\n')
+        //   .map(row => row.split(','));
+        // const brentRates = {};
+        // data.forEach(row => {
+        //   const [Date, Close] = row;
+        //   if (Date >= startDate) {
+        //     brentRates[Date] = Number(Close);
+        //   }
+        // });
 
-        if (!chartData['brent'] && period == 'total') {
-          chartData['brent'] = {
-            name: 'Brent',
-            type: "line",
-            mode: "lines",
-            yaxis: "y3",
-            hoverinfo: "all",
-            hovertemplate: "%{x|%x}<br>%{y:,.2f}<br>USD per %{fullData.name}<extra></extra>",
-            x: Object.keys(brentRates),
-            y: Object.values(brentRates)
-          };
-        }
+        // if (!chartData['brent'] && period == 'total') {
+        //   chartData['brent'] = {
+        //     name: 'Brent',
+        //     type: "line",
+        //     mode: "lines",
+        //     yaxis: "y3",
+        //     hoverinfo: "all",
+        //     hovertemplate: "%{x|%x}<br>%{y:,.2f}<br>USD per %{fullData.name}<extra></extra>",
+        //     x: Object.keys(brentRates),
+        //     y: Object.values(brentRates)
+        //   };
+        // }
 
-        const rows = await d3.csv(`/moex/history/${period}.csv`);
+        const rows = await d3.csv(`/moex/value/history/${period}.csv`);
 
         rows.forEach(row => {
           const traceName = row.traceName;
           const date = row.date;
-          var marketCap = parseFloat(row.marketCap);
+          var marketValue = parseFloat(row.marketValue);
 
           if (!chartData[traceName]) {
             chartData[traceName] = {
@@ -214,15 +214,15 @@
             };
           }
 
-          if (currency !== 'RUB') {
-            if (currencyRates[date] !== undefined) {
-              rate = currencyRates[date];
-            }
-            marketCap = marketCap / rate;
-          }
+          // if (currency !== 'RUB') {
+          //   if (currencyRates[date] !== undefined) {
+          //     rate = currencyRates[date];
+          //   }
+          //   marketValue = marketValue / rate;
+          // }
 
           chartData[traceName].x.push(date);
-          chartData[traceName].y.push(marketCap);
+          chartData[traceName].y.push(marketValue);
         });
       
         const jsonChartData = Object.values(chartData);
