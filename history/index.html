@@ -128,7 +128,7 @@
         var response = await fetch('/moex/data/issues-by-sector.tsv');
         response = await response.text();
         var data = response.split('\n')
-          .slice(1, 16)
+          .slice(1, 37)
           .map(row => row.split('\t'));
         const traceColors = {};
         data.forEach(row => {
