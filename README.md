@@ -4,27 +4,39 @@ Currently, I do not have any shares of Russian companies in my portfolio, but I 
 
 At first glance, over the past 23 years, the total market capitalization of Russian companies listed on the Moscow Exchange has nearly doubled: from 24 trillion to 54 trillion rubles.
 
-![1727390062182](https://github.com/user-attachments/assets/9feb5ea0-852b-47e4-bb02-89a0c36a1e49)<br>
-![1727390165412](https://github.com/user-attachments/assets/0b909c8d-fe7c-4834-b71e-33180bd34d49)<br>
-![1727390187907](https://github.com/user-attachments/assets/64f84e08-5797-4627-9703-d9e06bbe0e61)<br>
+![](article-assets/history-total-rub.jpeg)<br>
+![](article-assets/treemap-cap-2011-12-19.jpeg)<br>
+![](article-assets/treemap-cap-2024-10-10.jpeg)
 
 But in December 2011, 401 shares of Russian companies were traded on the exchange, and the US dollar cost 32 rubles. Now the number of shares has dropped to 329, and the national currency exchange rate has plummeted three times to 92 rubles per US dollar.
 
-![1727390452717](https://github.com/user-attachments/assets/5eeee2d5-bad9-4b3d-b727-38a06b56d4ed)
-![1727390477349](https://github.com/user-attachments/assets/e64d0ea4-86e0-4f70-9655-26e57912ea20)
+![](article-assets/listing-total.jpeg)<br>
+![](article-assets/history-rub-vs-usd.jpeg)
 
 Taking these two facts into account, the total market capitalization has fallen from 753 billion to 579 billion USD.
 
-![1727390640631](https://github.com/user-attachments/assets/a90f19bd-d47f-45fe-9bd3-0eec62522b10)
+![](article-assets/history-total-usd.jpeg)
 
 The number of shares on the Moscow Exchange peaked in 2014 and has been declining since then.
 
-![1727390793770](https://github.com/user-attachments/assets/c4a694c4-7167-4257-8a9e-1f9cefa24cc8)
+![](article-assets/listing-new.jpeg)
+
+The Russian economy relies heavily on oil prices.
+
+![](article-assets/history-cap-usd-vs-brent.jpeg)
+
+The exchange rate of the ruble is largely influenced by the movement of oil prices. Since 2017, the Central Bank of Russia has implemented a so-called "budget rule." According to this rule, the budget is formed based on an assumed price of Urals oil at $40. During periods when oil prices exceed this threshold, additional revenues are directed to a stabilization fund. This measure has effectively reduced the impact of oil prices on the ruble.
+
+![](article-assets/history-cap-usd-vs-brent.jpeg)
+
+This measure also led to an increase in the market capitalization of oil-exporting companies.
+
+![](article-assets/rub-vs-oil-export.jpeg)
 
 The capitalization of most sectors is declining or stagnating. There are two exceptions: the industrial sector and information technology. Industrial sector capitalization tripled over the past three years, peaked in January 2024 and has been declining ever since. The information technology sector is highly volatile.
 
-![1727390999049](https://github.com/user-attachments/assets/5042161f-fe93-4c0e-87b7-be3a90d6fbdb)
+![](article-assets/history-cap-usd-it-industrial.jpeg)
 
 The largest sector includes oil, gas, and coal mining companies. Since 2012, its share has decreased from 52% to 44% of the total market capitalization.
 
-![1727391252309](https://github.com/user-attachments/assets/1b39be1a-91df-452b-9053-e1cfb46c0a42)
+![](article-assets/history-cap-usd-oil.jpeg)
