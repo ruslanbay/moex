@@ -80,7 +80,11 @@ for index, row in df.iterrows():
   if ticker in ['labels', 'Moscow Exchange', 'Chemicals and Pertochemicals', 'Conglomerate',
                 'Construction (Development)', 'Consumer', 'Electricity, Utilities', 'Energy (Oil, Gas, Coal)',
                 'Financials', 'Health Care', 'Industrials', 'Information Technologies',
-                'Metals and Mining', 'Telecommunication Services', 'Transportation', 'TQFD. PAI (USD)', 'TQIF. PAI', 'TQPI. Shares PIR', 'TQTF. ETF', 'Others']:
+                'Metals and Mining', 'Telecommunication Services', 'Transportation',
+                'TQFD. PAI (USD)', 'TQIF. PAI', 'TQPI. Shares PIR', 'TQTF. ETF', 'Others',
+                'cb_bond', 'corporate_bond', 'etf_ppif', 'euro_bond', 'exchange_bond', 'exchange_ppif',
+                'Foreign Companies', 'ifi_bond', 'interval_ppif', 'municipal_bond', 'ofz_bond',
+                'private_ppif', 'public_ppif', 'state_bond', 'stock_mortgage', 'subfederal_bond']:
     continue
   companyInfo = getCompanyInfo(ticker)
   df.at[index, 'parents'] = companyInfo['TYPE']
