@@ -99,7 +99,7 @@
     async function loadData() {
       const totalSecurities = new Map();
       const today = new Date();
-      const startDate = new Date('2000-01-01');
+      const startDate = new Date('1994-01-01');
 
       for (let date = startDate; date <= today; date.setMonth(date.getMonth() + 1)) {
         const dateString = date.toISOString().slice(0, 7); // Format to 'YYYY-MM'
@@ -111,10 +111,16 @@
 
       const response = await fetch('/moex/data/issues-by-sector.tsv');
       const data = await response.text();
-      const rows = data.split('\n').slice(16);
+      const rows = data.split('\n').slice(37);
+      const excludeList = ["TQFD. PAI (USD)", "TQIF. PAI", "TQPI. Shares PIR", "TQTF. ETF", "TQTY. PAI (CNY)", "cb_bond", "corporate_bond", "etf_ppif", "euro_bond", "exchange_bond", "exchange_ppif", "Foreign Companies", "ifi_bond", "interval_ppif", "municipal_bond", "ofz_bond", "private_ppif", "public_ppif", "state_bond", "stock_mortgage", "subfederal_bond"];
 
       rows.forEach(row => {
         const columns = row.split('\t');
+        const parent = String(columns[0]);
+        if (excludeList.includes(parent)) {
+          return;
+        }
+        
         const historyFrom = String(columns[5]).slice(0, 7);
         const historyTill = String(columns[6]).slice(0, 7);
 
@@ -187,7 +193,7 @@
         yaxis: 'y',
       };
 
-      function getYearsArray(startYear = 2000) {
+      function getYearsArray(startYear = 1994) {
         const currentYear = new Date().getFullYear();
         return Array.from({ length: currentYear - startYear + 1 }, (_, i) => startYear + i);
       }
@@ -273,7 +279,7 @@
           showgrid: false,
         },
         yaxis2: {
-          title: '# of new/delisted securities',
+          title: '# of new/delisted',
           range: [-15, 70],
           domain: [0.0, 1.0],
           showgrid: false,
