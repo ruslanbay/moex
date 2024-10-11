@@ -1,4 +1,4 @@
-# How the Russian stock market has changed over the past 23 years
+# How the Russian stock market has changed over the past 20+ years
 
 Currently, I do not have any shares of Russian companies in my portfolio, but I continue to follow the news and its impact on the market out of habit. Previously, I published a visualization for the Moscow Exchange in the form of a [treemap](https://ruslanbay.github.io/moex). Recently, I added a [histogram](https://ruslanbay.github.io/moex/history/) to display the changes in the ruble exchange rate and market capitalization over time. I also included a [bar chart](https://ruslanbay.github.io/moex/listings/) that shows the total number of Russian company shares listed on the Moscow Exchange. Below is a brief analysis.
 
