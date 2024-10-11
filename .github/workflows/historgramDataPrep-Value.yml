@@ -98,6 +98,6 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add history/*.csv
-        git commit -a -m "Process local data for the history chart"
+        git add value/history/*.csv
+        git commit -a -m "Value Histogram: Prepare chart data"
         git push
