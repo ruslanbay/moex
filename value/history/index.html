@@ -93,6 +93,12 @@
       <option value="2013">2013</option>
       <option value="2012">2012</option>
     </select>
+    <select id="currencySelector">
+      <option value="USD" selected="selected">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="CNY">CNY</option>
+      <option value="RUB">RUB</option>
+    </select>
     &nbsp;&nbsp;
     <a href="https://github.com/ruslanbay" title="GitHub">
       <img src="/moex/images/icons/github.svg" height="30" />&nbsp;&nbsp;
@@ -115,7 +121,7 @@
   <div id='chart'></div>
   <script type="text/javascript">
 
-    async function prepChartData(period) {
+    async function prepChartData(period, currency) {
       try {
         const chartData = {};
         const startDate = '2011-12-19';
@@ -132,17 +138,17 @@
         });
 
 
-        // response = await fetch(`/moex/history/${currency}FIXME.csv`);
-        // response = await response.text();
-        // data = response.split('\n')
-        //   .map(row => row.split(','));
-        // const currencyRates = {};
-        // data.forEach(row => {
-        //   const [Date, , , , Close] = row;
-        //   if (Date >= startDate) {
-        //     currencyRates[Date] = Number(Close);
-        //   }
-        // });
+        response = await fetch(`/moex/history/${currency}FIXME.csv`);
+        response = await response.text();
+        data = response.split('\n')
+          .map(row => row.split(','));
+        const currencyRates = {};
+        data.forEach(row => {
+          const [Date, , , , Close] = row;
+          if (Date >= startDate) {
+            currencyRates[Date] = Number(Close);
+          }
+        });
 
         // const oneOverY = Object.values(currencyRates);
 
@@ -208,12 +214,12 @@
             };
           }
 
-          // if (currency !== 'RUB') {
-          //   if (currencyRates[date] !== undefined) {
-          //     rate = currencyRates[date];
-          //   }
-          //   marketValue = marketValue / rate;
-          // }
+          if (currency !== 'RUB') {
+            if (currencyRates[date] !== undefined) {
+              rate = currencyRates[date];
+            }
+            marketValue = marketValue / rate;
+          }
 
           chartData[traceName].x.push(date);
           chartData[traceName].y.push(marketValue);
@@ -230,9 +236,9 @@
 
     function refreshChart() {
       var period = document.getElementById('periodSelector').value;
-      // var currency = document.getElementById('currencySelector').value;
+      var currency = document.getElementById('currencySelector').value;
 
-      prepChartData(period)
+      prepChartData(period, currency)
         .then(function(chartData) {
           var tickvals, tickformat;
           if (period === "total") {
@@ -393,6 +399,9 @@
 
     const inputPeriodSelector = document.getElementById("periodSelector");
     inputPeriodSelector.addEventListener("change", refreshChart);
+
+    const inputCurrencySelector = document.getElementById("currencySelector");
+    inputCurrencySelector.addEventListener("change", refreshChart);
 
     refreshChart();
   </script>
