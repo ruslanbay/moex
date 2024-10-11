@@ -132,7 +132,7 @@
           var shortnamesRus = unpack(rows, 'shortname_rus');
           var namesRus = unpack(rows, 'name_rus');
 
-          for (let i = 0; i <= 14; i++) {
+          for (let i = 0; i <= 36; i++) {
             chartData["sector"].push(parents[i]);
             chartData["ticker"].push(labels[i]);
             chartData["size"].push(0);
@@ -162,19 +162,20 @@
                 // exclude foreign shares
                 if(RegExp('^[a-zA-Z0-9]+-RM').test(ticker))
                   return;
-                // exclude bonds
-                if(RegExp('^RU[0-9]+.*').test(ticker))
-                  return;
-                // exclude bonds
-                if(RegExp('^XS[0-9]+.*').test(ticker))
-                  return;
-                // exclude ETFs
-                if(['FXRB', 'FXGD', 'FXAU', 'FXDE', 'FXIT',
-                  'FXJP', 'FXUK', 'FXUS', 'FXRU', 'FXCN',
-                  'FXMM', 'FXRL', 'FXKZ', 'FXTB', 'FXRB',
-                  'FXWO', 'FXTM', 'FXDM', 'FXFA', 'FXTP',
-                  'FXIP', 'FXES', 'FXRD', 'FXRE', 'FXEM', 'FXBC'].includes(ticker))
-                  return;
+                // // exclude bonds
+                // if(RegExp('^RU[0-9]+.*').test(ticker))
+                //   return;
+                // if(RegExp('^SU[0-9]+.*').test(ticker))
+                //   return;
+                // if(RegExp('^XS[0-9]+.*').test(ticker))
+                //   return;
+                // // exclude ETFs
+                // if(['FXRB', 'FXGD', 'FXAU', 'FXDE', 'FXIT',
+                //   'FXJP', 'FXUK', 'FXUS', 'FXRU', 'FXCN',
+                //   'FXMM', 'FXRL', 'FXKZ', 'FXTB', 'FXRB',
+                //   'FXWO', 'FXTM', 'FXDM', 'FXFA', 'FXTP',
+                //   'FXIP', 'FXES', 'FXRD', 'FXRE', 'FXEM', 'FXBC'].includes(ticker))
+                //   return;
                 
                 if(isToday) {
                   var currency = '';
@@ -227,7 +228,7 @@
                 chartData["prevSize"].push(prevMarketCap);
               });
 
-              for (let i = 1; i <= 14; i++) {
+              for (let i = 1; i <= 36; i++) {
                 chartData["customdata"][i][2] = chartData["size"][i];
                 chartData["priceChange"][i] = 100 * (chartData["size"][i] - chartData["prevSize"][i]) / chartData["prevSize"][i];
                 chartData["customdata"][i][3] = chartData["priceChange"][i];
