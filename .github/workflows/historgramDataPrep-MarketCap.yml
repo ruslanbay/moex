@@ -51,13 +51,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       
-    - name: Cache files
-      uses: actions/cache@v4
-      with:
-        path: data/iss/history/engines/stock/totals/boards/MRKT
-        key: ruslanbay-moex-cache-${{ hashFiles('data/iss/history/engines/stock/totals/boards/MRKT/securities-2011*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2012*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2013*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2014*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2015*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2016*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2017*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2018*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2019*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2020*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2021*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2022*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2023*') }}
-        restore-keys: |
-          ruslanbay-moex-cache-
+    # - name: Cache files
+    #   uses: actions/cache@v4
+    #   with:
+    #     path: data/iss/history/engines/stock/totals/boards/MRKT
+    #     key: ruslanbay-moex-cache-${{ hashFiles('data/iss/history/engines/stock/totals/boards/MRKT/securities-2011*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2012*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2013*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2014*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2015*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2016*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2017*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2018*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2019*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2020*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2021*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2022*,data/iss/history/engines/stock/totals/boards/MRKT/securities-2023*') }}
+    #     restore-keys: |
+    #       ruslanbay-moex-cache-
           
     - uses: actions/checkout@v4
     - name: Set up Python 3.11
@@ -70,26 +70,26 @@ jobs:
       run: |
         YESTERDAY=$(date --utc -d 'yesterday' +'%Y-%m-%d')
         CURRENT_YEAR=$(date --utc +"%Y")
-        python .github/workflows/processLocalData.py --start "${CURRENT_YEAR}-01-01" --end "${YESTERDAY}" --step 1 --mode sector --filename "${CURRENT_YEAR}.csv"
+        python .github/workflows/historgramDataPrep-MarketCap.py --start "${CURRENT_YEAR}-01-01" --end "${YESTERDAY}" --step 1 --mode sector --filename "${CURRENT_YEAR}.csv"
         
     - name: WEEKLY. Process local files
       if: ${{ github.event.schedule == '35 01 * * 6' }}
       run: |
         YESTERDAY=$(date --utc -d 'yesterday' +'%Y-%m-%d')
-        python .github/workflows/processLocalData.py --start 2011-12-19 --end "${YESTERDAY}" --step 1 --mode sector --filename total.csv
+        python .github/workflows/historgramDataPrep-MarketCap.py --start 2011-12-19 --end "${YESTERDAY}" --step 1 --mode sector --filename total.csv
     
     - name: YEARLY. Process local files
       if: ${{ github.event.schedule == '35 02 2 1 *' }}
       run: |
         LAST_YEAR=$(date --utc -d "last year" +"%Y")
-        python .github/workflows/processLocalData.py --start "${LAST_YEAR}-01-01" --end "${LAST_YEAR}-12-31" --step 1 --mode sector --filename "${LAST_YEAR}.csv"
+        python .github/workflows/historgramDataPrep-MarketCap.py --start "${LAST_YEAR}-01-01" --end "${LAST_YEAR}-12-31" --step 1 --mode sector --filename "${LAST_YEAR}.csv"
     
     - name: MANUAL. Process local files
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
         FILENAME="${{ inputs.filename }}"
         [ -z "$FILENAME" ] && FILENAME="${{ inputs.startDate }}_${{ inputs.endDate }}_${{ inputs.stepDays }}_${{ inputs.mode }}.csv"
-        python .github/workflows/processLocalData.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }} --filename "${FILENAME}.csv"
+        python .github/workflows/historgramDataPrep-MarketCap.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }} --filename "${FILENAME}.csv"
     
     # Commit and push all changed files
     # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html
