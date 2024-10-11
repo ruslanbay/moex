@@ -11,7 +11,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="MOEX History">
   <link rel="apple-touch-icon" href="/moex/images/icons/icon-152x152.png">
-  <meta name="description" content="Russian Stock Market Visualization">
+  <meta name="description" content="Russian Stock Market Visualization. How the Russian stock market has changed over the past 20+ years">
   <style>
     html,
     body {
@@ -194,8 +194,15 @@
 
         rows.forEach(row => {
           const traceName = row.traceName;
+          const traceNameExcludeList = ['TQFD. PAI (USD)', 'TQIF. PAI', 'TQPI. Shares PIR', 'TQTF. ETF', 'TQTY. PAI (CNY)',
+                                        'cb_bond', 'corporate_bond', 'etf_ppif', 'euro_bond', 'exchange_bond', 'exchange_ppif',
+                                        'Foreign Companies', 'ifi_bond', 'interval_ppif', 'municipal_bond', 'ofz_bond',
+                                        'private_ppif', 'public_ppif', 'state_bond', 'stock_mortgage', 'subfederal_bond'];
           const date = row.date;
           var marketCap = parseFloat(row.marketCap);
+          if (traceNameExcludeList.includes(traceName)) {
+            return;
+          }
 
           if (!chartData[traceName]) {
             chartData[traceName] = {
