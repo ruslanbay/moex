@@ -29,7 +29,7 @@ on:
       mode:
         description: 'Show capitalization by ticket, sector or total'
         required: true
-        default: 'total'
+        default: 'sector'
         type: choice
         options:
           - total
