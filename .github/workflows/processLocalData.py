@@ -6,19 +6,14 @@ import re
 import sys
 
 parser = argparse.ArgumentParser(description='Process locally stored data')
-parser.add_argument('--start', nargs=1, type=str, required=True,
-           help="start date, YYYY-MM-DD")
-parser.add_argument('--end', nargs=1, type=str, required=True,
-           help="end date, YYYY-MM-DD")
-parser.add_argument('--step', nargs=1, type=int, required=True,
-           help="step between data points in days")
-parser.add_argument('--mode', nargs=1, type=str, required=True,
-                   choices=['total', 'ticket', 'sector'],
-                   help='''total - total capitalization,
+parser.add_argument('--start', nargs=1, type=str, required=True, help="start date, YYYY-MM-DD")
+parser.add_argument('--end', nargs=1, type=str, required=True, help="end date, YYYY-MM-DD")
+parser.add_argument('--step', nargs=1, type=int, required=True, help="step between data points in days")
+parser.add_argument('--mode', nargs=1, type=str, required=True, choices=['sum', 'ticket', 'sector'],
+help='''sum - sum capitalization,
 ticket - capitalization by tickets,
 sector - capitalization by setctors''')
-parser.add_argument('--filename', nargs=1, type=str, required=True,
-           help="Example: total.csv")
+parser.add_argument('--filename', nargs=1, type=str, required=True, help="Example: 2015-BACKUP")
 args=parser.parse_args()
 start = datetime.strptime(args.start[0], '%Y-%m-%d').date()
 end = datetime.strptime(args.end[0], '%Y-%m-%d').date()
@@ -115,7 +110,7 @@ for ticket in traces.keys():
 chartData = []
 
 match mode:
-  case 'total':
+  case 'sum':
     ySum = traces[list(traces.keys())[0]]['y']
     for ticket in traces.keys():
       for i in range(1, len(ySum)):
