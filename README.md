@@ -27,7 +27,7 @@ The Russian economy relies heavily on oil prices.
 
 The exchange rate of the ruble is largely influenced by the movement of oil prices. Since 2017, the Central Bank of Russia has implemented a so-called "budget rule." According to this rule, the budget is formed based on an assumed price of Urals oil at $40. During periods when oil prices exceed this threshold, additional revenues are directed to a stabilization fund. This measure has effectively reduced the impact of oil prices on the ruble.
 
-![](article-assets/history-cap-usd-vs-brent.jpeg)
+![](article-assets/rub-vs-oil.jpeg)
 
 This measure also led to an increase in the market capitalization of oil-exporting companies.
 
