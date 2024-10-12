@@ -283,6 +283,7 @@ date,marketValue,traceName
 2024-10-08,341904086.4,Chemicals and Pertochemicals
 2024-10-09,177573430.2,Chemicals and Pertochemicals
 2024-10-10,197571092.5,Chemicals and Pertochemicals
+2024-10-11,263773404.1,Chemicals and Pertochemicals
 2024-01-03,210662349.8,Conglomerate
 2024-01-03,210662349.8,Conglomerate
 2024-01-03,210662349.8,Conglomerate
@@ -567,6 +568,7 @@ date,marketValue,traceName
 2024-10-08,863273129.9399999,Conglomerate
 2024-10-09,916596983.5500001,Conglomerate
 2024-10-10,965849215.1,Conglomerate
+2024-10-11,1634276796.73,Conglomerate
 2024-01-03,403123920.64,Construction (Development)
 2024-01-03,403123920.64,Construction (Development)
 2024-01-03,403123920.64,Construction (Development)
@@ -851,6 +853,7 @@ date,marketValue,traceName
 2024-10-08,641362059.14,Construction (Development)
 2024-10-09,841040507.4000001,Construction (Development)
 2024-10-10,1045690186.13,Construction (Development)
+2024-10-11,794175141.31,Construction (Development)
 2024-01-03,3344197184.98,Consumer
 2024-01-03,3344197184.98,Consumer
 2024-01-03,3344197184.98,Consumer
@@ -1135,6 +1138,7 @@ date,marketValue,traceName
 2024-10-08,2897756906.1199994,Consumer
 2024-10-09,2490770623.02,Consumer
 2024-10-10,2708052204.5,Consumer
+2024-10-11,1867130571.8799996,Consumer
 2024-01-03,1563101406.9699998,"Electricity, Utilities"
 2024-01-03,1563101406.9699998,"Electricity, Utilities"
 2024-01-03,1563101406.9699998,"Electricity, Utilities"
@@ -1419,6 +1423,7 @@ date,marketValue,traceName
 2024-10-08,1130828874.3499997,"Electricity, Utilities"
 2024-10-09,745667126.4,"Electricity, Utilities"
 2024-10-10,731090396.56,"Electricity, Utilities"
+2024-10-11,890476327.6299999,"Electricity, Utilities"
 2024-01-03,8473708915.13,"Energy (Oil, Gas, Coal)"
 2024-01-03,8473708915.13,"Energy (Oil, Gas, Coal)"
 2024-01-03,8473708915.13,"Energy (Oil, Gas, Coal)"
@@ -1703,6 +1708,7 @@ date,marketValue,traceName
 2024-10-08,24757080577.28,"Energy (Oil, Gas, Coal)"
 2024-10-09,21310959738.929996,"Energy (Oil, Gas, Coal)"
 2024-10-10,20215050273.309998,"Energy (Oil, Gas, Coal)"
+2024-10-11,22452162961.63,"Energy (Oil, Gas, Coal)"
 2024-01-03,9277672029.35,Financials
 2024-01-03,9277672029.35,Financials
 2024-01-03,9277672029.35,Financials
@@ -1987,6 +1993,7 @@ date,marketValue,traceName
 2024-10-08,13783529138.0,Financials
 2024-10-09,24826201156.5,Financials
 2024-10-10,17998826254.08,Financials
+2024-10-11,15701421581.499998,Financials
 2024-01-03,0,Foreign Companies
 2024-01-03,0,Foreign Companies
 2024-01-03,0,Foreign Companies
@@ -2271,6 +2278,7 @@ date,marketValue,traceName
 2024-10-08,0,Foreign Companies
 2024-10-09,0,Foreign Companies
 2024-10-10,0,Foreign Companies
+2024-10-11,0,Foreign Companies
 2024-01-03,163553931.02,Health Care
 2024-01-03,163553931.02,Health Care
 2024-01-03,163553931.02,Health Care
@@ -2555,6 +2563,7 @@ date,marketValue,traceName
 2024-10-08,273881203.22,Health Care
 2024-10-09,865782336.91,Health Care
 2024-10-10,680058561.88,Health Care
+2024-10-11,235894040.01000002,Health Care
 2024-01-03,2889389587.93,Industrials
 2024-01-03,2889389587.93,Industrials
 2024-01-03,2889389587.93,Industrials
@@ -2839,6 +2848,7 @@ date,marketValue,traceName
 2024-10-08,5790014496.89,Industrials
 2024-10-09,5561724453.58,Industrials
 2024-10-10,1609565458.69,Industrials
+2024-10-11,3678252351.63,Industrials
 2024-01-03,2120776702.03,Information Technologies
 2024-01-03,2120776702.03,Information Technologies
 2024-01-03,2120776702.03,Information Technologies
@@ -3123,6 +3133,7 @@ date,marketValue,traceName
 2024-10-08,8170695164.03,Information Technologies
 2024-10-09,8454885206.759999,Information Technologies
 2024-10-10,4622548635.32,Information Technologies
+2024-10-11,5679837695.23,Information Technologies
 2024-01-03,9271983218.98,Metals and Mining
 2024-01-03,9271983218.98,Metals and Mining
 2024-01-03,9271983218.98,Metals and Mining
@@ -3407,6 +3418,7 @@ date,marketValue,traceName
 2024-10-08,9908276971.829998,Metals and Mining
 2024-10-09,12510807005.08,Metals and Mining
 2024-10-10,9855435383.269999,Metals and Mining
+2024-10-11,12284490428.339998,Metals and Mining
 2024-01-03,0.0,Others
 2024-01-03,0.0,Others
 2024-01-03,0.0,Others
@@ -3691,6 +3703,7 @@ date,marketValue,traceName
 2024-10-08,0.0,Others
 2024-10-09,34733216.1,Others
 2024-10-10,113408204.5,Others
+2024-10-11,83667313.4,Others
 2024-01-03,0,TQFD. PAI (USD)
 2024-01-03,0,TQFD. PAI (USD)
 2024-01-03,0,TQFD. PAI (USD)
@@ -3975,6 +3988,7 @@ date,marketValue,traceName
 2024-10-08,0,TQFD. PAI (USD)
 2024-10-09,0,TQFD. PAI (USD)
 2024-10-10,0,TQFD. PAI (USD)
+2024-10-11,0,TQFD. PAI (USD)
 2024-01-03,43582023.15,TQIF. PAI
 2024-01-03,43582023.15,TQIF. PAI
 2024-01-03,43582023.15,TQIF. PAI
@@ -4259,6 +4273,7 @@ date,marketValue,traceName
 2024-10-08,212691599.14000002,TQIF. PAI
 2024-10-09,172070832.58,TQIF. PAI
 2024-10-10,237845874.99,TQIF. PAI
+2024-10-11,154914445.41999996,TQIF. PAI
 2024-01-03,1297096,TQPI. Shares PIR
 2024-01-03,1297096,TQPI. Shares PIR
 2024-01-03,1297096,TQPI. Shares PIR
@@ -4543,6 +4558,7 @@ date,marketValue,traceName
 2024-10-08,1880940,TQPI. Shares PIR
 2024-10-09,6854672,TQPI. Shares PIR
 2024-10-10,7838580,TQPI. Shares PIR
+2024-10-11,1479160,TQPI. Shares PIR
 2024-01-03,5689237563.23,TQTF. ETF
 2024-01-03,5689237563.23,TQTF. ETF
 2024-01-03,5689237563.23,TQTF. ETF
@@ -4827,6 +4843,7 @@ date,marketValue,traceName
 2024-10-08,17350488324.219997,TQTF. ETF
 2024-10-09,20359923084.229992,TQTF. ETF
 2024-10-10,23535872408.41,TQTF. ETF
+2024-10-11,20479126542.57,TQTF. ETF
 2024-01-03,0,TQTY. PAI (CNY)
 2024-01-03,0,TQTY. PAI (CNY)
 2024-01-03,0,TQTY. PAI (CNY)
@@ -5111,6 +5128,7 @@ date,marketValue,traceName
 2024-10-08,0,TQTY. PAI (CNY)
 2024-10-09,0,TQTY. PAI (CNY)
 2024-10-10,0,TQTY. PAI (CNY)
+2024-10-11,0,TQTY. PAI (CNY)
 2024-01-03,940100147.6100001,Telecommunication Services
 2024-01-03,940100147.6100001,Telecommunication Services
 2024-01-03,940100147.6100001,Telecommunication Services
@@ -5395,6 +5413,7 @@ date,marketValue,traceName
 2024-10-08,1724260943.8200002,Telecommunication Services
 2024-10-09,643920919.3100001,Telecommunication Services
 2024-10-10,632609963.6400001,Telecommunication Services
+2024-10-11,492018356.62,Telecommunication Services
 2024-01-03,4322745185.91,Transportation
 2024-01-03,4322745185.91,Transportation
 2024-01-03,4322745185.91,Transportation
@@ -5679,6 +5698,7 @@ date,marketValue,traceName
 2024-10-08,3323799115.2899995,Transportation
 2024-10-09,3421287491.05,Transportation
 2024-10-10,2982634489.83,Transportation
+2024-10-11,2333187815.2400002,Transportation
 2024-01-03,0,cb_bond
 2024-01-03,0,cb_bond
 2024-01-03,0,cb_bond
@@ -5963,6 +5983,7 @@ date,marketValue,traceName
 2024-10-08,0,cb_bond
 2024-10-09,0,cb_bond
 2024-10-10,0,cb_bond
+2024-10-11,0,cb_bond
 2024-01-03,730269913.52,corporate_bond
 2024-01-03,730269913.52,corporate_bond
 2024-01-03,730269913.52,corporate_bond
@@ -6247,6 +6268,7 @@ date,marketValue,traceName
 2024-10-08,1650388528.269999,corporate_bond
 2024-10-09,2323230136.31,corporate_bond
 2024-10-10,1807336222.3700004,corporate_bond
+2024-10-11,1585775632.29,corporate_bond
 2024-01-03,0,etf_ppif
 2024-01-03,0,etf_ppif
 2024-01-03,0,etf_ppif
@@ -6531,6 +6553,7 @@ date,marketValue,traceName
 2024-10-08,0,etf_ppif
 2024-10-09,0,etf_ppif
 2024-10-10,0,etf_ppif
+2024-10-11,0,etf_ppif
 2024-01-03,0,euro_bond
 2024-01-03,0,euro_bond
 2024-01-03,0,euro_bond
@@ -6815,6 +6838,7 @@ date,marketValue,traceName
 2024-10-08,0,euro_bond
 2024-10-09,0,euro_bond
 2024-10-10,0,euro_bond
+2024-10-11,0,euro_bond
 2024-01-03,1138349728.9399996,exchange_bond
 2024-01-03,1138349728.9399996,exchange_bond
 2024-01-03,1138349728.9399996,exchange_bond
@@ -7099,6 +7123,7 @@ date,marketValue,traceName
 2024-10-08,5849154738.389994,exchange_bond
 2024-10-09,4429593780.149994,exchange_bond
 2024-10-10,3796797025.3,exchange_bond
+2024-10-11,3897667579.3599944,exchange_bond
 2024-01-03,100054.03,exchange_ppif
 2024-01-03,100054.03,exchange_ppif
 2024-01-03,100054.03,exchange_ppif
@@ -7383,6 +7408,7 @@ date,marketValue,traceName
 2024-10-08,0.0,exchange_ppif
 2024-10-09,0.0,exchange_ppif
 2024-10-10,0.0,exchange_ppif
+2024-10-11,0.0,exchange_ppif
 2024-01-03,0,ifi_bond
 2024-01-03,0,ifi_bond
 2024-01-03,0,ifi_bond
@@ -7667,6 +7693,7 @@ date,marketValue,traceName
 2024-10-08,0,ifi_bond
 2024-10-09,0,ifi_bond
 2024-10-10,0,ifi_bond
+2024-10-11,0,ifi_bond
 2024-01-03,0,interval_ppif
 2024-01-03,0,interval_ppif
 2024-01-03,0,interval_ppif
@@ -7951,6 +7978,7 @@ date,marketValue,traceName
 2024-10-08,0,interval_ppif
 2024-10-09,0,interval_ppif
 2024-10-10,0,interval_ppif
+2024-10-11,0,interval_ppif
 2024-01-03,810560.23,municipal_bond
 2024-01-03,810560.23,municipal_bond
 2024-01-03,810560.23,municipal_bond
@@ -8235,6 +8263,7 @@ date,marketValue,traceName
 2024-10-08,181021.84,municipal_bond
 2024-10-09,214523.57,municipal_bond
 2024-10-10,401895.95,municipal_bond
+2024-10-11,105275.80999999998,municipal_bond
 2024-01-03,1266121871.94,ofz_bond
 2024-01-03,1266121871.94,ofz_bond
 2024-01-03,1266121871.94,ofz_bond
@@ -8519,6 +8548,7 @@ date,marketValue,traceName
 2024-10-08,6192497839.64,ofz_bond
 2024-10-09,5722827033.859999,ofz_bond
 2024-10-10,4956472481.510001,ofz_bond
+2024-10-11,6831422146.320002,ofz_bond
 2024-01-03,2980,private_ppif
 2024-01-03,2980,private_ppif
 2024-01-03,2980,private_ppif
@@ -8803,6 +8833,7 @@ date,marketValue,traceName
 2024-10-08,0.0,private_ppif
 2024-10-09,0.0,private_ppif
 2024-10-10,0.0,private_ppif
+2024-10-11,0.0,private_ppif
 2024-01-03,298314.5,public_ppif
 2024-01-03,298314.5,public_ppif
 2024-01-03,298314.5,public_ppif
@@ -9087,6 +9118,7 @@ date,marketValue,traceName
 2024-10-08,0.0,public_ppif
 2024-10-09,0.0,public_ppif
 2024-10-10,0.0,public_ppif
+2024-10-11,0.0,public_ppif
 2024-01-03,0,state_bond
 2024-01-03,0,state_bond
 2024-01-03,0,state_bond
@@ -9371,6 +9403,7 @@ date,marketValue,traceName
 2024-10-08,0,state_bond
 2024-10-09,0,state_bond
 2024-10-10,0,state_bond
+2024-10-11,0,state_bond
 2024-01-03,0,stock_mortgage
 2024-01-03,0,stock_mortgage
 2024-01-03,0,stock_mortgage
@@ -9655,6 +9688,7 @@ date,marketValue,traceName
 2024-10-08,0,stock_mortgage
 2024-10-09,0,stock_mortgage
 2024-10-10,0,stock_mortgage
+2024-10-11,0,stock_mortgage
 2024-01-03,34263983.120000005,subfederal_bond
 2024-01-03,34263983.120000005,subfederal_bond
 2024-01-03,34263983.120000005,subfederal_bond
@@ -9939,3 +9973,4 @@ date,marketValue,traceName
 2024-10-08,19140389.07,subfederal_bond
 2024-10-09,19947533.789999995,subfederal_bond
 2024-10-10,57834293.879999995,subfederal_bond
+2024-10-11,54795820.269999996,subfederal_bond
