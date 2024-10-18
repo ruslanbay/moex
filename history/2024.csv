@@ -289,6 +289,7 @@ date,marketCap,traceName
 2024-10-14,1732776428106.2002,Chemicals and Pertochemicals
 2024-10-15,1750461742154.3198,Chemicals and Pertochemicals
 2024-10-16,1757894704876.56,Chemicals and Pertochemicals
+2024-10-17,1743991436236.76,Chemicals and Pertochemicals
 2024-01-03,442320798278.4,Conglomerate
 2024-01-03,442320798278.4,Conglomerate
 2024-01-03,442320798278.4,Conglomerate
@@ -579,6 +580,7 @@ date,marketCap,traceName
 2024-10-14,362667550617.6,Conglomerate
 2024-10-15,370156579561.6,Conglomerate
 2024-10-16,367881266659.2,Conglomerate
+2024-10-17,363052507068.8,Conglomerate
 2024-01-03,838640695506.7001,Construction (Development)
 2024-01-03,838640695506.7001,Construction (Development)
 2024-01-03,838640695506.7001,Construction (Development)
@@ -869,6 +871,7 @@ date,marketCap,traceName
 2024-10-14,684749224473.76,Construction (Development)
 2024-10-15,696568507627.7899,Construction (Development)
 2024-10-16,700260897286.2999,Construction (Development)
+2024-10-17,687411778741.2899,Construction (Development)
 2024-01-03,1342983606457.3599,Consumer
 2024-01-03,1342983606457.3599,Consumer
 2024-01-03,1342983606457.3599,Consumer
@@ -1159,6 +1162,7 @@ date,marketCap,traceName
 2024-10-14,1099604642394.7798,Consumer
 2024-10-15,1117229786856.8398,Consumer
 2024-10-16,1118452838623.8,Consumer
+2024-10-17,1101991935284.15,Consumer
 2024-01-03,2306154345091.8994,"Electricity, Utilities"
 2024-01-03,2306154345091.8994,"Electricity, Utilities"
 2024-01-03,2306154345091.8994,"Electricity, Utilities"
@@ -1449,6 +1453,7 @@ date,marketCap,traceName
 2024-10-14,1899348819404.75,"Electricity, Utilities"
 2024-10-15,1921920880144.9595,"Electricity, Utilities"
 2024-10-16,1936961990651.0903,"Electricity, Utilities"
+2024-10-17,1911147844592.2693,"Electricity, Utilities"
 2024-01-03,27615550398442.883,"Energy (Oil, Gas, Coal)"
 2024-01-03,27615550398442.883,"Energy (Oil, Gas, Coal)"
 2024-01-03,27615550398442.883,"Energy (Oil, Gas, Coal)"
@@ -1739,6 +1744,7 @@ date,marketCap,traceName
 2024-10-14,22807646173639.46,"Energy (Oil, Gas, Coal)"
 2024-10-15,23004453399181.496,"Energy (Oil, Gas, Coal)"
 2024-10-16,23160353016300.297,"Energy (Oil, Gas, Coal)"
+2024-10-17,22927523655313.49,"Energy (Oil, Gas, Coal)"
 2024-01-03,9457090345977.95,Financials
 2024-01-03,9457090345977.95,Financials
 2024-01-03,9457090345977.95,Financials
@@ -2029,6 +2035,7 @@ date,marketCap,traceName
 2024-10-14,8714999845912.859,Financials
 2024-10-15,8831079921615.24,Financials
 2024-10-16,8816840775750.78,Financials
+2024-10-17,8732705356514.751,Financials
 2024-01-03,0,Foreign Companies
 2024-01-03,0,Foreign Companies
 2024-01-03,0,Foreign Companies
@@ -2319,6 +2326,7 @@ date,marketCap,traceName
 2024-10-14,0,Foreign Companies
 2024-10-15,0,Foreign Companies
 2024-10-16,0,Foreign Companies
+2024-10-17,0,Foreign Companies
 2024-01-03,198382127854.61,Health Care
 2024-01-03,198382127854.61,Health Care
 2024-01-03,198382127854.61,Health Care
@@ -2609,6 +2617,7 @@ date,marketCap,traceName
 2024-10-14,305059159026.4,Health Care
 2024-10-15,310796992116.4,Health Care
 2024-10-16,311689328629.76,Health Care
+2024-10-17,312954189650.98004,Health Care
 2024-01-03,1529413868506.62,Industrials
 2024-01-03,1529413868506.62,Industrials
 2024-01-03,1529413868506.62,Industrials
@@ -2899,6 +2908,7 @@ date,marketCap,traceName
 2024-10-14,1952977980693.2102,Industrials
 2024-10-15,1974716317037.8396,Industrials
 2024-10-16,1965019632263.44,Industrials
+2024-10-17,1909405131363.55,Industrials
 2024-01-03,1251861107798.0,Information Technologies
 2024-01-03,1251861107798.0,Information Technologies
 2024-01-03,1251861107798.0,Information Technologies
@@ -3189,6 +3199,7 @@ date,marketCap,traceName
 2024-10-14,2239232438697.5,Information Technologies
 2024-10-15,2270701846432.5,Information Technologies
 2024-10-16,2257933133305.0,Information Technologies
+2024-10-17,2236325047468.0,Information Technologies
 2024-01-03,9523133610218.209,Metals and Mining
 2024-01-03,9523133610218.209,Metals and Mining
 2024-01-03,9523133610218.209,Metals and Mining
@@ -3479,296 +3490,298 @@ date,marketCap,traceName
 2024-10-14,7722734102384.031,Metals and Mining
 2024-10-15,7747338678380.379,Metals and Mining
 2024-10-16,7748514867836.539,Metals and Mining
-2024-01-03,0,Others
-2024-01-03,0,Others
-2024-01-03,0,Others
-2024-01-04,0,Others
-2024-01-05,0,Others
-2024-01-08,0,Others
-2024-01-08,0,Others
-2024-01-08,0,Others
-2024-01-09,0,Others
-2024-01-10,0,Others
-2024-01-11,0,Others
-2024-01-12,0,Others
-2024-01-15,0,Others
-2024-01-15,0,Others
-2024-01-15,0,Others
-2024-01-16,0,Others
-2024-01-17,0,Others
-2024-01-18,0,Others
-2024-01-19,0,Others
-2024-01-22,0,Others
-2024-01-22,0,Others
-2024-01-22,0,Others
-2024-01-23,0,Others
-2024-01-24,0,Others
-2024-01-25,0,Others
-2024-01-26,0,Others
-2024-01-29,0,Others
-2024-01-29,0,Others
-2024-01-29,0,Others
-2024-01-30,0,Others
-2024-01-31,0,Others
-2024-02-01,0,Others
-2024-02-02,0,Others
-2024-02-05,0,Others
-2024-02-05,0,Others
-2024-02-05,0,Others
-2024-02-06,0,Others
-2024-02-07,0,Others
-2024-02-08,0,Others
-2024-02-09,0,Others
-2024-02-12,0,Others
-2024-02-12,0,Others
-2024-02-12,0,Others
-2024-02-13,0,Others
-2024-02-14,0,Others
-2024-02-15,0,Others
-2024-02-16,0,Others
-2024-02-19,0,Others
-2024-02-19,0,Others
-2024-02-19,0,Others
-2024-02-20,0,Others
-2024-02-21,0,Others
-2024-02-22,0,Others
-2024-02-26,0,Others
-2024-02-26,0,Others
-2024-02-26,0,Others
-2024-02-26,0,Others
-2024-02-27,0,Others
-2024-02-28,0,Others
-2024-02-29,0,Others
-2024-03-01,0,Others
-2024-03-04,0,Others
-2024-03-04,0,Others
-2024-03-04,0,Others
-2024-03-05,0,Others
-2024-03-06,0,Others
-2024-03-07,0,Others
-2024-03-11,0,Others
-2024-03-11,0,Others
-2024-03-11,0,Others
-2024-03-11,0,Others
-2024-03-12,0,Others
-2024-03-13,0,Others
-2024-03-14,0,Others
-2024-03-15,0,Others
-2024-03-18,0,Others
-2024-03-18,0,Others
-2024-03-18,0,Others
-2024-03-19,0,Others
-2024-03-20,0,Others
-2024-03-21,0,Others
-2024-03-22,0,Others
-2024-03-25,0,Others
-2024-03-25,0,Others
-2024-03-25,0,Others
-2024-03-26,0,Others
-2024-03-27,0,Others
-2024-03-28,0,Others
-2024-03-29,0,Others
-2024-04-01,0,Others
-2024-04-01,0,Others
-2024-04-01,0,Others
-2024-04-02,0,Others
-2024-04-03,0,Others
-2024-04-04,0,Others
-2024-04-05,0,Others
-2024-04-08,0,Others
-2024-04-08,0,Others
-2024-04-08,0,Others
-2024-04-09,0,Others
-2024-04-10,0,Others
-2024-04-11,0,Others
-2024-04-12,0,Others
-2024-04-15,0,Others
-2024-04-15,0,Others
-2024-04-15,0,Others
-2024-04-16,0,Others
-2024-04-17,0,Others
-2024-04-18,0,Others
-2024-04-19,0,Others
-2024-04-22,0,Others
-2024-04-22,0,Others
-2024-04-22,0,Others
-2024-04-23,0,Others
-2024-04-24,0,Others
-2024-04-25,0,Others
-2024-04-26,0,Others
-2024-04-29,0,Others
-2024-04-29,0,Others
-2024-04-29,0,Others
-2024-04-30,0,Others
-2024-05-02,0,Others
-2024-05-02,0,Others
-2024-05-03,0,Others
-2024-05-06,0,Others
-2024-05-06,0,Others
-2024-05-06,0,Others
-2024-05-07,0,Others
-2024-05-08,0,Others
-2024-05-10,0,Others
-2024-05-10,0,Others
-2024-05-13,0,Others
-2024-05-13,0,Others
-2024-05-13,0,Others
-2024-05-14,0,Others
-2024-05-15,0,Others
-2024-05-16,0,Others
-2024-05-17,0,Others
-2024-05-20,0,Others
-2024-05-20,0,Others
-2024-05-20,0,Others
-2024-05-21,0,Others
-2024-05-22,0,Others
-2024-05-23,0,Others
-2024-05-24,0,Others
-2024-05-27,0,Others
-2024-05-27,0,Others
-2024-05-27,0,Others
-2024-05-28,0,Others
-2024-05-29,0,Others
-2024-05-30,0,Others
-2024-05-31,0,Others
-2024-06-03,0,Others
-2024-06-03,0,Others
-2024-06-03,0,Others
-2024-06-04,0,Others
-2024-06-05,0,Others
-2024-06-06,0,Others
-2024-06-07,0,Others
-2024-06-10,0,Others
-2024-06-10,0,Others
-2024-06-10,0,Others
-2024-06-11,0,Others
-2024-06-13,0,Others
-2024-06-13,0,Others
-2024-06-14,0,Others
-2024-06-17,0,Others
-2024-06-17,0,Others
-2024-06-17,0,Others
-2024-06-18,0,Others
-2024-06-19,0,Others
-2024-06-20,0,Others
-2024-06-21,0,Others
-2024-06-24,0,Others
-2024-06-24,0,Others
-2024-06-24,0,Others
-2024-06-25,0,Others
-2024-06-26,0,Others
-2024-06-27,0,Others
-2024-06-28,0,Others
-2024-07-01,0,Others
-2024-07-01,0,Others
-2024-07-01,0,Others
-2024-07-02,0,Others
-2024-07-03,0,Others
-2024-07-04,0,Others
-2024-07-05,0,Others
-2024-07-08,0,Others
-2024-07-08,0,Others
-2024-07-08,0,Others
-2024-07-09,0,Others
-2024-07-10,0,Others
-2024-07-11,0,Others
-2024-07-12,0,Others
-2024-07-15,0,Others
-2024-07-15,0,Others
-2024-07-15,0,Others
-2024-07-16,0,Others
-2024-07-17,0,Others
-2024-07-18,0,Others
-2024-07-19,0,Others
-2024-07-22,0,Others
-2024-07-22,0,Others
-2024-07-22,0,Others
-2024-07-23,0,Others
-2024-07-24,0,Others
-2024-07-25,0,Others
-2024-07-26,0,Others
-2024-07-29,0,Others
-2024-07-29,0,Others
-2024-07-29,0,Others
-2024-07-30,0,Others
-2024-07-31,0,Others
-2024-08-01,0,Others
-2024-08-02,0,Others
-2024-08-05,0,Others
-2024-08-05,0,Others
-2024-08-05,0,Others
-2024-08-06,0,Others
-2024-08-07,0,Others
-2024-08-08,0,Others
-2024-08-09,0,Others
-2024-08-12,0,Others
-2024-08-12,0,Others
-2024-08-12,0,Others
-2024-08-13,0,Others
-2024-08-14,0,Others
-2024-08-15,0,Others
-2024-08-16,0,Others
-2024-08-19,0,Others
-2024-08-19,0,Others
-2024-08-19,0,Others
-2024-08-20,0,Others
-2024-08-21,0,Others
-2024-08-22,0,Others
-2024-08-23,0,Others
-2024-08-26,0,Others
-2024-08-26,0,Others
-2024-08-26,0,Others
-2024-08-27,0,Others
-2024-08-28,0,Others
-2024-08-29,0,Others
-2024-08-30,0,Others
-2024-09-02,0,Others
-2024-09-02,0,Others
-2024-09-02,0,Others
-2024-09-03,0,Others
-2024-09-04,0,Others
-2024-09-05,0,Others
-2024-09-06,0,Others
-2024-09-09,0,Others
-2024-09-09,0,Others
-2024-09-09,0,Others
-2024-09-10,0,Others
-2024-09-11,0,Others
-2024-09-12,0,Others
-2024-09-13,0,Others
-2024-09-16,0,Others
-2024-09-16,0,Others
-2024-09-16,0,Others
-2024-09-17,0,Others
-2024-09-18,0,Others
-2024-09-19,0,Others
-2024-09-20,0,Others
-2024-09-23,0,Others
-2024-09-23,0,Others
-2024-09-23,0,Others
-2024-09-24,0,Others
-2024-09-25,0,Others
-2024-09-26,0,Others
-2024-09-27,0,Others
-2024-09-30,0,Others
-2024-09-30,0,Others
-2024-09-30,0,Others
-2024-10-01,0,Others
-2024-10-02,0,Others
-2024-10-03,0,Others
-2024-10-04,0,Others
-2024-10-07,0,Others
-2024-10-07,0,Others
-2024-10-07,0,Others
-2024-10-08,0,Others
-2024-10-09,0,Others
-2024-10-10,0,Others
-2024-10-11,0,Others
-2024-10-14,0,Others
-2024-10-14,0,Others
-2024-10-14,0,Others
-2024-10-15,0,Others
-2024-10-16,0,Others
+2024-10-17,7627994135339.33,Metals and Mining
+2024-01-03,0.0,Others
+2024-01-03,0.0,Others
+2024-01-03,0.0,Others
+2024-01-04,0.0,Others
+2024-01-05,0.0,Others
+2024-01-08,0.0,Others
+2024-01-08,0.0,Others
+2024-01-08,0.0,Others
+2024-01-09,0.0,Others
+2024-01-10,0.0,Others
+2024-01-11,0.0,Others
+2024-01-12,0.0,Others
+2024-01-15,0.0,Others
+2024-01-15,0.0,Others
+2024-01-15,0.0,Others
+2024-01-16,0.0,Others
+2024-01-17,0.0,Others
+2024-01-18,0.0,Others
+2024-01-19,0.0,Others
+2024-01-22,0.0,Others
+2024-01-22,0.0,Others
+2024-01-22,0.0,Others
+2024-01-23,0.0,Others
+2024-01-24,0.0,Others
+2024-01-25,0.0,Others
+2024-01-26,0.0,Others
+2024-01-29,0.0,Others
+2024-01-29,0.0,Others
+2024-01-29,0.0,Others
+2024-01-30,0.0,Others
+2024-01-31,0.0,Others
+2024-02-01,0.0,Others
+2024-02-02,0.0,Others
+2024-02-05,0.0,Others
+2024-02-05,0.0,Others
+2024-02-05,0.0,Others
+2024-02-06,0.0,Others
+2024-02-07,0.0,Others
+2024-02-08,0.0,Others
+2024-02-09,0.0,Others
+2024-02-12,0.0,Others
+2024-02-12,0.0,Others
+2024-02-12,0.0,Others
+2024-02-13,0.0,Others
+2024-02-14,0.0,Others
+2024-02-15,0.0,Others
+2024-02-16,0.0,Others
+2024-02-19,0.0,Others
+2024-02-19,0.0,Others
+2024-02-19,0.0,Others
+2024-02-20,0.0,Others
+2024-02-21,0.0,Others
+2024-02-22,0.0,Others
+2024-02-26,0.0,Others
+2024-02-26,0.0,Others
+2024-02-26,0.0,Others
+2024-02-26,0.0,Others
+2024-02-27,0.0,Others
+2024-02-28,0.0,Others
+2024-02-29,0.0,Others
+2024-03-01,0.0,Others
+2024-03-04,0.0,Others
+2024-03-04,0.0,Others
+2024-03-04,0.0,Others
+2024-03-05,0.0,Others
+2024-03-06,0.0,Others
+2024-03-07,0.0,Others
+2024-03-11,0.0,Others
+2024-03-11,0.0,Others
+2024-03-11,0.0,Others
+2024-03-11,0.0,Others
+2024-03-12,0.0,Others
+2024-03-13,0.0,Others
+2024-03-14,0.0,Others
+2024-03-15,0.0,Others
+2024-03-18,0.0,Others
+2024-03-18,0.0,Others
+2024-03-18,0.0,Others
+2024-03-19,0.0,Others
+2024-03-20,0.0,Others
+2024-03-21,0.0,Others
+2024-03-22,0.0,Others
+2024-03-25,0.0,Others
+2024-03-25,0.0,Others
+2024-03-25,0.0,Others
+2024-03-26,0.0,Others
+2024-03-27,0.0,Others
+2024-03-28,0.0,Others
+2024-03-29,0.0,Others
+2024-04-01,0.0,Others
+2024-04-01,0.0,Others
+2024-04-01,0.0,Others
+2024-04-02,0.0,Others
+2024-04-03,0.0,Others
+2024-04-04,0.0,Others
+2024-04-05,0.0,Others
+2024-04-08,0.0,Others
+2024-04-08,0.0,Others
+2024-04-08,0.0,Others
+2024-04-09,0.0,Others
+2024-04-10,0.0,Others
+2024-04-11,0.0,Others
+2024-04-12,0.0,Others
+2024-04-15,0.0,Others
+2024-04-15,0.0,Others
+2024-04-15,0.0,Others
+2024-04-16,0.0,Others
+2024-04-17,0.0,Others
+2024-04-18,0.0,Others
+2024-04-19,0.0,Others
+2024-04-22,0.0,Others
+2024-04-22,0.0,Others
+2024-04-22,0.0,Others
+2024-04-23,0.0,Others
+2024-04-24,0.0,Others
+2024-04-25,0.0,Others
+2024-04-26,0.0,Others
+2024-04-29,0.0,Others
+2024-04-29,0.0,Others
+2024-04-29,0.0,Others
+2024-04-30,0.0,Others
+2024-05-02,0.0,Others
+2024-05-02,0.0,Others
+2024-05-03,0.0,Others
+2024-05-06,0.0,Others
+2024-05-06,0.0,Others
+2024-05-06,0.0,Others
+2024-05-07,0.0,Others
+2024-05-08,0.0,Others
+2024-05-10,0.0,Others
+2024-05-10,0.0,Others
+2024-05-13,0.0,Others
+2024-05-13,0.0,Others
+2024-05-13,0.0,Others
+2024-05-14,0.0,Others
+2024-05-15,0.0,Others
+2024-05-16,0.0,Others
+2024-05-17,0.0,Others
+2024-05-20,0.0,Others
+2024-05-20,0.0,Others
+2024-05-20,0.0,Others
+2024-05-21,0.0,Others
+2024-05-22,0.0,Others
+2024-05-23,0.0,Others
+2024-05-24,0.0,Others
+2024-05-27,0.0,Others
+2024-05-27,0.0,Others
+2024-05-27,0.0,Others
+2024-05-28,0.0,Others
+2024-05-29,0.0,Others
+2024-05-30,0.0,Others
+2024-05-31,0.0,Others
+2024-06-03,0.0,Others
+2024-06-03,0.0,Others
+2024-06-03,0.0,Others
+2024-06-04,0.0,Others
+2024-06-05,0.0,Others
+2024-06-06,0.0,Others
+2024-06-07,0.0,Others
+2024-06-10,0.0,Others
+2024-06-10,0.0,Others
+2024-06-10,0.0,Others
+2024-06-11,0.0,Others
+2024-06-13,0.0,Others
+2024-06-13,0.0,Others
+2024-06-14,0.0,Others
+2024-06-17,0.0,Others
+2024-06-17,0.0,Others
+2024-06-17,0.0,Others
+2024-06-18,0.0,Others
+2024-06-19,0.0,Others
+2024-06-20,0.0,Others
+2024-06-21,0.0,Others
+2024-06-24,0.0,Others
+2024-06-24,0.0,Others
+2024-06-24,0.0,Others
+2024-06-25,0.0,Others
+2024-06-26,0.0,Others
+2024-06-27,0.0,Others
+2024-06-28,0.0,Others
+2024-07-01,0.0,Others
+2024-07-01,0.0,Others
+2024-07-01,0.0,Others
+2024-07-02,0.0,Others
+2024-07-03,0.0,Others
+2024-07-04,0.0,Others
+2024-07-05,0.0,Others
+2024-07-08,0.0,Others
+2024-07-08,0.0,Others
+2024-07-08,0.0,Others
+2024-07-09,0.0,Others
+2024-07-10,0.0,Others
+2024-07-11,0.0,Others
+2024-07-12,0.0,Others
+2024-07-15,0.0,Others
+2024-07-15,0.0,Others
+2024-07-15,0.0,Others
+2024-07-16,0.0,Others
+2024-07-17,0.0,Others
+2024-07-18,0.0,Others
+2024-07-19,0.0,Others
+2024-07-22,0.0,Others
+2024-07-22,0.0,Others
+2024-07-22,0.0,Others
+2024-07-23,0.0,Others
+2024-07-24,0.0,Others
+2024-07-25,0.0,Others
+2024-07-26,0.0,Others
+2024-07-29,0.0,Others
+2024-07-29,0.0,Others
+2024-07-29,0.0,Others
+2024-07-30,0.0,Others
+2024-07-31,0.0,Others
+2024-08-01,0.0,Others
+2024-08-02,0.0,Others
+2024-08-05,0.0,Others
+2024-08-05,0.0,Others
+2024-08-05,0.0,Others
+2024-08-06,0.0,Others
+2024-08-07,0.0,Others
+2024-08-08,0.0,Others
+2024-08-09,0.0,Others
+2024-08-12,0.0,Others
+2024-08-12,0.0,Others
+2024-08-12,0.0,Others
+2024-08-13,0.0,Others
+2024-08-14,0.0,Others
+2024-08-15,0.0,Others
+2024-08-16,0.0,Others
+2024-08-19,0.0,Others
+2024-08-19,0.0,Others
+2024-08-19,0.0,Others
+2024-08-20,0.0,Others
+2024-08-21,0.0,Others
+2024-08-22,0.0,Others
+2024-08-23,0.0,Others
+2024-08-26,0.0,Others
+2024-08-26,0.0,Others
+2024-08-26,0.0,Others
+2024-08-27,0.0,Others
+2024-08-28,0.0,Others
+2024-08-29,0.0,Others
+2024-08-30,0.0,Others
+2024-09-02,0.0,Others
+2024-09-02,0.0,Others
+2024-09-02,0.0,Others
+2024-09-03,0.0,Others
+2024-09-04,0.0,Others
+2024-09-05,0.0,Others
+2024-09-06,0.0,Others
+2024-09-09,0.0,Others
+2024-09-09,0.0,Others
+2024-09-09,0.0,Others
+2024-09-10,0.0,Others
+2024-09-11,0.0,Others
+2024-09-12,0.0,Others
+2024-09-13,0.0,Others
+2024-09-16,0.0,Others
+2024-09-16,0.0,Others
+2024-09-16,0.0,Others
+2024-09-17,0.0,Others
+2024-09-18,0.0,Others
+2024-09-19,0.0,Others
+2024-09-20,0.0,Others
+2024-09-23,0.0,Others
+2024-09-23,0.0,Others
+2024-09-23,0.0,Others
+2024-09-24,0.0,Others
+2024-09-25,0.0,Others
+2024-09-26,0.0,Others
+2024-09-27,0.0,Others
+2024-09-30,0.0,Others
+2024-09-30,0.0,Others
+2024-09-30,0.0,Others
+2024-10-01,0.0,Others
+2024-10-02,0.0,Others
+2024-10-03,0.0,Others
+2024-10-04,0.0,Others
+2024-10-07,0.0,Others
+2024-10-07,0.0,Others
+2024-10-07,0.0,Others
+2024-10-08,0.0,Others
+2024-10-09,0.0,Others
+2024-10-10,0.0,Others
+2024-10-11,0.0,Others
+2024-10-14,0.0,Others
+2024-10-14,0.0,Others
+2024-10-14,0.0,Others
+2024-10-15,0.0,Others
+2024-10-16,0.0,Others
+2024-10-17,34440000000,Others
 2024-01-03,0,TQFD. PAI (USD)
 2024-01-03,0,TQFD. PAI (USD)
 2024-01-03,0,TQFD. PAI (USD)
@@ -4059,6 +4072,7 @@ date,marketCap,traceName
 2024-10-14,0,TQFD. PAI (USD)
 2024-10-15,0,TQFD. PAI (USD)
 2024-10-16,0,TQFD. PAI (USD)
+2024-10-17,0,TQFD. PAI (USD)
 2024-01-03,0,TQIF. PAI
 2024-01-03,0,TQIF. PAI
 2024-01-03,0,TQIF. PAI
@@ -4349,6 +4363,7 @@ date,marketCap,traceName
 2024-10-14,0,TQIF. PAI
 2024-10-15,0,TQIF. PAI
 2024-10-16,0,TQIF. PAI
+2024-10-17,0,TQIF. PAI
 2024-01-03,0,TQPI. Shares PIR
 2024-01-03,0,TQPI. Shares PIR
 2024-01-03,0,TQPI. Shares PIR
@@ -4639,6 +4654,7 @@ date,marketCap,traceName
 2024-10-14,0,TQPI. Shares PIR
 2024-10-15,0,TQPI. Shares PIR
 2024-10-16,0,TQPI. Shares PIR
+2024-10-17,0,TQPI. Shares PIR
 2024-01-03,0,TQTF. ETF
 2024-01-03,0,TQTF. ETF
 2024-01-03,0,TQTF. ETF
@@ -4929,6 +4945,7 @@ date,marketCap,traceName
 2024-10-14,0,TQTF. ETF
 2024-10-15,0,TQTF. ETF
 2024-10-16,0,TQTF. ETF
+2024-10-17,0,TQTF. ETF
 2024-01-03,0,TQTY. PAI (CNY)
 2024-01-03,0,TQTY. PAI (CNY)
 2024-01-03,0,TQTY. PAI (CNY)
@@ -5219,6 +5236,7 @@ date,marketCap,traceName
 2024-10-14,0,TQTY. PAI (CNY)
 2024-10-15,0,TQTY. PAI (CNY)
 2024-10-16,0,TQTY. PAI (CNY)
+2024-10-17,0,TQTY. PAI (CNY)
 2024-01-03,979276573460.8201,Telecommunication Services
 2024-01-03,979276573460.8201,Telecommunication Services
 2024-01-03,979276573460.8201,Telecommunication Services
@@ -5509,6 +5527,7 @@ date,marketCap,traceName
 2024-10-14,839164533223.2601,Telecommunication Services
 2024-10-15,846713175628.16,Telecommunication Services
 2024-10-16,850665200137.1599,Telecommunication Services
+2024-10-17,847814687651.3099,Telecommunication Services
 2024-01-03,1159766326615.95,Transportation
 2024-01-03,1159766326615.95,Transportation
 2024-01-03,1159766326615.95,Transportation
@@ -5799,6 +5818,7 @@ date,marketCap,traceName
 2024-10-14,969886146796.62,Transportation
 2024-10-15,992404000183.2301,Transportation
 2024-10-16,994359207568.78,Transportation
+2024-10-17,979229885116.27,Transportation
 2024-01-03,0,cb_bond
 2024-01-03,0,cb_bond
 2024-01-03,0,cb_bond
@@ -6089,6 +6109,7 @@ date,marketCap,traceName
 2024-10-14,0,cb_bond
 2024-10-15,0,cb_bond
 2024-10-16,0,cb_bond
+2024-10-17,0,cb_bond
 2024-01-03,0,corporate_bond
 2024-01-03,0,corporate_bond
 2024-01-03,0,corporate_bond
@@ -6379,6 +6400,7 @@ date,marketCap,traceName
 2024-10-14,0,corporate_bond
 2024-10-15,0,corporate_bond
 2024-10-16,0,corporate_bond
+2024-10-17,0,corporate_bond
 2024-01-03,0,etf_ppif
 2024-01-03,0,etf_ppif
 2024-01-03,0,etf_ppif
@@ -6669,6 +6691,7 @@ date,marketCap,traceName
 2024-10-14,0,etf_ppif
 2024-10-15,0,etf_ppif
 2024-10-16,0,etf_ppif
+2024-10-17,0,etf_ppif
 2024-01-03,0,euro_bond
 2024-01-03,0,euro_bond
 2024-01-03,0,euro_bond
@@ -6959,6 +6982,7 @@ date,marketCap,traceName
 2024-10-14,0,euro_bond
 2024-10-15,0,euro_bond
 2024-10-16,0,euro_bond
+2024-10-17,0,euro_bond
 2024-01-03,0,exchange_bond
 2024-01-03,0,exchange_bond
 2024-01-03,0,exchange_bond
@@ -7249,6 +7273,7 @@ date,marketCap,traceName
 2024-10-14,0,exchange_bond
 2024-10-15,0,exchange_bond
 2024-10-16,0,exchange_bond
+2024-10-17,0,exchange_bond
 2024-01-03,0,exchange_ppif
 2024-01-03,0,exchange_ppif
 2024-01-03,0,exchange_ppif
@@ -7539,6 +7564,7 @@ date,marketCap,traceName
 2024-10-14,0,exchange_ppif
 2024-10-15,0,exchange_ppif
 2024-10-16,0,exchange_ppif
+2024-10-17,0,exchange_ppif
 2024-01-03,0,ifi_bond
 2024-01-03,0,ifi_bond
 2024-01-03,0,ifi_bond
@@ -7829,6 +7855,7 @@ date,marketCap,traceName
 2024-10-14,0,ifi_bond
 2024-10-15,0,ifi_bond
 2024-10-16,0,ifi_bond
+2024-10-17,0,ifi_bond
 2024-01-03,0,interval_ppif
 2024-01-03,0,interval_ppif
 2024-01-03,0,interval_ppif
@@ -8119,6 +8146,7 @@ date,marketCap,traceName
 2024-10-14,0,interval_ppif
 2024-10-15,0,interval_ppif
 2024-10-16,0,interval_ppif
+2024-10-17,0,interval_ppif
 2024-01-03,0,municipal_bond
 2024-01-03,0,municipal_bond
 2024-01-03,0,municipal_bond
@@ -8409,6 +8437,7 @@ date,marketCap,traceName
 2024-10-14,0,municipal_bond
 2024-10-15,0,municipal_bond
 2024-10-16,0,municipal_bond
+2024-10-17,0,municipal_bond
 2024-01-03,0,ofz_bond
 2024-01-03,0,ofz_bond
 2024-01-03,0,ofz_bond
@@ -8699,6 +8728,7 @@ date,marketCap,traceName
 2024-10-14,0,ofz_bond
 2024-10-15,0,ofz_bond
 2024-10-16,0,ofz_bond
+2024-10-17,0,ofz_bond
 2024-01-03,0,private_ppif
 2024-01-03,0,private_ppif
 2024-01-03,0,private_ppif
@@ -8989,6 +9019,7 @@ date,marketCap,traceName
 2024-10-14,0,private_ppif
 2024-10-15,0,private_ppif
 2024-10-16,0,private_ppif
+2024-10-17,0,private_ppif
 2024-01-03,0,public_ppif
 2024-01-03,0,public_ppif
 2024-01-03,0,public_ppif
@@ -9279,6 +9310,7 @@ date,marketCap,traceName
 2024-10-14,0,public_ppif
 2024-10-15,0,public_ppif
 2024-10-16,0,public_ppif
+2024-10-17,0,public_ppif
 2024-01-03,0,state_bond
 2024-01-03,0,state_bond
 2024-01-03,0,state_bond
@@ -9569,6 +9601,7 @@ date,marketCap,traceName
 2024-10-14,0,state_bond
 2024-10-15,0,state_bond
 2024-10-16,0,state_bond
+2024-10-17,0,state_bond
 2024-01-03,0,stock_mortgage
 2024-01-03,0,stock_mortgage
 2024-01-03,0,stock_mortgage
@@ -9859,6 +9892,7 @@ date,marketCap,traceName
 2024-10-14,0,stock_mortgage
 2024-10-15,0,stock_mortgage
 2024-10-16,0,stock_mortgage
+2024-10-17,0,stock_mortgage
 2024-01-03,0,subfederal_bond
 2024-01-03,0,subfederal_bond
 2024-01-03,0,subfederal_bond
@@ -10149,3 +10183,4 @@ date,marketCap,traceName
 2024-10-14,0,subfederal_bond
 2024-10-15,0,subfederal_bond
 2024-10-16,0,subfederal_bond
+2024-10-17,0,subfederal_bond
