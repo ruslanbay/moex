@@ -7,7 +7,7 @@ on:
   #     - completed
   schedule:
     - cron: '55 00 * * 2-6' # run every day at 00:35 am utc
-    - cron: '55 01 * * 6' # run every Saturday at 01:35 am utc
+    - cron: '55 01 * * 2-6' # run every Saturday at 01:35 am utc
     - cron: '55 02 2 1 *' # run every year at Jan 1st 02:35 UTC
   workflow_dispatch:
     inputs:
@@ -73,7 +73,7 @@ jobs:
         python .github/workflows/historgramDataPrep-Value.py --start "${CURRENT_YEAR}-01-01" --end "${YESTERDAY}" --step 1 --mode sector --filename "${CURRENT_YEAR}.csv"
         
     - name: WEEKLY. Process local files
-      if: ${{ github.event.schedule == '55 01 * * 6' }}
+      if: ${{ github.event.schedule == '55 01 * * 2-6' }}
       run: |
         YESTERDAY=$(date --utc -d 'yesterday' +'%Y-%m-%d')
         python .github/workflows/historgramDataPrep-Value.py --start 2011-12-19 --end "${YESTERDAY}" --step 1 --mode sector --filename total.csv
