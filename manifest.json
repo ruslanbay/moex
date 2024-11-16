@@ -39,9 +39,9 @@
     "theme_color": "#414554",
     "shortcuts": [
         {
-            "name": "MOEX Capitalization",
-            "short_name": "MOEX Capitalization",
-            "description": "MOEX Capitalization",
+            "name": "MOEX Treemap",
+            "short_name": "MOEX Treemap",
+            "description": "MOEX Treemap",
             "url": "/moex/",
             "icons": [
                 {

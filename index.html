@@ -2,85 +2,30 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MOEX Visualization</title>
-  <link rel="icon" href="/moex/images/icons/favicon.ico" type="image/x-icon">
-  <link rel="manifest" href="/moex/manifest.json">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="MOEX Capitalization">
-  <link rel="apple-touch-icon" href="/moex/images/icons/icon-152x152.png">
+  <base href="https://ruslanbay.github.io/moex/">
+  <meta charset="UTF-8">
   <meta name="description" content="Russian Stock Market Visualization. How the Russian stock market has changed over the past 20+ years">
   <meta name="theme-color" content="#414554" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="MOEX Visualization">
 
-  <style>
-    html,
-    body {
-      overflow: hidden;
-      position: relative;
-      width: 99.5%;
-      height: 100%;
-      background-color: rgb(65, 69, 84);
-    }
-
-    header {
-      height: 45px;
-      padding: 0;
-      margin: 0;
-      background-color: rgb(65, 69, 84);
-      border: 0px;
-      border-color: rgb(65, 69, 84);
-      color: #ffffff;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      outline: none;
-      display: flex;
-      align-items: center;
-    }
-
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    * {
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    #chart {
-      height: 92%;
-      width: 100%;
-      overflow: hidden;
-      background-color: rgb(65, 69, 84);
-      position: absolute;
-      top: 45px;
-      left: 0px;
-      outline: none;
-    }
-    
-    input[type="date"]::-webkit-clear-button {
-      display: none;
-    }
-
-    input[type="date"]::-ms-clear {
-      display: none;
-    }
-  </style>
-  <script src='https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js'></script>
-  <script src='https://cdn.jsdelivr.net/npm/plotly.js/dist/plotly.min.js'></script>
-  <script src='https://cdn.jsdelivr.net/npm/d3/dist/d3.min.js'></script>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js/dist/plotly.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3/dist/d3.min.js"></script>
+  
+  <!-- <script src="scripts/install.js"></script> -->
+  <script src="scripts/main.js"></script>
   <script type="text/javascript">
-    document.addEventListener('contextmenu', event => event.preventDefault()); // TODO: customize context menu
+    // Prevent the default context menu from appearing on right-click
+    document.addEventListener("contextmenu", event => event.preventDefault());
   </script>
 </head>
 
@@ -88,241 +33,32 @@
   <header>
     <input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="2023-12-08" min="2011-12-19" max="2024-03-04">
     &nbsp;&nbsp;
-    <a href="https://github.com/ruslanbay" title="GitHub">
-      <img src="/moex/images/icons/github.svg" height="30" />&nbsp;&nbsp;
+    <a href="" title="MOEX Treemap">
+      <img class="header-icon" src="images/icons/treemap.jpeg"/>
     </a>
-    <a href="https://www.linkedin.com/in/ruslanbay" title="Linkedin">
-      <img src="/moex/images/icons/linkedin.svg" height="30" />&nbsp;&nbsp;
+    <a href="history" title="MOEX Histogram">
+      <img class="header-icon" src="images/icons/scatter.jpeg"/>
     </a>
-    <a href="/moex/" title="MOEX Capitalization">
-      <img src="/moex/images/icons/treemap.jpeg" height="40" style="outline: 3px solid white; outline-offset: -4px;" />
+    <a href="listings" title="MOEX Listings">
+      <img class="header-icon" src="images/icons/bar.jpeg"/>
     </a>
-    <a href="/moex/history" title="MOEX History">
-      <img src="/moex/images/icons/scatter.jpeg" height="40" style="outline: 3px solid white; outline-offset: -4px;" />
-    </a>
-    <a href="/moex/listings" title="MOEX Listings">
-      <img src="/moex/images/icons/bar.jpeg" height="40" style="outline: 3px solid white; outline-offset: -4px;" />
-    </a>
-    <a href="/moex/value" title="MOEX Value Treemap">
-      <img src="/moex/images/icons/treemap.jpeg" height="40" style="outline: 3px solid white; outline-offset: -4px;" />
-    </a>
-    <a href="/moex/value/history" title="MOEX Value Histogram">
-      <img src="/moex/images/icons/scatter.jpeg" height="40" style="outline: 3px solid white; outline-offset: -4px;" />
-    </a>
-    &nbsp;
+    &nbsp;&nbsp;&nbsp;
   </header>
   <div id="chart"></div>
+  <footer>
+    <a href="https://github.com/ruslanbay" title="GitHub">
+      <img src="images/icons/github.svg" height="10" /> GitHub
+    </a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.linkedin.com/in/ruslanbay" title="Linkedin">
+      <img src="images/icons/linkedin.svg" height="10" /> Linkedin
+    </a>
+  </footer>
   <script type="text/javascript">
-    function refreshChart(date) {
-      date = date.target.value;
-
-      d3.tsv('/moex/data/issues-by-sector.tsv')
-        .then(function (rows) {
-          function unpack(rows, key) {
-            return rows.map(function (row) {
-              return row[key]
-            });
-          }
-
-          var chartData = {};
-          chartData["sector"] = [];
-          chartData["ticker"] = [];
-          chartData["size"] = [];
-          chartData["priceChange"] = [];
-          chartData["prevSize"] = [];
-          chartData["customdata"] = [];
-
-          var labels = unpack(rows, 'labels');
-          var parents = unpack(rows, 'parents');
-          var shortnames = unpack(rows, 'shortname');
-          var shortnamesRus = unpack(rows, 'shortname_rus');
-          var namesRus = unpack(rows, 'name_rus');
-
-          for (let i = 0; i <= 36; i++) {
-            chartData["sector"].push(parents[i]);
-            chartData["ticker"].push(labels[i]);
-            chartData["size"].push(0);
-            chartData["priceChange"].push(NaN);
-            chartData["prevSize"].push(0);
-            chartData["customdata"].push(["Moscow Exchange", labels[i], NaN, NaN, labels[i], NaN]);
-          };
-
-          if(date === new Date().toISOString().split('T')[0]) {
-            var isToday = true;
-            var path = `/moex/data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json?_=' + new Date().getTime()`;
-          }
-          else {
-            isToday = false;
-            path = `/moex/data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`;
-          }
-          return $.getJSON(`${path}`)
-            .then(function (moexJson) {
-              if(isToday) {
-                moexJson = moexJson.marketdata.data.filter(entry => entry[1] === 'TQBR')
-              }
-              else {
-                moexJson = moexJson.securities.data
-              }
-              moexJson.forEach(item => {
-                var ticker = item[0];
-                // exclude foreign shares
-                if(RegExp('^[a-zA-Z0-9]+-RM').test(ticker))
-                  return;
-                // // exclude bonds
-                // if(RegExp('^RU[0-9]+.*').test(ticker))
-                //   return;
-                // if(RegExp('^SU[0-9]+.*').test(ticker))
-                //   return;
-                // if(RegExp('^XS[0-9]+.*').test(ticker))
-                //   return;
-                // // exclude ETFs
-                // if(['FXRB', 'FXGD', 'FXAU', 'FXDE', 'FXIT',
-                //   'FXJP', 'FXUK', 'FXUS', 'FXRU', 'FXCN',
-                //   'FXMM', 'FXRL', 'FXKZ', 'FXTB', 'FXRB',
-                //   'FXWO', 'FXTM', 'FXDM', 'FXFA', 'FXTP',
-                //   'FXIP', 'FXES', 'FXRD', 'FXRE', 'FXEM', 'FXBC'].includes(ticker))
-                //   return;
-                
-                if(isToday) {
-                  var currency = '';
-                  var openPrice = item[9] == null ? 0 : item[9];
-                  var closePrice = item[12] == null ? 0 : item[12];
-                  var volume = item[27] == null ? 0 : item[27];
-                  var value = item[16] == null ? 0 : item[16];
-                  var numTrades = item[26] == null ? 0 : item[26];
-                  var marketCapDaily = item[50] == null ? 0 : item[50];
-                }
-                else {
-                  var currency = item[1];
-                  var openPrice = item[2] == null ? 0 : item[2];
-                  var closePrice = item[3] == null ? 0 : item[3];
-                  var volume = item[4] == null ? 0 : item[4];
-                  var value = item[5] == null ? 0 : item[5];
-                  var numTrades = item[6] == null ? 0 : item[6];
-                  var marketCapDaily = item[7] == null ? 0 : item[7];
-                }
-
-                if (openPrice == 0) {
-                  var priceChange = 0;
-                  var prevMarketCap = marketCapDaily;
-                }
-                else {
-                  var priceChange = 100 * (closePrice - openPrice) / openPrice;
-                  var prevMarketCap = marketCapDaily / (1 + priceChange * 0.01)
-                }
-
-                var sector = "Others";
-                var index = labels.indexOf(ticker);
-                if (index == -1) {
-                  sector = "Others";
-                  chartData["size"][labels.indexOf("Others")] = chartData["size"][labels.indexOf("Others")] + marketCapDaily;
-                  chartData["prevSize"][labels.indexOf("Others")] = chartData["prevSize"][labels.indexOf("Others")] + prevMarketCap;
-                  chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, ticker, closePrice]);
-                } else {
-                  sector = parents[index];
-                  chartData["size"][labels.indexOf(sector)] = chartData["size"][labels.indexOf(sector)] + marketCapDaily;
-                  chartData["prevSize"][labels.indexOf(sector)] = chartData["prevSize"][labels.indexOf(sector)] + prevMarketCap;
-
-                  var name = shortnames[index];
-                  chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, name, closePrice]);
-                };
-
-                chartData["sector"].push(sector);
-                chartData["ticker"].push(ticker);
-                chartData["size"].push(marketCapDaily);
-                chartData["priceChange"].push(priceChange);
-                chartData["prevSize"].push(prevMarketCap);
-              });
-
-              for (let i = 1; i <= 36; i++) {
-                chartData["customdata"][i][2] = chartData["size"][i];
-                chartData["priceChange"][i] = 100 * (chartData["size"][i] - chartData["prevSize"][i]) / chartData["prevSize"][i];
-                chartData["customdata"][i][3] = chartData["priceChange"][i];
-
-                chartData["size"][0] = chartData["size"][0] + chartData["size"][i];
-                chartData["prevSize"][0] = chartData["prevSize"][0] + chartData["prevSize"][i];
-                chartData["priceChange"][0] = 100 * (chartData["size"][0] - chartData["prevSize"][0]) / chartData["prevSize"][0];
-              };
-              chartData["customdata"][0] = ["Moscow Exchange", "Moscow Exchange", chartData["size"][0], chartData["priceChange"][0], "Moscow Exchange", NaN];
-
-              var texttemplate = '<b>%{label}</b><br>%{customdata[4]}<br>%{customdata[5]:,.2f} (%{customdata[3]:.2f}%)<br>Cap: ₽%{value:,.0f}';
-              var hovertemplate = '<b>%{customdata[1]}</b><br>%{customdata[4]}<br>Share price: %{customdata[5]:,.4f}<br>Price change: %{customdata[3]:.2f}%<br>Cap: ₽%{customdata[2]:,.0f}<br>percentParent: %{percentParent:.2p}<br>percentRoot: %{percentRoot:.2p}<extra></extra>';
-
-              var data = [{
-                type: "treemap",
-                labels: chartData["ticker"],
-                level: "Moscow Exchange",
-                parents: chartData["sector"],
-                values: chartData["size"],
-                marker: {
-                  colors: chartData.priceChange,
-                  colorscale: [[0, 'rgb(246,53,56)'], [0.5, 'rgba(65, 69, 84, 1)'], [1, 'rgb(48,204,90)']],
-                  cmin: -3,
-                  cmid: 0,
-                  cmax: 3,
-                  line: {
-                    width: 2,
-                    color: "rgb(64,68,83)"
-                  }
-                },
-                text: chartData.customdata[4],
-                textinfo: "label+text+value",
-                customdata: chartData.customdata,
-                branchvalues: "total",
-                texttemplate: texttemplate,
-                hovertemplate: hovertemplate,
-                pathbar: {
-                  visible: true,
-                  edgeshape: ">",
-                  side: "top"
-                }
-              }];
-
-              var layout = {
-                showlegend: false,
-                autosize: true,
-                margin: {
-                  l: 0,
-                  r: 0,
-                  t: 0,
-                  b: 0
-                },
-                paper_bgcolor: "rgb(0,0,0,0)",
-                plot_bgcolor: "rgb(0,0,0,0)",
-                annotations: [{
-                  name: 'wm',
-                  text: '<a style="color: grey;" href="https://ruslanbay.github.io/moex">ruslanbay.github.io/moex</a><br><a style="color: grey;" href="https://www.linkedin.com/in/ruslanbay">linkedin.com/in/ruslanbay</a><br><a style="color: grey;" href="https://github.com/ruslanbay">github.com/ruslanbay</a>',
-                  xref: 'paper',
-                  yref: 'paper',
-                  x: 0.03,
-                  y: 0.03,
-                  showarrow: false,
-                  opacity: 0.9,
-                  align: 'left',
-                  font: {
-                    size: 16,
-                    color: 'rgb(120, 108, 144)'
-                  }
-                }]
-              }
-
-              var config = {
-                responsive: true,
-                displaylogo: false,
-                displayModeBar: false,
-                scrollZoom: true
-              }
-              Plotly.react('chart', data, layout, config);
-            })
-            .catch(error => alert("Oops! There's no data. Please select another date."));
-        });
-    }
-
     const input = document.querySelector("#dateInput");
     input.addEventListener("change", refreshChart);
-
+    
     var currentDate = new Date();
-    // currentDate.setDate(currentDate.getDate() - 1);
     while (currentDate.getDay() === 0 || currentDate.getDay() === 6) {
       currentDate.setDate(currentDate.getDate() - 1);
     }
@@ -335,15 +71,11 @@
         value: formattedDate
       }
     });
-  </script>
-  <!--   PWA: Install script -->
-  <!-- <script src="/moex/scripts/install.js"></script> -->
 
-  <!--   PWA Register service-worker.js -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/moex/service-worker.js')
+    // PWA: Register service-worker.js
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("scripts/service-worker.js")
       });
     }
   </script>
