@@ -4,15 +4,17 @@ function toggleInput() {
   switch (chartTypeValue) {
     case "treemap":
       currency.disabled = true;
+      dataType.disabled = false;
       dateInput.disabled = false;
       break;
     case "history":
       currency.disabled = false;
+      dataType.disabled = false;
       dateInput.disabled = true;
       break;
     case "listings":
-      chartType.disabled = true;
       currency.disabled = true;
+      dataType.disabled = true;
       dateInput.disabled = true;
       break;
   }
