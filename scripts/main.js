@@ -89,7 +89,7 @@ async function prepHistogramData() {
       };
     }
 
-    const rows = await d3.csv(`data/historyMarketCap.csv`);
+    const rows = await d3.csv(`data/history.csv`);
 
     rows.forEach(row => {
       const traceName = row.traceName;
@@ -98,7 +98,22 @@ async function prepHistogramData() {
                                     'Foreign Companies', 'ifi_bond', 'interval_ppif', 'municipal_bond', 'ofz_bond',
                                     'private_ppif', 'public_ppif', 'state_bond', 'stock_mortgage', 'subfederal_bond'];
       const date = row.date;
-      var marketCap = parseFloat(row.marketCap);
+
+      const dataTypeValue = document.getElementById('dataType').value;
+      let histogramData;
+
+      switch(dataTypeValue){
+        case "marketcap":
+          histogramData = parseFloat(row.marketCap);;
+          break;
+        case "value":
+          histogramData = parseFloat(row.marketValue);;
+          break;
+        case "trades":
+          histogramData = parseFloat(row.marketTrades);;
+          break;
+      }
+
       if (traceNameExcludeList.includes(traceName)) {
         return;
       }
@@ -119,15 +134,15 @@ async function prepHistogramData() {
         };
       }
 
-      if (currency !== 'RUB') {
+      if (currency !== 'RUB' && (dataTypeValue === 'capitalization' || dataTypeValue === 'value')) {
         if (currencyRates[date] !== undefined) {
-          rate = currencyRates[date];
+          var rate = currencyRates[date];
         }
-        marketCap = marketCap / rate;
+        histogramData = histogramData / rate;
       }
 
       chartData[traceName].x.push(date);
-      chartData[traceName].y.push(marketCap);
+      chartData[traceName].y.push(histogramData);
     });
   
     const jsonChartData = Object.values(chartData);
@@ -230,7 +245,7 @@ function prepTreemapData() {
             }
 
             switch(dataType){
-              case "capitalization":
+              case "marketcap":
                 var sizeValue = marketCapDaily;
                 break;
               case "value":
