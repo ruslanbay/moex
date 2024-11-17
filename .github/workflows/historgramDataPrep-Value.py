@@ -156,7 +156,7 @@ match mode:
 
 chartData.sort(key=lambda entry: entry['name'][0])
 
-with open(f'value/history/{filename}', 'w', newline='') as f:
+with open(f'data/{filename}', 'w', newline='') as f:
   fieldnames = ['date', 'marketValue', 'traceName']
   writer = csv.DictWriter(f, fieldnames=fieldnames)
 
