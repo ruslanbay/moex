@@ -70,26 +70,26 @@ jobs:
     #   run: |
     #     YESTERDAY=$(date --utc -d 'yesterday' +'%Y-%m-%d')
     #     CURRENT_YEAR=$(date --utc +"%Y")
-    #     python .github/workflows/generateHistoryCsv.py --start "${CURRENT_YEAR}-01-01" --end "${YESTERDAY}" --step 1 --mode sector --filename "${CURRENT_YEAR}.csv"
+    #     python .github/workflows/updateHistoryCsv.py --start "${CURRENT_YEAR}-01-01" --end "${YESTERDAY}" --step 1 --mode sector --filename "${CURRENT_YEAR}.csv"
         
     - name: DAILY. Process local files
       if: ${{ github.event.schedule == '55 01 * * 2-6' }}
       run: |
         YESTERDAY=$(date --utc -d 'yesterday' +'%Y-%m-%d')
-        python .github/workflows/generateHistoryCsv.py --start 2011-12-19 --end "${YESTERDAY}" --step 1 --mode sector --filename history.csv
+        python .github/workflows/updateHistoryCsv.py --start 2011-12-19 --end "${YESTERDAY}" --step 1 --mode sector --filename history.csv
     
     # - name: YEARLY. Process local files
     #   if: ${{ github.event.schedule == '55 02 2 1 *' }}
     #   run: |
     #     LAST_YEAR=$(date --utc -d "last year" +"%Y")
-    #     python .github/workflows/generateHistoryCsv.py --start "${LAST_YEAR}-01-01" --end "${LAST_YEAR}-12-31" --step 1 --mode sector --filename "${LAST_YEAR}.csv"
+    #     python .github/workflows/updateHistoryCsv.py --start "${LAST_YEAR}-01-01" --end "${LAST_YEAR}-12-31" --step 1 --mode sector --filename "${LAST_YEAR}.csv"
     
     - name: MANUAL. Process local files
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
         FILENAME="${{ inputs.filename }}"
         [ -z "$FILENAME" ] && FILENAME="${{ inputs.startDate }}_${{ inputs.endDate }}_${{ inputs.stepDays }}_${{ inputs.mode }}.csv"
-        python .github/workflows/generateHistoryCsv.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }} --filename "${FILENAME}.csv"
+        python .github/workflows/updateHistoryCsv.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --mode ${{ inputs.mode }} --filename "${FILENAME}.csv"
     
     # Commit and push all changed files
     # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html
