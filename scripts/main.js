@@ -1,7 +1,7 @@
 function toggleInput() {
-  const chartType = document.getElementById("chartType").value;
+  const chartTypeValue = document.getElementById("chartType").value;
 
-  switch (chartType) {
+  switch (chartTypeValue) {
     case "treemap":
       currency.disabled = true;
       dateInput.disabled = false;
