@@ -1,4 +1,4 @@
-name: 'Prepare chart data for the histogram'
+name: 'Update history.csv'
 
 on:
   # workflow_run:
