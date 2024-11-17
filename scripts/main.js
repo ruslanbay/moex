@@ -1,5 +1,6 @@
 function toggleInput() {
   const chartTypeValue = document.getElementById("chartType").value;
+  const dataTypeValue = document.getElementById("dataType").value;
 
   switch (chartTypeValue) {
     case "treemap":
@@ -8,9 +9,14 @@ function toggleInput() {
       dateInput.disabled = false;
       break;
     case "history":
-      currency.disabled = false;
       dataType.disabled = false;
       dateInput.disabled = true;
+      if (dataTypeValue == 'trades' ) {
+        currency.disabled = true;
+      }
+      else {
+        currency.disabled = false;
+      }
       break;
     case "listings":
       currency.disabled = true;
@@ -21,7 +27,7 @@ function toggleInput() {
 };
 
 async function prepHistogramData() {
-  const currency = document.getElementById('currencySelector').value;
+  const currencyType = document.getElementById('currencySelector').value;
   try {
     const startDate = '2011-12-19';
 
@@ -36,7 +42,7 @@ async function prepHistogramData() {
       traceColors[label] = traceColor;
     });
 
-    response = await fetch(`data/${currency}FIXME.csv`);
+    response = await fetch(`data/${currencyType}FIXME.csv`);
     response = await response.text();
     data = response.split('\n')
       .map(row => row.split(','));
@@ -50,9 +56,9 @@ async function prepHistogramData() {
 
     const oneOverY = Object.values(currencyRates);
     let chartData = {};
-    if (!chartData[currency]) {
-      chartData[currency] = {
-        name: currency,
+    if (!chartData[currencyType]) {
+      chartData[currencyType] = {
+        name: currencyType,
         customdata: oneOverY,
         type: "scatter",
         mode: "lines",
@@ -134,7 +140,7 @@ async function prepHistogramData() {
         };
       }
 
-      if (currency !== 'RUB' && (dataTypeValue === 'capitalization' || dataTypeValue === 'value')) {
+      if (currencyType !== 'RUB' && (dataTypeValue == 'marketcap' || dataTypeValue == 'value')) {
         if (currencyRates[date] !== undefined) {
           var rate = currencyRates[date];
         }
