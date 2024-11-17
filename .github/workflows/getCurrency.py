@@ -14,7 +14,7 @@ currency = args.currency[0]
 if(start > end):
   sys.exit('ERROR: End date has to be greater than start date')
 
-with open(f'history/{currency}.csv', 'a') as f:
+with open(f'data/{currency}.csv', 'a') as f:
   url = f'https://iss.moex.com/iss/history/engines/currency/markets/index/securities/{currency}.json?iss.meta=on&history.columns=TRADEDATE,OPEN,HIGH,LOW,CLOSE&sort_column=TRADEDATE&sort_order=asc&FROM={start}&TILL={end}'
   headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'}
   try:
