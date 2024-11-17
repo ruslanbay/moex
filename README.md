@@ -4,21 +4,21 @@
 
 Мосбиржа предоставляет данные с декабря 2011 года. За прошедшие 23 года общая рублёвая капитализация компаний, представленных на бирже, удвоилась: с 24 до 50 триллиона. Если посмотреть этот же график в других валютах, увидим что рубль потерял 2/3 стоиомсти, а общая капитализация рынка снизилась примерно на четверть.
 
-![](article-assets/history-total-rub.jpeg)
+![](images/article/history-total-rub.jpeg)
 
-![](article-assets/history-rub-vs-usd.jpeg)
+![](images/article/history-rub-vs-usd.jpeg)
 
-![](article-assets/history-total-usd.jpeg)
+![](images/article/history-total-usd.jpeg)
 
-![](article-assets/treemap-cap-2011-12-19.jpeg)
+![](images/article/treemap-cap-2011-12-19.jpeg)
 
-![](article-assets/treemap-cap-2024-10-10.jpeg)
+![](images/article/treemap-cap-2024-10-10.jpeg)
 
 [Число отечественных компаний, представленных на бирже](https://ruslanbay.github.io/moex/listings/), достигло пика в ноябре 2012 года и с тех пор снижается.
 
-![](article-assets/listing-total.jpeg)
+![](images/article/listing-total.jpeg)
 
-![](article-assets/listing-new.jpeg)
+![](images/article/listing-new.jpeg)
 
 Ниже таблица с распределением секторов в общей капиталазации рынка.
 
@@ -40,25 +40,23 @@
 
 Из-за большой доли нефтегазовых компаний-экспортёров, курс рубля и капитализация рынка коррелируют со стоимостью нефти.
 
-![](article-assets/history-cap-usd-vs-brent.jpeg)
-![](article-assets/rub-vs-oil.jpeg)
+![](images/article/history-cap-usd-vs-brent.jpeg)
+![](images/article/rub-vs-oil.jpeg)
 
 В 2017 году ЦБР начал применять бюджетное правило, согласно которому бюджет формировался исходя из ожидаемой стоимости Urals в 40 USD, "излишки" в виде иностранной валюты и драгметаллов направлялись в ФНБ. Последующие три года, благодаря этой мере, несмотря на дорожавшую нефть, рубль оставался стабильным. Дешёвый по отношению к нефти рубль помог компаниям-экспортёрам снизить издержки и принёс им дополнительную прибыль.
 
-![](article-assets/rub-vs-oil-export.jpeg)
+![](images/article/rub-vs-oil-export.jpeg)
 
 По объёмам торгов я заметил растущую популярность ETF денежного рынка. Они появились почти одновременно - в середине 2022 года и с тех пор их доля в объёме торгов выросла с 0.8% до 12% или с 0.45 до 19 млрд. рублей. Насколько понимаю, это связано с ростом ключевой ставки и доходности облигаций.
 
-![](article-assets/tqtf-etf-value-histogram.jpeg)
-![](article-assets/tqtf-etf-value-treemap-2022-07-22.jpeg)
-![](article-assets/tqtf-etf-value-treemap-2024-11-13.jpeg)
+![](images/article/tqtf-etf-value-histogram.jpeg)
+![](images/article/tqtf-etf-value-treemap-2022-07-22.jpeg)
+![](images/article/tqtf-etf-value-treemap-2024-11-13.jpeg)
 
 Объём торгов ETF денежного рынка сравним с объёмами торгов нескольких отраслей вместе взятых. Из-за высокой ключевой ставки рынок долговых бумаг выглядит привлекательнее инвестиций в акции:
 
-![](article-assets/tqtf-etf-value-histogram-compare.jpeg)
+![](images/article/tqtf-etf-value-histogram-compare.jpeg)
 
 Посмотреть графики можно на странице [ruslanbay.github.io/moex](http://ruslanbay.github.io/moex). Данные обновляются ежедневно.
-
-Визуализация показывает объём торгов по стоимости и количеству сделок, капитализацию рынка. Доступно два типа визуализации: в динамике ([histogram](https://ruslanbay.github.io/moex/history/)) и в разрезе ([treemap](https://ruslanbay.github.io/moex)).
 
 JS - не моя стихия, не судите код строго, он просто работает =)

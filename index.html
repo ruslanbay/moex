@@ -8,12 +8,13 @@
   <meta name="description" content="Russian Stock Market Visualization. How the Russian stock market has changed over the past 20+ years">
   <meta name="theme-color" content="#414554" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="MOEX Visualization">
 
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="E:\GitHub\moex\css\style.css">
   <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
   
@@ -22,57 +23,66 @@
   <script src="https://cdn.jsdelivr.net/npm/d3/dist/d3.min.js"></script>
   
   <!-- <script src="scripts/install.js"></script> -->
-  <script src="scripts/main.js"></script>
-  <script type="text/javascript">
-    // Prevent the default context menu from appearing on right-click
-    document.addEventListener("contextmenu", event => event.preventDefault());
-  </script>
+  <!-- <script src="scripts/main.js"></script> -->
+  <script src="E:\GitHub\moex\scripts\main.js"></script>
 </head>
 
 <body>
   <header>
+    <select id="currencySelector">
+      <option value="USD" selected="selected">$</option>
+      <option value="EUR">€</option>
+      <option value="CNY">¥</option>
+      <option value="RUB">₽</option>
+    </select>
+    &nbsp;
+    <select id="chartType">
+      <option value="treemap" selected="selected">treemap</option>
+      <option value="history">history</option>
+      <option value="listings">listings</option>
+    </select>
+    &nbsp;
+    <select id="dataType">
+      <option value="capitalization" selected="selected">marketcap</option>
+      <option value="value">value</option>
+      <option value="trades">trades</option>
+    </select>
+    &nbsp;
     <input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="2023-12-08" min="2011-12-19" max="2024-03-04">
-    &nbsp;&nbsp;
-    <a href="" title="MOEX Treemap">
-      <img class="header-icon" src="images/icons/treemap.jpeg"/>
-    </a>
-    <a href="history" title="MOEX Histogram">
-      <img class="header-icon" src="images/icons/scatter.jpeg"/>
-    </a>
-    <a href="listings" title="MOEX Listings">
-      <img class="header-icon" src="images/icons/bar.jpeg"/>
-    </a>
-    &nbsp;&nbsp;&nbsp;
+    &nbsp;
   </header>
   <div id="chart"></div>
   <footer>
-    <a href="https://github.com/ruslanbay" title="GitHub">
-      <img src="images/icons/github.svg" height="10" /> GitHub
-    </a>
+    <img src="images/icons/github.svg" height="10" />&nbsp;
+    <a href="https://github.com/ruslanbay/moex" title="">Github</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://www.linkedin.com/in/ruslanbay" title="Linkedin">
-      <img src="images/icons/linkedin.svg" height="10" /> Linkedin
-    </a>
+    <img src="images/icons/linkedin.svg" height="10" />&nbsp;
+    <a href="https://www.linkedin.com/pulse/как-российский-фондовый-рынок-изменился-за-последние-20-ruslan-bay-evwxe/" title="">Linkedin</a>
   </footer>
   <script type="text/javascript">
-    const input = document.querySelector("#dateInput");
-    input.addEventListener("change", refreshChart);
+    const chartType = document.getElementById("chartType");
+    const currency = document.getElementById("currencySelector");
+    const dataType = document.getElementById("dataType");
+    const dateInput = document.getElementById("dateInput");
+    
+    chartType.addEventListener("change", refreshChart);
+    currency.addEventListener("change", refreshChart);
+    dataType.addEventListener("change", refreshChart);
+    dateInput.addEventListener("change", refreshChart);
+
+    // Prevent the default context menu from appearing on right-click
+    document.addEventListener("contextmenu", event => event.preventDefault());
     
     var currentDate = new Date();
     while (currentDate.getDay() === 0 || currentDate.getDay() === 6) {
       currentDate.setDate(currentDate.getDate() - 1);
     }
     var formattedDate = currentDate.toISOString().split('T')[0];
-    document.querySelector("#dateInput").value = formattedDate;
-    document.querySelector("#dateInput").max = formattedDate;
+    document.getElementById("dateInput").value = formattedDate;
+    document.getElementById("dateInput").max = formattedDate;
 
-    refreshChart({
-      target: {
-        value: formattedDate
-      }
-    });
+    refreshChart();
 
-    // PWA: Register service-worker.js
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker.register("scripts/service-worker.js")

@@ -1,5 +1,5 @@
 {
-  "name": "MOEX",
+  "name": "MOEX Visualization",
   "short_name": "MOEX",
   "icons": [
     {
@@ -55,6 +55,18 @@
       "short_name": "MOEX History",
       "description": "MOEX History",
       "url": "/moex/history/",
+      "icons": [
+        {
+          "src": "/moex/images/icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "MOEX Listings",
+      "short_name": "MOEX Listings",
+      "description": "MOEX Listings",
+      "url": "/moex/listings/",
       "icons": [
         {
           "src": "/moex/images/icons/icon-192x192.png",

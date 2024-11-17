@@ -1,7 +1,7 @@
 'use strict';
 
-const CACHE_NAME = 'my-app-static-cache-v8';
-const DATA_CACHE_NAME = 'my-app-data-cache-v8';
+const CACHE_NAME = 'my-app-static-cache-v9';
+const DATA_CACHE_NAME = 'my-app-data-cache-v9';
 
 const FILES_TO_CACHE = [
     '/moex/',
@@ -11,10 +11,6 @@ const FILES_TO_CACHE = [
     '/moex/images/icons/favicon.ico',
     '/moex/images/icons/github.svg',
     '/moex/images/icons/linkedin.svg',
-    '/moex/images/icons/email.svg',
-    '/moex/images/icons/treemap.jpeg',
-    '/moex/images/icons/scatter.jpeg',
-    '/moex/images/icons/bar.jpeg',
     '/moex/scripts/install.js',
     'https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js',
     'https://cdn.jsdelivr.net/npm/d3/dist/d3.min.js',
@@ -48,7 +44,7 @@ self.addEventListener('activate', (evt) => {
 });
 
 self.addEventListener('fetch', (evt) => {
-    if (evt.request.url.includes('/moex/data/iss/history/engines/stock/totals/boards/MRKT/') || evt.request.url.includes('/moex/history/')) {
+    if (evt.request.url.includes('/moex/data/') || evt.request.url.includes('/moex/history/')) {
         evt.respondWith(
             caches.open(DATA_CACHE_NAME).then(async (cache) => {
                 try {
