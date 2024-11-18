@@ -99,29 +99,29 @@ async function prepHistogramData() {
 
     rows.forEach(row => {
       const traceName = row.traceName;
-      const traceNameExcludeList = ['TQFD. PAI (USD)', 'TQIF. PAI', 'TQPI. Shares PIR', 'TQTF. ETF', 'TQTY. PAI (CNY)',
-                                    'cb_bond', 'corporate_bond', 'etf_ppif', 'euro_bond', 'exchange_bond', 'exchange_ppif',
-                                    'Foreign Companies', 'ifi_bond', 'interval_ppif', 'municipal_bond', 'ofz_bond',
-                                    'private_ppif', 'public_ppif', 'state_bond', 'stock_mortgage', 'subfederal_bond'];
       const date = row.date;
 
       const dataTypeValue = document.getElementById('dataType').value;
       let histogramData;
+      // const traceNameExcludeList = ['TQFD. PAI (USD)', 'TQIF. PAI', 'TQPI. Shares PIR', 'TQTF. ETF', 'TQTY. PAI (CNY)',
+      //                               'cb_bond', 'corporate_bond', 'etf_ppif', 'euro_bond', 'exchange_bond', 'exchange_ppif',
+      //                               'Foreign Companies', 'ifi_bond', 'interval_ppif', 'municipal_bond', 'ofz_bond',
+      //                               'private_ppif', 'public_ppif', 'state_bond', 'stock_mortgage', 'subfederal_bond'];
+      const traceNameExcludeList = ['Foreign Companies'];
 
       switch(dataTypeValue){
         case "marketcap":
-          histogramData = parseFloat(row.marketCap);;
+          histogramData = parseFloat(row.marketCap);
+          if (traceNameExcludeList.includes(traceName)) {
+            return;
+          }
           break;
         case "value":
-          histogramData = parseFloat(row.marketValue);;
+          histogramData = parseFloat(row.marketValue);
           break;
         case "trades":
-          histogramData = parseFloat(row.marketTrades);;
+          histogramData = parseFloat(row.marketTrades);
           break;
-      }
-
-      if (traceNameExcludeList.includes(traceName)) {
-        return;
       }
 
       if (!chartData[traceName]) {
@@ -410,12 +410,44 @@ function refreshHistogram() {
           x: 0,
           xanchor: "left",
           y: 0.89,
-          yanchor: "bottom",
+          yanchor: "top",
           // entrywidth: 0,
-          bgcolor: 'rgba(0, 0, 0, 0)',
-          bordercolor: 'rgba(0, 0, 0, 0)',
+          bgcolor: 'rgba(65, 69, 84, 0)',
+          bordercolor: 'rgba(65, 69, 84, 0)',
           borderwidth: 0,
         },
+        updatemenus: [{
+          type: 'buttons',
+          buttons: [
+            {
+              label: 'Show/Hide Legend',
+              method: 'relayout',
+              args: [{ 'showlegend': true }],
+              args2: [{ 'showlegend': false }]
+            },
+            // {
+            //   label: 'Hide Legend',
+            //   method: 'relayout',
+            //   args: [{ 'showlegend': false }]
+            // }
+          ],
+          direction: 'right',
+          showactive: true,
+          x: 0.01,
+          xanchor: 'left',
+          y: 1.0,
+          yanchor: 'top',
+          // pad: { t: 1, r: 1, b: 1, l: 1 },
+          bgcolor: 'rgba(65, 69, 84, 1)',
+          bordercolor: 'rgba(65, 69, 84, 1)',
+          borderwidth: 0,
+          font: {
+            lineposition: 'none',
+            color: 'black',
+            size: 14,
+            variant: 'all-small-caps'
+          }
+        }],
         yaxis: {
           visible: true,
           fixedrange: true,
