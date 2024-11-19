@@ -169,10 +169,14 @@ async function prepHistogramData() {
 
       chartData[traceName].x.push(date);
       chartData[traceName].y.push(histogramData);
-    });
-  
+    }); 
+
     const jsonChartData = Object.values(chartData);
-    return jsonChartData;
+    const filteredData = jsonChartData.filter(trace => {
+        return trace.y.some(value => value !== null && value !== 0 && !isNaN(value));
+    });
+
+    return filteredData;
 
   } catch (error) {
     console.error('Error fetching data:', error);
