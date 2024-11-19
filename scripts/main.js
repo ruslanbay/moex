@@ -267,7 +267,7 @@ percentRoot: %{percentRoot:.2p}
               var openPrice = item[9] == null ? 0 : item[9];
               var closePrice = item[12] == null ? 0 : item[12];
               var volume = item[27] == null ? 0 : item[27];
-              var value = item[16] == null ? 0 : item[16];
+              var value = item[15] == null ? 0 : item[16];
               var numTrades = item[26] == null ? 0 : item[26];
               var marketCapDaily = item[50] == null ? 0 : item[50];
             }
