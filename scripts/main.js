@@ -47,10 +47,10 @@ async function getCurrencyRateByDate(date) {
   const currencyRates = await getCurrencyRates(currencyType);
   
   let rate = currencyRates[date];
-  if (typeof rate == 'undefined') {
-    let cdate = new Date(date);
-    cdate.setDate(cdate.getDate() - 1);
-    let prevDate = cdate.toISOString().split('T')[0];
+  let d = new Date(date);
+  while (typeof rate == 'undefined') {
+    d.setDate(d.getDate() - 1);
+    let prevDate = d.toISOString().split('T')[0];
     rate = currencyRates[prevDate];
   }
   
@@ -120,9 +120,9 @@ async function prepHistogramData() {
     rows.forEach(row => {
       const traceName = row.traceName;
       const date = row.date;
+      let y;
 
       const dataTypeValue = document.getElementById('dataType').value;
-      let histogramData;
       // const traceNameExcludeList = ['TQFD. PAI (USD)', 'TQIF. PAI', 'TQPI. Shares PIR', 'TQTF. ETF', 'TQTY. PAI (CNY)',
       //                               'cb_bond', 'corporate_bond', 'etf_ppif', 'euro_bond', 'exchange_bond', 'exchange_ppif',
       //                               'Foreign Companies', 'ifi_bond', 'interval_ppif', 'municipal_bond', 'ofz_bond',
@@ -131,16 +131,16 @@ async function prepHistogramData() {
 
       switch(dataTypeValue){
         case "marketcap":
-          histogramData = parseFloat(row.marketCap);
+          y = parseFloat(row.marketCap);
           if (traceNameExcludeList.includes(traceName)) {
             return;
           }
           break;
         case "value":
-          histogramData = parseFloat(row.marketValue);
+          y = parseFloat(row.marketValue);
           break;
         case "trades":
-          histogramData = parseFloat(row.marketTrades);
+          y = parseFloat(row.marketTrades);
           break;
       }
 
@@ -150,6 +150,7 @@ async function prepHistogramData() {
           type: "scatter",
           mode: "lines",
           stackgroup: "one",
+          connectgaps: true,
           hoverinfo: "all",
           hovertemplate: "%{x|%x}<br>%{y:,.0f}<br>%{fullData.name}<extra></extra>",
           marker: {
@@ -161,19 +162,26 @@ async function prepHistogramData() {
       }
 
       if (currencyType !== 'RUB' && (dataTypeValue == 'marketcap' || dataTypeValue == 'value')) {
-        if (currencyRates[date] !== undefined) {
-          var rate = currencyRates[date];
+        // if (currencyRates[date] !== undefined) {
+        //   var rate = currencyRates[date];
+        // }
+        var rate = currencyRates[date];
+        var d = new Date(date);
+        while (typeof rate == 'undefined') {
+          d.setDate(d.getDate() - 1);
+          let prevDate = d.toISOString().split('T')[0];
+          rate = currencyRates[prevDate];
         }
-        histogramData = histogramData / rate;
+        y = y / rate;
       }
 
       chartData[traceName].x.push(date);
-      chartData[traceName].y.push(histogramData);
+      chartData[traceName].y.push(y);
     }); 
 
     const jsonChartData = Object.values(chartData);
     const filteredData = jsonChartData.filter(trace => {
-        return trace.y.some(value => value !== null && value !== 0 && !isNaN(value));
+        return trace.y.some(v => v !== null && v !== 0 && !isNaN(v));
     });
 
     return filteredData;
@@ -458,7 +466,6 @@ function refreshHistogram() {
           xanchor: "left",
           y: 0.89,
           yanchor: "top",
-          // entrywidth: 0,
           bgcolor: 'rgba(65, 69, 84, 0)',
           bordercolor: 'rgba(65, 69, 84, 0)',
           borderwidth: 0,
@@ -480,7 +487,7 @@ function refreshHistogram() {
           ],
           direction: 'right',
           showactive: true,
-          x: 0.01,
+          x: 0.02,
           xanchor: 'left',
           y: 1.0,
           yanchor: 'top',
