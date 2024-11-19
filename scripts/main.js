@@ -4,7 +4,7 @@ function toggleInput() {
 
   switch (chartTypeValue) {
     case "treemap":
-      currency.disabled = true;
+      currency.disabled = false;
       dataType.disabled = false;
       dateInput.disabled = false;
       break;
@@ -26,6 +26,37 @@ function toggleInput() {
   }
 };
 
+async function getCurrencyRates(currencyType) {
+  const startDate = '2011-12-19';
+  const response = await fetch(`data/${currencyType}FIXME.csv`);
+  const textResponse = await response.text();
+  const data = textResponse.split('\n').map(row => row.split(','));
+
+  const currencyRates = {};
+  data.forEach(row => {
+    const [Date, , , , Close] = row;
+    if (Date >= startDate) {
+      currencyRates[Date] = Number(Close);
+    }
+  });
+  return currencyRates;
+}
+
+async function getCurrencyRateByDate(date) {
+  const currencyType = document.getElementById('currencySelector').value;
+  const currencyRates = await getCurrencyRates(currencyType);
+  
+  let rate = currencyRates[date];
+  if (typeof rate == 'undefined') {
+    let cdate = new Date(date);
+    cdate.setDate(cdate.getDate() - 1);
+    let prevDate = cdate.toISOString().split('T')[0];
+    rate = currencyRates[prevDate];
+  }
+  
+  return rate;
+}
+
 async function prepHistogramData() {
   const currencyType = document.getElementById('currencySelector').value;
   try {
@@ -42,18 +73,7 @@ async function prepHistogramData() {
       traceColors[label] = traceColor;
     });
 
-    response = await fetch(`data/${currencyType}FIXME.csv`);
-    response = await response.text();
-    data = response.split('\n')
-      .map(row => row.split(','));
-    const currencyRates = {};
-    data.forEach(row => {
-      const [Date, , , , Close] = row;
-      if (Date >= startDate) {
-        currencyRates[Date] = Number(Close);
-      }
-    });
-
+    const currencyRates = await getCurrencyRates(currencyType);
     const oneOverY = Object.values(currencyRates);
     let chartData = {};
     if (!chartData[currencyType]) {
@@ -166,13 +186,33 @@ function unpack(rows, key) {
   });
 }
 
-function prepTreemapData() {
-  var currency = document.getElementById('currencySelector').value;
+async function prepTreemapData() {
+  var currencyType = document.getElementById('currencySelector').value;
   var dataType = document.getElementById('dataType').value;
   var date = document.getElementById('dateInput').value;
+  const currencyRates = await getCurrencyRates(currencyType);
 
-  var texttemplate = '<b>%{label}</b><br>%{customdata[4]}<br>%{customdata[5]:,.2f} (%{customdata[3]:.2f}%)<br>Cap: ₽%{value:,.0f}';
-  var hovertemplate = '<b>%{customdata[1]}</b><br>%{customdata[4]}<br>Share price: %{customdata[5]:,.4f}<br>Price change: %{customdata[3]:.2f}%<br>Cap: ₽%{customdata[2]:,.0f}<br>percentParent: %{percentParent:.2p}<br>percentRoot: %{percentRoot:.2p}<extra></extra>';
+  let rate = 1
+  if (currencyType != 'RUB') {
+    rate = await getCurrencyRateByDate(date);
+  }
+
+  var texttemplate = `<b>%{label}</b><br>
+%{customdata[4]}<br>
+%{customdata[5]:,.2f} (%{customdata[3]:.2f}%)<br>
+C: %{customdata[2]:,.0f}<br>
+V: %{customdata[6]:,.0f}<br>
+T: %{customdata[7]:,.0f}`;
+  var hovertemplate = `<b>%{customdata[1]}</b><br>
+%{customdata[4]}<br>
+Share price: %{customdata[5]:,.4f}<br>
+Price change: %{customdata[3]:.2f}%<br>
+Cap: %{customdata[2]:,.0f}<br>
+Value: %{customdata[6]:,.0f}<br>
+Trades: %{customdata[7]:,.0f}<br>
+percentParent: %{percentParent:.2p}<br>
+percentRoot: %{percentRoot:.2p}
+<extra></extra>`;
 
   return d3.tsv('data/issues-by-sector.tsv')
     .then(function (rows) {
@@ -200,7 +240,7 @@ function prepTreemapData() {
         chartData["priceChange"].push(NaN);
         chartData["cap"].push(0);
         chartData["prevCap"].push(0);
-        chartData["customdata"].push(["Moscow Exchange", labels[i], NaN, NaN, labels[i], NaN]);
+        chartData["customdata"].push(["Moscow Exchange", labels[i], NaN, NaN, labels[i], NaN, NaN, NaN]);
       };
 
       var path = `data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`;
@@ -241,6 +281,9 @@ function prepTreemapData() {
               var marketCapDaily = item[7] == null ? 0 : item[7];
             }
 
+            value = value / rate;
+            marketCapDaily = marketCapDaily / rate;
+
             if (openPrice == 0) {
               var priceChange = 0;
               var prevMarketCap = marketCapDaily;
@@ -269,7 +312,7 @@ function prepTreemapData() {
               chartData["size"][labels.indexOf("Others")] = chartData["size"][labels.indexOf("Others")] + sizeValue;
               chartData["cap"][labels.indexOf("Others")] = chartData["cap"][labels.indexOf("Others")] + marketCapDaily;
               chartData["prevCap"][labels.indexOf("Others")] = chartData["prevCap"][labels.indexOf("Others")] + prevMarketCap;
-              chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, ticker, closePrice]);
+              chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, ticker, closePrice, value, numTrades]);
             } else {
               sector = parents[index];
               chartData["size"][labels.indexOf(sector)] = chartData["size"][labels.indexOf(sector)] + sizeValue;
@@ -277,7 +320,7 @@ function prepTreemapData() {
               chartData["prevCap"][labels.indexOf(sector)] = chartData["prevCap"][labels.indexOf(sector)] + prevMarketCap;
 
               var name = shortnames[index];
-              chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, name, closePrice]);
+              chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, name, closePrice, value, numTrades]);
             };
 
             chartData["sector"].push(sector);
@@ -289,7 +332,7 @@ function prepTreemapData() {
           });
 
           for (let i = 1; i <= 36; i++) {
-            chartData["customdata"][i][2] = chartData["size"][i];
+            chartData["customdata"][i][2] = chartData["cap"][i];
             chartData["priceChange"][i] = 100 * (chartData["cap"][i] - chartData["prevCap"][i]) / chartData["prevCap"][i];
             chartData["customdata"][i][3] = chartData["priceChange"][i];
 
@@ -298,7 +341,7 @@ function prepTreemapData() {
             chartData["prevCap"][0] = chartData["prevCap"][0] + chartData["prevCap"][i];
             chartData["priceChange"][0] = 100 * (chartData["cap"][0] - chartData["prevCap"][0]) / chartData["prevCap"][0];
           };
-          chartData["customdata"][0] = ["Moscow Exchange", "Moscow Exchange", chartData["size"][0], chartData["priceChange"][0], "Moscow Exchange", NaN];
+          chartData["customdata"][0] = ["Moscow Exchange", "Moscow Exchange", chartData["cap"][0], chartData["priceChange"][0], "Moscow Exchange", NaN, NaN, NaN];
           data = [{
             type: "treemap",
             labels: chartData["ticker"],
