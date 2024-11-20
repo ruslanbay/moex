@@ -399,7 +399,7 @@ function refreshTreemap() {
         margin: {
           l: 0,
           r: 0,
-          t: 0,
+          t: 20,
           b: 20
         },
         paper_bgcolor: "rgba(0,0,0,0)",
