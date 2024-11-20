@@ -2,7 +2,7 @@ name: 'Get MOEX data'
 
 on:
   schedule:
-    - cron: '10 20 * * 2-6'
+    - cron: '20 00 * * 2-6'
     - cron: '0,15,30,45 7-19 * * 1-5'
   workflow_dispatch:
     inputs:
@@ -56,7 +56,7 @@ jobs:
           exit 1
         fi
     - name: DAILY. Get data files from MOEX ISS
-      if: ${{ github.event.schedule == '10 20 * * 2-6' }}
+      if: ${{ github.event.schedule == '20 00 * * 2-6' }}
       run: |
         python .github/workflows/getMoexData.py
     - name: MANUAL. Get data files from MOEX ISS
