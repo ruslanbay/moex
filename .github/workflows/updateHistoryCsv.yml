@@ -6,8 +6,8 @@ on:
   #   types:
   #     - completed
   schedule:
-    # - cron: '55 00 * * 2-6'
-    - cron: '15 20 * * 2-6'
+    # - cron: '55 01 * * 2-6'
+    - cron: '55 00 * * 2-6'
     # - cron: '55 02 2 1 *'
   workflow_dispatch:
     inputs:
@@ -66,14 +66,14 @@ jobs:
         python-version: "3.11"
 
     # - name: DAYLY. Process local files
-    #   if: ${{ github.event.schedule == '55 00 * * 2-6' }}
+    #   if: ${{ github.event.schedule == '55 01 * * 2-6' }}
     #   run: |
     #     YESTERDAY=$(date --utc -d 'yesterday' +'%Y-%m-%d')
     #     CURRENT_YEAR=$(date --utc +"%Y")
     #     python .github/workflows/updateHistoryCsv.py --start "${CURRENT_YEAR}-01-01" --end "${YESTERDAY}" --step 1 --mode sector --filename "${CURRENT_YEAR}.csv"
         
     - name: DAILY. Process local files
-      if: ${{ github.event.schedule == '15 20 * * 2-6' }}
+      if: ${{ github.event.schedule == '55 00 * * 2-6' }}
       run: |
         YESTERDAY=$(date --utc -d 'yesterday' +'%Y-%m-%d')
         python .github/workflows/updateHistoryCsv.py --start 2011-12-19 --end "${YESTERDAY}" --step 1 --mode sector --filename history.csv
