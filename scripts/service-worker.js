@@ -1,7 +1,7 @@
 'use strict';
 
-const CACHE_NAME = 'my-app-static-cache-v11';
-const DATA_CACHE_NAME = 'my-app-data-cache-v11';
+const CACHE_NAME = 'my-app-static-cache-v12';
+const DATA_CACHE_NAME = 'my-app-data-cache-v12';
 
 const FILES_TO_CACHE = [
     '/moex/',
