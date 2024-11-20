@@ -7,10 +7,12 @@ function toggleInput() {
       currency.disabled = false;
       dataType.disabled = false;
       dateInput.disabled = false;
+      searchInput.disabled = false;
       break;
     case "history":
       dataType.disabled = false;
       dateInput.disabled = true;
+      searchInput.disabled = true;
       if (dataTypeValue == 'trades' ) {
         currency.disabled = true;
       }
@@ -22,7 +24,22 @@ function toggleInput() {
       currency.disabled = true;
       dataType.disabled = true;
       dateInput.disabled = true;
+      searchInput.disabled = true;
       break;
+  }
+};
+
+function selectTreemapItemByLabel(label) {
+  var myDiv = document.getElementById('chart');
+
+  var boxes = myDiv.querySelectorAll('g');
+  for (var i = 18; i < boxes.length; i++) {
+    var box = boxes[i];
+
+    if (box.innerHTML.includes(label)) {
+      box.dispatchEvent(new MouseEvent('click'));
+      break;
+    }
   }
 };
 

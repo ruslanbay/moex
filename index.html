@@ -27,6 +27,10 @@
 
 <body>
   <header>
+    <form id="inputForm" onsubmit="return false;">
+      <input type="text" id="textInput" placeholder="search" maxlength="20" autocomplete="off">
+    </form>
+    &nbsp;
     <select id="currencySelector">
       <option value="USD" selected="selected">$</option>
       <option value="EUR">€</option>
@@ -62,6 +66,7 @@
     const currency = document.getElementById("currencySelector");
     const dataType = document.getElementById("dataType");
     const dateInput = document.getElementById("dateInput");
+    const searchInput = document.getElementById('textInput');
     
     chartType.addEventListener("change", refreshChart);
     currency.addEventListener("change", refreshChart);
@@ -80,6 +85,17 @@
     document.getElementById("dateInput").max = formattedDate;
 
     refreshChart();
+
+    searchInput.addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        const inputValue = this.value.trim().toUpperCase();
+        if (inputValue) {
+          selectTreemapItemByLabel(inputValue);
+          this.value = '';
+        }
+      }
+    });
 
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {

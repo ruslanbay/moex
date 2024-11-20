@@ -52,6 +52,10 @@ input {
   min-height: 25px;
 }
 
+#textInput {
+  width: 60px;
+}
+
 input[type="date"]::-webkit-clear-button,
 input[type="date"]::-ms-clear {
   display: none;
