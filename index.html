@@ -28,7 +28,7 @@
 <body>
   <header>
     <form id="inputForm" onsubmit="return false;">
-      <input type="text" id="textInput" placeholder="🔎 PLZL" maxlength="20" autocomplete="off">
+      <input type="text" id="tickerInput" placeholder="🔎 PLZL" maxlength="20" autocomplete="off">
     </form>
     &nbsp;
     <select id="currencySelector">
@@ -60,33 +60,51 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <img src="images/icons/linkedin.svg" height="10" />&nbsp;
     <a href="https://www.linkedin.com/pulse/как-российский-фондовый-рынок-изменился-за-последние-20-ruslan-bay-evwxe/" title="">Linkedin</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://ruslanbay.github.io/moex?date=2024-11-20&currency=USD" title="">Share</a>
   </footer>
   <script type="text/javascript">
-    const chartType = document.getElementById("chartType");
-    const currency = document.getElementById("currencySelector");
-    const dataType = document.getElementById("dataType");
-    const dateInput = document.getElementById("dateInput");
-    const searchInput = document.getElementById('textInput');
-    
-    chartType.addEventListener("change", refreshChart);
-    currency.addEventListener("change", refreshChart);
-    dataType.addEventListener("change", refreshChart);
-    dateInput.addEventListener("change", refreshChart);
-
     // Prevent the default context menu from appearing on right-click
     document.addEventListener("contextmenu", event => event.preventDefault());
-    
-    var currentDate = new Date();
-    while (currentDate.getDay() === 0 || currentDate.getDay() === 6) {
-      currentDate.setDate(currentDate.getDate() - 1);
-    }
-    var formattedDate = currentDate.toISOString().split('T')[0];
-    document.getElementById("dateInput").value = formattedDate;
-    document.getElementById("dateInput").max = formattedDate;
 
+    const url = new URL(window.location.href);
+    const urlDate = url.searchParams.get('date');
+    const urlChartType = url.searchParams.get('chartType');
+    const urlCurrency = url.searchParams.get('currency');
+    const urlDataType = url.searchParams.get('dataType');
+    const urlTicker = url.searchParams.get('ticker');
+    
+    let date = urlDate ? new Date(urlDate) : new Date();
+    while (date.getDay() === 0 || date.getDay() === 6) {
+      date.setDate(date.getDate() - 1);
+    }
+    var formattedDate = date.toISOString().split('T')[0];
+    document.getElementById("dateInput").value = formattedDate;
+    document.getElementById("dateInput").max = new Date().toISOString().split('T')[0];
+
+    const dateInput = document.getElementById("dateInput");
+    if (urlDate) { urlDate.value = urlDate };
+
+    const chartTypeInput = document.getElementById("chartType");
+    if (urlChartType && ['treemap', 'history', 'listings'].includes(urlChartType)) { chartTypeInput.value = urlChartType };
+    
+    const currency = document.getElementById("currencySelector");
+    if (urlCurrency && ['USD', 'EUR', 'CNY', 'RUB'].includes(urlCurrency)) { currency.value = urlCurrency };
+    
+    const dataTypeInput = document.getElementById("dataType");
+    if (urlDataType && ['marketcap', 'value', 'trades'].includes(urlDataType)) { dataTypeInput.value = urlDataType };
+
+    const tickerInput = document.getElementById('textInput');
+    if (urlTicker) { selectTreemapItemByLabel(urlTicker); };
+  
+    chartTypeInput.addEventListener("change", refreshChart);
+    currency.addEventListener("change", refreshChart);
+    dataTypeInput.addEventListener("change", refreshChart);
+    dateInput.addEventListener("change", refreshChart);
+    
     refreshChart();
 
-    searchInput.addEventListener('keypress', function(event) {
+    tickerInput.addEventListener('keypress', function(event) {
       if (event.key === 'Enter') {
         event.preventDefault();
         const inputValue = this.value.trim().toUpperCase();
