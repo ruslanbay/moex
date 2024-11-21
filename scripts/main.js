@@ -27,6 +27,12 @@ function toggleInput() {
       tickerInput.disabled = true;
       break;
   }
+  
+  url.searchParams.set('currency', currency.value);
+  url.searchParams.set('chartType', chartTypeValue);
+  url.searchParams.set('dataType', dataTypeValue);
+  url.searchParams.set('date', dateInput.value);
+  history.replaceState(null, '', url);
 };
 
 function selectTreemapItemByLabel(label) {
@@ -36,7 +42,7 @@ function selectTreemapItemByLabel(label) {
   for (var i = 18; i < boxes.length; i++) {
     var box = boxes[i];
 
-    if (box.innerHTML.includes(label)) {
+    if (box.innerHTML.toLowerCase().includes(label)) {
       box.dispatchEvent(new MouseEvent('click'));
       break;
     }

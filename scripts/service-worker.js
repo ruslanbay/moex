@@ -1,10 +1,11 @@
 'use strict';
 
-const CACHE_NAME = 'my-app-static-cache-v19';
-const DATA_CACHE_NAME = 'my-app-data-cache-v19';
+const CACHE_NAME = 'my-app-static-cache-v20';
+const DATA_CACHE_NAME = 'my-app-data-cache-v20';
 
 const FILES_TO_CACHE = [
     '/moex/',
+    '/moex/css/style.css',
     '/moex/index.html',
     '/moex/images/icons/favicon.ico',
     '/moex/images/icons/github.svg',
