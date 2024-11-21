@@ -94,7 +94,7 @@
     const dataTypeInput = document.getElementById("dataType");
     if (urlDataType && ['marketcap', 'value', 'trades'].includes(urlDataType)) { dataTypeInput.value = urlDataType };
 
-    const tickerInput = document.getElementById('textInput');
+    const tickerInput = document.getElementById('tickerInput');
     if (urlTicker) { selectTreemapItemByLabel(urlTicker); };
   
     chartTypeInput.addEventListener("change", refreshChart);
