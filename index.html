@@ -65,7 +65,10 @@
   </footer>
   <script type="text/javascript">
     // Prevent the default context menu from appearing on right-click
-    document.addEventListener("contextmenu", event => event.preventDefault());
+    const chartDiv = document.getElementById('chart');
+    chartDiv.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+    });
     
     const url = new URL(window.location.href);
     const urlDate = url.searchParams.get('date');
