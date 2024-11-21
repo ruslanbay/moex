@@ -39,10 +39,34 @@
   "theme_color": "#414554",
   "shortcuts": [
     {
-      "name": "MOEX Visualization",
-      "short_name": "MOEX Visualization",
-      "description": "MOEX Visualization",
+      "name": "MOEX Treemap",
+      "short_name": "MOEX Treemap",
+      "description": "MOEX Treemap",
       "url": "/moex/",
+      "icons": [
+        {
+          "src": "/moex/images/icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "MOEX Histogram",
+      "short_name": "MOEX Histogram",
+      "description": "MOEX Histogram",
+      "url": "/moex/?chartType=history",
+      "icons": [
+        {
+          "src": "/moex/images/icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "MOEX Listings",
+      "short_name": "MOEX Listings",
+      "description": "MOEX Listings",
+      "url": "/moex/?chartType=listings",
       "icons": [
         {
           "src": "/moex/images/icons/icon-192x192.png",

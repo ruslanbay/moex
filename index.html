@@ -21,14 +21,13 @@
   <script src="https://cdn.jsdelivr.net/npm/plotly.js/dist/plotly.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3/dist/d3.min.js"></script>
   
-  <!-- <script src="scripts/install.js"></script> -->
   <script src="scripts/main.js"></script>
 </head>
 
 <body>
   <header>
     <form id="inputForm" onsubmit="return false;">
-      <input type="text" id="tickerInput" placeholder="🔎 PLZL" maxlength="20" autocomplete="off">
+      <input type="text" id="tickerInput" placeholder="🔎 PLZL" maxlength="40" autocomplete="off">
     </form>
     &nbsp;
     <select id="currencySelector">
@@ -63,86 +62,6 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     ♡︎&nbsp;<a id="share">Share</a>
   </footer>
-  <script type="text/javascript">
-    // Prevent the default context menu from appearing on right-click
-    const chartDiv = document.getElementById("chart");
-    chartDiv.addEventListener("contextmenu", (event) => {
-        event.preventDefault();
-    });
-    
-    // Share link
-    const shareLink = document.getElementById("share");
-    const thisTitle = document.title;
-    
-    shareLink.addEventListener("click", event => {
-      if (navigator.share) {
-        navigator.share({
-          title: thisTitle,
-          url: url
-        })
-        .catch(console.error);
-      }
-      else {
-        alert("Web Share API is not supported");
-      }
-    });
-    
-
-    const url = new URL(window.location.href);
-    const urlDate = url.searchParams.get("date");
-    const urlChartType = url.searchParams.get("chartType");
-    const urlCurrency = url.searchParams.get("currency");
-    const urlDataType = url.searchParams.get("dataType");
-    
-    let date = urlDate ? new Date(urlDate) : new Date();
-    while (date.getDay() === 0 || date.getDay() === 6) {
-      date.setDate(date.getDate() - 1);
-    }
-    var formattedDate = date.toISOString().split('T')[0];
-    document.getElementById("dateInput").value = formattedDate;
-    document.getElementById("dateInput").max = new Date().toISOString().split('T')[0];
-    
-    const dateInput = document.getElementById("dateInput");
-    if (urlDate) { urlDate.value = urlDate };
-    
-    const chartTypeInput = document.getElementById("chartType");
-    if (urlChartType && ["treemap", "history", "listings"].includes(urlChartType)) { chartTypeInput.value = urlChartType };
-    
-    const currency = document.getElementById("currencySelector");
-    if (urlCurrency && ["USD", "EUR", "CNY", "RUB"].includes(urlCurrency)) { currency.value = urlCurrency };
-    
-    const dataTypeInput = document.getElementById("dataType");
-    if (urlDataType && ["marketcap", "value", "trades"].includes(urlDataType)) { dataTypeInput.value = urlDataType };
-    
-    const tickerInput = document.getElementById("tickerInput");
-    
-    chartTypeInput.addEventListener("change", refreshChart);
-    currency.addEventListener("change", refreshChart);
-    dataTypeInput.addEventListener("change", refreshChart);
-    dateInput.addEventListener("change", refreshChart);
-    
-    
-    refreshChart();
-    
-    
-    tickerInput.addEventListener("keypress", function(event) {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        const inputValue = this.value.trim().toLowerCase();
-        if (inputValue) {
-          selectTreemapItemByLabel(inputValue);
-          this.value = '';
-        }
-      }
-    });
-    
-    
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("scripts/service-worker.js")
-      });
-    }
-  </script>
+  <button id="install" hidden>Install</button>
 </body>
-
 </html>

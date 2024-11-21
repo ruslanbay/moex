@@ -882,3 +882,113 @@ function refreshChart() {
       break;
   }
 };
+
+function disableInAppInstallPrompt() {
+  installPrompt = null;
+  installButton.setAttribute("hidden", "");
+}
+
+
+// Prevent the default context menu from appearing on right-click
+const chartDiv = document.getElementById("chart");
+chartDiv.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+});
+
+
+// Share link
+const shareLink = document.getElementById("share");
+const thisTitle = document.title;
+
+shareLink.addEventListener("click", event => {
+  if (navigator.share) {
+    navigator.share({
+      title: thisTitle,
+      url: url
+    })
+    .catch(console.error);
+  }
+  else {
+    alert("Web Share API is not supported");
+  }
+});
+
+
+// Install PWA
+let installPrompt = null;
+const installButton = document.querySelector("#install");
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  installPrompt = event;
+  installButton.removeAttribute("hidden");
+});
+
+window.addEventListener("appinstalled", () => {
+  disableInAppInstallPrompt();
+});
+
+installButton.addEventListener("click", async () => {
+  if (!installPrompt) {
+    return;
+  }
+  const result = await installPrompt.prompt();
+  console.log(`Install prompt was: ${result.outcome}`);
+  disableInAppInstallPrompt();
+});
+
+
+const url = new URL(window.location.href);
+const urlDate = url.searchParams.get("date");
+const urlChartType = url.searchParams.get("chartType");
+const urlCurrency = url.searchParams.get("currency");
+const urlDataType = url.searchParams.get("dataType");
+
+let date = urlDate ? new Date(urlDate) : new Date();
+while (date.getDay() === 0 || date.getDay() === 6) {
+  date.setDate(date.getDate() - 1);
+}
+var formattedDate = date.toISOString().split('T')[0];
+document.getElementById("dateInput").value = formattedDate;
+document.getElementById("dateInput").max = new Date().toISOString().split('T')[0];
+
+const dateInput = document.getElementById("dateInput");
+if (urlDate) { urlDate.value = urlDate };
+
+const chartTypeInput = document.getElementById("chartType");
+if (urlChartType && ["treemap", "history", "listings"].includes(urlChartType)) { chartTypeInput.value = urlChartType };
+
+const currency = document.getElementById("currencySelector");
+if (urlCurrency && ["USD", "EUR", "CNY", "RUB"].includes(urlCurrency)) { currency.value = urlCurrency };
+
+const dataTypeInput = document.getElementById("dataType");
+if (urlDataType && ["marketcap", "value", "trades"].includes(urlDataType)) { dataTypeInput.value = urlDataType };
+
+const tickerInput = document.getElementById("tickerInput");
+
+chartTypeInput.addEventListener("change", refreshChart);
+currency.addEventListener("change", refreshChart);
+dataTypeInput.addEventListener("change", refreshChart);
+dateInput.addEventListener("change", refreshChart);
+
+
+refreshChart();
+
+
+tickerInput.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    const inputValue = this.value.trim().toLowerCase();
+    if (inputValue) {
+      selectTreemapItemByLabel(inputValue);
+      this.value = '';
+    }
+  }
+});
+
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("scripts/service-worker.js")
+  });
+}
