@@ -11,7 +11,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="MOEX Visualization">
-
+  
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
@@ -61,18 +61,17 @@
     <img src="images/icons/linkedin.svg" height="10" />&nbsp;
     <a href="https://www.linkedin.com/pulse/как-российский-фондовый-рынок-изменился-за-последние-20-ruslan-bay-evwxe/" title="">Linkedin</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://ruslanbay.github.io/moex?date=2024-11-20&currency=USD" title="">Share</a>
+    <a href="https://ruslanbay.github.io/moex/?date=2024-11-18&currency=RUB&chartType=treemap&dataType=value" title="">Share</a>
   </footer>
   <script type="text/javascript">
     // Prevent the default context menu from appearing on right-click
     document.addEventListener("contextmenu", event => event.preventDefault());
-
+    
     const url = new URL(window.location.href);
     const urlDate = url.searchParams.get('date');
     const urlChartType = url.searchParams.get('chartType');
     const urlCurrency = url.searchParams.get('currency');
     const urlDataType = url.searchParams.get('dataType');
-    const urlTicker = url.searchParams.get('ticker');
     
     let date = urlDate ? new Date(urlDate) : new Date();
     while (date.getDay() === 0 || date.getDay() === 6) {
@@ -81,10 +80,10 @@
     var formattedDate = date.toISOString().split('T')[0];
     document.getElementById("dateInput").value = formattedDate;
     document.getElementById("dateInput").max = new Date().toISOString().split('T')[0];
-
+    
     const dateInput = document.getElementById("dateInput");
     if (urlDate) { urlDate.value = urlDate };
-
+    
     const chartTypeInput = document.getElementById("chartType");
     if (urlChartType && ['treemap', 'history', 'listings'].includes(urlChartType)) { chartTypeInput.value = urlChartType };
     
@@ -93,17 +92,18 @@
     
     const dataTypeInput = document.getElementById("dataType");
     if (urlDataType && ['marketcap', 'value', 'trades'].includes(urlDataType)) { dataTypeInput.value = urlDataType };
-
+    
     const tickerInput = document.getElementById('tickerInput');
-    if (urlTicker) { selectTreemapItemByLabel(urlTicker); };
-  
+    
     chartTypeInput.addEventListener("change", refreshChart);
     currency.addEventListener("change", refreshChart);
     dataTypeInput.addEventListener("change", refreshChart);
     dateInput.addEventListener("change", refreshChart);
     
+    
     refreshChart();
-
+    
+    
     tickerInput.addEventListener('keypress', function(event) {
       if (event.key === 'Enter') {
         event.preventDefault();
@@ -114,7 +114,8 @@
         }
       }
     });
-
+    
+    
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker.register("scripts/service-worker.js")
