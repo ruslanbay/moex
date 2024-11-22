@@ -5,7 +5,7 @@
   <title>MOEX Visualization</title>
   <base href="https://ruslanbay.github.io/moex/">
   <meta charset="UTF-8">
-  <meta name="description" content="Russian Stock Market Visualization. How the Russian stock market has changed over the past 20+ years">
+  <meta name="description" content="Russian Stock Market Visualization. How the Russian stock market has changed over the past 10+ years">
   <meta name="theme-color" content="#414554" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="mobile-web-app-capable" content="yes">
@@ -72,47 +72,19 @@
         event.preventDefault();
     });
     
-    // Share link
-    const shareLink = document.getElementById("share");
-    const thisTitle = document.title;
-    
-    shareLink.addEventListener("click", event => {
-      if (navigator.share) {
-        navigator.share({
-          title: thisTitle,
-          url: url
-        })
-        .catch(console.error);
-      }
-      else {
-        alert("Web Share API is not supported");
-      }
-    });
-
     // Install PWA
     let installPrompt = null;
     const installLink = document.getElementById("install");
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+    window.addEventListener("appinstalled", handleAppInstalled);
+    installLink.addEventListener("click", handleInstallClick);
     
-    window.addEventListener("beforeinstallprompt", (event) => {
-      event.preventDefault();
-      installPrompt = event;
-      installLink.removeAttribute("hidden");
-    });
-
-    window.addEventListener("appinstalled", () => {
-      disableInAppInstallPrompt();
-    });
-
-    installLink.addEventListener("click", async () => {
-      if (!installPrompt) {
-        return;
-      }
-      const result = await installPrompt.prompt();
-      console.log(`Install prompt was: ${result.outcome}`);
-      disableInAppInstallPrompt();
-    });
+    // Share link
+    const shareLink = document.getElementById("share");
+    const thisTitle = document.title;
+    shareLink.addEventListener("click", handleShareClick);
     
-
+    
     const url = new URL(window.location.href);
     const urlDate = url.searchParams.get("date");
     const urlChartType = url.searchParams.get("chartType");
@@ -139,27 +111,16 @@
     const dataTypeInput = document.getElementById("dataType");
     if (urlDataType && ["marketcap", "value", "trades"].includes(urlDataType)) { dataTypeInput.value = urlDataType };
     
-    const tickerInput = document.getElementById("tickerInput");
-    
     chartTypeInput.addEventListener("change", refreshChart);
     currency.addEventListener("change", refreshChart);
     dataTypeInput.addEventListener("change", refreshChart);
     dateInput.addEventListener("change", refreshChart);
     
+    const tickerInput = document.getElementById("tickerInput");
+    tickerInput.addEventListener("keypress", handleEnterKey);
+    
     
     refreshChart();
-    
-    
-    tickerInput.addEventListener("keypress", function(event) {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        const inputValue = this.value.trim().toLowerCase();
-        if (inputValue) {
-          selectTreemapItemByLabel(inputValue);
-          this.value = '';
-        }
-      }
-    });
     
     
     if ("serviceWorker" in navigator) {

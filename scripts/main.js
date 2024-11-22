@@ -883,7 +883,51 @@ function refreshChart() {
   }
 };
 
+
 function disableInAppInstallPrompt() {
   installPrompt = null;
   installButton.setAttribute("hidden", "");
+}
+
+function handleBeforeInstallPrompt(event) {
+  event.preventDefault();
+  installPrompt = event;
+  installLink.removeAttribute("hidden");
+}
+
+function handleAppInstalled() {
+  disableInAppInstallPrompt();
+}
+
+async function handleInstallClick() {
+  if (!installPrompt) {
+    return;
+  }
+  const result = await installPrompt.prompt();
+  console.log(`Install prompt was: ${result.outcome}`);
+  disableInAppInstallPrompt();
+}
+
+function handleEnterKey(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    const inputValue = this.value.trim().toLowerCase();
+    if (inputValue) {
+      selectTreemapItemByLabel(inputValue);
+      this.value = '';
+    }
+  }
+}
+
+
+function handleShareClick(event) {
+  if (navigator.share) {
+    navigator.share({
+      title: thisTitle,
+      url: url
+    })
+    .catch(console.error);
+  } else {
+    alert("Web Share API is not supported");
+  }
 }
