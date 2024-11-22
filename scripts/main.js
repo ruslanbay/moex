@@ -232,23 +232,6 @@ async function prepTreemapData() {
     rate = await getCurrencyRateByDate(date);
   }
 
-  var texttemplate = `<b>%{label}</b><br>
-%{customdata[4]}<br>
-%{customdata[5]:,.2f} (%{customdata[3]:.2f}%)<br>
-C: %{customdata[2]:,.0f}<br>
-V: %{customdata[6]:,.0f}<br>
-T: %{customdata[7]:,.0f}`;
-  var hovertemplate = `<b>%{customdata[1]}</b><br>
-%{customdata[4]}<br>
-Share price: %{customdata[5]:,.4f}<br>
-Price change: %{customdata[3]:.2f}%<br>
-Cap: %{customdata[2]:,.0f}<br>
-Value: %{customdata[6]:,.0f}<br>
-Trades: %{customdata[7]:,.0f}<br>
-percentParent: %{percentParent:.2p}<br>
-percentRoot: %{percentRoot:.2p}
-<extra></extra>`;
-
   return d3.tsv('data/issues-by-sector.tsv')
     .then(function (rows) {
       var data = {};
@@ -377,37 +360,7 @@ percentRoot: %{percentRoot:.2p}
             chartData["priceChange"][0] = 100 * (chartData["cap"][0] - chartData["prevCap"][0]) / chartData["prevCap"][0];
           };
           chartData["customdata"][0] = ["Moscow Exchange", "Moscow Exchange", chartData["cap"][0], chartData["priceChange"][0], "Moscow Exchange", NaN, NaN, NaN];
-          data = [{
-            type: "treemap",
-            labels: chartData["ticker"],
-            level: "Moscow Exchange",
-            parents: chartData["sector"],
-            values: chartData["size"],
-            marker: {
-              colors: chartData.priceChange,
-              colorscale: [[0, 'rgb(246,53,56)'], [0.5, 'rgba(65, 69, 84, 1)'], [1, 'rgb(48,204,90)']],
-              cmin: -3,
-              cmid: 0,
-              cmax: 3,
-              line: {
-                width: 2,
-                color: "rgb(64,68,83)"
-              }
-            },
-            text: chartData.customdata[4],
-            textinfo: "label+text+value",
-            customdata: chartData.customdata,
-            branchvalues: "total",
-            texttemplate: texttemplate,
-            hovertemplate: hovertemplate,
-            pathbar: {
-              visible: true,
-              edgeshape: ">",
-              side: "top"
-            }
-          }];
-
-          return data;
+          return chartData;
         });
     });
 };
@@ -416,6 +369,52 @@ function refreshTreemap() {
   toggleInput();
   prepTreemapData()
     .then(function (chartData) {
+      const texttemplate = `<b>%{label}</b><br>
+%{customdata[4]}<br>
+%{customdata[5]:,.2f} (%{customdata[3]:.2f}%)<br>
+C: %{customdata[2]:,.0f}<br>
+V: %{customdata[6]:,.0f}<br>
+T: %{customdata[7]:,.0f}`;
+      const hovertemplate = `<b>%{customdata[1]}</b><br>
+%{customdata[4]}<br>
+Share price: %{customdata[5]:,.4f}<br>
+Price change: %{customdata[3]:.2f}%<br>
+Cap: %{customdata[2]:,.0f}<br>
+Value: %{customdata[6]:,.0f}<br>
+Trades: %{customdata[7]:,.0f}<br>
+percentParent: %{percentParent:.2p}<br>
+percentRoot: %{percentRoot:.2p}
+<extra></extra>`;
+      let data = [{
+        type: "treemap",
+        labels: chartData["ticker"],
+        level: "Moscow Exchange",
+        parents: chartData["sector"],
+        values: chartData["size"],
+        marker: {
+          colors: chartData.priceChange,
+          colorscale: [[0, 'rgb(246,53,56)'], [0.5, 'rgba(65, 69, 84, 1)'], [1, 'rgb(48,204,90)']],
+          cmin: -3,
+          cmid: 0,
+          cmax: 3,
+          line: {
+            width: 2,
+            color: "rgb(64,68,83)"
+          }
+        },
+        text: chartData.customdata[4],
+        textinfo: "label+text+value",
+        customdata: chartData.customdata,
+        branchvalues: "total",
+        texttemplate: texttemplate,
+        hovertemplate: hovertemplate,
+        pathbar: {
+          visible: true,
+          edgeshape: ">",
+          side: "top"
+        }
+      }];
+
       var layout = {
         showlegend: false,
         autosize: true,
@@ -450,7 +449,7 @@ function refreshTreemap() {
         displayModeBar: false,
         scrollZoom: true
       }
-      Plotly.react('chart', chartData, layout, config);
+      Plotly.react('chart', data, layout, config);
     })
     .catch(function(error) {
       alert("Oops! There's no data. Please select another date.");
