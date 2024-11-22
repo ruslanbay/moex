@@ -71,6 +71,11 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  text-transform: none;
+  letter-spacing: 0; 
 }
 
 #chart {

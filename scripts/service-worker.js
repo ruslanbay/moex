@@ -1,7 +1,7 @@
 'use strict';
 
-const CACHE_NAME = 'my-app-static-cache-v22';
-const DATA_CACHE_NAME = 'my-app-data-cache-v22';
+const CACHE_NAME = 'my-app-static-cache-v23';
+const DATA_CACHE_NAME = 'my-app-data-cache-v23';
 
 const FILES_TO_CACHE = [
     '/moex/',
@@ -43,7 +43,7 @@ self.addEventListener('activate', (evt) => {
 });
 
 self.addEventListener('fetch', (evt) => {
-    if (evt.request.url.includes('/moex/data/')) {
+    if (evt.request.url.includes('/moex/data/iss')) {
         evt.respondWith(
             caches.open(DATA_CACHE_NAME).then(async (cache) => {
                 try {
