@@ -185,9 +185,6 @@ async function prepHistogramData() {
       }
 
       if (currencyType !== 'RUB' && (dataTypeValue == 'marketcap' || dataTypeValue == 'value')) {
-        // if (currencyRates[date] !== undefined) {
-        //   var rate = currencyRates[date];
-        // }
         var rate = currencyRates[date];
         var d = new Date(date);
         while (typeof rate == 'undefined') {
@@ -222,7 +219,7 @@ function unpack(rows, key) {
 }
 
 async function prepTreemapData() {
-  var currencyType = document.getElementById('currencySelector').value;
+  const currencyType = document.getElementById('currencySelector').value;
   var dataType = document.getElementById('dataType').value;
   var date = document.getElementById('dateInput').value;
   const currencyRates = await getCurrencyRates(currencyType);
@@ -234,8 +231,8 @@ async function prepTreemapData() {
 
   return d3.tsv('data/issues-by-sector.tsv')
     .then(function (rows) {
-      var data = {};
-      var chartData = {
+      let data = {};
+      let chartData = {
         sector: [],
         ticker: [],
         size: [],
@@ -245,11 +242,11 @@ async function prepTreemapData() {
         customdata: []
       };
 
-      var labels = unpack(rows, 'labels');
-      var parents = unpack(rows, 'parents');
-      var shortnames = unpack(rows, 'shortname');
-      var shortnamesRus = unpack(rows, 'shortname_rus');
-      var namesRus = unpack(rows, 'name_rus');
+      let labels = unpack(rows, 'labels');
+      let parents = unpack(rows, 'parents');
+      let shortnames = unpack(rows, 'shortname');
+      // let shortnamesRus = unpack(rows, 'shortname_rus');
+      // let namesRus = unpack(rows, 'name_rus');
 
       for (let i = 0; i <= 36; i++) {
         chartData["sector"].push(parents[i]);
@@ -261,22 +258,23 @@ async function prepTreemapData() {
         chartData["customdata"].push(["Moscow Exchange", labels[i], NaN, NaN, labels[i], NaN, NaN, NaN]);
       };
 
-      var path = `data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`;
+      let path = `data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`;
       if (date === new Date().toISOString().split('T')[0]) {
         path = path + `?_=${new Date().getTime()}`;
       }
       return $.getJSON(`${path}`)
         .then(function (moexJson) {
+          let isToday = false;
           if (moexJson.marketdata) {
-            moexJson = moexJson.marketdata.data.filter(entry => entry[1] === 'TQBR')
-            var isToday = true;
+            moexJson = moexJson.marketdata.data.filter(entry => entry[1] === 'TQBR');
+            isToday = true;
           }
           else {
             moexJson = moexJson.securities.data
-            var isToday = false;
+            isToday = false;
           }
           moexJson.forEach(item => {
-            var ticker = item[0];
+            let ticker = item[0];
             if (RegExp('^[a-zA-Z0-9]+-RM').test(ticker))
               return;
 
@@ -323,8 +321,8 @@ async function prepTreemapData() {
                 break;
             }
 
-            var sector = "Others";
-            var index = labels.indexOf(ticker);
+            let sector = "Others";
+            let index = labels.indexOf(ticker);
             if (index == -1) {
               sector = "Others";
               chartData["size"][labels.indexOf("Others")] = chartData["size"][labels.indexOf("Others")] + sizeValue;
@@ -337,7 +335,7 @@ async function prepTreemapData() {
               chartData["cap"][labels.indexOf(sector)] = chartData["cap"][labels.indexOf(sector)] + marketCapDaily;
               chartData["prevCap"][labels.indexOf(sector)] = chartData["prevCap"][labels.indexOf(sector)] + prevMarketCap;
 
-              var name = shortnames[index];
+              let name = shortnames[index];
               chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, name, closePrice, value, numTrades]);
             };
 
@@ -426,21 +424,6 @@ percentRoot: %{percentRoot:.2p}
         },
         paper_bgcolor: "rgba(0,0,0,0)",
         plot_bgcolor: "rgba(0,0,0,0)",
-        // annotations: [{
-        //   name: 'wm',
-        //   text: 'ruslanbay.github.io/moex<br>linkedin.com/in/ruslanbay<br>github.com/ruslanbay',
-        //   xref: 'paper',
-        //   yref: 'paper',
-        //   x: 0.03,
-        //   y: 0.03,
-        //   showarrow: false,
-        //   opacity: 0.9,
-        //   align: 'left',
-        //   font: {
-        //     size: 16,
-        //     color: 'grey'
-        //   }
-        // }]
       }
 
       var config = {
@@ -464,21 +447,6 @@ function refreshHistogram() {
   prepHistogramData()
     .then(function(chartData) {
       var layout = {
-        // annotations: [{
-        //   name: 'wm',
-        //   text: '<a style="color: grey;" href="https://ruslanbay.github.io/moex">ruslanbay.github.io/moex</a><br><a style="color: grey;" href="https://www.linkedin.com/in/ruslanbay">linkedin.com/in/ruslanbay</a><br><a style="color: grey;" href="https://github.com/ruslanbay">github.com/ruslanbay</a>',
-        //   xref: 'paper',
-        //   yref: 'paper',
-        //   x: 0.03,
-        //   y: 0.03,
-        //   showarrow: false,
-        //   opacity: 0.9,
-        //   align: 'left',
-        //   font: {
-        //     size: 16,
-        //     color: 'rgb(120, 108, 144)'
-        //   }
-        // }],
         showlegend: true,
         legend: {
           visible: true,
@@ -501,11 +469,6 @@ function refreshHistogram() {
               args: [{ 'showlegend': true }],
               args2: [{ 'showlegend': false }]
             },
-            // {
-            //   label: 'Hide Legend',
-            //   method: 'relayout',
-            //   args: [{ 'showlegend': false }]
-            // }
           ],
           direction: 'right',
           showactive: true,
@@ -513,7 +476,6 @@ function refreshHistogram() {
           xanchor: 'left',
           y: 1.0,
           yanchor: 'top',
-          // pad: { t: 1, r: 1, b: 1, l: 1 },
           bgcolor: 'rgba(65, 69, 84, 1)',
           bordercolor: 'rgba(65, 69, 84, 1)',
           borderwidth: 0,
@@ -595,10 +557,6 @@ function refreshHistogram() {
             }]
           },
           showgrid: true,
-          // rangebreaks: {
-            // pattern: 'day of week',
-            // bounds: [6, 1]
-          // }
         },
         autosize: true,
         margin: {
@@ -646,7 +604,11 @@ async function loadData() {
   const response = await fetch('data/issues-by-sector.tsv');
   const data = await response.text();
   const rows = data.split('\n').slice(37);
-  const excludeList = ["TQFD. PAI (USD)", "TQIF. PAI", "TQPI. Shares PIR", "TQTF. ETF", "TQTY. PAI (CNY)", "cb_bond", "corporate_bond", "etf_ppif", "euro_bond", "exchange_bond", "exchange_ppif", "Foreign Companies", "ifi_bond", "interval_ppif", "municipal_bond", "ofz_bond", "private_ppif", "public_ppif", "state_bond", "stock_mortgage", "subfederal_bond"];
+  const excludeList = ["TQFD. PAI (USD)", "TQIF. PAI", "TQPI. Shares PIR", "TQTF. ETF",
+                       "TQTY. PAI (CNY)", "cb_bond", "corporate_bond", "etf_ppif",
+                       "euro_bond", "exchange_bond", "exchange_ppif", "Foreign Companies",
+                       "ifi_bond", "interval_ppif", "municipal_bond", "ofz_bond",
+                       "private_ppif", "public_ppif", "state_bond", "stock_mortgage", "subfederal_bond"];
 
   rows.forEach(row => {
     const columns = row.split('\t');
@@ -736,23 +698,6 @@ async function refreshListings() {
 
   const layout = {
     grid: { rows: 1, columns: 1, pattern: 'independent' },
-    // barmode: 'relative',
-    // title: '',
-    // annotations: [{
-    //   name: 'wm',
-    //   text: '<a style="color: grey;" href="https://ruslanbay.github.io/moex">ruslanbay.github.io/moex</a><br><a style="color: grey;" href="https://www.linkedin.com/in/ruslanbay">linkedin.com/in/ruslanbay</a><br><a style="color: grey;" href="https://github.com/ruslanbay">github.com/ruslanbay</a>',
-    //   xref: 'paper',
-    //   yref: 'paper',
-    //   x: 0.03,
-    //   y: 0.03,
-    //   showarrow: false,
-    //   opacity: 0.9,
-    //   align: 'left',
-    //   font: {
-    //     size: 16,
-    //     color: 'rgb(120, 108, 144)'
-    //   }
-    // }],
     dragmode: false,
     showlegend: true,
     legend: {
