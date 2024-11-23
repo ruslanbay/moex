@@ -51,7 +51,7 @@ function selectTreemapItemByLabel(label) {
 
 async function getCurrencyRates(currencyType) {
   const startDate = '2011-12-19';
-  const response = await fetch(`data/${currencyType}FIXME.csv`);
+  const response = await fetch(`data/${currencyType}FIXME.csv?_=${new Date().toISOString().split('T')[0]}`);
   const textResponse = await response.text();
   const data = textResponse.split('\n').map(row => row.split(','));
 
@@ -85,7 +85,7 @@ async function prepHistogramData() {
   try {
     const startDate = '2011-12-19';
 
-    let response = await fetch('data/issues-by-sector.tsv');
+    let response = await fetch(`data/issues-by-sector.tsv?_=${new Date().toISOString().split('T')[0]}`);
     response = await response.text();
     let data = response.split('\n')
       .slice(1, 37)
@@ -138,7 +138,7 @@ async function prepHistogramData() {
       };
     }
 
-    const rows = await d3.csv(`data/history.csv`);
+    const rows = await d3.csv(`data/history.csv?_=${new Date().toISOString().split('T')[0]}`);
 
     rows.forEach(row => {
       const traceName = row.traceName;
@@ -236,7 +236,7 @@ async function prepTreemapData() {
     rate = await getCurrencyRateByDate(date);
   }
 
-  const rows = await fetch('data/issues-by-sector.tsv')
+  const rows = await fetch(`data/issues-by-sector.tsv?_=${new Date().toISOString().split('T')[0]}`)
     .then(response => response.text())
     .then(text => {
       return text.split('\n').map(row => row.split('\t'));
@@ -618,7 +618,7 @@ async function loadData() {
   const newSecurities = new Map(totalSecurities);
   const delistedSecurities = new Map(totalSecurities);
 
-  const response = await fetch('data/issues-by-sector.tsv');
+  const response = await fetch(`data/issues-by-sector.tsv?_=${new Date().toISOString().split('T')[0]}`);
   const data = await response.text();
   const rows = data.split('\n').slice(37);
   const excludeList = ["TQFD. PAI (USD)", "TQIF. PAI", "TQPI. Shares PIR", "TQTF. ETF",
