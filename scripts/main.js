@@ -87,7 +87,7 @@ async function prepHistogramData() {
 
     let response = await fetch('data/issues-by-sector.tsv');
     response = await response.text();
-    var data = response.split('\n')
+    let data = response.split('\n')
       .slice(1, 37)
       .map(row => row.split('\t'));
     let traceColors = {};
@@ -212,16 +212,23 @@ async function prepHistogramData() {
   }
 };
 
-function unpack(rows, key) {
-  return rows.map(function (row) {
-    return row[key]
+function unpack(rows, keyIndex) {
+  const headers = rows[0];
+  const key = headers.indexOf(keyIndex);
+
+  if (key === -1) {
+    throw new Error(`Key "${keyIndex}" not found in headers.`);
+  }
+
+  return rows.slice(1).map(function (row) {
+    return row[key];
   });
 }
 
 async function prepTreemapData() {
   const currencyType = document.getElementById('currencySelector').value;
-  var dataType = document.getElementById('dataType').value;
-  var date = document.getElementById('dateInput').value;
+  const dataType = document.getElementById('dataType').value;
+  const date = document.getElementById('dateInput').value;
   const currencyRates = await getCurrencyRates(currencyType);
 
   let rate = 1
@@ -229,139 +236,149 @@ async function prepTreemapData() {
     rate = await getCurrencyRateByDate(date);
   }
 
-  return d3.tsv('data/issues-by-sector.tsv')
-    .then(function (rows) {
-      let data = {};
-      let chartData = {
-        sector: [],
-        ticker: [],
-        size: [],
-        priceChange: [],
-        cap: [],
-        prevCap: [],
-        customdata: []
-      };
-
-      let labels = unpack(rows, 'labels');
-      let parents = unpack(rows, 'parents');
-      let shortnames = unpack(rows, 'shortname');
-      // let shortnamesRus = unpack(rows, 'shortname_rus');
-      // let namesRus = unpack(rows, 'name_rus');
-
-      for (let i = 0; i <= 36; i++) {
-        chartData["sector"].push(parents[i]);
-        chartData["ticker"].push(labels[i]);
-        chartData["size"].push(0);
-        chartData["priceChange"].push(NaN);
-        chartData["cap"].push(0);
-        chartData["prevCap"].push(0);
-        chartData["customdata"].push(["Moscow Exchange", labels[i], NaN, NaN, labels[i], NaN, NaN, NaN]);
-      };
-
-      let path = `data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`;
-      if (date === new Date().toISOString().split('T')[0]) {
-        path = path + `?_=${new Date().getTime()}`;
-      }
-      return $.getJSON(`${path}`)
-        .then(function (moexJson) {
-          let isToday = false;
-          if (moexJson.marketdata) {
-            moexJson = moexJson.marketdata.data.filter(entry => entry[1] === 'TQBR');
-            isToday = true;
-          }
-          else {
-            moexJson = moexJson.securities.data
-            isToday = false;
-          }
-          moexJson.forEach(item => {
-            let ticker = item[0];
-            if (RegExp('^[a-zA-Z0-9]+-RM').test(ticker))
-              return;
-
-            if (isToday) {
-              var currency = '';
-              var openPrice = item[9] == null ? 0 : item[9];
-              var closePrice = item[12] == null ? 0 : item[12];
-              var volume = item[27] == null ? 0 : item[27];
-              var value = item[15] == null ? 0 : item[16];
-              var numTrades = item[26] == null ? 0 : item[26];
-              var marketCapDaily = item[50] == null ? 0 : item[50];
-            }
-            else {
-              var currency = item[1];
-              var openPrice = item[2] == null ? 0 : item[2];
-              var closePrice = item[3] == null ? 0 : item[3];
-              var volume = item[4] == null ? 0 : item[4];
-              var value = item[5] == null ? 0 : item[5];
-              var numTrades = item[6] == null ? 0 : item[6];
-              var marketCapDaily = item[7] == null ? 0 : item[7];
-            }
-
-            value = value / rate;
-            marketCapDaily = marketCapDaily / rate;
-
-            if (openPrice == 0) {
-              var priceChange = 0;
-              var prevMarketCap = marketCapDaily;
-            }
-            else {
-              var priceChange = 100 * (closePrice - openPrice) / openPrice;
-              var prevMarketCap = marketCapDaily / (1 + priceChange * 0.01)
-            }
-
-            switch(dataType){
-              case "marketcap":
-                var sizeValue = marketCapDaily;
-                break;
-              case "value":
-                var sizeValue = value;
-                break;
-              case "trades":
-                var sizeValue = numTrades;
-                break;
-            }
-
-            let sector = "Others";
-            let index = labels.indexOf(ticker);
-            if (index == -1) {
-              sector = "Others";
-              chartData["size"][labels.indexOf("Others")] = chartData["size"][labels.indexOf("Others")] + sizeValue;
-              chartData["cap"][labels.indexOf("Others")] = chartData["cap"][labels.indexOf("Others")] + marketCapDaily;
-              chartData["prevCap"][labels.indexOf("Others")] = chartData["prevCap"][labels.indexOf("Others")] + prevMarketCap;
-              chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, ticker, closePrice, value, numTrades]);
-            } else {
-              sector = parents[index];
-              chartData["size"][labels.indexOf(sector)] = chartData["size"][labels.indexOf(sector)] + sizeValue;
-              chartData["cap"][labels.indexOf(sector)] = chartData["cap"][labels.indexOf(sector)] + marketCapDaily;
-              chartData["prevCap"][labels.indexOf(sector)] = chartData["prevCap"][labels.indexOf(sector)] + prevMarketCap;
-
-              let name = shortnames[index];
-              chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, name, closePrice, value, numTrades]);
-            };
-
-            chartData["sector"].push(sector);
-            chartData["ticker"].push(ticker);
-            chartData["size"].push(sizeValue);
-            chartData["priceChange"].push(priceChange);
-            chartData["cap"].push(marketCapDaily);
-            chartData["prevCap"].push(prevMarketCap);
-          });
-
-          for (let i = 1; i <= 36; i++) {
-            chartData["customdata"][i][2] = chartData["cap"][i];
-            chartData["priceChange"][i] = 100 * (chartData["cap"][i] - chartData["prevCap"][i]) / chartData["prevCap"][i];
-            chartData["customdata"][i][3] = chartData["priceChange"][i];
-
-            chartData["size"][0] = chartData["size"][0] + chartData["size"][i];
-            chartData["cap"][0] = chartData["cap"][0] + chartData["cap"][i];
-            chartData["prevCap"][0] = chartData["prevCap"][0] + chartData["prevCap"][i];
-            chartData["priceChange"][0] = 100 * (chartData["cap"][0] - chartData["prevCap"][0]) / chartData["prevCap"][0];
-          };
-          chartData["customdata"][0] = ["Moscow Exchange", "Moscow Exchange", chartData["cap"][0], chartData["priceChange"][0], "Moscow Exchange", NaN, NaN, NaN];
-          return chartData;
-        });
+  const rows = await fetch('data/issues-by-sector.tsv')
+    .then(response => response.text())
+    .then(text => {
+      return text.split('\n').map(row => row.split('\t'));
     });
-};
+    let chartData = {
+      sector: [],
+      ticker: [],
+      size: [],
+      priceChange: [],
+      cap: [],
+      prevCap: [],
+      customdata: []
+    };
+
+    let labels = unpack(rows, 'labels');
+    let parents = unpack(rows, 'parents');
+    let shortnames = unpack(rows, 'shortname');
+    // let shortnamesRus = unpack(rows, 'shortname_rus');
+    // let namesRus = unpack(rows, 'name_rus');
+
+    for (let i = 0; i <= 36; i++) {
+      chartData["sector"].push(parents[i]);
+      chartData["ticker"].push(labels[i]);
+      chartData["size"].push(0);
+      chartData["priceChange"].push(NaN);
+      chartData["cap"].push(0);
+      chartData["prevCap"].push(0);
+      chartData["customdata"].push(["Moscow Exchange", labels[i], NaN, NaN, labels[i], NaN, NaN, NaN]);
+    }
+
+    let path = `data/iss/history/engines/stock/totals/boards/MRKT/securities-${date}.json`;
+
+    if (date === new Date().toISOString().split('T')[0]) {
+      path = path + `?_=${new Date().getTime()}`;
+    }
+
+    let moexJson = await fetch(path)
+      .then(response => response.json());
+
+    let isToday = false;
+
+    if (moexJson.marketdata) {
+      moexJson = moexJson.marketdata.data.filter(entry => entry[1] === 'TQBR');
+      isToday = true;
+    }
+    else {
+      moexJson = moexJson.securities.data
+      isToday = false;
+    }
+    moexJson.forEach(item => {
+      let ticker = item[0];
+
+      let currency, openPrice, closePrice, volume, value, numTrades, marketCapDaily;
+
+      if (isToday) {
+        currency = '';
+        openPrice = item[9] == null ? 0 : item[9];
+        closePrice = item[12] == null ? 0 : item[12];
+        volume = item[27] == null ? 0 : item[27];
+        value = item[15] == null ? 0 : item[16];
+        numTrades = item[26] == null ? 0 : item[26];
+        marketCapDaily = item[50] == null ? 0 : item[50];
+      }
+      else {
+        currency = item[1];
+        openPrice = item[2] == null ? 0 : item[2];
+        closePrice = item[3] == null ? 0 : item[3];
+        volume = item[4] == null ? 0 : item[4];
+        value = item[5] == null ? 0 : item[5];
+        numTrades = item[6] == null ? 0 : item[6];
+        marketCapDaily = item[7] == null ? 0 : item[7];
+      }
+
+      value = value / rate;
+      marketCapDaily = marketCapDaily / rate;
+
+      let priceChange, prevMarketCap;
+
+      if (openPrice === 0) {
+        priceChange = 0;
+        prevMarketCap = marketCapDaily;
+      }
+      else {
+        priceChange = (100 * (closePrice - openPrice)) / openPrice;
+        prevMarketCap = marketCapDaily / (1 + priceChange * 0.01);
+      }
+
+      let sizeValue;
+
+      switch(dataType) {
+        case "marketcap":
+          sizeValue = marketCapDaily;
+          break;
+        case "value":
+          sizeValue = value;
+          break;
+        case "trades":
+          sizeValue = numTrades;
+          break;
+      }
+
+      let sector;
+      let index = labels.indexOf(ticker);
+      if (index === -1) {
+        sector = "Others";
+        sectorIndex = labels.indexOf(sector);
+        chartData["size"][sectorIndex] = chartData["size"][sectorIndex] + sizeValue;
+        chartData["cap"][sectorIndex] = chartData["cap"][sectorIndex] + marketCapDaily;
+        chartData["prevCap"][sectorIndex] = chartData["prevCap"][sectorIndex] + prevMarketCap;
+        chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, ticker, closePrice, value, numTrades]);
+      } else {
+        sector = parents[index];
+        sectorIndex = labels.indexOf(sector);
+        chartData["size"][sectorIndex] = chartData["size"][sectorIndex] + sizeValue;
+        chartData["cap"][sectorIndex] = chartData["cap"][sectorIndex] + marketCapDaily;
+        chartData["prevCap"][sectorIndex] = chartData["prevCap"][sectorIndex] + prevMarketCap;
+      
+        let name = shortnames[index];
+        chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, name, closePrice, value, numTrades]);
+      }
+          
+      chartData["sector"].push(sector);
+      chartData["ticker"].push(ticker);
+      chartData["size"].push(sizeValue);
+      chartData["priceChange"].push(priceChange);
+      chartData["cap"].push(marketCapDaily);
+      chartData["prevCap"].push(prevMarketCap);
+    });
+
+    for (let i=1; i <= 36; i++) {
+      chartData["customdata"][i][2] = chartData["cap"][i];
+      chartData["priceChange"][i] = (100 * (chartData["cap"][i] - chartData["prevCap"][i])) / chartData["prevCap"][i];
+      chartData["customdata"][i][3] = chartData["priceChange"][i];
+
+      chartData["size"][0] = chartData["size"][0] + chartData["size"][i];
+      chartData["cap"][0] = chartData["cap"][0] + chartData["cap"][i];
+      chartData["prevCap"][0] = chartData["prevCap"][0] + chartData["prevCap"][i];
+      chartData["priceChange"][0] = (100 * (chartData["cap"][0] - chartData["prevCap"][0])) / chartData["prevCap"][0];
+    }
+    chartData["customdata"][0] = ["Moscow Exchange", "Moscow Exchange", chartData["cap"][0], chartData["priceChange"][0], "Moscow Exchange", NaN, NaN, NaN];
+    return chartData;
+}
 
 function refreshTreemap() {
   toggleInput();
