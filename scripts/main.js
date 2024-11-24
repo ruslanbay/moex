@@ -240,8 +240,7 @@ async function applyFilter(csv) {
     // operation: [],
   };
   data.forEach(row => {
-    const [ticker] = row;
-    // const [date, ticker, price, ammount, operation] = row;
+    const [date, ticker, price, ammount, operation] = row;
     // filterCsv["date"].push(date);
     filterCsv["ticker"].push(ticker);
     // filterCsv["price"].push(price);
@@ -257,7 +256,7 @@ async function prepTreemapData() {
   const img = document.getElementById('filterImg');
   if (localFilterCsv !== undefined && localFilterCsv !== null) {
     tickerList = await applyFilter(localFilterCsv);
-    img.src = "images/icons/nofilter.png";
+    img.src = "images/icons/erasefilter.png";
     img.title="Erase filter";
   }
   else {
