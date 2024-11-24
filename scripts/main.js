@@ -253,15 +253,16 @@ async function applyFilter(csv) {
 async function prepTreemapData() {
   let tickerList;
   const localFilterCsv = localStorage.getItem('filterCsv');
-  const img = document.getElementById('filterImg');
+  const erasefilterImg = document.getElementById('erasefilterImg');
   if (localFilterCsv !== undefined && localFilterCsv !== null) {
     tickerList = await applyFilter(localFilterCsv);
-    img.src = "images/icons/erasefilter.png";
-    img.title="Erase filter";
+    inputFileLabel.setAttribute("hidden", "");
+    erasefilterImg.removeAttribute("hidden");
   }
   else {
-    img.src = "images/icons/filter.png";
-    img.title="Apply filter";
+    localStorage.removeItem('filterCsv');
+    inputFileLabel.removeAttribute("hidden");
+    erasefilterImg.setAttribute("hidden", "");
   }
 
   const currencyType = document.getElementById('currencySelector').value;
