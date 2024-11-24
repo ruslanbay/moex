@@ -894,7 +894,8 @@ function disableInAppInstallPrompt() {
 }
 
 function handleBeforeInstallPrompt(event) {
-  event.preventDefault();
+  // event.preventDefault();
+  event.prompt();
   installPrompt = event;
   installLink.removeAttribute("hidden");
 }
