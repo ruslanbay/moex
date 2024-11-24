@@ -92,12 +92,11 @@
     
     // Apply filter.csv
     const inputFileLabel = document.getElementById("inputFileLabel");
-    const pwaInstalled = getCookie('pwaInstalled');
-    if (pwaInstalled === 'true') {
-      inputFileLabel.removeAttribute("hidden");
-    }
     const chooseFileButton = document.getElementById("inputFile");
-    chooseFileButton.addEventListener("change", processCsv);
+    chooseFileButton.addEventListener("change", function(event) {
+      processCsv(event);
+      chooseFileButton.value = null;
+    });
     
     const url = new URL(window.location.href);
     const urlDate = url.searchParams.get("date");

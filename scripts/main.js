@@ -233,16 +233,16 @@ async function applyFilter(csv) {
   let data = csv.split('\n')
     .map(row => row.replace(/\r/g, '').split(','));
   const filterCsv = {
-    // date: [],
     ticker: [],
+    // date: [],
     // price: [],
     // ammount: [],
     // operation: [],
   };
   data.forEach(row => {
-    const [date, ticker, price, ammount, operation] = row;
-    // filterCsv["date"].push(date);
+    const [ticker, date, price, ammount, operation] = row;
     filterCsv["ticker"].push(ticker);
+    // filterCsv["date"].push(date);
     // filterCsv["price"].push(price);
     // filterCsv["ammount"].push(ammount);
     // filterCsv["operation"].push(operation);
@@ -902,13 +902,6 @@ function handleBeforeInstallPrompt(event) {
 
 function handleAppInstalled() {
   disableInAppInstallPrompt();
-  document.cookie = "pwaInstalled=true;path=/";
-}
-
-function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
 async function handleInstallClick() {
