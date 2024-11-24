@@ -231,7 +231,8 @@ function unpack(rows, keyIndex) {
 
 async function applyFilter(csv) {
   let data = csv.split('\n')
-    .map(row => row.replace(/\r/g, '').split(','));
+    .map(row => row.replace(/\r/g, '').split(','))
+    .filter(row => row.some(cell => cell));
   const filterCsv = {
     ticker: [],
     // date: [],
