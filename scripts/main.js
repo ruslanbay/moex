@@ -890,7 +890,7 @@ function refreshChart() {
 
 function disableInAppInstallPrompt() {
   installPrompt = null;
-  installButton.setAttribute("hidden", "");
+  installLink.setAttribute("hidden", "");
 }
 
 function handleBeforeInstallPrompt(event) {
