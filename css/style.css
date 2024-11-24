@@ -31,12 +31,6 @@ header {
   right: 0;
 }
 
-.header-icon {
-  height: 40px;
-  outline: 3px solid white;
-  outline-offset: -4px;
-}
-
 a {
   color: #ffffff;
   text-decoration: none;

@@ -1,7 +1,7 @@
 'use strict';
 
-const CACHE_NAME = 'my-app-static-cache-v25';
-const DATA_CACHE_NAME = 'my-app-data-cache-v25';
+const CACHE_NAME = 'my-app-static-cache-v27';
+const DATA_CACHE_NAME = 'my-app-data-cache-v27';
 
 const FILES_TO_CACHE = [
     '/moex/',
@@ -11,8 +11,6 @@ const FILES_TO_CACHE = [
     '/moex/images/icons/github.svg',
     '/moex/images/icons/linkedin.svg',
     '/moex/scripts/main.js',
-    'https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js',
-    'https://cdn.jsdelivr.net/npm/d3/dist/d3.min.js',
     'https://cdn.jsdelivr.net/npm/plotly.js/dist/plotly.min.js'
 ];
 

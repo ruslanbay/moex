@@ -138,12 +138,16 @@ async function prepHistogramData() {
       };
     }
 
-    const rows = await d3.csv(`data/history.csv?_=${new Date().toISOString().split('T')[0]}`);
+    response = await fetch(`data/history.tsv?_=${new Date().toISOString().split('T')[0]}`);
+    response = await response.text();
+    data = response.split('\n')
+      .slice(1)
+      .map(row => row.replace(/\r/g, '').split('\t'))
+      .filter(row => row.some(cell => cell));
 
-    rows.forEach(row => {
-      const traceName = row.traceName;
-      const date = row.date;
+    data.forEach(row => {
       let y;
+      const [date, marketValue, marketTrades, marketCap, traceName] = row;
 
       const dataTypeValue = document.getElementById('dataType').value;
       // const traceNameExcludeList = ['TQFD. PAI (USD)', 'TQIF. PAI', 'TQPI. Shares PIR', 'TQTF. ETF', 'TQTY. PAI (CNY)',
@@ -154,16 +158,16 @@ async function prepHistogramData() {
 
       switch(dataTypeValue){
         case "marketcap":
-          y = parseFloat(row.marketCap);
+          y = parseFloat(marketCap);
           if (traceNameExcludeList.includes(traceName)) {
             return;
           }
           break;
         case "value":
-          y = parseFloat(row.marketValue);
+          y = parseFloat(marketValue);
           break;
         case "trades":
-          y = parseFloat(row.marketTrades);
+          y = parseFloat(marketTrades);
           break;
       }
 
@@ -225,7 +229,42 @@ function unpack(rows, keyIndex) {
   });
 }
 
+async function applyFilter(csv) {
+  let data = csv.split('\n')
+    .map(row => row.replace(/\r/g, '').split(','));
+  const filterCsv = {
+    // date: [],
+    ticker: [],
+    // price: [],
+    // ammount: [],
+    // operation: [],
+  };
+  data.forEach(row => {
+    const [ticker] = row;
+    // const [date, ticker, price, ammount, operation] = row;
+    // filterCsv["date"].push(date);
+    filterCsv["ticker"].push(ticker);
+    // filterCsv["price"].push(price);
+    // filterCsv["ammount"].push(ammount);
+    // filterCsv["operation"].push(operation);
+  });
+  return filterCsv;
+}
+
 async function prepTreemapData() {
+  let tickerList;
+  const localFilterCsv = localStorage.getItem('filterCsv');
+  const img = document.getElementById('filterImg');
+  if (localFilterCsv !== undefined && localFilterCsv !== null) {
+    tickerList = await applyFilter(localFilterCsv);
+    img.src = "images/icons/nofilter.png";
+    img.title="Erase filter";
+  }
+  else {
+    img.src = "images/icons/filter.png";
+    img.title="Apply filter";
+  }
+
   const currencyType = document.getElementById('currencySelector').value;
   const dataType = document.getElementById('dataType').value;
   const date = document.getElementById('dateInput').value;
@@ -290,7 +329,11 @@ async function prepTreemapData() {
       let ticker = item[0];
 
       let currency, openPrice, closePrice, volume, value, numTrades, marketCapDaily;
-
+      
+      if (tickerList && !tickerList["ticker"].includes(ticker)) {
+        return;
+      }
+      
       if (isToday) {
         currency = '';
         openPrice = item[9] == null ? 0 : item[9];
@@ -858,6 +901,13 @@ function handleBeforeInstallPrompt(event) {
 
 function handleAppInstalled() {
   disableInAppInstallPrompt();
+  document.cookie = "pwaInstalled=true;path=/";
+}
+
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
 async function handleInstallClick() {
@@ -890,5 +940,19 @@ function handleShareClick(event) {
     .catch(console.error);
   } else {
     alert("Web Share API is not supported");
+  }
+}
+
+
+function processCsv(event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const csvContent = e.target.result;
+      localStorage.setItem('filterCsv', csvContent);
+      refreshChart();
+    };
+    reader.readAsText(file);
   }
 }

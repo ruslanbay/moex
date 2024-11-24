@@ -14,12 +14,10 @@
   
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/icons/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/plotly.js/dist/plotly.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/d3/dist/d3.min.js"></script>
   
   <!-- <script src="scripts/install.js"></script> -->
   <script src="scripts/main.js"></script>
@@ -27,6 +25,10 @@
 
 <body>
   <header>
+    <input type="file" id="inputFile" accept=".csv" hidden />
+    <label for="inputFile" id="inputFileLabel" >
+      <img src="images/icons/filter.png" title="Apply filter" id="filterImg" height="30px" />
+    </label>&nbsp;
     <form id="inputForm" onsubmit="return false;">
       <input type="text" id="tickerInput" placeholder="🔎 PLZL" maxlength="40" autocomplete="off">
     </form>
@@ -55,10 +57,10 @@
   </header>
   <div id="chart"></div>
   <footer>
-    <img src="images/icons/github.svg" height="10" />&nbsp;
+    <img src="images/icons/github.svg" height="14px" />&nbsp;
     <a href="https://github.com/ruslanbay/moex" title="">Github</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="images/icons/linkedin.svg" height="10" />&nbsp;
+    <img src="images/icons/linkedin.svg" height="14px" />&nbsp;
     <a href="https://www.linkedin.com/pulse/как-российский-фондовый-рынок-изменился-за-последние-20-ruslan-bay-evwxe/" title="">Linkedin</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     ♡︎&nbsp;<a id="share">Share</a>
@@ -72,6 +74,11 @@
         event.preventDefault();
     });
     
+    // Share link
+    const shareLink = document.getElementById("share");
+    const thisTitle = document.title;
+    shareLink.addEventListener("click", handleShareClick);
+    
     // Install PWA
     let installPrompt = null;
     const installLink = document.getElementById("install");
@@ -79,11 +86,14 @@
     window.addEventListener("appinstalled", handleAppInstalled);
     installLink.addEventListener("click", handleInstallClick);
     
-    // Share link
-    const shareLink = document.getElementById("share");
-    const thisTitle = document.title;
-    shareLink.addEventListener("click", handleShareClick);
-    
+    // Apply filter.csv
+    const inputFileLabel = document.getElementById("inputFileLabel");
+    const pwaInstalled = getCookie('pwaInstalled');
+    if (pwaInstalled === 'true') {
+      inputFileLabel.removeAttribute("hidden");
+    }
+    const chooseFileButton = document.getElementById("inputFile");
+    chooseFileButton.addEventListener("change", processCsv);
     
     const url = new URL(window.location.href);
     const urlDate = url.searchParams.get("date");
