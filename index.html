@@ -82,7 +82,9 @@
     const shareLink = document.getElementById("share");
     const thisTitle = document.title;
     shareLink.addEventListener("click", handleShareClick);
-    
+    const erasefilter = document.getElementById("erasefilter");
+    erasefilter.addEventListener("click", refreshChart);
+
     // Install PWA
     let installPrompt = null;
     const installLink = document.getElementById("install");
