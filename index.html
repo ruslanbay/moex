@@ -105,6 +105,11 @@
     const urlDataType = url.searchParams.get("dataType");
     
     let date = urlDate ? new Date(urlDate) : new Date();
+
+    if (date.getHours() < 8) {
+      date.setDate(date.getDate() - 1);
+    }
+    
     while (date.getDay() === 0 || date.getDay() === 6) {
       date.setDate(date.getDate() - 1);
     }
