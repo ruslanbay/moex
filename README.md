@@ -79,6 +79,7 @@ YDEX
 
 <details>
   <summary>ПОДЕЛИТЬСЯ</summary>
+  
   Пожалуйста, расскажите о проекте друзьям и коллегам!
 
   <img src="images/article/share.gif" />
