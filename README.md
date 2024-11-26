@@ -1,6 +1,90 @@
-# Как российский фондовый рынок изменился за последние 10 лет
+# Визуализация данных Мосбиржи. Как российский фондовый рынок изменился за последние 10 лет
 
-Данная визуализация показывает объём торгов по стоимости и количеству сделок, капитализацию рынка. Доступно два типа визуализации: в динамике (histogram) и в разрезе (treemap).
+Данная визуализация показывает объём торгов по стоимости и количеству сделок, капитализацию рынка. Доступно два типа визуализации: в динамике (histogram) и в разрезе (treemap). Все графики интерактивные, можно кликать, зумить. Экспериментируйте! :)
+
+
+<details>
+  <summary>PATHBAR ДЛЯ УДОБНОЙ НАВИГАЦИИ</summary>
+  <img src="images/article/treemap_pathbar.gif" />
+</details>
+
+<details>
+  <summary>SEARCHBOX ДЛЯ БЫСТРОГО ПОИСКА ПО ТИКЕРАМ</summary>
+  <img src="images/article/treemap_searchbox.gif" />
+</details>
+
+<details>
+  <summary>ФИЛЬТР ЦЕННЫХ БУМАГ</summary>
+  Чтобы на treemap отобразить только выбранные бумаги, перечислите их тикеры и сохраните в txt файл. После этого кликните по кнопке 🛄 и выберете ваш файл. Все данные обрабатываются на вашем устройстве, на сервер ничего не отправляется. Пример содержимого файла portfolio.txt:
+
+```
+ticker
+GAZP
+PLZL
+YDEX
+```
+  <img src="images/article/treemap_filter.gif" />
+</details>
+
+<details>
+  <summary>СБРОСИТЬ ФИЛЬТР</summary>
+  <img src="images/article/treemap_erase_filter.gif" />
+</details>
+
+ 
+<details>
+  <summary>ОТКРЫТЬ ГИСТОГРАММУ</summary>
+  <img src="images/article/histogram.gif" />
+</details>
+
+<details>
+  <summary>СКРЫТЬ ЭЛЕМЕНТ НА ГРАФИКЕ</summary>
+  Кликните по элементу легенды, чтобы его скрыть. Кликните дважды, чтобы скрыть всё кроме выбранного элемента
+  <img src="images/article/histogram_legend.gif" />
+</details>
+
+<details>
+  <summary>ВЫБРАТЬ ВРЕМЕННОЙ ОТРЕЗОК НА ГИСТОГРАММЕ</summary>
+  Чтобы выбрать период, за который вы хотите посмотреть данные, можете использовать кнопки `1 year`, `6 months`, `1 month`, либо выделить часть графика
+
+  <img src="images/article/histogram_rangeselector.gif" /> <img src="images/article/histogram_zoom.gif" />
+</details>
+
+<details>
+  <summary>УСТАНОВИТЬ ПРИЛОЖЕНИЕ</summary>
+  Чтобы установить приложение нажмите кнопку `Install` в нижней части экрана
+
+  <img src="images/article/install.jpg" />
+</details>
+
+<details>
+  <summary>УСТАНОВИТЬ НА IPHONE ИЛИ IPAD</summary>
+
+  <img src="images/article/install_ios.gif" />
+</details>
+
+
+<details>
+  <summary>УСТАНОВИТЬ В FIREFOX</summary>
+
+  <img src="images/article/install_firefox.gif" />
+</details>
+
+<details>
+  <summary>БЫСТРЫЕ ССЫЛКИ</summary>
+  В Windows по правый клик на ярлык приложения вызывает меню с быстрыми ссылками на Treemap, History и Listings
+
+  <img src="images/article/windows_shortcuts.jpg" />
+</details>
+
+<details>
+  <summary>ПОДЕЛИТЬСЯ</summary>
+  Пожалуйста, расскажите о проекте друзьям и коллегам!
+
+  <img src="images/article/share.gif" />
+</details>
+
+Ниже пример использования для анализа данных Мосбиржи.
 
 Мосбиржа предоставляет данные с декабря 2011 года. За прошедшие 13 лет общая рублёвая капитализация компаний, представленных на бирже, удвоилась: с 24 до 50 триллионов. Если посмотреть этот же график в других валютах, увидим что рубль потерял 2/3 стоиомсти, а общая капитализация рынка снизилась примерно на четверть.
 
