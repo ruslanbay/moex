@@ -1,6 +1,7 @@
 function toggleInput() {
   const chartTypeValue = document.getElementById("chartType").value;
   const dataTypeValue = document.getElementById("dataType").value;
+  const erasefilterLink = document.getElementById("erasefilter");
 
   switch (chartTypeValue) {
     case "treemap":
@@ -13,18 +14,24 @@ function toggleInput() {
       dataType.disabled = false;
       dateInput.disabled = true;
       tickerInput.disabled = true;
+      inputFileLabel.disabled = true;
+      erasefilterLink.disabled = true;
       if (dataTypeValue == 'trades' ) {
         currency.disabled = true;
       }
       else {
         currency.disabled = false;
       }
+      url.searchParams.delete('date');
       break;
     case "listings":
       currency.disabled = true;
       dataType.disabled = true;
       dateInput.disabled = true;
       tickerInput.disabled = true;
+      inputFileLabel.disabled = true;
+      erasefilterLink.disabled = true;
+      url.searchParams.delete('date');
       break;
   }
   
