@@ -105,13 +105,13 @@
     const urlDataType = url.searchParams.get("dataType");
     
     let date = urlDate ? new Date(`${urlDate}T13:00:00`) : new Date();
-
-    if (date.getHours() < 8) {
-      date.setDate(date.getDate() - 1);
+    
+    if (date.getUTCHours() < 8) {
+      date.setDate(date.getUTCDate() - 1);
     }
     
     while (date.getDay() === 0 || date.getDay() === 6) {
-      date.setDate(date.getDate() - 1);
+      date.setDate(date.getUTCDate() - 1);
     }
     var formattedDate = date.toISOString().split('T')[0];
     document.getElementById("dateInput").value = formattedDate;

@@ -72,7 +72,7 @@ async function getCurrencyRateByDate(date) {
   let rate = currencyRates[date];
   let d = new Date(date);
   while (typeof rate == 'undefined') {
-    d.setDate(d.getDate() - 1);
+    d.setDate(d.getUTCDate() - 1);
     let prevDate = d.toISOString().split('T')[0];
     rate = currencyRates[prevDate];
   }
@@ -192,7 +192,7 @@ async function prepHistogramData() {
         var rate = currencyRates[date];
         var d = new Date(date);
         while (typeof rate == 'undefined') {
-          d.setDate(d.getDate() - 1);
+          d.setDate(d.getUTCDate() - 1);
           let prevDate = d.toISOString().split('T')[0];
           rate = currencyRates[prevDate];
         }
@@ -711,11 +711,6 @@ async function loadData() {
   return { dates, values };
 }
 
-function getYearsArray(startYear = 1994) {
-  const currentYear = new Date().getFullYear();
-  return Array.from({ length: currentYear - startYear + 1 }, (_, i) => startYear + i);
-}
-
 async function refreshListings() {
   const { dates, values } = await loadData();
 
@@ -757,8 +752,6 @@ async function refreshListings() {
     xaxis: 'x',
     yaxis: 'y',
   };
-
-  const tickvals = getYearsArray();
 
   const layout = {
     grid: { rows: 1, columns: 1, pattern: 'independent' },
