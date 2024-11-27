@@ -2,7 +2,12 @@ function toggleInput() {
   const chartTypeValue = document.getElementById("chartType").value;
   const dataTypeValue = document.getElementById("dataType").value;
   const erasefilterLink = document.getElementById("erasefilter");
-
+  
+  url.searchParams.set('currency', currency.value);
+  url.searchParams.set('chartType', chartTypeValue);
+  url.searchParams.set('dataType', dataTypeValue);
+  url.searchParams.set('date', dateInput.value);
+  
   switch (chartTypeValue) {
     case "treemap":
       currency.disabled = false;
@@ -14,8 +19,8 @@ function toggleInput() {
       dataType.disabled = false;
       dateInput.disabled = true;
       tickerInput.disabled = true;
-      inputFileLabel.disabled = true;
-      erasefilterLink.disabled = true;
+      inputFileLabel.setAttribute("hidden", "");
+      erasefilterLink.setAttribute("hidden", "");
       if (dataTypeValue == 'trades' ) {
         currency.disabled = true;
       }
@@ -29,16 +34,11 @@ function toggleInput() {
       dataType.disabled = true;
       dateInput.disabled = true;
       tickerInput.disabled = true;
-      inputFileLabel.disabled = true;
-      erasefilterLink.disabled = true;
+      inputFileLabel.setAttribute("hidden", "");
+      erasefilterLink.setAttribute("hidden", "");
       url.searchParams.delete('date');
       break;
   }
-  
-  url.searchParams.set('currency', currency.value);
-  url.searchParams.set('chartType', chartTypeValue);
-  url.searchParams.set('dataType', dataTypeValue);
-  url.searchParams.set('date', dateInput.value);
   history.replaceState(null, '', url);
 };
 
@@ -261,16 +261,16 @@ async function applyFilter(csv) {
 async function prepTreemapData() {
   let tickerList;
   const localFilterCsv = localStorage.getItem('filterCsv');
-  const erasefilter = document.getElementById('erasefilter');
+  const erasefilterLink = document.getElementById('erasefilter');
   if (localFilterCsv !== undefined && localFilterCsv !== null) {
     tickerList = await applyFilter(localFilterCsv);
     inputFileLabel.setAttribute("hidden", "");
-    erasefilter.removeAttribute("hidden");
+    erasefilterLink.removeAttribute("hidden");
   }
   else {
     localStorage.removeItem('filterCsv');
     inputFileLabel.removeAttribute("hidden");
-    erasefilter.setAttribute("hidden", "");
+    erasefilterLink.setAttribute("hidden", "");
   }
 
   const currencyType = document.getElementById('currencySelector').value;
