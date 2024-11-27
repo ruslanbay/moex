@@ -393,6 +393,9 @@ async function prepTreemapData() {
         chartData["customdata"].push([sector, ticker, marketCapDaily, priceChange, ticker, closePrice, value, numTrades]);
       } else {
         sector = parents[index];
+        if (sector === "Foreign Companies") {
+          return;
+        }
         sectorIndex = labels.indexOf(sector);
         chartData["size"][sectorIndex] = chartData["size"][sectorIndex] + sizeValue;
         chartData["cap"][sectorIndex] = chartData["cap"][sectorIndex] + marketCapDaily;
