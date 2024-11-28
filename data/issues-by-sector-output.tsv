@@ -1,147 +1,147 @@
 parents	labels	shortname	shortname_rus	name_rus	history_from	history_till	trace_color
-	RU000A109R27						
-	RU000A0P1N07						
-	RU000A109XN0						
-	RU000A108C41						
-	RU000A109XW1						
-	RU000A109GX4						
-	RU000A10A3R1						
-	RU000A109SZ4						
-	RU000A109SH2						
-	RU000A109VK0						
-	DRI-RM						
-	RU000A109S67						
-	RU000A109TR9						
-	RU000A109XX9						
-	RU000A10A349						
-	RU000A0P1MY4						
-	RU000A109650						
-	RU000A109QT1						
-	RU000A0NR5Y2						
-	RU000A109TF4						
-	RU000A109UD7						
-	RU000A109445						
-	OZPH						
-	RU000A109VM6						
-	RU000A109U06						
-	RU000A109H29						
-	RU000A109U97						
-	RU000A1080C8						
-	RU000A109ZQ8						
-	RU000A1080B0						
-	RU000A109486						
-	RU000A109QS3						
-	RU000A108090						
-	RU000A109TS7						
-	RU000A10A3L4						
-	RU000A10A539						
-	RU000A10A1U9						
-	RU000A109T25						
-	RU000A109411						
-	RU000A107ZJ7						
-	RU000A109T41						
-	T						
-	RU000A10A1P9						
-	RU000A108FA6						
-	RU000A109UL0						
-	RU000A109S83						
-	RU000A108HW6						
-	RU000A1050V1						
-	RU000A109YT5						
-	RU000A109S91						
-	RU000A109X03						
-	RU000A1050E7						
-	LMBZ						
-	RU000A108HR6						
-	RU000A109SJ8						
-	RU000A109WZ6						
-	RU000A10A133						
-	RU000A109SP5						
-	RU000A10A505						
-	RU000A10A141						
-	RU000A109429						
-	RU000A109EG4						
-	RU000A107ZS8						
-	RU000A109VL8						
-	RU000A0P1MZ1						
-	RU000A10A125						
-	RU000A109XZ4						
-	RU000A109XT7						
-	RU000A0NR9V0						
-	RU000A109PP1						
-	RU000A109QR5						
-	RU000A10A4S7						
-	RU000A109YH0						
-	AKFB						
-	RU000A10A5H7						
-	RU000A10A3Q3						
-	RU000A109LL9						
-	PSRB						
-	RU000A109EW1						
-	RU000A109VJ2						
-	AKHT						
-	RU000A109GV8						
-	RU000A108QE5						
-	RU000A10A158						
-	RU000A10A554						
-	RU000A109ZJ3						
-	RU000A10A026						
-	RU000A10A166						
-	RU000A109478						
-	RU000A0P1N23						
-	RU000A10A4C1						
-	RU000A109TG2						
-	RU000A1080A2						
-	RU000A109ZK1						
-	RU000A109H11						
-	RU000A10A1N4						
-	RU000A109XY7						
-	RU000A109SX9						
-	RU000A109RX1						
-	RU000A0P1N15						
-	RU000A107XF0						
-	RU000A109YF4						
-	RU000A109TJ6						
-	RU000A10A0H8						
-	RU000A1094B1						
-	RU000A109EX9						
-	RU000A108HS4						
-	RU000A108QF2						
-	RU000A10A398						
-	RU000A109494						
-	AKAI						
-	RU000A109H03						
-	RU000A109GY2						
-	RU000A1094A3						
-	RU000A10A0R7						
-	RU000A109UE5						
-	RU000A109RW3						
-	RU000A10A414						
-	RU000A109X37						
-	RU000A109452						
-	RU000A109T74						
-	RU000A109GZ9						
-	RU000A109XR1						
-	CASH						
-	RU000A109JH1						
-	RU000A109SM2						
-	RU000A109GW6						
-	RU000A109XS9						
-	RU000A109X29						
-	RU000A10A422						
-	RU000A10A3Z4						
-	RU000A1099U0						
-	RU000A10A3W1						
-	RU000A109RR3						
-	RU000A109SK6						
-	RU000A109TW9						
-	RU000A109XV3						
-	RU000A1080D6						
-	RU000A107ZT6						
-	RU000A109X45						
-	RU000A10A4N8						
-	BCSR						
-	RU000A108HQ8						
-	RU000A10A3C3						
-	RU000A109460						
-	RU000A109XU5						
+interval_ppif	RU000A109R27	2x Shares	2х Акции	2х Акции	2024-11-13		
+corporate_bond	RU000A0P1N07	Sber CIB-CO-713	СберСIB713	Сбер CIB-СО-713	2024-11-01		
+exchange_bond	RU000A109XN0	SLDK 001P-01	СЛДК 1P1	СЛДК 001P-01	2024-10-29		
+corporate_bond	RU000A108C41	Investment bonds 06	ИнвОбл06	Инвестиционные облигации 06	2024-11-22		
+exchange_bond	RU000A109XW1	VEB.RF PBO-002P-K554	ВЭБ2P-К554	ВЭБ.РФ ПБО-002Р-К554	2024-11-14		
+corporate_bond	RU000A109GX4	Sber CIB-CO-EQ-001S-04	СберКИБ1P4	Сбер CIB-CO-EQ-001S-04	2024-10-25		
+exchange_bond	RU000A10A3R1	Rostelecom 001P-13R	РостелP13R	Ростелеком ПАО 001P-13R	2024-11-19		
+exchange_bond	RU000A109SZ4	MegaFon BO-002P-07	Мегафон2P7	МегаФон ПАО БО-002P-07	2024-10-17		
+exchange_bond	RU000A109SH2	ALROSA 001P-02	АЛРОСА1Р2	АЛРОСА 001Р-02	2024-10-14		
+exchange_bond	RU000A109VK0	VseInstrumenti.ru LLC 001P-03	ВсИнстр1Р3	ВсеИнструменты.ру 001Р-03	2024-10-25		
+common_share	DRI-RM	DARDEN RESTAURANTS INCO ORDSHS	DardenRest	DARDEN RESTAURANTS INCO ORDSHS	2021-11-01		
+exchange_bond	RU000A109S67	SberIOS 001P-653R 5Y AC SBER	СберИОС653	СберИОС 001Р-653R 5Г AC СБЕР	2024-10-30		
+exchange_bond	RU000A109TR9	SberIOS 001P-654R RUGOLD CS	СберИОС654	СберИОС 001Р-654R RUGOLD КС	2024-10-25		
+exchange_bond	RU000A109XX9	VEB.RF PBO-002P-K555	ВЭБ2P-К555	ВЭБ.РФ ПБО-002Р-К555	2024-11-20		
+exchange_bond	RU000A10A349	RusHydro BO-002P-01	РусГид2Р01	РусГидро БО-002Р-01	2024-11-14		
+corporate_bond	RU000A0P1MY4	Sber CIB-CO-711	СберСIB711	Сбер CIB-СО-711	2024-10-11		
+corporate_bond	RU000A109650	SPE AI class A1	СФО АИ А1	СФО АИ класса А1	2024-10-22		
+corporate_bond	RU000A109QT1	Investment bonds 11	ИнвОбл11	Инвестиционные облигации 11	2024-11-02		
+corporate_bond	RU000A0NR5Y2	Sber CIB-CO-532	СберСIB532	Сбер CIB-СО-532	2024-11-15		
+exchange_bond	RU000A109TF4	LCA BO-03-001P	АСВ 1Р03	ООО АСВ БО-03-001P	2024-10-18		
+exchange_bond	RU000A109UD7	Atomenergoprom 001P-03	Атомэнпр03	Атомэнергопром АО 001Р-03	2024-10-23		
+exchange_bond	RU000A109445	VEB.RF PBO-002P-K542	ВЭБ2P-К542	ВЭБ.РФ ПБО-002Р-К542	2024-10-11		
+common_share	OZPH	Ozon Pharmaceuticals	ОзонФарм	Озон Фармацевтика	2024-10-17	2024-11-28	
+exchange_bond	RU000A109VM6	KAMAZ PTC BO-P13	КАМАЗ БП13	КАМАЗ ПАО БО-П13	2024-10-25		
+exchange_bond	RU000A109U06	DeltaLeasing 001P-01	ДелЛиз1Р1	ДельтаЛизинг 001Р-01	2024-10-22		
+corporate_bond	RU000A109H29	Sber CIB-CO-EQ-001S-09	СберКИБ1P9	Сбер CIB-CO-EQ-001S-09	2024-11-25		
+exchange_bond	RU000A109U97	DOM.RF 002P-05	ДОМ 2P5	ДОМ.РФ АО 002P-05	2024-10-22		
+corporate_bond	RU000A1080C8	Sber CIB-CO-801	СберСIB801	Сбер CIB-СО-801	2024-11-18		
+exchange_bond	RU000A109ZQ8	ROSSETI BO 001P-14R	Россет1Р14	Россети ПАО БО 001P-14R	2024-11-01		
+corporate_bond	RU000A1080B0	Sber CIB-CO-800	СберСIB800	Сбер CIB-СО-800	2024-11-18		
+exchange_bond	RU000A109486	VEB.RF PBO-002P-K546	ВЭБ2P-К546	ВЭБ.РФ ПБО-002Р-К546	2024-10-25		
+exchange_bond	RU000A109QS3	SberIOS 001P-651R LKOH CS	СберИОС651	СберИОС 001Р-651R ЛУКОЙЛ КС	2024-10-28		
+corporate_bond	RU000A108090	Sber CIB-CO-798	СберСIB798	Сбер CIB-СО-798	2024-10-30		
+exchange_bond	RU000A109TS7	SberIOS 001P-655R RUGOLD CS	СберИОС655	СберИОС 001Р-655R RUGOLD КС	2024-10-25		
+exchange_bond	RU000A10A3L4	Sber 002P-SBER48	Сбер Sb48R	Сбербанк ПАО 002Р-SBER48	2024-11-22		
+corporate_bond	RU000A10A539	Bank DOM.RF SUB-T2-2	ДОМСУБТ2-2	Банк ДОМ.РФ СУБ-T2-2	2024-11-25		
+exchange_bond	RU000A10A1U9	SibAvtoTrans 001P-04	СИБАВТО1Р4	СибАвтоТранс 001Р-04	2024-11-13		
+corporate_bond	RU000A109T25	SFO BCS Structured Notes 47	СФО БКС 47	СФО БКС Структурные Ноты 47	2024-11-19		
+exchange_bond	RU000A109411	VEB.RF PBO-002P-K539	ВЭБ2P-К539	ВЭБ.РФ ПБО-002Р-К539	2024-10-25		
+corporate_bond	RU000A107ZJ7	Sber CIB-CO-773	СберСIB773	Сбер CIB-СО-773	2024-11-11		
+exchange_bond	RU000A109T41	R-Vision 001P-01	R-Vision 1	Р-Вижн 001Р-01	2024-10-17		
+common_share	T	IPJSC TCS Holding	ТКСХолд ао	ТКС Холдинг МКПАО ао	2019-10-28	2024-11-28	
+exchange_bond	RU000A10A1P9	APRI BO-002P-05	АПРИ 2Р5	АПРИ БО-002Р-05	2024-11-12		
+corporate_bond	RU000A108FA6	Rumberg CP-1-5	Румбрг1P5	СФО Румберг СП-1-5	2024-10-14		
+exchange_bond	RU000A109UL0	KORYAKENERGO-01	КОРЯКЭН-01	КОРЯКЭНЕРГО-01	2024-10-24		
+exchange_bond	RU000A109S83	MONOPOLY 001P-01	МОНОП 1P01	МОНОПОЛИЯ 001P-01	2024-10-11		
+corporate_bond	RU000A108HW6	Sber CIB-CO-841	СберСIB841	Сбер CIB-СО-841	2024-11-26		
+corporate_bond	RU000A1050V1	Sber CIB-CO-274	СберСIB274	Сбер CIB-СО-274	2024-11-22		
+exchange_bond	RU000A109YT5	ALFA-BANK 001P-17	АЛЬФАБ1Р17	АЛЬФА-БАНК Б1Р17	2024-11-01		
+exchange_bond	RU000A109S91	Rosseti Moscow Region BO1P07	РСетиМР1P7	ПАО Россети Моск.рег. БО1Р07	2024-10-11		
+exchange_bond	RU000A109X03	SberIOS 001P-656R 5Y AC LKOH	СберИОС656	СберИОС 001Р-656R 5Г AC LKOH	2024-11-15		
+corporate_bond	RU000A1050E7	Sber CIB-CO-317	СберСIB317	Сбер CIB-СО-317	2024-11-15		
+common_share	LMBZ	Lambumiz	Ламбумиз	Ламбумиз	2024-10-30	2024-11-28	
+corporate_bond	RU000A108HR6	Sber CIB-CO-836	СберСIB836	Сбер CIB-СО-836	2024-11-21		
+exchange_bond	RU000A109SJ8	OSTROVMASHYN-01	ОСТРОВМ-01	ОСТРОВМАШИН-01	2024-10-15		
+exchange_bond	RU000A109WZ6	ALFA-BANK 001P-16	АЛЬФАБ1Р16	АЛЬФА-БАНК Б1Р16	2024-10-29		
+exchange_bond	RU000A10A133	EvroTrans BO-001P-04	ЕвроТранс4	ЕвроТранс БО-001Р-04	2024-11-11		
+exchange_bond	RU000A109SP5	Etalon-Finans 002P-02	ЭталонФин2	Эталон-Финанс 002Р-02	2024-10-15		
+exchange_bond	RU000A10A505	Villina 001P-01	Виллин1P1	Виллина 001P-01	2024-11-25		
+exchange_bond	RU000A10A141	EvroTrans BO-001P-05	ЕвроТранс5	ЕвроТранс БО-001Р-05	2024-11-11		
+exchange_bond	RU000A109429	VEB.RF PBO-002P-K540	ВЭБ2P-К540	ВЭБ.РФ ПБО-002Р-К540	2024-10-09		
+exchange_bond	RU000A109EG4	Gazprombank BO 004P-12	ГПБ004Р12	ГПБ (АО) БО 004Р-12	2024-10-31		
+corporate_bond	RU000A107ZS8	Sber CIB-CO-781	СберСIB781	Сбер CIB-СО-781	2024-11-19		
+exchange_bond	RU000A109VL8	Sovkombank B0-P05	СовкомБОП5	Совкомбанк БО-П05	2024-10-25		
+corporate_bond	RU000A0P1MZ1	Sber CIB-CO-712	СберСIB712	Сбер CIB-СО-712	2024-10-21		
+exchange_bond	RU000A10A125	Rosneft 004P-03	Роснфт4P3	ПАО НК Роснефть 004P-03	2024-11-11		
+exchange_bond	RU000A109XZ4	VEB.RF PBO-002P-K557	ВЭБ2P-К557	ВЭБ.РФ ПБО-002Р-К557	2024-11-27		
+exchange_bond	RU000A109XT7	VEB.RF PBO-002P-K551	ВЭБ2P-К551	ВЭБ.РФ ПБО-002Р-К551	2024-11-08		
+corporate_bond	RU000A0NR9V0	Sber CIB-CO-618	СберСIB618	Сбер CIB-СО-618	2024-11-21		
+exchange_bond	RU000A109PP1	ABZ-1 002P-01	АБЗ-1 2Р01	АБЗ-1 002Р-01	2024-10-09		
+public_ppif	RU000A109QR5	AAA PIF Gold Fund	ААА Золото	ААА ПИФ Фонд Золота	2024-11-11		
+exchange_bond	RU000A10A4S7	PhosAgro BO-02-01	ФосАгро2П1	ФосАгро БО-02-01	2024-11-22		
+exchange_bond	RU000A109YH0	SberIOS 001P-659R 3Y1M RMFS	СберИОС659	СберИОС 001Р-659R 3Y1M ОФЗ	2024-11-15		
+exchange_ppif	AKFB	AKFB ETF floating rate bonds	AKFB ETF	БПИФ Альфа Обл с перем купоном	2024-10-23		
+exchange_bond	RU000A10A5H7	GTLK BO 002P-06	ГТЛК 2P-06	ГТЛК БО 002P-06	2024-11-27		
+exchange_bond	RU000A10A3Q3	ANTERRA-03	АНТЕРРА-03	АНТЕРРА-03	2024-11-19		
+exchange_bond	RU000A109LL9	SberIOS 001P-649R 5Y AC LKOH	СберИОС649	СберИОС 001Р-649R 5Г AC LKOH	2024-10-16		
+exchange_ppif	PSRB	PSRB ETF Ruble bonds	PSRB ETF	ПСБ  Рублевые облигации	2024-11-20		
+corporate_bond	RU000A109EW1	SFO BCS Structured Notes 42	СФО БКС 42	СФО БКС Структурные Ноты 42	2024-10-17		
+exchange_bond	RU000A109VJ2	VseInstrumenti.ru LLC 001P-02	ВсИнстр1Р2	ВсеИнструменты.ру 001Р-02	2024-10-25		
+exchange_ppif	AKHT	AKHT ETF Alfa IT Leaders	AKHT ETF	БПИФ Альфа Капитал ИТ Лидеры	2024-11-11		
+corporate_bond	RU000A109GV8	Sber CIB-CO-BQ-001S-02	СберКИБ1P2	Сбер СIB-CO-EQ-001S-02	2024-10-15		
+corporate_bond	RU000A108QE5	SFO BCS Structured Notes 33	СФО БКС 33	СФО БКС Структурные Ноты 33	2024-10-22		
+exchange_bond	RU000A10A158	Gazprom capital BO-003P-08	ГазпКап3P8	Газпром капитал БО-003Р-08	2024-11-11		
+exchange_bond	RU000A10A554	APRI BO-002P-06	АПРИ 2Р6	АПРИ БО-002Р-06	2024-11-26		
+exchange_bond	RU000A109ZJ3	Bank VTB B-1-363	ВТБ Б1-363	Банк ВТБ (ПАО) Б-1-363	2024-11-01		
+exchange_bond	RU000A10A026	ARENZA-PRO 001P-06	АРЕНЗА1Р06	АРЕНЗА-ПРО 001P-06	2024-11-05		
+exchange_bond	RU000A10A166	Gazprom capital BO-003P-05	ГазпКап3P5	Газпром капитал БО-003Р-05	2024-11-11		
+exchange_bond	RU000A109478	VEB.RF PBO-002P-K545	ВЭБ2P-К545	ВЭБ.РФ ПБО-002Р-К545	2024-10-23		
+corporate_bond	RU000A0P1N23	Sber CIB-CO-715	СберСIB715	Сбер CIB-СО-715	2024-11-05		
+exchange_bond	RU000A10A4C1	ENERGONICA 001P-05	ЭНИКА 1Р05	ЭНЕРГОНИКА 001Р-05	2024-11-21		
+exchange_bond	RU000A109TG2	Carsharing Russia 001P-04	iКарРус1P4	Каршеринг Руссия 001P-04	2024-10-18		
+corporate_bond	RU000A1080A2	Sber CIB-CO-799	СберСIB799	Сбер CIB-СО-799	2024-10-30		
+exchange_bond	RU000A109ZK1	Bank VTB B-1-364	ВТБ Б1-364	Банк ВТБ (ПАО) Б-1-364	2024-11-01		
+corporate_bond	RU000A109H11	Sber CIB-CO-EQ-001S-08	СберКИБ1P8	Сбер CIB-CO-EQ-001S-08	2024-11-22		
+exchange_bond	RU000A10A1N4	Alfa-Leasing BO-02	АльфаЛБ02	Альфа-Лизинг БО-02	2024-11-12		
+exchange_bond	RU000A109XY7	VEB.RF PBO-002P-K556	ВЭБ2P-К556	ВЭБ.РФ ПБО-002Р-К556	2024-11-22		
+exchange_bond	RU000A109SX9	DDC Sadko 001P-01	Садко 1P1	ЦРС Садко 001P-01	2024-10-16		
+exchange_bond	RU000A109RX1	GazTransSnab BO-01	ГТС БО-01	ГазТрансСнаб БО-01	2024-10-10		
+corporate_bond	RU000A0P1N15	Sber CIB-CO-714	СберСIB714	Сбер CIB-СО-714	2024-10-28		
+exchange_bond	RU000A107XF0	VEB.RF PBO-002P-K503	ВЭБ2P-К503	ВЭБ.РФ ПБО-002Р-К503	2024-11-01		
+exchange_bond	RU000A109YF4	SberIOS 001P-657R RUGOLD CS	СберИОС657	СберИОС 001Р-657R RUGOLD КС	2024-11-22		
+exchange_bond	RU000A109TJ6	Promsvyazbank 003P-09	ПСБ 3P-09	Промсвязьбанк 003P-09	2024-10-18		
+exchange_bond	RU000A10A0H8	VERATEC-01	ВЕРАТЕК-01	ВЕРАТЕК-01	2024-11-06		
+exchange_bond	RU000A1094B1	VEB.RF PBO-002P-K549	ВЭБ2P-К549	ВЭБ.РФ ПБО-002Р-К549	2024-11-01		
+corporate_bond	RU000A109EX9	SFO BCS Structured Notes 43	СФО БКС 43	СФО БКС Структурные Ноты 43	2024-10-31		
+corporate_bond	RU000A108HS4	Sber CIB-CO-837	СберСIB837	Сбер CIB-СО-837	2024-11-27		
+corporate_bond	RU000A108QF2	SFO BCS Structured Notes 34	СФО БКС 34	СФО БКС Структурные Ноты 34	2024-11-19		
+exchange_bond	RU000A10A398	SIMPLE 001P-01	СИМПЛ1Р01	СИМПЛ 001Р-01	2024-11-15		
+exchange_bond	RU000A109494	VEB.RF PBO-002P-K547	ВЭБ2P-К547	ВЭБ.РФ ПБО-002Р-К547	2024-10-30		
+exchange_ppif	AKAI	AKAI ETF Anti-inflationary	AKAI ETF	БПИФ Антиинфляционный	2024-10-16		
+corporate_bond	RU000A109H03	Sber CIB-CO-EQ-001S-07	СберКИБ1P7	Сбер CIB-CO-EQ-001S-07	2024-10-24		
+corporate_bond	RU000A109GY2	Sber CIB-CO-EQ-001S-05	СберКИБ1P5	Сбер CIB-CO-EQ-001S-05	2024-10-25		
+exchange_bond	RU000A1094A3	VEB.RF PBO-002P-K548	ВЭБ2P-К548	ВЭБ.РФ ПБО-002Р-К548	2024-10-31		
+exchange_bond	RU000A10A0R7	ALFA-BANK 001P-18	АЛЬФАБ1Р18	АЛЬФА-БАНК Б1Р18	2024-11-12		
+corporate_bond	RU000A109UE5	RAF 001-01	РАТ 001-01	Автоассистанс 001-01	2024-10-23		
+exchange_bond	RU000A109RW3	ALFA-BANK 001P-15	АЛЬФАБ1Р15	АЛЬФА-БАНК Б1Р15	2024-10-18		
+exchange_bond	RU000A10A414	PCB 1P-06	ПКБ 1Р-06	Первое кол.бюро НАО 001Р-06	2024-11-20		
+exchange_bond	RU000A109X37	Sber 001P-SBERD3	Сбер SbD3R	Сбербанк ПАО 001Р-SBERD3	2024-11-11		
+exchange_bond	RU000A109452	VEB.RF PBO-002P-K543	ВЭБ2P-К543	ВЭБ.РФ ПБО-002Р-К543	2024-10-16		
+exchange_bond	RU000A109T74	ID Collect 001P-02	АйДиКол1Р2	АйДи Коллект 001P-02	2024-10-17		
+corporate_bond	RU000A109GZ9	Sber CIB-CO-EQ-001S-06	СберКИБ1P6	Сбер CIB-CO-EQ-001S-06	2024-10-30		
+exchange_bond	RU000A109XR1	Acron BO-001P-05	Акрон Б1P5	Акрон (ПАО) БО-001P-05	2024-10-29		
+exchange_ppif	CASH	CASH ETF Daily rate	CASH ETF	ААА БПИФ Ежедневный процент	2024-11-07		
+exchange_bond	RU000A109JH1	X5 FINANSE 003P-01	ИКС5Фин3P1	ИКС 5 ФИНАНС 003P-01	2024-11-20		
+exchange_bond	RU000A109SM2	BuySell 001P-02	Байсэл 1Р2	Байсэл 001P-02	2024-10-15		
+corporate_bond	RU000A109GW6	Sber CIB-CO-EQ-001S-03	СберКИБ1Р3	Сбер CIB-CO-EQ-001S-03	2024-10-15		
+exchange_bond	RU000A109XS9	VEB.RF PBO-002P-K550	ВЭБ2P-К550	ВЭБ.РФ ПБО-002Р-К550	2024-11-06		
+exchange_bond	RU000A109X29	Rostelecom 001P-12R	РостелP12R	Ростелеком ПАО 001P-12R	2024-10-28		
+exchange_bond	RU000A10A422	Sovkombank BO-I03	СовкомБИ03	Совкомбанк БО-И03	2024-11-21		
+exchange_bond	RU000A10A3Z4	GTLK BO 002P-04	ГТЛК 2P-04	ГТЛК БО 002P-04	2024-11-20		
+private_ppif	RU000A1099U0	ZPIF Sovremenniy 9	ЗПИФСовр 9	ЗПИФ Современный 9	2024-11-14		
+exchange_bond	RU000A10A3W1	Baltic Leasing BO-P14	БалтЛизП14	Балтийский лизинг ООО БО-П14	2024-11-26		
+subfederal_bond	RU000A109RR3	Ulyanovskaya oblast 34009	Ульоб34009	Минфин Ульяновской обл. 34009	2024-10-10		
+exchange_bond	RU000A109SK6	MTS 001P-27	МТС 1P-27	Мобильные ТелеСистемы 001P-27	2024-10-14		
+exchange_bond	RU000A109TW9	MMC NORILSK NICKEL BO-10	НорНик Б10	ГМК Нор.никель БО-10	2024-10-22		
+exchange_bond	RU000A109XV3	VEB.RF PBO-002P-K553	ВЭБ2P-К553	ВЭБ.РФ ПБО-002Р-К553	2024-11-13		
+corporate_bond	RU000A1080D6	Sber CIB-CO-802	СберСIB802	Сбер CIB-СО-802	2024-11-22		
+corporate_bond	RU000A107ZT6	Sber CIB-CO-782	СберСIB782	Сбер CIB-СО-782	2024-11-19		
+exchange_bond	RU000A109X45	VTB Leasing 001P-MB-02	ВТБЛИЗ 1Р2	ВТБ Лизинг 001Р-МБ-02	2024-10-28		
+exchange_bond	RU000A10A4N8	INTERLISING 001P-10	ИнтЛиз1Р10	Интерлизинг 001Р-10	2024-11-22		
+exchange_ppif	BCSR	BCSR ETF MX	BCSR ETF	БПИФ БКС Индекс Росс рынка	2024-11-15		
+corporate_bond	RU000A108HQ8	Sber CIB-CO-835	СберСIB835	Сбер CIB-СО-835	2024-11-21		
+exchange_bond	RU000A10A3C3	Brusnika 002P-03	Брус 2P03	Брусника 002Р-03	2024-11-18		
+exchange_bond	RU000A109460	VEB.RF PBO-002P-K544	ВЭБ2P-К544	ВЭБ.РФ ПБО-002Р-К544	2024-10-17		
+exchange_bond	RU000A109XU5	VEB.RF PBO-002P-K552	ВЭБ2P-К552	ВЭБ.РФ ПБО-002Р-К552	2024-11-22		
