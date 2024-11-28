@@ -2,6 +2,32 @@ name: 'Parse Securities'
 
 on:
   workflow_dispatch:
+    inputs:
+      startDate:
+        description: 'Start date'
+        required: true
+        type: string
+        default: '2011-12-19'
+      endDate:
+        description: 'End date'
+        required: true
+        type: string
+        default: '2024-11-28'
+      stepDays:
+        description: 'Step in days'
+        required: true
+        type: number
+        default: 1
+      inputTSVFile:
+        description: 'Input tsv file name'
+        required: true
+        type: string
+        default: 'issues-by-sector'
+      outputTSVFile:
+        description: 'Output tsv file name'
+        required: true
+        type: string
+        default: 'issues-by-sector-output'
 
 permissions:
   contents: write
@@ -22,10 +48,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install requests pandas
-    - name: Update /data/issues-by-sector.tsv
+    - name: Update tsv file
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
-        python .github/workflows/parseSecurities.py
+        python .github/workflows/parseSecurities.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --input ${{ inputs.inputTSVFile }} --output ${{ inputs.outputTSVFile }}
     - name: Commit and push build artifacts
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"

@@ -1,7 +1,22 @@
+import argparse
 import csv
+from datetime import datetime, timedelta
 import json
 import os
-from datetime import datetime, timedelta
+
+parser = argparse.ArgumentParser(description='Parse securities localy')
+parser.add_argument('--start', nargs=1, type=str, required=True, help='start date, YYYY-MM-DD')
+parser.add_argument('--end', nargs=1, type=str, required=True, help='end date, YYYY-MM-DD')
+parser.add_argument('--step', nargs=1, type=int, required=True, help='step between data points in days')
+parser.add_argument('--input', nargs=1, type=str, required=True, help='Input TSV file')
+parser.add_argument('--output', nargs=1, type=str, required=True, help='Output TSV file')
+args=parser.parse_args()
+start = datetime.strptime(args.start[0], '%Y-%m-%d').date()
+end = datetime.strptime(args.end[0], '%Y-%m-%d').date()
+step = int(args.step[0])
+mode = args.mode[0]
+inputTSVFile = args.input[0]
+outputTSVFile = args.output[0]
 
 # Function to read the first column from the TSV file
 def read_issues_by_sector(file_path):
@@ -40,21 +55,22 @@ def append_to_issues_by_sector(file_path, new_values):
 # Main logic of the script
 def main():
     # Path to the TSV file
-    tsv_file_path = 'data/issues-by-sector-test.tsv'
+    inputTSVFilePath = f'data/{inputTSVFile}.tsv'
+    outputTSVFilePath = f'data/{outputTSVFile}.tsv'
     
     # Read existing values
-    existing_values = read_issues_by_sector(tsv_file_path)
+    existing_values = read_issues_by_sector(inputTSVFilePath)
 
     # Define the date range
-    start_date = datetime(2011, 12, 19)
-    end_date = datetime(2024, 10, 9)
+    start_date = datetime.strptime(start, '%Y-%m-%d')
+    end_date = datetime.strptime(end, '%Y-%m-%d')
 
     # Get new values from JSON files
     new_values = get_new_values(start_date, end_date, existing_values)
 
     # Print new values to the console
     if new_values:
-        append_to_issues_by_sector(tsv_file_path, new_values)
+        append_to_issues_by_sector(outputTSVFilePath, new_values)
         print(f"Added new values: {len(new_values)}")
         print(new_values)
     else:
