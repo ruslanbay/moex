@@ -1,6 +1,8 @@
 name: 'Update Ticket List'
 
 on:
+  schedule:
+    - cron: '55 03 * * 2-6'
   workflow_dispatch:
     inputs:
       startDate:
@@ -49,12 +51,21 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Update tsv file
+    - name: MANUAL. Update tsv file
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
         inputFileName="${{ inputs.inputFileNameTSV }}"
         outputFileName="${{ inputs.outputFileNameTSV }}"
         python .github/workflows/updateTicketList.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --input "data/${inputFileName}.tsv" --output "data/${outputFileName}.tsv"
+    - name: DAILY. Update tsv file
+      if: ${{ github.event.schedule == '55 03 * * 2-6' }}
+      run: |
+        start=$(date --utc -d 'yesterday' +'%Y-%m-%d')
+        end=$(date --utc +"%Y")
+        step=1
+        inputFileName="issues-by-sector"
+        outputFileName="issues-by-sector"
+        python .github/workflows/updateTicketList.py --start "${start}" --end "${end}" --step "${step}" --input "data/${inputFileName}.tsv" --output "data/${outputFileName}.tsv"
     - name: Commit and push build artifacts
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
