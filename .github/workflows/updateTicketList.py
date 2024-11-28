@@ -127,7 +127,7 @@ def main():
   # Print new values to the console
   if new_values:
     with open(outputTSVFile, 'a', encoding='utf-8', newline='') as file:
-      writer = csv.writer(file)
+      writer = csv.writer(file, delimiter='\t')
       for ticker in new_values:
         companyInfo = getCompanyInfo(ticker)
         writer.writerow(companyInfo.values())
