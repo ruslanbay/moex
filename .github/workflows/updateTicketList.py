@@ -126,11 +126,11 @@ def main():
   
   # Print new values to the console
   if new_values:
-    with open(outputTSVFile, 'a', encoding='utf-8') as file:
+    with open(outputTSVFile, 'a', encoding='utf-8', newline='') as file:
       writer = csv.writer(file)
       for ticker in new_values:
         companyInfo = getCompanyInfo(ticker)
-        writer.writerows(companyInfo.values())
+        writer.writerow(companyInfo.values())
   else:
     print("No new values found.")
 
