@@ -134,7 +134,7 @@ def main():
       writer = csv.writer(file)
       for ticker in new_values:
         companyInfo = getCompanyInfo(ticker)
-        writer.writerows(list(companyInfo.values())
+        writer.writerows(list(companyInfo.values()))
   else:
     print("No new values found.")
 
