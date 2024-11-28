@@ -14,7 +14,6 @@ args=parser.parse_args()
 start = datetime.strptime(args.start[0], '%Y-%m-%d').date()
 end = datetime.strptime(args.end[0], '%Y-%m-%d').date()
 step = int(args.step[0])
-mode = args.mode[0]
 inputTSVFile = args.input[0]
 outputTSVFile = args.output[0]
 
@@ -25,7 +24,7 @@ def read_issues_by_sector(file_path):
         return [row[1] for row in reader]
 
 # Function to get a list of new values from JSON files
-def get_new_values(start_date, end_date, existing_values):
+def get_new_values(start_date, end_date, step, existing_values):
     new_values = set()
     current_date = start_date
 
@@ -66,7 +65,7 @@ def main():
     end_date = datetime.strptime(end, '%Y-%m-%d')
 
     # Get new values from JSON files
-    new_values = get_new_values(start_date, end_date, existing_values)
+    new_values = get_new_values(start_date, end_date, step, existing_values)
 
     # Print new values to the console
     if new_values:
