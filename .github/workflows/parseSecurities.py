@@ -11,8 +11,8 @@ parser.add_argument('--step', nargs=1, type=int, required=True, help='step betwe
 parser.add_argument('--input', nargs=1, type=str, required=True, help='Input TSV file')
 parser.add_argument('--output', nargs=1, type=str, required=True, help='Output TSV file')
 args=parser.parse_args()
-start = datetime.strptime(args.start[0], '%Y-%m-%d').date()
-end = datetime.strptime(args.end[0], '%Y-%m-%d').date()
+start = datetime.strptime(args.start[0], '%Y-%m-%d')
+end = datetime.strptime(args.end[0], '%Y-%m-%d')
 step = int(args.step[0])
 inputTSVFile = args.input[0]
 outputTSVFile = args.output[0]
