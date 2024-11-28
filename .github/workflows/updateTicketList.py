@@ -65,7 +65,7 @@ def getCompanyInfo(ticker):
         'shortname_rus': ticker,
         'name_rus': ticker,
         'history_from': '',
-        'history_till': ''
+        'history_till': '',
         'trace_color': ''
       }
       history_from = ''
