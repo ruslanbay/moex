@@ -60,12 +60,8 @@ def main():
     # Read existing values
     existing_values = read_issues_by_sector(inputTSVFilePath)
 
-    # Define the date range
-    start_date = datetime.strptime(start, '%Y-%m-%d')
-    end_date = datetime.strptime(end, '%Y-%m-%d')
-
     # Get new values from JSON files
-    new_values = get_new_values(start_date, end_date, step, existing_values)
+    new_values = get_new_values(start, end, step, existing_values)
 
     # Print new values to the console
     if new_values:
