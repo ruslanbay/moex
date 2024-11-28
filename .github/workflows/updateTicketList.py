@@ -118,19 +118,15 @@ def getCompanyInfo(ticker):
 
 # Main logic of the script
 def main():
-  # Path to the TSV file
-  inputTSVFilePath = f'data/{inputTSVFile}.tsv'
-  outputTSVFilePath = f'data/{outputTSVFile}.tsv'
-  
   # Read existing values
-  existing_values = read_issues_by_sector(inputTSVFilePath)
+  existing_values = read_issues_by_sector(inputTSVFile)
   
   # Get new values from JSON files
   new_values = get_new_values(start, end, step, existing_values)
   
   # Print new values to the console
   if new_values:
-    with open(outputTSVFilePath, 'a', encoding='utf-8') as file:
+    with open(outputTSVFile, 'a', encoding='utf-8') as file:
       writer = csv.writer(file)
       for ticker in new_values:
         companyInfo = getCompanyInfo(ticker)

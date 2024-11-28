@@ -18,12 +18,12 @@ on:
         required: true
         type: number
         default: 1
-      inputTSVFile:
+      inputFileNameTSV:
         description: 'Input tsv file name'
         required: true
         type: string
         default: 'issues-by-sector'
-      outputTSVFile:
+      outputFileNameTSV:
         description: 'Output tsv file name'
         required: true
         type: string
@@ -52,7 +52,9 @@ jobs:
     - name: Update tsv file
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
-        python .github/workflows/updateTicketList.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --input ${{ inputs.inputTSVFile }} --output ${{ inputs.outputTSVFile }}
+        inputFileName="${{ inputs.inputFileNameTSV }}"
+        outputFileName="${{ inputs.outputFileNameTSV }}"
+        python .github/workflows/updateTicketList.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --input "data/${inputFileName}.tsv" --output "data/${outputFileName}.tsv"
     - name: Commit and push build artifacts
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
