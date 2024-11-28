@@ -51,7 +51,7 @@ jobs:
     - name: Update tsv file
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
-        python .github/workflows/parseSecurities.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --input ${{ inputs.inputTSVFile }} --output ${{ inputs.outputTSVFile }}
+        python .github/workflows/updateTicketList.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --input ${{ inputs.inputTSVFile }} --output ${{ inputs.outputTSVFile }}
     - name: Commit and push build artifacts
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
