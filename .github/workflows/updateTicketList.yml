@@ -1,4 +1,4 @@
-name: 'Parse Securities'
+name: 'Update Ticket List'
 
 on:
   workflow_dispatch:
@@ -36,7 +36,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env: 
-      CI_COMMIT_MESSAGE: Parse securities
+      CI_COMMIT_MESSAGE: Update Ticket List
       CI_COMMIT_AUTHOR: github-actions[bot]
     steps:
     - uses: actions/checkout@v4
@@ -51,7 +51,7 @@ jobs:
     - name: Update tsv file
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
-        python .github/workflows/updateTicketList.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --input ${{ inputs.inputTSVFile }} --output ${{ inputs.outputTSVFile }}
+        python .github/workflows/parseSecurities.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --input ${{ inputs.inputTSVFile }} --output ${{ inputs.outputTSVFile }}
     - name: Commit and push build artifacts
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
