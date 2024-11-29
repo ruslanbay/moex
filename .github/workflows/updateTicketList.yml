@@ -61,7 +61,7 @@ jobs:
       if: ${{ github.event.schedule == '55 03 * * 2-6' }}
       run: |
         start=$(date --utc -d 'yesterday' +'%Y-%m-%d')
-        end=$(date --utc +"%Y")
+        end=$(date --utc +"%Y-%m-%d")
         step=1
         inputFileName="issues-by-sector"
         outputFileName="issues-by-sector"
