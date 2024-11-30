@@ -688,9 +688,15 @@ async function loadData() {
       return;
     }
     
-    const historyFrom = String(columns[5]).slice(0, 7);
-    const historyTill = String(columns[6]).slice(0, 7);
+    let historyFrom = columns[5];
+    let historyTill = columns[6];
+    if (historyFrom == undefined || historyTill == undefined) {
+      return;
+    }
 
+    historyFrom = String(historyFrom).slice(0, 7);
+    historyTill = String(historyTill).slice(0, 7);
+    
     if (historyFrom !== '') {
       if (totalSecurities.has(historyFrom)) {
         totalSecurities.set(historyFrom, totalSecurities.get(historyFrom) + 1);
@@ -875,17 +881,15 @@ async function refreshListings() {
 
 function refreshChart() {
   const chartType = document.getElementById("chartType").value;
+  toggleInput();
   switch (chartType) {
     case "treemap":
-      toggleInput();
       refreshTreemap();
       break;
     case "history":
-      toggleInput();
       refreshHistogram();
       break;
     case "listings":
-      toggleInput();
       refreshListings();
       break;
   }
