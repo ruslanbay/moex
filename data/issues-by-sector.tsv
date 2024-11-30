@@ -9200,7 +9200,8 @@ exchange_bond	RU000A109T41	R-Vision 001P-01	R-Vision 1	Р-Вижн 001Р-01	2024
 exchange_bond	RU000A10A349	RusHydro BO-002P-01	РусГид2Р01	РусГидро БО-002Р-01	2024-11-14		
 exchange_bond	RU000A10A125	Rosneft 004P-03	Роснфт4P3	ПАО НК Роснефть 004P-03	2024-11-11		
 exchange_bond	RU000A109TR9	SberIOS 001P-654R RUGOLD CS	СберИОС654	СберИОС 001Р-654R RUGOLD КС	2024-10-25		
-corporate_bond	RU000A109GX4	Sber CIB-CO-EQ-001S-04	СберКИБ1P4	Сбер CIB-CO-EQ-001S-04	2024-10-25		exchange_bond	RU000A109Y02	VEB.RF PBO-002P-K558	ВЭБ2P-К558	ВЭБ.РФ ПБО-002Р-К558	2024-11-28		
+corporate_bond	RU000A109GX4	Sber CIB-CO-EQ-001S-04	СберКИБ1P4	Сбер CIB-CO-EQ-001S-04	2024-10-25		
+exchange_bond	RU000A109Y02	VEB.RF PBO-002P-K558	ВЭБ2P-К558	ВЭБ.РФ ПБО-002Р-К558	2024-11-28		
 corporate_bond	RU000A109EJ8	Rumberg CP-1-13	Румбрг1P13	СФО Румберг СП-1-13	2024-11-29		
 corporate_bond	RU000A109H37	Sber CIB-CO-EQ-001S-10	СбКИБ1P10	Сбер CIB-CO-EQ-001S-10	2024-11-29		
 municipal_bond	RU000A10A6J1	Tomsk Region 34009	ТомскАдм 9	Адм. г.Томск 34009	2024-11-28		
