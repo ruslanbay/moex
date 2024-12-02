@@ -1,3 +1,8 @@
+[![Get MOEX data](https://github.com/ruslanbay/moex/actions/workflows/getMoexData.yml/badge.svg?branch=main)](https://github.com/ruslanbay/moex/actions/workflows/getMoexData.yml)
+[![Get currency exchange rate](https://github.com/ruslanbay/moex/actions/workflows/getCurrency.yml/badge.svg?branch=main)](https://github.com/ruslanbay/moex/actions/workflows/getCurrency.yml)
+[![Update history.tsv](https://github.com/ruslanbay/moex/actions/workflows/updateHistoryTsv.yml/badge.svg?branch=main)](https://github.com/ruslanbay/moex/actions/workflows/updateHistoryTsv.yml)
+[![Update Ticket List](https://github.com/ruslanbay/moex/actions/workflows/updateTicketList.yml/badge.svg?branch=main)](https://github.com/ruslanbay/moex/actions/workflows/updateTicketList.yml)
+
 # Визуализация данных Мосбиржи. Как российский фондовый рынок изменился за последние 10 лет
 
 Данная визуализация показывает объём торгов по стоимости и количеству сделок, капитализацию рынка. Доступно два типа визуализации: в динамике (histogram) и в разрезе (treemap). Все графики интерактивные, можно кликать, зумить. Экспериментируйте! :)
