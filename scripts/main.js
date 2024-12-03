@@ -259,18 +259,18 @@ async function applyFilter(csv) {
 
 async function prepTreemapData() {
   let tickerList;
-  // const localFilterCsv = localStorage.getItem('filterCsv');
-  // const erasefilterLink = document.getElementById('erasefilter');
-  // if (localFilterCsv !== undefined && localFilterCsv !== null) {
-  //   tickerList = await applyFilter(localFilterCsv);
-  //   inputFileLabel.setAttribute("hidden", "");
-  //   erasefilterLink.removeAttribute("hidden");
-  // }
-  // else {
-  //   localStorage.removeItem('filterCsv');
-  //   inputFileLabel.removeAttribute("hidden");
-  //   erasefilterLink.setAttribute("hidden", "");
-  // }
+  const localFilterCsv = localStorage.getItem('filterCsv');
+  const erasefilterLink = document.getElementById('erasefilter');
+  if (localFilterCsv !== undefined && localFilterCsv !== null) {
+    tickerList = await applyFilter(localFilterCsv);
+    inputFileLabel.setAttribute("hidden", "");
+    erasefilterLink.removeAttribute("hidden");
+  }
+  else {
+    localStorage.removeItem('filterCsv');
+    inputFileLabel.removeAttribute("hidden");
+    erasefilterLink.setAttribute("hidden", "");
+  }
 
   const currencyType = document.getElementById('currencySelector').value;
   const dataType = document.getElementById('dataType').value;
@@ -766,7 +766,7 @@ async function refreshListings() {
 
   const layout = {
     grid: { rows: 1, columns: 1, pattern: 'independent' },
-    dragmode: false,
+    // dragmode: false,
     showlegend: true,
     legend: {
       visible: true,
