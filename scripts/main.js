@@ -207,11 +207,11 @@ dataTypeInput.addEventListener("change", refreshChart);
 dateInput.addEventListener("change", refreshChart);
 
 
-const chartTypeValue = document.getElementById("chartType").value;
-const dataTypeValue = document.getElementById("dataType").value;
-const erasefilterLink = document.getElementById("erasefilter");
-
 function toggleInput() {
+  const chartTypeValue = document.getElementById("chartType").value;
+  const dataTypeValue = document.getElementById("dataType").value;
+  const erasefilterLink = document.getElementById("erasefilter");
+  
   url.searchParams.set('currency', currency.value);
   url.searchParams.set('chartType', chartTypeValue);
   url.searchParams.set('dataType', dataTypeValue);
