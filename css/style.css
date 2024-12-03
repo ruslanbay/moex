@@ -46,9 +46,23 @@ input {
   min-height: 25px;
 }
 
-#tickerInput {
+#searchbox {
   width: 60px;
 }
+
+/* 
+.autocomplete-items {
+  width: 60px;
+  position: absolute;
+  z-index: 1000;
+}
+
+.autocomplete-items div {
+}
+
+.autocomplete-items div:hover {
+}
+*/
 
 input[type="date"]::-webkit-clear-button,
 input[type="date"]::-ms-clear {

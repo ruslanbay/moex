@@ -1,8 +1,217 @@
+// Prevent the default context menu from appearing on right-click
+const chartDiv = document.getElementById("chart");
+chartDiv.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+});
+
+// Share link
+const shareLink = document.getElementById("share");
+const thisTitle = document.title;
+shareLink.addEventListener("click", handleShareClick);
+
+function handleShareClick(event) {
+  if (navigator.share) {
+    navigator.share({
+      title: thisTitle,
+      url: url
+    })
+    .catch(console.error);
+  } else {
+    alert("Web Share API is not supported");
+  }
+}
+
+// Install PWA
+let installPrompt = null;
+const installLink = document.getElementById("install");
+window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+window.addEventListener("appinstalled", handleAppInstalled);
+installLink.addEventListener("click", handleInstallClick);
+
+function disableInAppInstallPrompt() {
+  installPrompt = null;
+  installLink.setAttribute("hidden", "");
+}
+
+function handleBeforeInstallPrompt(event) {
+  event.prompt();
+  installPrompt = event;
+  installLink.removeAttribute("hidden");
+}
+
+function handleAppInstalled() {
+  disableInAppInstallPrompt();
+}
+
+async function handleInstallClick() {
+  if (!installPrompt) {
+    return;
+  }
+  const result = await installPrompt.prompt();
+  console.log(`Install prompt was: ${result.outcome}`);
+  disableInAppInstallPrompt();
+}
+
+
+// Apply filter.csv
+const inputFileLabel = document.getElementById("inputFileLabel");
+const chooseFileButton = document.getElementById("inputFile");
+chooseFileButton.addEventListener("change", function(event) {
+  processCsv(event);
+  chooseFileButton.value = null;
+});
+
+function processCsv(event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const csvContent = e.target.result;
+      localStorage.setItem('filterCsv', csvContent);
+      refreshChart();
+    };
+    reader.readAsText(file);
+  }
+}
+
+
+// Searchbox
+const searchbox = document.getElementById("searchbox");
+searchbox.addEventListener("keypress", handleEnterKey);
+
+function handleEnterKey(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    const inputValue = this.value.trim().toLowerCase();
+    if (inputValue) {
+      selectTreemapItemByLabel(inputValue);
+      this.value = '';
+    }
+  }
+}
+
+/*
+// Searchbox autocomplete
+function getTicketList() {
+  // TODO: вместо tsv-файла использовать выборку элементов с чарта как в 
+  // function selectTreemapItemByLabel(label) {
+  const url = `data/issues-by-sector.tsv?_=${new Date().toISOString().split('T')[0]}`;
+  const columnIndex = 1;
+  const tickerList = [];
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Something's wrong");
+      }
+      return response.text();
+    })
+    .then(data => {
+      const lines = data.split('\n');
+      
+      for (let line of lines) {
+        const values = line.split('\t');
+        if (values.length > columnIndex) {
+          tickerList.push(values[columnIndex].trim());
+        }
+      }
+      // document.getElementById('output').innerText = tickerList.join('\n');
+      // const inputValue = this.value.trim().toLowerCase();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+    
+    return tickerList;
+}
+
+const suggestions = getTicketList();
+
+function autocomplete(inputElement, suggestions) {
+  inputElement.addEventListener("input", function () {
+    const value = this.value;
+    closeAllLists();
+    if (!value) return false;
+
+    const suggestionList = document.createElement("div");
+    suggestionList.setAttribute("class", "autocomplete-items");
+    this.parentNode.appendChild(suggestionList);
+
+    suggestions.forEach((item) => {
+      if (item.substr(0, value.length).toUpperCase() === value.toUpperCase()) {
+        const suggestionItem = document.createElement("div");
+        suggestionItem.innerHTML = "<strong>" + item.substr(0, value.length) + "</strong>";
+        suggestionItem.innerHTML += item.substr(value.length);
+        suggestionItem.addEventListener("click", function () {
+          inputElement.value = item;
+          closeAllLists();
+          if (item) {
+            selectTreemapItemByLabel(item);
+            this.value = '';
+          }
+        });
+        suggestionList.appendChild(suggestionItem);
+      }
+    });
+  });
+
+  function closeAllLists() {
+    const items = document.getElementsByClassName("autocomplete-items");
+    while (items[0]) {
+      items[0].parentNode.removeChild(items[0]);
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+    closeAllLists(e.target);
+  });
+}
+
+autocomplete(searchbox, suggestions);
+*/
+
+// Update URL
+const url = new URL(window.location.href);
+const urlDate = url.searchParams.get("date");
+const urlChartType = url.searchParams.get("chartType");
+const urlCurrency = url.searchParams.get("currency");
+const urlDataType = url.searchParams.get("dataType");
+
+let date = urlDate ? new Date(`${urlDate}T13:00:00`) : new Date();
+
+if (date.getUTCHours() < 8) {
+  date.setDate(date.getUTCDate() - 1);
+}
+
+while (date.getDay() === 0 || date.getDay() === 6) {
+  date.setDate(date.getUTCDate() - 1);
+}
+var formattedDate = date.toISOString().split('T')[0];
+document.getElementById("dateInput").value = formattedDate;
+document.getElementById("dateInput").max = new Date().toISOString().split('T')[0];
+
+const dateInput = document.getElementById("dateInput");
+if (urlDate) { urlDate.value = urlDate };
+
+const chartTypeInput = document.getElementById("chartType");
+if (urlChartType && ["treemap", "history", "listings"].includes(urlChartType)) { chartTypeInput.value = urlChartType };
+
+const currency = document.getElementById("currencySelector");
+if (urlCurrency && ["USD", "EUR", "CNY", "RUB"].includes(urlCurrency)) { currency.value = urlCurrency };
+
+const dataTypeInput = document.getElementById("dataType");
+if (urlDataType && ["marketcap", "value", "trades"].includes(urlDataType)) { dataTypeInput.value = urlDataType };
+
+chartTypeInput.addEventListener("change", refreshChart);
+currency.addEventListener("change", refreshChart);
+dataTypeInput.addEventListener("change", refreshChart);
+dateInput.addEventListener("change", refreshChart);
+
+
+const chartTypeValue = document.getElementById("chartType").value;
+const dataTypeValue = document.getElementById("dataType").value;
+const erasefilterLink = document.getElementById("erasefilter");
+
 function toggleInput() {
-  const chartTypeValue = document.getElementById("chartType").value;
-  const dataTypeValue = document.getElementById("dataType").value;
-  const erasefilterLink = document.getElementById("erasefilter");
-  
   url.searchParams.set('currency', currency.value);
   url.searchParams.set('chartType', chartTypeValue);
   url.searchParams.set('dataType', dataTypeValue);
@@ -13,12 +222,12 @@ function toggleInput() {
       currency.disabled = false;
       dataType.disabled = false;
       dateInput.disabled = false;
-      tickerInput.disabled = false;
+      searchbox.disabled = false;
       break;
     case "history":
       dataType.disabled = false;
       dateInput.disabled = true;
-      tickerInput.disabled = true;
+      searchbox.disabled = true;
       inputFileLabel.setAttribute("hidden", "");
       erasefilterLink.setAttribute("hidden", "");
       if (dataTypeValue == 'trades' ) {
@@ -33,7 +242,7 @@ function toggleInput() {
       currency.disabled = true;
       dataType.disabled = true;
       dateInput.disabled = true;
-      tickerInput.disabled = true;
+      searchbox.disabled = true;
       inputFileLabel.setAttribute("hidden", "");
       erasefilterLink.setAttribute("hidden", "");
       url.searchParams.delete('date');
@@ -43,12 +252,24 @@ function toggleInput() {
 };
 
 function selectTreemapItemByLabel(label) {
-  var myDiv = document.getElementById('chart');
+  label = label.toLowerCase();
+  const chartDiv = document.getElementById('chart');
 
-  var boxes = myDiv.querySelectorAll('g');
-  for (var i = 18; i < boxes.length; i++) {
+  var boxes = chartDiv.querySelectorAll('g');
+  let skipItems = 18;
+  // switch (dataTypeValue) {
+  //   case "marketcap":
+  //     skipItems = 18;
+  //     break;
+  //   case "value":
+  //     skipItems = 18;
+  //     break;
+  //   case "trades":
+  //     skipItems = 18;
+  //     break;
+  // }
+  for (var i = skipItems; i < boxes.length; i++) {
     var box = boxes[i];
-
     if (box.innerHTML.toLowerCase().includes(label)) {
       box.dispatchEvent(new MouseEvent('click'));
       break;
@@ -893,66 +1114,10 @@ function refreshChart() {
   }
 };
 
+refreshChart();
 
-function disableInAppInstallPrompt() {
-  installPrompt = null;
-  installLink.setAttribute("hidden", "");
-}
-
-function handleBeforeInstallPrompt(event) {
-  // event.preventDefault();
-  event.prompt();
-  installPrompt = event;
-  installLink.removeAttribute("hidden");
-}
-
-function handleAppInstalled() {
-  disableInAppInstallPrompt();
-}
-
-async function handleInstallClick() {
-  if (!installPrompt) {
-    return;
-  }
-  const result = await installPrompt.prompt();
-  console.log(`Install prompt was: ${result.outcome}`);
-  disableInAppInstallPrompt();
-}
-
-function handleEnterKey(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    const inputValue = this.value.trim().toLowerCase();
-    if (inputValue) {
-      selectTreemapItemByLabel(inputValue);
-      this.value = '';
-    }
-  }
-}
-
-
-function handleShareClick(event) {
-  if (navigator.share) {
-    navigator.share({
-      title: thisTitle,
-      url: url
-    })
-    .catch(console.error);
-  } else {
-    alert("Web Share API is not supported");
-  }
-}
-
-
-function processCsv(event) {
-  const file = event.target.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      const csvContent = e.target.result;
-      localStorage.setItem('filterCsv', csvContent);
-      refreshChart();
-    };
-    reader.readAsText(file);
-  }
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("scripts/service-worker.js")
+  });
 }
