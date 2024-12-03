@@ -1,30 +1,11 @@
 parents	labels	shortname	shortname_rus	name_rus	history_from	history_till	trace_color
 	Moscow Exchange		Московская биржа				
-Moscow Exchange	Chemicals and Pertochemicals		Химия и нефтехимия				rgba(54,114,64,1)
-Moscow Exchange	Conglomerate		Холдинги				rgba(160,98,49,1)
-Moscow Exchange	Construction (Development)		Строительство				rgba(106,86,137,1)
-Moscow Exchange	Consumer		Потребительский сектор				rgba(102,77,80,1)
-Moscow Exchange	Electricity, Utilities		Электроэнергетика				rgba(96,98,106,1)
-Moscow Exchange	Energy (Oil, Gas, Coal)		Энергоресурсы (Нефть, газ, уголь)				rgba(44,129,146,1)
-Moscow Exchange	Financials		Финансы				rgba(139,54,62,1)
-Moscow Exchange	Health Care		Здравоохранение				rgba(163,90,253,1)
-Moscow Exchange	Industrials		Промышленность				rgba(202,224,92,1)
-Moscow Exchange	Information Technologies		Информационные технологии				rgba(183,50,68,1)
-Moscow Exchange	Metals and Mining		Металлы и добыча				rgba(199,131,37,1)
-Moscow Exchange	Telecommunication Services		Телекоммуникации				rgba(106,228,127,1)
-Moscow Exchange	Transportation		Транспорт				rgba(54,104,114,1)
-Moscow Exchange	TQFD. PAI (USD)		TQFD. ПАИ (USD)				rgba(105,34,166,1)
-Moscow Exchange	TQIF. PAI		TQIF. ПАИ				rgba(77,192,166,1)
-Moscow Exchange	TQPI. Shares PIR		TQPI. Акции ПИР				rgba(150,113,120,1)
-Moscow Exchange	TQTF. ETF		TQTF. ETF				rgba(222,217,139,1)
-Moscow Exchange	TQTY. PAI (CNY)		TQTY. ПАИ (CNY)				rgba(222,127,107,1)
+Moscow Exchange	Others		Прочее				rgba(199,78,165,1)
 Moscow Exchange	cb_bond		cb_bond				rgba(220, 20, 60, 1)
 Moscow Exchange	corporate_bond		corporate_bond				rgba(50, 205, 50, 1)
 Moscow Exchange	etf_ppif		etf_ppif				rgba(199, 21, 133, 1)
 Moscow Exchange	euro_bond		euro_bond				rgba(106, 90, 205, 1)
 Moscow Exchange	exchange_bond		exchange_bond				rgba(255, 99, 71, 1)
-Moscow Exchange	exchange_ppif		exchange_ppif				rgba(218, 112, 214, 1)
-Moscow Exchange	Foreign Companies		Foreign Companies				rgba(32, 178, 170, 1)
 Moscow Exchange	ifi_bond		ifi_bond				rgba(255, 127, 80, 1)
 Moscow Exchange	interval_ppif		interval_ppif				rgba(70, 130, 180, 1)
 Moscow Exchange	municipal_bond		municipal_bond				rgba(60, 179, 113, 1)
@@ -34,7 +15,21 @@ Moscow Exchange	public_ppif		public_ppif				rgba(75, 0, 130, 1)
 Moscow Exchange	state_bond		state_bond				rgba(178, 34, 34, 1)
 Moscow Exchange	stock_mortgage		stock_mortgage				rgba(0, 206, 209, 1)
 Moscow Exchange	subfederal_bond		subfederal_bond				rgba(123, 104, 238, 1)
-Moscow Exchange	Others		Прочее				rgba(199,78,165,1)
+Moscow Exchange	Conglomerate		Холдинги				rgba(160,98,49,1)
+Moscow Exchange	Construction (Development)		Строительство				rgba(106,86,137,1)
+Moscow Exchange	Consumer		Потребительский сектор				rgba(102,77,80,1)
+Moscow Exchange	Electricity, Utilities		Электроэнергетика				rgba(96,98,106,1)
+Moscow Exchange	Telecommunication Services		Телекоммуникации				rgba(106,228,127,1)
+Moscow Exchange	Transportation		Транспорт				rgba(54,104,114,1)
+Moscow Exchange	Health Care		Здравоохранение				rgba(163,90,253,1)
+Moscow Exchange	Industrials		Промышленность				rgba(202,224,92,1)
+Moscow Exchange	Information Technologies		Информационные технологии				rgba(183,50,68,1)
+Moscow Exchange	Foreign Companies		Foreign Companies				rgba(32, 178, 170, 1)
+Moscow Exchange	Chemicals and Pertochemicals		Химия и нефтехимия				rgba(54,114,64,1)
+Moscow Exchange	Metals and Mining		Металлы и добыча				rgba(199,131,37,1)
+Moscow Exchange	Financials		Финансы				rgba(139,54,62,1)
+Moscow Exchange	Energy (Oil, Gas, Coal)		Энергоресурсы (Нефть, газ, уголь)				rgba(44,129,146,1)
+Moscow Exchange	exchange_ppif		exchange_ppif				rgba(218, 112, 214, 1)
 Chemicals and Pertochemicals	AKRN	Acron	Акрон	Акрон ПАО ао	2006-10-11		
 Chemicals and Pertochemicals	AZKM	Azot	Азот ао	КОАО Азот ао	2008-08-28	2012-12-25	
 Chemicals and Pertochemicals	DGBZ	Dorogobuzh	Дорогбж ао	Дорогобуж ПАО ао	2006-12-21	2018-02-28	
@@ -642,192 +637,6 @@ Transportation	TRFM	TransFin-M	ТрансФ ао	ПАО ТрансФин-М ао
 Transportation	SZPR	Severo-Zapadnoe Parokhodstvo	СЗПароход	Сев.-зап. пароходство ПАО	2009-07-08	2020-06-29	
 Transportation	TAER	TRANSAERO ao	ТРАНСАЭРао	ТРАНСАЭРО АК (ОАО) ао	2011-03-29	2015-12-21	
 Transportation	UTAR	UTAir Aviacompany	ЮТэйр ао	Авиакомпания ЮТэйр (ПАО) ао	2005-01-11		
-TQFD. PAI (USD)	RU000A1007R9	OPIF BCS Fundamental Choice	БКСФундВыб	ОПИФ БКС Фундаментальный Выбор			
-TQIF. PAI	RU0005418747	Fund-1 IP	  ФондПервый	ОПИФ Фонд Первый			
-TQIF. PAI	RU0006922010	Fund-Konservativniy IP	  ФондКонс	ОПИФ Фонд Консервативный			
-TQIF. PAI	RU0006922044	Fund-Professional IP	  ФондПроф	ОПИФ Фонд Профессиональный			
-TQIF. PAI	RU0006922051	Fond Otrasl Inv	  АкцииРоста	ОПИФ Акции роста			
-TQIF. PAI	RU000A0ERGA7	PIF Kommercheskaya Nedvizhimos	  ПИФСбер-КН	ПИФСбербанк Комм.недвижимость			
-TQIF. PAI	RU000A0HGNG6	OPIF Arsaguera - Stock Fund	  АрсагераФА	ОПИФ Арсагера - фонд акций			
-TQIF. PAI	RU000A0HGNH4	Arsagera fund mixed investment	  ПИФАрсСИ	Арсагера фонд смеш. инвестиц.			
-TQIF. PAI	RU000A0JNK00	Pervyi IPIF UK Kapit	  ПервыйИПИФ	Первый ИПИФ УК КапиталЪ			
-TQIF. PAI	RU000A0JNK34	Universalnyi IPIF UK Kapital	  УниверИПИФ	Универсальный ИПИФ УК КапиталЪ			
-TQIF. PAI	RU000A0JP4U1	PIF InvBalance UK Kapital	  ПИФКапИнвб	ПИФ УК КапиталЪ Ивестбаланс			
-TQIF. PAI	RU000A0JP773	PIF BKS-Indeks MMVB	  БКС РосАкц	ОПИФ БКС Российские Акции			
-TQIF. PAI	RU000A0JP799	PIF BKS RossObl	  БКС РосОбл	ОПИФ БКС Российские облигации			
-TQIF. PAI	RU000A0JPGC6	Straji Yrala -IF comb. YK Sodr	  СтражУрСод	ЗПИФ комб. Стражи Урала Содр			
-TQIF. PAI	RU000A0JPMD2	Arsagera-akcii 6.4 IP	  ПИФАрс6.4	Арсагера-акции 6.4 ПИФ			
-TQIF. PAI	RU000A0JPZL7	AK BARS-Investitsii	  АкБрс-Инв	Ак Барс ПИФ АК БАРС-Инвестиц			
-TQIF. PAI	RU000A0JPZP8	AK BARS-Perspektiva	  АкБрс-Прсп	УКАкБарсКап ПИФ АК БАРС-Персп.			
-TQIF. PAI	RU000A0JR282	Equity Fund	  ПИФАкции	ПИФ Акции УК ВИМИнвест			
-TQIF. PAI	RU000A0JR290	Index Moex Fund	  ПИФИнМосБр	ПИФ ИндексМосБиржи УКВИМИнвест			
-TQIF. PAI	RU000A0JR2A5	Balanced Fund	  ПИФСбалан	ПИФ Сбалансир Инв УК ВИМИнвест			
-TQIF. PAI	RU000A0JR2C1	Treasury Fund	  ПИФКазна	ПИФ Казначейский УК ВИМИнвест			
-TQIF. PAI	RU000A0JR7X6	PIF Effective	  ПИФЭффект	УК Русь Менедж. ПИФЭффективный			
-TQIF. PAI	RU000A0JR7Z1	PIF Domodedovskiy prom.	  ПИФДомПром	УК Русь Менедж. ПИФДом.пром.			
-TQIF. PAI	RU000A0JR811	PIF Odintsovskiy promishlenniy	  ПИФОдинцПр	УК Русь Менедж. ПИФОдинцПром			
-TQIF. PAI	RU000A0JRHC0	ATRIUM UK VELES TR	  ПИФ АТРИУМ	ПИФ АТРИУМ УК ВЕЛЕС ТР			
-TQIF. PAI	RU000A0JRUQ3	TKBIP Sbl	  ТКБИП Сбал	ОПИФ ТКБИП Сбалансированный			
-TQIF. PAI	RU000A0JS991	Kommercheskie Investicii	  ПИФКоммИнв	ПИФ Коммерческие Инвестиции			
-TQIF. PAI	RU000A0JT4S1	OPIF Cumulative reserve	  НакопРез	ОПИФ Накопительный резерв			
-TQIF. PAI	RU000A0JTVY1	PIF Nevskiy UK EMRIS	  ПИФНевский	ПИФ Невский УК ЭМРИС			
-TQIF. PAI	RU000A0JUR61	UK PERAMO IN PIF CONSERVATORia	  ПИФ КОНСЕР	УК ПЕРАМО ИН ПИФ КОНСЕРВАТОРия			
-TQIF. PAI	RU000A0JUTH8	ZPIF Variant UK TETIS Kapital	  ПИФВариант	ЗПИФ Вариант УК ТЕТИС Кэпитал			
-TQIF. PAI	RU000A0JUYB1	ZPIF Loftinvest	  ЗПИФЛофтин	ЗПИФ Лофтинвест			
-TQIF. PAI	RU000A0JVGP6	ZPIF Prom.In PI UK	  ЗПИФПромИн	ЗПИФ Пром.Ин УК ПИ			
-TQIF. PAI	RU000A0JVHY6	OPIF BCS Imperia	  БКСИмперия	ОПИФ БКС Империя			
-TQIF. PAI	RU000A0JVJ29	OPIF BCS Precious Metals	  БКСДрагМет	ОПИФ БКС Драгоценные Металлы			
-TQIF. PAI	RU000A0JWAW3	SFNArendBiznes	  СФНАрБизн	ПИФ СФН - Арендный бизнес			
-TQIF. PAI	RU000A0JWCE7	ZPIF Perlovsky	  Перловский	ЗПИФ Недвижимости Перловский			
-TQIF. PAI	RU000A0JXP78	ZPIF DOM.RF	  ЗПИФДОМ.РФ	ЗПИФ недвижимости ДОМ.РФ			
-TQIF. PAI	RU000A0JXWF0	Arsagera bonds KP 1.55	  АрсКР1.55	Арсагера фонд обл КР 1.55			
-TQIF. PAI	RU000A0ZYC64	SovrArendBiznes 2	  СоврАрБиз2	ЗПИФ СовременАрендный бизнес 2			
-TQIF. PAI	RU000A0ZZ5R2	PIF SovrArendBiznes3	  СоврАрБиз3	ПИФ Современ Арендный бизнес 3			
-TQIF. PAI	RU000A0ZZAU6	ZPIF ACCENT FUND I - LOGISTICS	  ЗПИФ АКЦ 1	ЗПИФ АКЦЕНТ ФОНД I - ЛОГИСТИКА			
-TQIF. PAI	RU000A0ZZCD8	IPIF Mirovye invest MC Aton	  ИПИФМирИнв	ИПИФ Мировые инвестиции УКАтон			
-TQIF. PAI	RU000A0ZZMD7	OPIF RSHB Fund Bonds	  РСХБ Облиг	ОПИФ РСХБ – Фонд Облигаций			
-TQIF. PAI	RU000A0ZZML0	OPIF RSHB Balanced Fund	  РСХБ Сбал	ОПИФ РСХБ Сбалансированный			
-TQIF. PAI	RU000A0ZZMN6	OPIF RSHB Fund Shares	  РСХБ Акции	ОПИФ РСХБ – Фонд Акций			
-TQIF. PAI	RU000A0ZZVH9	PIF Gazprombank Eurobonds	  ГПБУАЕОбИП	ПИФ Газпромбанк-Еврооблигации			
-TQIF. PAI	RU000A1000Y0	PIF  pre IPO Fund	  iпре-АйПиО	ПИФ ВИМ пре-АйПиО фонд			
-TQIF. PAI	RU000A100EQ2	OPIF BCS Russian Eurobonds	  БКС РосЕвр	ОПИФ БКС Российские Еврообл			
-TQIF. PAI	RU000A101HY7	PIF Alfa-Capital Arendn.potok	  ПИФАльфаАП	ПИФ Альфа-К Арендн. поток			
-TQIF. PAI	RU000A101NK4	ZPIF Primary placement fund	  ЗПИФ ФПР	ЗПИФ Фонд первичных размещений			
-TQIF. PAI	RU000A101UY0	OPIF MKB Money market	  ОПИФ MM	ОПИФ МКБ Денежный рынок			
-TQIF. PAI	RU000A101YY2	PIF Alfa-Capital Arendn.potok2	  ПИФАльфАП2	ЗПИФ Альфа-К Арендный поток-2			
-TQIF. PAI	RU000A1022Z1	ZPIF PARUS-OZN	  ПАРУС-ОЗН	ЗПИФ ПАРУС-ОЗН			
-TQIF. PAI	RU000A102AH5	ZPIF Sovremenniy 6	  ЗПИФСовр 6	ЗПИФ Современный 6			
-TQIF. PAI	RU000A102N77	ZPIF RI	  ЗПИФРД	ЗПИФ РД			
-TQIF. PAI	RU000A102P67	IPIF Raiffeisen World Bonds	  ИПИФРайфМО	ИПИФ Райффайзен Мир Облигации			
-TQIF. PAI	RU000A102PE0	Fund Subord USD	  ФондсубUSD	ИПИФ ВИМ Фонд Суборд Доллары			
-TQIF. PAI	RU000A102PF7	Fund Subord EURO	  ФондсубEUR	ИПИФ ВИМ Фонд Суборд Евро			
-TQIF. PAI	RU000A102PN1	PIF Alfa-Capital FastFood	  ПИФАльфаФФ	ЗПИФ Альфа-К ФастФуд			
-TQIF. PAI	RU000A102PQ4	Fund Subord RUB	  ФондСубРуб	ИПИФ ВИМ Фонд Суборд Рубли			
-TQIF. PAI	RU000A102Q33	OPIF BCS World Resources	  БКС Миррес	ОПИФ БКС Мировые ресурсы			
-TQIF. PAI	RU000A103B62	Rental income PRO	  РенДохПРО	Рентный доход ПРО			
-TQIF. PAI	RU000A103HD7	ZPIF RI 2	  ЗПИФРД2	ЗПИФ РД 2			
-TQIF. PAI	RU000A104172	ZPIF PARUS-SBL	  ПАРУС-СБЛ	ЗПИФ ПАРУС-СБЛ			
-TQIF. PAI	RU000A104FB3	MF Gazprombank - Hyperion	  Гиперион	ИПИФ Газпромбанк - Гиперион			
-TQIF. PAI	RU000A104KU3	ZPIF PARUS-Nordway	  ПАРУС-НОРД	ЗПИФ ПАРУС-Нордвей			
-TQIF. PAI	RU000A104M43	OPIF Alenka-Capital	  ПИФ Аленка	ОПИФ Аленка-Капитал			
-TQIF. PAI	RU000A104YX8	ZPIF Commercial Real Estate	  ЗПИФКомНед	ЗПИФ СФН Совр Ком недвиж			
-TQIF. PAI	RU000A105153	IPIF Astra Hedge Fund P5	  ХеджФондР5	ИПИФ Астра Хедж-фонд Р5			
-TQIF. PAI	RU000A105328	ZPIF PARUS-LOGISTICS	  ПАРУС-ЛОГ	ЗПИФ ПАРУС-ЛОГИСТИКА			
-TQIF. PAI	RU000A105GY0	ZPIF Gamma First Sports	  ЗПИФПервСп	ЗПИФ Гамма Первый спортивный			
-TQIF. PAI	RU000A105R70	IPIF Annapurna	  Аннапурна	ИПИФ Аннапурна			
-TQIF. PAI	RU000A105RJ8	OPIF RSHB Debt Market	  РСХБДолРын	ОПИФ РСХБ Долговой рынок			
-TQIF. PAI	RU000A105TU1	BCS Capital	  БКСКапитал	ОПИФ БКС Капитал			
-TQIF. PAI	RU000A1068X9	ZPIF PARUS-Dvincev	  ПАРУС-ДВН	ЗПИФ ПАРУС-Двинцев			
-TQIF. PAI	RU000A106G80	ZPIF Tinkoff Replacement bonds	  ТКЗамещОбл	ЗПИФ Тинькофф Замещающие облиг			
-TQIF. PAI	RU000A106MG3	IPIF Astra Hedge Fund D5	  ХеджФондД5	ИПИФ Астра Хедж-фонд Д5			
-TQIF. PAI	RU000A1075T2	MF Gazprombank - Ruby	  ЗПИФ Рубин	ЗПИФ Газпромбанк – Рубин			
-TQIF. PAI	RU000A107860	IPIF Astra Hedge Fund U5	  ХеджФондЮ5	ИПИФ Астра Хедж-фонд Ю5			
-TQIF. PAI	RU000A1079J5	IPIF Astra Hedge Fund D1	  ХеджФондД1	ИПИФ Астра Хедж-фонд Д1			
-TQIF. PAI	RU000A107J37	PIF Alfa Samolet Jilay Nedvij	  ПИФ СЖилН	ПИФ Альфа Самолет Жилая недвиж			
-TQIF. PAI	RU000A107RE5	PIF Alfa Skladskaya kollekciya	  ПИФ СкладК	ЗПИФ Альфа Складская коллекция			
-TQIF. PAI	RU000A108157	Rental PRO	  Рентал ПРО	ЗПИФ Рентал ПРО			
-TQIF. PAI	RU000A108751	ZPIF Alfa Industrial parks	  ПИФПромПар	ЗПИФ Альфа Промышленные парки			
-TQIF. PAI	RU000A108KP4	IPIF Astra Hedge Fund A+	  ХеджФондА+	ИПИФ Астра Хедж-фонд А+			
-TQIF. PAI	RU000A108RS3	ZPIF Zalogovye zajmy	  ПИФЗалЗайм	ЗПИФ Залоговые займы			
-TQIF. PAI	RU000A108TT7	BCS Equities with dividends	  БКСДивАкци	БКС Дивиденд акции с выплатой			
-TQIF. PAI	RU000A108VR7	ZPIF PARUS-MAX	  ПАРУС-МАКС	ЗПИФ ПАРУС-МАКС			
-TQIF. PAI	RU000A108ZB2	WIM Investments 2x OFZ	  2хОФЗ	ВИМ Инвестиции 2х ОФЗ			
-TQIF. PAI	RU000A1092L4	ZPIF AKTIVO 20	  ПИФАКТИВ20	ЗПИФ АКТИВО ДВАДЦАТЬ			
-TQIF. PAI	RU000A109G79	ZPIF GREENFLOW SCANDINAVIA	  ПИФГРИНФЛО	ЗПИФ ГРИНФЛОУ СКАНДИНАВИЯ			
-TQPI. Shares PIR	BLNG	Belon ao	  Белон ао	Белон ОАО ао			
-TQPI. Shares PIR	DSKY	Detsky mir	  ДетскийМир	ПАО Детский мир			
-TQPI. Shares PIR	GAZA	Gaz ao	  ГАЗ ао	ГАЗ ПАО ао			
-TQPI. Shares PIR	GAZAP	Gaz (pref)	  ГАЗ ап	ГАЗ ПАО ап			
-TQPI. Shares PIR	GTRK	GTM	  ГТМ ао	ПАО ГТМ ао			
-TQPI. Shares PIR	LIFE	Farmsintez ao	  Фармсинтез	Фармсинтез ПАО ао			
-TQPI. Shares PIR	LPSB	LESK ao	  ЛЭСК ао	Липецкая энергосбыт.ком.ОАО ао			
-TQPI. Shares PIR	PAZA	Pavlovo Bus ao	  ПавлАвт ао	Павловский автобус ПАО ао			
-TQPI. Shares PIR	RBCM	GK RBK ao	  ГК РБК ао	ГК РБК ПАО ао			
-TQPI. Shares PIR	RU000A0JNUM1	UKNavigator Kapital. vlozh.	  ЗПИФ КапВл	ПИФ Капитал.влож УК Навигатор			
-TQPI. Shares PIR	RU000A0JVEZ0	ISU GK-3 Ai Kiu Dzhi UA	  ИСУ ГК-3	ИСУ ГК-3 Ай Кью Джи УА			
-TQPI. Shares PIR	RU000A0ZZ422	Torgovye ryady ZPIF	  ТРЗПИФ	ЗПИФ Торговые ряды			
-TQPI. Shares PIR	RU000A0ZZX84	ZPIF Solid Rental - 2	  СолидРент2	ЗПИФ Солид Рентный - 2			
-TQPI. Shares PIR	RU000A101UK9	ZPIF STROYPROEKT AM OREOL	  ОРЕОЛСтрой	ЗПИФ СТРОЙПРОЕКТ УК ОРЕОЛ			
-TQPI. Shares PIR	RU000A1027E5	ZPIF VDO Fund for Dev RusComp	  ЗПИФ ВДО	ЗПИФ Фонд ВДО разв. росс. комп			
-TQPI. Shares PIR	RU000A1034U7	SFNArendBiznes 7	  СФНАрБиз7	ПИФ СФН Арендный бизнес 7			
-TQPI. Shares PIR	UWGN	OVK ao	  ОВК ао	ПАО НПК ОВК ао			
-TQTF. ETF	AKGD	AKGD ETF Gold	  AKGD ETF	БПИФ Альфа Капитал Золото			
-TQTF. ETF	AKIE	ETF Alfa Managed Income Shares	  ETF AKIE	БПИФ Альфа Упр Акции с доходом			
-TQTF. ETF	AKMB	ETF AKMB Alfa Managed Bonds	  ETF AKMB	БПИФ Альфа Управляем облигации			
-TQTF. ETF	AKME	ETF AKME Alfa Managed Equties	  ETF AKME	БПИФ Альфа Управляем Акции			
-TQTF. ETF	AKMM	AKMM ETF Money market	  AKMM ETF	БПИФ Альфа Денежный рынок			
-TQTF. ETF	AKQU	AKQU ETF Alfa Capital Quant	  AKQU ETF	БПИФ Альфа Капитал Квант			
-TQTF. ETF	AKUP	AKUP ETF Smart portfolio	  AKUP ETF	Альфа-Капитал Умный портфель			
-TQTF. ETF	AMNR	AMNR ETF Cumulative in rubles	  AMNR ETF	АТОН – Накопительный в рублях			
-TQTF. ETF	AMNY	AMNY ETF Cumulative in yuan	  AMNY ETF	АТОН - Накопительный в юанях			
-TQTF. ETF	AMRE	ATON Russian Equities + ETF	  AMRE ETF	БПИФ АТОН – Российские акции +			
-TQTF. ETF	AMRH	AMRH ETF ATON Hyield Rus Bonds	  AMRH ETF	БПИФ АТОН Высокодох. рос. обл.			
-TQTF. ETF	BCSB	BCSB ETF High Yield Bonds	  BCSB ETF	БКС Облигации повыш доход			
-TQTF. ETF	BCSD	BCSD ETF Money Market	  BCSD ETF	БПИФ БКС Денежный рынок			
-TQTF. ETF	BOND	BOND ETF DOHOD Cbonds corp. RU	  BOND ETF	ДОХОДЪ Сбондс Корп. обл. РФ			
-TQTF. ETF	CNYM	CNYM ETF Liquidity. CNY	  CNYM ETF	Ликвидность. Юань			
-TQTF. ETF	DIVD	ETF DIVD DOHOD DIV	  ETF DIVD	БПИФ ДОХОДЪ Инд дивид акций			
-TQTF. ETF	EQMX	EQMX ETF MOEX Fund	  EQMX ETF	БПИФ Индекс МосБиржи УК ВИМ			
-TQTF. ETF	ESGE	ESGE ETF Russian Equity ESG	  ESGE ETF	БПИФ УстойчРазвРоссКомп УК ВИМ			
-TQTF. ETF	ESGR	ESGR ETF RSHB-MOEX-RSPP VecTR	  ESGR ETF	БПИФ РСХБ-МосБиржа-РСПП Вектор			
-TQTF. ETF	FINC	FINSTAR Money market +	  FINC ETF	ФИНСТАР Денежный рынок +			
-TQTF. ETF	FMMM	FMMM ETF Money market	  FMMM ETF	БПИФ Финам Денежный рынок			
-TQTF. ETF	GOLD	GOLD ETF Gold Fund	  GOLD ETF	БПИФ Золото.Биржевой УК ВИМ			
-TQTF. ETF	GROD	ETF GROD DOHOD GROWTH IND	  ETF GROD	БПИФ ДОХОДЪ Инд акций роста			
-TQTF. ETF	INFL	INFL ETF Ingosstrakh Inflation	  INFL ETF	БПИФ Ингосстрах Инфляционный			
-TQTF. ETF	INGO	INGO ETF Ingosstrakh Corpbonds	  INGO ETF	БПИФ Ингосстрах Корп облигации			
-TQTF. ETF	LQDT	LQDT ETF Money Market Fund	  LQDT ETF	БПИФ Ликвидность УК ВИМ			
-TQTF. ETF	MKBD	MKBD ETF Russian Div. Shares	  MKBD ETF	БПИФ МКБ Российские Див. Акции			
-TQTF. ETF	OBLG	OBLG ETF Corp Bonds Smart beta	  OBLG ETF	БПИФ Российскиеоблигации УКВИМ			
-TQTF. ETF	OPNB	OPNB ETF - RU Bonds	  OPNB ETF	БПИФ Открытие - Облигации РФ			
-TQTF. ETF	OPNR	OPNR ETF - RU Stocks	  OPNR ETF	БПИФ Открытие - Акции РФ			
-TQTF. ETF	PRIE	PRIE ETF RSHB-BondsESG	  PRIE ETF	БПИФ РСХБ-Облигации ИЭсДжи			
-TQTF. ETF	PSMM	PSMM ETF MFI PSB-Money Market	  PSMM ETF	БПИФ РФИ ПСБ–Денежный рынок			
-TQTF. ETF	RCGL	RCGL ETF Raiffeisen - Gold	  RCGL ETF	БПИФ Райффайзен - Золото			
-TQTF. ETF	RCHY	RCHY ETF Raiff Hyield Bonds	  RCHY ETF	БПИФ Райф Высокодох. облигации			
-TQTF. ETF	RCMB	RCMB ETF	  RCMB ETF	БПИФ Райф Еврооблигации			
-TQTF. ETF	RCMX	RCMX ETF MOEX 15 Index	  RCMX ETF	БПИФ Райф Индекс МосБиржи 15			
-TQTF. ETF	RSHU	RSHU ETF smart beta bonds	  RSHU ETF	БПИФ РСХБ Корп обл смарт бета			
-TQTF. ETF	SBBY	SBBY ETF Instrum Fund in CNY	  SBBY ETF	БПИФ Фонд Инструменты в юанях			
-TQTF. ETF	SBCB	SBCB ETF USD Corporate Bonds	  SBCB ETF	БПИФ Первая Фонд валютн. облиг			
-TQTF. ETF	SBCN	SBCN ETF First Savings in cny	  SBCN ETF	БПИФ Первая Сберегат. в юанях			
-TQTF. ETF	SBCS	SBCS ETF Conservative smart	  SBCS ETF	БПИФ Первая Консерватив смарт			
-TQTF. ETF	SBDS	SBDS ETF Dynamic smart	  SBDS ETF	БПИФ Первая Динамичный смарт			
-TQTF. ETF	SBFR	SBFR ETF Fund Bonds floaters	  SBFR ETF	БПИФ Первая Облигации флоатеры			
-TQTF. ETF	SBGB	SBGB ETF Government Bonds	  SBGB ETF	БПИФ Первая Гос. облигации			
-TQTF. ETF	SBGD	SBGD ETF Fund Affordable gold	  SBGD ETF	БПИФ Первая Доступное золото			
-TQTF. ETF	SBHI	SBHI ETF Halal investments	  SBHI ETF	БПИФ Первая Халяльные инвест			
-TQTF. ETF	SBLB	First - Fund Bonds Longs	  SBLB ETF	БПИФПервая Долгосроч.гособлиг.			
-TQTF. ETF	SBMM	SBMM ETF Money Market	  SBMM ETF	БПИФ Первая Сберегательный			
-TQTF. ETF	SBMX	SBMX ETF Top Russia equities	  SBMX ETF	БПИФ Первая Топ Рос. акций			
-TQTF. ETF	SBPS	SBPS ETF Progressive smart	  SBPS ETF	БПИФ Первая Прогрессив смарт			
-TQTF. ETF	SBRB	SBRB ETF RUB Corporate Bond	  SBRB ETF	БПИФ  Первая Корп облигации			
-TQTF. ETF	SBRI	SBRI ETF Responsible invest	  SBRI ETF	БПИФ Первая Ответствен инвест			
-TQTF. ETF	SBRS	SBRS ETF Rational smart	  SBRS ETF	БПИФ Первая Осторожный смарт			
-TQTF. ETF	SBSC	First-Equities mid small cap	  SBSC ETF	БПИФ Первая Акции ср.и мал.кап			
-TQTF. ETF	SBWS	SBWS ETF Weighted smart	  SBWS ETF	БПИФ Первая Взвешенный смарт			
-TQTF. ETF	SCFT	SCFT ETF Future Technologies	  SCFT ETF	БПИФ Технологии будущего			
-TQTF. ETF	SCLI	SCLI ETF Liquid	  SCLI ETF	БПИФ Ликвидный			
-TQTF. ETF	SIPO	SIPO ETF First IPO	  SIPO ETF	БПИФ Первая Индекс IPO			
-TQTF. ETF	SUGB	SUGB ETF Government Bond 1-3Y	  SUGB ETF	БПИФ МКБ – ОФЗ 1-3 г			
-TQTF. ETF	TBEU	TBEU ETF TCAPITAL BONDS E	  TBEU ETF	БПИФ ТКАПИТАЛ ОБЛИГАЦИИ Е			
-TQTF. ETF	TBRU	TBRU ETF T-Capital BONDS	  TBRU ETF	БПИФ Т-Капитал ОБЛИГАЦИИ			
-TQTF. ETF	TDIV	TDIV T-Capital DIVIDEND STOCKS	  TDIV ETF	Т-Капитал ДИВИДЕНДНЫЕ АКЦИИ			
-TQTF. ETF	TEUR	TCAPITAL ETF ALL-WEATHER E	  TEUR ETF	БПИФ ТКАПИТАЛ ВЕЧНЫЙ ПОРТФ Е			
-TQTF. ETF	TGLD	TGLD ETF T-capital GOLD USD	  TGLD ETF	БПИФ Т-Капитал ЗОЛОТО			
-TQTF. ETF	TITR	T-Capital RUSSIAN TECHNOLOGY	  TITR ETF	Т-Капитал Российские Технологи			
-TQTF. ETF	TLCB	TLCB T-Capital CURRENCY BONDS	  TLCB ETF	Т-КАПИТАЛ ВАЛЮТНЫЕ ОБЛИГАЦИИ			
-TQTF. ETF	TMON	TMON ETF TCAPITAL MONEY MARKET	  TMON ETF	T-КАПИТАЛ ДЕНЕЖНЫЙ РЫНОК			
-TQTF. ETF	TMOS	TMOS ETF TINKOFF IMOEX RUB	  TMOS ETF	БПИФ ТИНЬКОФФ ИНДЕКС МОСБИРЖИ			
-TQTF. ETF	TPAY	TPAY ETF T-Capital Passive Inc	  TPAY ETF	Т-Капитал Пассивный Доход			
-TQTF. ETF	TRUR	TRUR ETF ALL-WEATHER RUB	  TRUR ETF	БПИФ Т-Кап ВЕЧНЫЙ ПОРТФ РУБ			
-TQTF. ETF	TUSD	TCAPITAL ETF ALL-WEATHER D	  TUSD ETF	БПИФ ТКАПИТАЛ ВЕЧНЫЙ ПОРТФ Д			
-TQTF. ETF	YUAN	YUAN Bonds ETF	  YUAN ETF	БПИФ Облигации в юанях			
-TQTY. PAI (CNY)	AMNY	AMNY ETF Cumulative in yuan	  AMNY ETF	АТОН - Накопительный в юанях			
-TQTY. PAI (CNY)	CNYM	CNYM ETF Liquidity. CNY	  CNYM ETF	Ликвидность. Юань			
-TQTY. PAI (CNY)	SBBY	SBBY ETF Instrum Fund in CNY	  SBBY ETF	БПИФ Фонд Инструменты в юанях			
-TQTY. PAI (CNY)	SBCN	SBCN ETF First Savings in cny	  SBCN ETF	БПИФ Первая Сберегат. в юанях			
-TQTY. PAI (CNY)	YUAN	YUAN Bonds ETF	  YUAN ETF	БПИФ Облигации в юанях			
 Others	DNKOP	Danilch (pref)	Данильч ап	ОАО героя ВОВ Данильченко ап	2010-10-08	2014-10-13	
 exchange_ppif	AKCH	ETF AKCH Alfa Chinese Equties	ETF AKCH	БПИФ Альфа Китайские Акции	2020-12-18		
 exchange_ppif	AKEB	AKEB ETF Managed Eurobonds	AKEB ETF	БПИФ Альфа Управляемые Еврообл	2021-11-22		

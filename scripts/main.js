@@ -92,10 +92,10 @@ async function prepHistogramData() {
   try {
     const startDate = '2011-12-19';
 
-    let response = await fetch(`data/issues-by-sector.tsv?_=${new Date().toISOString().split('T')[0]}`);
+    let response = await fetch(`data/issues-by-sector-INPUT.tsv?_=${new Date().toISOString().split('T')[0]}`);
     response = await response.text();
     let data = response.split('\n')
-      .slice(1, 37)
+      .slice(1, 32)
       .map(row => row.split('\t'));
     let traceColors = {};
     data.forEach(row => {
@@ -157,8 +157,7 @@ async function prepHistogramData() {
       const [date, marketValue, marketTrades, marketCap, traceName] = row;
 
       const dataTypeValue = document.getElementById('dataType').value;
-      // const traceNameExcludeList = ['TQFD. PAI (USD)', 'TQIF. PAI', 'TQPI. Shares PIR', 'TQTF. ETF', 'TQTY. PAI (CNY)',
-      //                               'cb_bond', 'corporate_bond', 'etf_ppif', 'euro_bond', 'exchange_bond', 'exchange_ppif',
+      // const traceNameExcludeList = ['cb_bond', 'corporate_bond', 'etf_ppif', 'euro_bond', 'exchange_bond', 'exchange_ppif',
       //                               'Foreign Companies', 'ifi_bond', 'interval_ppif', 'municipal_bond', 'ofz_bond',
       //                               'private_ppif', 'public_ppif', 'state_bond', 'stock_mortgage', 'subfederal_bond'];
       const traceNameExcludeList = ['Foreign Companies'];
@@ -260,18 +259,18 @@ async function applyFilter(csv) {
 
 async function prepTreemapData() {
   let tickerList;
-  const localFilterCsv = localStorage.getItem('filterCsv');
-  const erasefilterLink = document.getElementById('erasefilter');
-  if (localFilterCsv !== undefined && localFilterCsv !== null) {
-    tickerList = await applyFilter(localFilterCsv);
-    inputFileLabel.setAttribute("hidden", "");
-    erasefilterLink.removeAttribute("hidden");
-  }
-  else {
-    localStorage.removeItem('filterCsv');
-    inputFileLabel.removeAttribute("hidden");
-    erasefilterLink.setAttribute("hidden", "");
-  }
+  // const localFilterCsv = localStorage.getItem('filterCsv');
+  // const erasefilterLink = document.getElementById('erasefilter');
+  // if (localFilterCsv !== undefined && localFilterCsv !== null) {
+  //   tickerList = await applyFilter(localFilterCsv);
+  //   inputFileLabel.setAttribute("hidden", "");
+  //   erasefilterLink.removeAttribute("hidden");
+  // }
+  // else {
+  //   localStorage.removeItem('filterCsv');
+  //   inputFileLabel.removeAttribute("hidden");
+  //   erasefilterLink.setAttribute("hidden", "");
+  // }
 
   const currencyType = document.getElementById('currencySelector').value;
   const dataType = document.getElementById('dataType').value;
@@ -283,7 +282,7 @@ async function prepTreemapData() {
     rate = await getCurrencyRateByDate(date);
   }
 
-  const rows = await fetch(`data/issues-by-sector.tsv?_=${new Date().toISOString().split('T')[0]}`)
+  const rows = await fetch(`data/issues-by-sector-INPUT.tsv?_=${new Date().toISOString().split('T')[0]}`)
     .then(response => response.text())
     .then(text => {
       return text.split('\n').map(row => row.split('\t'));
@@ -304,7 +303,7 @@ async function prepTreemapData() {
     // let shortnamesRus = unpack(rows, 'shortname_rus');
     // let namesRus = unpack(rows, 'name_rus');
 
-    for (let i = 0; i <= 36; i++) {
+    for (let i = 0; i <= 30; i++) {
       chartData["sector"].push(parents[i]);
       chartData["ticker"].push(labels[i]);
       chartData["size"].push(0);
@@ -420,7 +419,7 @@ async function prepTreemapData() {
       chartData["prevCap"].push(prevMarketCap);
     });
 
-    for (let i=1; i <= 36; i++) {
+    for (let i=1; i <= 30; i++) {
       chartData["customdata"][i][2] = chartData["cap"][i];
       chartData["priceChange"][i] = (100 * (chartData["cap"][i] - chartData["prevCap"][i])) / chartData["prevCap"][i];
       chartData["customdata"][i][3] = chartData["priceChange"][i];
@@ -672,11 +671,10 @@ async function loadData() {
   const newSecurities = new Map(totalSecurities);
   const delistedSecurities = new Map(totalSecurities);
 
-  const response = await fetch(`data/issues-by-sector.tsv?_=${new Date().toISOString().split('T')[0]}`);
+  const response = await fetch(`data/issues-by-sector-INPUT.tsv?_=${new Date().toISOString().split('T')[0]}`);
   const data = await response.text();
-  const rows = data.split('\n').slice(37);
-  const excludeList = ["TQFD. PAI (USD)", "TQIF. PAI", "TQPI. Shares PIR", "TQTF. ETF",
-                       "TQTY. PAI (CNY)", "cb_bond", "corporate_bond", "etf_ppif",
+  const rows = data.split('\n').slice(32);
+  const excludeList = ["cb_bond", "corporate_bond", "etf_ppif",
                        "euro_bond", "exchange_bond", "exchange_ppif", "Foreign Companies",
                        "ifi_bond", "interval_ppif", "municipal_bond", "ofz_bond",
                        "private_ppif", "public_ppif", "state_bond", "stock_mortgage", "subfederal_bond"];
