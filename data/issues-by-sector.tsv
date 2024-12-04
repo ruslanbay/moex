@@ -9198,3 +9198,8 @@ public_ppif	RU000A0HGNG6	OPIF Arsaguera - Stock Fund	АрсагераФА	ОПИ
 exchange_ppif	RSHU	RSHU ETF smart beta bonds	RSHU ETF	БПИФ РСХБ Корп обл смарт бета	2019-12-12		
 exchange_ppif	SBCN	SBCN ETF First Savings in cny	SBCN ETF	БПИФ Первая Сберегат. в юанях	2023-01-16		
 exchange_ppif	INGO	INGO ETF Ingosstrakh Corpbonds	INGO ETF	БПИФ Ингосстрах Корп облигации	2021-07-28		
+exchange_bond	RU000A10A7A8	VZVT-01	ВЗВТ-01	ВЗВТ-01	2024-12-03		
+corporate_bond	RU000A109P52	Bank VTB C-1-1340	ВТБС1-1340	Банк ВТБ (ПАО) С-1-1340	2024-12-03		
+exchange_bond	RU000A10A7F7	VEB.RF PBO-002P-47	ВЭБP-47	ВЭБ.РФ ПБО-002Р-47	2024-12-03		
+exchange_bond	RU000A10A7C4	Evropln1P8	Европлн1Р8	ПАО ЛК Европлан 001P-08	2024-12-03		
+exchange_bond	RU000A10A7H3	SIBUR Holding 001P-02	СибурХ1Р02	СИБУР Холдинг 001Р-02	2024-12-03		
