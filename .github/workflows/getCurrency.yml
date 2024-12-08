@@ -1,91 +1,73 @@
-name: 'Get US Market Data'
+name: 'Get currency exchange rate'
 
 on:
-  # Pre-Market Trading:  9:00 AM - 2:30 PM UTC
-  # Regular Session:     2:30 PM - 9:00 PM UTC
-  # After-Hours Trading: 9:00 PM - 1:00 AM UTC (the following day)
   schedule:
-   - cron: '58 9-23 * * 1-5'
+    - cron: '05 00 * * 2-6'
   workflow_dispatch:
     inputs:
-      tsv_header:
-        description: 'Comma separated keys to use as TSV header. Supported keys are: symbol, name, lastsale, netchange, pctchange, volume, marketCap, country, ipoyear, industry, sector, url'
+      startDate:
+        description: 'Start date'
         required: true
         type: string
-        default: 'symbol,name,lastsale,netchange,pctchange,volume,marketCap,country,ipoyear,industry,sector'
-      output:
-        description: 'Output filename'
-        required: false
+        default: '2024-08-19'
+      endDate:
+        description: 'End date'
+        required: true
         type: string
+        default: '2024-08-19'
+      currency:
+        required: true
+        default: 'USDFIXME'
+        type: choice
+        options:
+          - USDFIXME
+          - CNYFIXME
+          - EURFIXME
+          - BYNFIXME
+          - CNYFIX
+          - EURUSDFIXME
+          - GOLDFIXME
+          - HKDFIXME
+          - TRYFIXME
+          - USDCNYFIXME
+          - USDKZTFIXME
 
 permissions:
   contents: write
 
 jobs:
-  fetch:
+  build:
     runs-on: ubuntu-latest
-    env:
-      API_URL: https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=25&offset=0&download=true
-      USER_AGENT: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0'
-      CI_COMMIT_AUTHOR: Ruslan Bay
-      CI_COMMIT_AUTHOR_EMAIL: 67730802+ruslanbay@users.noreply.github.com
-      CI_COMMIT_MESSAGE: Update US Market Data
+    env: 
+      CI_COMMIT_MESSAGE: Update currency data
+      CI_COMMIT_AUTHOR: github-actions[bot]
     steps:
     - uses: actions/checkout@v4
-    - name: Get data
-      run: |
-        function get_data() {
-          exchange="$1"
-          response_code=$(curl --request GET \
-            --url "${{ env.API_URL }}&exchange=${exchange}" \
-            --user-agent "${{ env.USER_AGENT }}" \
-            --silent \
-            --write-out "%{http_code}" \
-            --output "${exchange}-tmp.json")
-          if [ "${response_code}" -eq 200 ]; then
-            jq '.data.rows' ${exchange}-tmp.json > ${exchange}.json
-            sed -i "s/\"symbol\": \"/\"symbol\": \"$exchange\_/g" ${exchange}.json
-            jq -r --arg header "${{ inputs.tsv_header }}" '.[] | [($header | split(","))[] as $h | .[$h]] | @tsv' ${exchange}.json > ${exchange}.tsv
-          else
-            echo "Request failed with response code: ${response_code}"
-            exit 1
-          fi
-        }
-        ex_list=("nasdaq" "nyse" "amex")
-        for ex in "${ex_list[@]}"; do
-          get_data "${ex}"
-        done
-    
-    - name: Concat TSVs
-      run: |
-        if [ -z "${{ inputs.output }}" ]; then
-          output_filename=$(date --utc +%Y-%m-%d)
-        else
-          output_filename="${{ inputs.output }}"
-        fi
-        echo "output_filename=${output_filename}" >> $GITHUB_ENV
-        (cat nasdaq.tsv; echo; cat nyse.tsv; echo; cat amex.tsv; echo) > data/by-date/${output_filename}.tsv
-    
-    - name: Concat JSONs
-      run: |
-        jq -s '[.[][]]' nasdaq.json nyse.json amex.json > data/by-date/"${{ env.output_filename }}".json
-    
-    - name: Checkout the ruslanbay.github.io repository
-      uses: actions/checkout@v4
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
       with:
-        repository: ruslanbay/ruslanbay.github.io
-        token: ${{ secrets.TOKEN_ruslanbay_github_io }}
-        path: ruslanbay.github.io
-    
-    - name: Copy changes into the ruslanbay.github.io repository
+        python-version: "3.11"
+        cache: "pip"
+    - name: Install dependencies
       run: |
-        cp data/by-date/* ruslanbay.github.io/data/by-date/
-    
-    - name: Commit and push into the ruslanbay.github.io repository
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: DAILY. Get currency exchange rate
+      if: ${{ github.event_name == 'schedule' }}
       run: |
-        cd ruslanbay.github.io
+        start=$(date --utc -d 'yesterday'  +%Y-%m-%d)
+        end=$start
+        python .github/workflows/getCurrency.py --start $start --end $end --currency USDFIXME
+        python .github/workflows/getCurrency.py --start $start --end $end --currency EURFIXME
+        python .github/workflows/getCurrency.py --start $start --end $end --currency CNYFIXME
+    - name: MANUAL. Get currency exchange rate
+      if: ${{ github.event_name == 'workflow_dispatch' }}
+      run: |
+        python .github/workflows/getCurrency.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --currency ${{ inputs.currency }}
+    - name: Commit and push build artifacts
+      run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
-        git config --global user.email "${{ env.CI_COMMIT_AUTHOR_EMAIL }}"
-        git add data/by-date/*
-        git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-        git push origin main
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add data/*.csv
+        git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+        git push
