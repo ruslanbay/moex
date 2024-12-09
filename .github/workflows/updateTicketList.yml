@@ -1,0 +1,75 @@
+name: 'Update Ticket List'
+
+on:
+  schedule:
+    - cron: '55 03 * * 2-6'
+  workflow_dispatch:
+    inputs:
+      startDate:
+        description: 'Start date'
+        required: true
+        type: string
+        default: '2011-12-19'
+      endDate:
+        description: 'End date'
+        required: true
+        type: string
+        default: '2024-11-28'
+      stepDays:
+        description: 'Step in days'
+        required: true
+        type: number
+        default: 1
+      inputFileNameTSV:
+        description: 'Input tsv file name'
+        required: true
+        type: string
+        default: 'issues-by-sector'
+      outputFileNameTSV:
+        description: 'Output tsv file name'
+        required: true
+        type: string
+        default: 'issues-by-sector-output'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env: 
+      CI_COMMIT_MESSAGE: Update Ticket List
+      CI_COMMIT_AUTHOR: github-actions[bot]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+        cache: "pip"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: MANUAL. Update tsv file
+      if: ${{ github.event_name == 'workflow_dispatch' }}
+      run: |
+        inputFileName="${{ inputs.inputFileNameTSV }}"
+        outputFileName="${{ inputs.outputFileNameTSV }}"
+        python .github/workflows/updateTicketList.py --start ${{ inputs.startDate }} --end ${{ inputs.endDate }} --step ${{ inputs.stepDays }} --input "data/${inputFileName}.tsv" --output "data/${outputFileName}.tsv"
+    - name: DAILY. Update tsv file
+      if: ${{ github.event.schedule == '55 03 * * 2-6' }}
+      run: |
+        start=$(date --utc -d 'yesterday' +'%Y-%m-%d')
+        end=$(date --utc +"%Y-%m-%d")
+        step=1
+        inputFileName="issues-by-sector"
+        outputFileName="issues-by-sector"
+        python .github/workflows/updateTicketList.py --start "${start}" --end "${end}" --step "${step}" --input "data/${inputFileName}.tsv" --output "data/${outputFileName}.tsv"
+    - name: Commit and push build artifacts
+      run: |
+        git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add data/iss/securities/*.json data/*.tsv
+        git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+        git push
