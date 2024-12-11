@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MOEX Visualization</title>
+  <base href="https://ruslanbay.github.io/moex/">
+  <meta charset="UTF-8">
+  <meta name="description" content="Russian Stock Market Visualization. How the Russian stock market has changed over the past 10+ years">
+  <meta name="theme-color" content="#414554" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="MOEX Visualization">
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" href="images/icons/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/icons/ios/152.png">
+  
+  <script src="scripts/plotly-2.35.2.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <input type="file" id="inputFile" accept=".csv,.txt" hidden />
+    <label for="inputFile" id="inputFileLabel" >
+      <img src="images/icons/filter.png" title="Apply filter" height="30px" />
+    </label>
+    <a id="erasefilter" onclick="localStorage.removeItem('filterCsv'); refreshChart();" hidden>
+      <img src="images/icons/erasefilter.png" title="Erase filter" height="30px" />
+    </a>
+    &nbsp;
+    <form id="inputForm" onsubmit="return false;">
+      <div class="autocomplete">
+        <input type="text" id="searchbox" placeholder="🔎 PLZL" maxlength="40">
+      </div>
+    </form>
+    &nbsp;
+    <select id="currencySelector">
+      <option value="USD" selected="selected">$</option>
+      <option value="EUR">€</option>
+      <option value="CNY">¥</option>
+      <option value="RUB">₽</option>
+    </select>
+    &nbsp;
+    <select id="chartType">
+      <option value="treemap" selected="selected">treemap</option>
+      <option value="history">history</option>
+      <option value="listings">listings</option>
+    </select>
+    &nbsp;
+    <select id="dataType">
+      <option value="marketcap" selected="selected">marketcap</option>
+      <option value="value">value</option>
+      <option value="trades">trades</option>
+    </select>
+    &nbsp;
+    <input type="date" id="dateInput" name="date" pattern="\d{4}-\d{2}-\d{2}" value="2023-12-08" min="2011-12-19" max="2024-03-04">
+    &nbsp;
+  </header>
+  <div id="chart"></div>
+  <footer>
+    <img src="images/icons/github.svg" height="14px" />&nbsp;
+    <a href="https://github.com/ruslanbay/moex" title="">Github</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="images/icons/linkedin.svg" height="14px" />&nbsp;
+    <a href="https://www.linkedin.com/pulse/как-российский-фондовый-рынок-изменился-за-последние-20-ruslan-bay-evwxe/" title="">Linkedin</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ♡︎&nbsp;<a id="share">Share</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a id="install" hidden>✓ Install</a>
+  </footer>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
