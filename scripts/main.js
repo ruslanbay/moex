@@ -567,7 +567,7 @@ async function prepTreemapData() {
         openPrice = item[9] == null ? 0 : item[9];
         closePrice = item[12] == null ? 0 : item[12];
         volume = item[27] == null ? 0 : item[27];
-        value = item[15] == null ? 0 : item[16];
+        value = item[28] == null ? 0 : item[28];
         numTrades = item[26] == null ? 0 : item[26];
         marketCapDaily = item[50] == null ? 0 : item[50];
       }
