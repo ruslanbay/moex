@@ -169,6 +169,57 @@ function autocomplete(inputElement, suggestions) {
 autocomplete(searchbox, suggestions);
 */
 
+
+// Add News Widget
+function addNewsWidget() {
+  const slices = document.querySelectorAll('g.slice.cursor-pointer');
+  if (slices.length === 1) {
+    var bbox = slices[0].getBBox(); // Get the bounding box of the first slice
+
+    // Create a new div element
+    var overlayDiv = document.createElement('div');
+    overlayDiv.className = 'overlay';
+    overlayDiv.innerHTML = 'This is a single child element!'; // Customize your content here
+
+    // Get News feed
+    const url = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnews.google.com%2Frss%2Fsearch%3Fhl%3Dru%26gl%3DRU%26ceid%3DRU%253Aru%26oc%3D11%26q%3DPLZL%2520when%253A7d';
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const articles = data.items;
+        let html = '';
+
+        articles.forEach(article => {
+          const title = article.title;
+          const link = article.link;
+          const description = article.description;
+
+          html += `
+        <article>
+          <h2>
+            <a href="${link}" target="_blank" rel="noopener">${title}</a>
+          </h2>
+          <p>${description}</p>
+        </article>
+      `;
+        });
+
+        overlayDiv.innerHTML = html;
+      })
+      .catch(error => console.error('Error fetching JSON data:', error));
+      // Position the div based on the bounding box of the slice
+      overlayDiv.style.left = bbox.x + 10 + 'px';
+      overlayDiv.style.top = bbox.y + 150 + 'px';
+      overlayDiv.style.width = bbox.width - 20 + 'px';
+      overlayDiv.style.height = bbox.height - 120 + 'px';
+      
+      // Append the div to the body or a specific container
+      document.body.appendChild(overlayDiv);
+    }
+ }
+
+
 // Update URL
 const url = new URL(window.location.href);
 const urlDate = url.searchParams.get("date");
@@ -270,7 +321,7 @@ function selectTreemapItemByLabel(label) {
   // }
   for (var i = skipItems; i < boxes.length; i++) {
     var box = boxes[i];
-    if (box.innerHTML.toLowerCase().includes(label)) {
+    if (box.innerHTML.toLowerCase().includes(`:${label}</tspan>`)) {
       box.dispatchEvent(new MouseEvent('click'));
       break;
     }
@@ -480,18 +531,18 @@ async function applyFilter(csv) {
 
 async function prepTreemapData() {
   let tickerList;
-  const localFilterCsv = localStorage.getItem('filterCsv');
-  const erasefilterLink = document.getElementById('erasefilter');
-  if (localFilterCsv !== undefined && localFilterCsv !== null) {
-    tickerList = await applyFilter(localFilterCsv);
-    inputFileLabel.setAttribute("hidden", "");
-    erasefilterLink.removeAttribute("hidden");
-  }
-  else {
-    localStorage.removeItem('filterCsv');
-    inputFileLabel.removeAttribute("hidden");
-    erasefilterLink.setAttribute("hidden", "");
-  }
+  // const localFilterCsv = localStorage.getItem('filterCsv');
+  // const erasefilterLink = document.getElementById('erasefilter');
+  // if (localFilterCsv !== undefined && localFilterCsv !== null) {
+  //   tickerList = await applyFilter(localFilterCsv);
+  //   inputFileLabel.setAttribute("hidden", "");
+  //   erasefilterLink.removeAttribute("hidden");
+  // }
+  // else {
+  //   localStorage.removeItem('filterCsv');
+  //   inputFileLabel.removeAttribute("hidden");
+  //   erasefilterLink.setAttribute("hidden", "");
+  // }
 
   const currencyType = document.getElementById('currencySelector').value;
   const dataType = document.getElementById('dataType').value;
