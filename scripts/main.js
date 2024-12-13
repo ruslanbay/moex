@@ -255,7 +255,7 @@ function selectTreemapItemByLabel(label) {
   label = label.toLowerCase();
   const chartDiv = document.getElementById('chart');
 
-  var boxes = chartDiv.querySelectorAll('g');
+  var boxes = chartDiv.querySelectorAll('g.slice.cursor-pointer');
   let skipItems = 18;
   // switch (dataTypeValue) {
   //   case "marketcap":
@@ -270,7 +270,7 @@ function selectTreemapItemByLabel(label) {
   // }
   for (var i = skipItems; i < boxes.length; i++) {
     var box = boxes[i];
-    if (box.innerHTML.toLowerCase().includes(`:${label}</tspan>`)) {
+    if (box.innerHTML.toLowerCase().includes(`<b>${label}</b>`)) {
       box.dispatchEvent(new MouseEvent('click'));
       break;
     }
