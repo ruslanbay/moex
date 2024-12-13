@@ -9241,3 +9241,8 @@ exchange_ppif	GOOD	GOOD ETF DOHOD MM Strategies	GOOD ETF	ДОХОДЪ Страт
 exchange_bond	RU000A109Y69	VEB.RF PBO-002P-K564	ВЭБ2Р-К564	ВЭБ.РФ ПБО-002Р-К564	2024-12-11		
 exchange_bond	RU000A1093L2	VEB.RF PBO-002P-46	ВЭБP-46	ВЭБ.РФ ПБО-002Р-46	2024-12-10		
 exchange_bond	RU000A10AAF7	Global Factoring BO-06-001P	ГлобалФ1P6	Глобал Факторинг БО-06-001P	2024-12-11		
+subfederal_bond	RU000A10AAU6	MinFin the Amur region 24001	Амур 24001	Минфин Амурской обл. 24001	2024-12-12		
+exchange_bond	RU000A109Y77	VEB.RF PBO-002P-K565	ВЭБ2Р-К565	ВЭБ.РФ ПБО-002Р-К565	2024-12-12		
+corporate_bond	RU000A10AAQ4	SFO Split Finance 1 01	СФО СФ1 01	СФО Сплит Финанс 1 01	2024-12-12		
+exchange_bond	RU000A10A7N1	SberIOS 001P-666R 5Y BSKRUS	СберИОС666	СберИОС 001Р-666R 5Г BSKRUS	2024-12-12		
+exchange_bond	RU000A10AAT8	Magnit BO-004P-07	Магнит4P07	Магнит ПАО БО-004Р-07	2024-12-12		
