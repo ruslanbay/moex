@@ -9246,3 +9246,6 @@ exchange_bond	RU000A109Y77	VEB.RF PBO-002P-K565	ВЭБ2Р-К565	ВЭБ.РФ ПБ
 corporate_bond	RU000A10AAQ4	SFO Split Finance 1 01	СФО СФ1 01	СФО Сплит Финанс 1 01	2024-12-12		
 exchange_bond	RU000A10A7N1	SberIOS 001P-666R 5Y BSKRUS	СберИОС666	СберИОС 001Р-666R 5Г BSKRUS	2024-12-12		
 exchange_bond	RU000A10AAT8	Magnit BO-004P-07	Магнит4P07	Магнит ПАО БО-004Р-07	2024-12-12		
+subfederal_bond	RU000A10ABC2	Novosibirsk region 34026	Новосиб 26	Новосибирская область 34026	2024-12-13		
+corporate_bond	RU000A10ABK5	Seligdar SILV01	SELSILV01	Селигдар SILV01	2024-12-13		
+exchange_bond	RU000A10ABJ7	Albazino Resources 001P-01	РесАлб1Р01	Ресурсы Албазино 001Р-01	2024-12-13		
