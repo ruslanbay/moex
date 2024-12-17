@@ -95,7 +95,7 @@ function handleEnterKey(event) {
 function getTicketList() {
   // TODO: вместо tsv-файла использовать выборку элементов с чарта как в 
   // function selectTreemapItemByLabel(label) {
-  const url = `data/securities/moex/securities-by-sector.tsv?_=${new Date().toISOString().split('T')[0]}`;
+  const url = `data/securities-by-sector/moex.tsv?_=${new Date().toISOString().split('T')[0]}`;
   const columnIndex = 1;
   const tickerList = [];
   fetch(url)
@@ -313,7 +313,7 @@ async function prepHistogramData() {
   try {
     const startDate = '2011-12-19';
 
-    let response = await fetch(`data/securities/moex/securities-by-sector.tsv?_=${new Date().toISOString().split('T')[0]}`);
+    let response = await fetch(`data/securities-by-sector/moex.tsv?_=${new Date().toISOString().split('T')[0]}`);
     response = await response.text();
     let data = response.split('\n')
       .slice(1, 32)
@@ -503,7 +503,7 @@ async function prepTreemapData() {
     rate = await getCurrencyRateByDate(date);
   }
 
-  const rows = await fetch(`data/securities/moex/securities-by-sector.tsv?_=${new Date().toISOString().split('T')[0]}`)
+  const rows = await fetch(`data/securities-by-sector/moex.tsv?_=${new Date().toISOString().split('T')[0]}`)
     .then(response => response.text())
     .then(text => {
       return text.split('\n').map(row => row.split('\t'));
@@ -892,7 +892,7 @@ async function loadData() {
   const newSecurities = new Map(totalSecurities);
   const delistedSecurities = new Map(totalSecurities);
 
-  const response = await fetch(`data/securities/moex/securities-by-sector.tsv?_=${new Date().toISOString().split('T')[0]}`);
+  const response = await fetch(`data/securities-by-sector/moex.tsv?_=${new Date().toISOString().split('T')[0]}`);
   const data = await response.text();
   const rows = data.split('\n').slice(32);
   const excludeList = ["cb_bond", "corporate_bond", "etf_ppif",
