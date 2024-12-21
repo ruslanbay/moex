@@ -366,7 +366,7 @@ async function prepHistogramData() {
       };
     }
 
-    response = await fetch(`data/history.tsv?_=${new Date().toISOString().split('T')[0]}`);
+    response = await fetch(`data/securities-by-sector/moex.tsv?_=${new Date().toISOString().split('T')[0]}`);
     response = await response.text();
     data = response.split('\n')
       .slice(1)
