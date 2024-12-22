@@ -323,9 +323,9 @@ Energy (Oil, Gas, Coal)	SIBN	Gazprom neft	Газпрнефть	Газпром н
 Energy (Oil, Gas, Coal)	SKRN	SUEK-Krasnoyarsk	СУЭК-Красн	СУЭК-Красноярск ОАО ао	2009-12-18	2013-03-29			
 Energy (Oil, Gas, Coal)	SNGS	Surgut	Сургнфгз	Сургутнефтегаз ПАО акции об.	2005-01-11			Сургутнефтегаз	Surgutneftegas
 Energy (Oil, Gas, Coal)	SNGSP	Surgut-pref	Сургнфгз-п	Сургутнефтегаз ПАО ап	2005-01-11			Сургутнефтегаз	Surgutneftegas
-Energy (Oil, Gas, Coal)	SNOS	Gazprom neftehim Salavat ao	ГПНХСал ао	Газпром нефтехим Салават  ОАО	2010-04-06	2014-05-30			
-Energy (Oil, Gas, Coal)	TATN	Tatneft-3	Татнфт 3ао	ПАО Татнефть ао	2005-01-11				
-Energy (Oil, Gas, Coal)	TATNP	Tatneft (pref)	Татнфт 3ап	ПАО Татнефть ап 3 вып.	2005-01-11				
+Energy (Oil, Gas, Coal)	SNOS	Gazprom neftehim Salavat ao	ГПНХСал ао	Газпром нефтехим Салават  ОАО	2010-04-06	2014-05-30		Газпром_нефтехим_Салават	Gazprom_Neftekhim_Salavat
+Energy (Oil, Gas, Coal)	TATN	Tatneft-3	Татнфт 3ао	ПАО Татнефть ао	2005-01-11			Татнефть	Tatneft
+Energy (Oil, Gas, Coal)	TATNP	Tatneft (pref)	Татнфт 3ап	ПАО Татнефть ап 3 вып.	2005-01-11			Татнефть	Tatneft
 Energy (Oil, Gas, Coal)	TNBP	RN Holding ao	РН Холд ао	РН Холдинг ОАО ао	2010-12-06	2013-10-25			
 Energy (Oil, Gas, Coal)	TNBPP	RN Holding ap	РН Холд ап	РН Холдинг ОАО ап	2010-12-06	2013-10-25			
 Energy (Oil, Gas, Coal)	TRNFP	Transneft (pref)	Транснф ап	Транснефть ПАО акц.пр.	2008-01-14			Транснефть	Transneft
